@@ -1,0 +1,76 @@
+1
+00:00:00,270 --> 00:00:05,860
+In the next few lectures he will learn how easy it is to perform database operations using spring JTB
+
+2
+00:00:05,860 --> 00:00:07,420
+CPP template.
+
+3
+00:00:07,560 --> 00:00:09,210
+He will do it in two simple steps.
+
+4
+00:00:09,210 --> 00:00:14,290
+The first step is to configure the driver manager data source and The Daily Beast template.
+
+5
+00:00:14,310 --> 00:00:20,230
+In this configuration there man is a data source will be used by JTB template.
+
+6
+00:00:20,550 --> 00:00:24,440
+So you'll first inject this being or you will first create this being or configured.
+
+7
+00:00:24,450 --> 00:00:28,830
+This being in the Phoring can pick the example by setting for properties.
+
+8
+00:00:29,160 --> 00:00:36,890
+The class name you want to connect to the database the user name to the database and finally the password.
+
+9
+00:00:36,930 --> 00:00:43,050
+In my case I'm using the Skrill driver so it would be my column brought my escarole dart the DBC Daut
+
+10
+00:00:43,140 --> 00:00:50,250
+driver and this is that you are a that we need to connect to the my Escorial DBI running on my machine.
+
+11
+00:00:50,250 --> 00:00:54,550
+My DB is the name of the database local host windes to my machine.
+
+12
+00:00:54,810 --> 00:00:57,310
+And here we have the protocol SoBo protocol.
+
+13
+00:00:57,600 --> 00:01:01,350
+The user name is routine in my case and the password is best.
+
+14
+00:01:01,590 --> 00:01:08,730
+Once we can figure out the driver manager data source the next bin is the GBC template will configure
+
+15
+00:01:08,730 --> 00:01:16,160
+that bin by injecting the data source that recreate in the previous to these two and going to this same
+
+16
+00:01:16,160 --> 00:01:19,730
+spring configuration file as two different beings.
+
+17
+00:01:19,940 --> 00:01:25,820
+There really is a template depends on our manager data that is step number one.
+
+18
+00:01:25,850 --> 00:01:32,750
+And the second step of course is create the best class and use the GBC template to perform it insert
+
+19
+00:01:32,810 --> 00:01:36,560
+operation or any other update operation on the database.
+

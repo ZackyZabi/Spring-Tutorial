@@ -1,0 +1,132 @@
+1
+00:00:00,270 --> 00:00:05,850
+The next step is to create the ProductDao interface and the ProductDaoImpl class that implements
+
+2
+00:00:05,850 --> 00:00:09,920
+that interface and will use the HibernateTemplate class.
+
+3
+00:00:09,950 --> 00:00:11,040
+So go to Eclipse.
+
+4
+00:00:14,810 --> 00:00:19,070
+Right click on this package here, say New -> Interface.
+
+5
+00:00:19,070 --> 00:00:20,900
+Always go to interfaces.
+
+6
+00:00:20,900 --> 00:00:27,560
+The package name should be springorm dot, product is our domain, dao.
+
+7
+00:00:27,610 --> 00:00:36,510
+And the name of the class should be Product, d capital, Finish.
+
+8
+00:00:36,750 --> 00:00:42,510
+We'll start with one method called create and we'll add the rest of the methods later on. The create
+
+9
+00:00:42,510 --> 00:00:43,200
+method
+
+10
+00:00:44,100 --> 00:00:55,060
+can return an integer. Integer create, it should take a product entity and create a row in the database. Product product,
+
+11
+00:00:55,240 --> 00:00:58,600
+that's our method, control+1, import product.
+
+12
+00:01:01,480 --> 00:01:05,210
+It's under springorm. Let's change the package of product as well.
+
+13
+00:01:05,210 --> 00:01:14,120
+Instead of springorm, we'll say springorm.product.entity. Control+1, more the Product.java
+
+14
+00:01:14,140 --> 00:01:20,210
+to the new package. So we'll have product, is our business model or it's the domain. Under it we have
+
+15
+00:01:20,490 --> 00:01:28,530
+entity, same in dao product, then the dao. Delete this import, hit control+1 and reimport product
+
+16
+00:01:28,530 --> 00:01:43,790
+from the right package. Save it. Right click, New -> Class, ProductDaoImpl and put it in a package called
+
+17
+00:01:44,020 --> 00:01:48,390
+product.dao.impl. This is how we do it in real time.
+
+18
+00:01:48,710 --> 00:01:57,030
+Click on add, search for ProductDao. Select that interface and our class should implement that interface, Finish.
+
+19
+00:01:57,470 --> 00:01:59,570
+And Eclipse will add the method for us.
+
+20
+00:01:59,750 --> 00:02:02,960
+Hit control+d to relate that TODO. Maximize.
+
+21
+00:02:05,730 --> 00:02:14,170
+And this class uses uses the HibernateTemplate. HibernateTemplate and the package should be,
+
+22
+00:02:17,130 --> 00:02:19,020
+always use the spring HibernateTemplate,
+
+23
+00:02:19,020 --> 00:02:22,310
+the latest version. Change the import to 5.
+
+24
+00:02:22,350 --> 00:02:27,580
+So there are multiple versions of HibernateTemplate available in the jars that we have added to
+
+25
+00:02:27,600 --> 00:02:28,750
+Maven dependencies.
+
+26
+00:02:28,830 --> 00:02:30,960
+So make sure that you are using the latest.
+
+27
+00:02:31,040 --> 00:02:35,690
+The package should be, or the import should say hibernate5.
+
+28
+00:02:35,710 --> 00:02:40,760
+HibernateTemplate, call it HibernateTemplate.
+
+29
+00:02:41,230 --> 00:02:41,820
+That's it.
+
+30
+00:02:41,890 --> 00:02:45,390
+And in the next lecture, we'll start wiring our beans.
+
+31
+00:02:45,490 --> 00:02:52,610
+So we'll add SessionFactory, LocalSessionFactory, the HibernateTemplate and then we'll inject into the
+
+32
+00:02:52,660 --> 00:02:53,470
+ProductDao.
+
+33
+00:02:53,620 --> 00:02:57,150
+And then we'll use the HibernateTemplate inside the create method.
+

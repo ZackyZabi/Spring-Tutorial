@@ -1,0 +1,36 @@
+1
+00:00:00,210 --> 00:00:05,550
+By going to the Resources section of this lecture, you will be able to download all the slides or the
+
+2
+00:00:05,550 --> 00:00:08,880
+presentations that I have been using throughout this course.
+
+3
+00:00:08,880 --> 00:00:15,180
+Once you download it, it will be a zip file. Unzip the contents of it and you will see all the presentations organized
+
+4
+00:00:15,180 --> 00:00:21,720
+by topic. You can start with Spring Core or any other topic you are interested in.
+
+5
+00:00:21,720 --> 00:00:29,930
+Once you go in there, you will see both .key files for Mac and pptx for Windows.
+
+6
+00:00:30,090 --> 00:00:32,530
+So each topic has both these type of files.
+
+7
+00:00:32,640 --> 00:00:39,290
+You can use them for quick review or even do presentations and train your colleagues and friends.
+
+8
+00:00:39,300 --> 00:00:43,180
+I'll be adding lot more lectures and sections to this course pretty soon.
+
+9
+00:00:43,270 --> 00:00:43,610
+Enjoy!
+

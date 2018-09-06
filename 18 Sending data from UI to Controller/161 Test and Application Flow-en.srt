@@ -1,0 +1,116 @@
+1
+00:00:00,230 --> 00:00:06,180
+We have successfully completed our usecase and ready to see the application flow end to end. To test
+
+2
+00:00:06,250 --> 00:00:13,770
+it, go to Servers, right click, restart the Tomcat server so that everything is reloaded and we
+
+3
+00:00:13,770 --> 00:00:14,470
+are clean.
+
+4
+00:00:15,630 --> 00:00:21,840
+Once it restarts, you can right click on the application, do a Run as -> run on server. Or if you have a browser
+
+5
+00:00:21,840 --> 00:00:22,540
+open already,
+
+6
+00:00:22,560 --> 00:00:24,520
+simply go there and change the URL.
+
+7
+00:00:26,400 --> 00:00:29,830
+The URL we should be using is registrationPage.
+
+8
+00:00:29,850 --> 00:00:31,680
+That is where the flow starts.
+
+9
+00:00:31,680 --> 00:00:38,610
+First we'll access the registrationPage, go to the browser, at the end paste registrationPage after
+
+10
+00:00:38,610 --> 00:00:45,770
+springmvc, p is capital. Enter, now the request goes to the UserController,
+
+11
+00:00:45,800 --> 00:00:49,890
+the very first method because that is what is mapped to registrationPage.
+
+12
+00:00:50,210 --> 00:00:58,010
+It returns a userReg as view. The ViewResolver will append the .jsp and the location and
+
+13
+00:00:58,010 --> 00:01:07,410
+we see the output which is the form, the userReg.jsp. Enter some details, 123,
+
+14
+00:01:07,450 --> 00:01:10,990
+the name is John.
+
+15
+00:01:11,060 --> 00:01:16,450
+Email is john@bob.com.
+
+16
+00:01:16,520 --> 00:01:22,180
+Now when we hit submit it will again go to the Controller because in the userReg.jsp,
+
+17
+00:01:22,250 --> 00:01:29,810
+we have mapped it to registerUser. So it will go to the Spring Container first. The Spring will create
+
+18
+00:01:30,010 --> 00:01:33,270
+a corresponding model object for this form,
+
+19
+00:01:33,530 --> 00:01:41,850
+because we have used the @ModelAttribute. It will come to this method because the registerUser is
+
+20
+00:01:41,850 --> 00:01:45,420
+mapped to this method it will create a model object called user. Take
+
+21
+00:01:45,420 --> 00:01:46,140
+the form fields,
+
+22
+00:01:46,140 --> 00:01:51,680
+whatever we are submitting from here, create that object. So hit submit and you will see it in action.
+
+23
+00:01:51,840 --> 00:01:58,050
+It comes to the Controller, goes to that method, gives it the model object after creating it, taking the form
+
+24
+00:01:58,050 --> 00:02:02,750
+fields, setting the values which we are displaying on the console here.
+
+25
+00:02:03,150 --> 00:02:08,340
+And after that, it goes back to the same registrationPage because that is what exactly we are doing
+
+26
+00:02:08,340 --> 00:02:15,060
+in the Controller. Here we are setting the view as userReg. This is where we are displaying the details on the
+
+27
+00:02:15,450 --> 00:02:16,120
+console.
+
+28
+00:02:17,650 --> 00:02:23,330
+So in this lecture, you have successfully finished sending the data from the Controller or from the
+
+29
+00:02:23,330 --> 00:02:26,960
+view to the Controller, from the UI to the controller.
+

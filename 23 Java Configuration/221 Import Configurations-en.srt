@@ -1,0 +1,79 @@
+0
+00:00.390 --> 00:06.720
+In real time applications we often spread our configuration across files that is we don't want to put
+
+1
+00:06.780 --> 00:14.130
+all the spring configuration in one single java file like this here because we'll be having multiple files
+
+2
+00:14.220 --> 00:18.530
+in the services layer and multiple beans in the dao layer when the application is huge.
+
+3
+00:18.780 --> 00:27.900
+So we want to move this Dao let's say to a new file called Dao Config right click new class Dao
+
+4
+00:28.170 --> 00:38.840
+config go back to the application config or the spring config copy this piece or it out
+
+5
+00:38.840 --> 00:39.510
+of it.
+
+6
+00:39.800 --> 00:42.390
+go back to the dao config paste it here.
+
+7
+00:42.410 --> 00:49.400
+Now we need to mark this particular java class with at configuration as well because this is also a spring
+
+8
+00:49.400 --> 00:51.470
+configuration.
+
+9
+00:51.470 --> 00:59.060
+Once we do that go back to the spring configuration and we can import and reuse that configuration here.
+
+10
+00:59.450 --> 01:07.630
+So you can mark use the at import annotation and you can import whatever configurations you want.
+
+11
+01:07.630 --> 01:15.700
+In this case it is dao config dot class and everything else should work as it is.
+
+12
+01:15.700 --> 01:18.430
+So we import the doa config configuration here.
+
+13
+01:18.640 --> 01:23.680
+The beans inside that particular configuration can be used within the spring config so the Dao will
+
+14
+01:23.680 --> 01:28.780
+be instantiated and that will be injected into the service and the services created.
+
+15
+01:28.780 --> 01:29.950
+So rerun the test
+
+16
+01:32.930 --> 01:34.220
+and it will still work.
+
+17
+01:34.220 --> 01:39.680
+So in this letter you have successfully learned that you can spread your java configuration across beans
+
+18
+01:40.580 --> 01:47.270
+and you can import those beans or import those configurations into other configurations by using the
+
+19
+01:47.630 --> 01:50.700
+at import annotation at the class level.

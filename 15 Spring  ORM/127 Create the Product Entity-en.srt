@@ -1,0 +1,172 @@
+1
+00:00:00,150 --> 00:00:06,720
+In this lecture, you'll create the very first class in our application which is the product entity. The product
+
+2
+00:00:06,720 --> 00:00:11,350
+will represent the database table which is product.
+
+3
+00:00:11,550 --> 00:00:16,040
+It has four columns, id, name, description and price.
+
+4
+00:00:16,140 --> 00:00:26,930
+So let's go back to Eclipse. Close all the poms, right click, close all. Go to the src/main/java, expand the
+
+5
+00:00:26,930 --> 00:00:37,340
+package, get rid of App.java, delete it. Right click on the package, say New -> class, Product.
+
+6
+00:00:37,340 --> 00:00:38,760
+This is our entity.
+
+7
+00:00:38,900 --> 00:00:41,320
+Entity represents a database table,
+
+8
+00:00:41,320 --> 00:00:49,970
+springorm dot, the package name should be entities or entity. entity the package name.
+
+9
+00:00:49,970 --> 00:00:55,250
+You can also use model, model or entity they are both synonyms. Finish.
+
+10
+00:00:58,820 --> 00:01:01,770
+Double click to maximize, we need to add four properties here.
+
+11
+00:01:01,810 --> 00:01:10,100
+Private int id, private int or private string name, of the product.
+
+12
+00:01:10,250 --> 00:01:12,520
+Private string description.
+
+13
+00:01:12,530 --> 00:01:19,460
+I'm going to use desc just to show you that the property names need not be same as the database column
+
+14
+00:01:19,460 --> 00:01:20,470
+names in the database.
+
+15
+00:01:20,480 --> 00:01:26,960
+It is description, but I am using it as desc. You can map it to the database column.
+
+16
+00:01:27,100 --> 00:01:32,550
+You've already seen that in theory. Private string, the last one,
+
+17
+00:01:32,570 --> 00:01:33,310
+it's not a string.
+
+18
+00:01:33,320 --> 00:01:35,900
+It's going to be a double, value.
+
+19
+00:01:36,480 --> 00:01:46,030
+Sorry, the price. You can select them all, go to a src or source, generate the mutator methods which are setter
+
+20
+00:01:46,030 --> 00:01:50,250
+and getter methods. Select them all. And here,
+
+21
+00:01:53,520 --> 00:01:56,990
+instead of first member change it to After 'price'. Hit
+
+22
+00:01:56,990 --> 00:02:00,120
+Ok, do a control+shift+f to format.
+
+23
+00:02:00,270 --> 00:02:07,680
+We have created a java bean. It's not an entity yet. To make it an entity we need to mark it with the
+
+24
+00:02:07,680 --> 00:02:10,570
+appropriate JPA annotations.
+
+25
+00:02:10,830 --> 00:02:15,020
+Let's start with the very first one if you remember, @Entity.
+
+26
+00:02:15,030 --> 00:02:23,180
+That makes this class an entity. Hit control+1 and import entity from javax.persistence, not from
+
+27
+00:02:23,180 --> 00:02:28,100
+hibernate, it should be from javax.persistence.Entity.
+
+28
+00:02:28,370 --> 00:02:33,260
+The next mandatory annotation is on the id field,
+
+29
+00:02:33,370 --> 00:02:37,870
+you should use a @id. Control+space,
+
+30
+00:02:37,900 --> 00:02:40,440
+id from javax.persistence.
+
+31
+00:02:40,450 --> 00:02:48,430
+These two are mandatory and the rest of the optional ones, table, @Table, this class should map
+
+32
+00:02:48,430 --> 00:02:53,570
+to a database table. javax.persistence is the package. Within brackets,
+
+33
+00:02:53,750 --> 00:02:56,690
+name is equal to product.
+
+34
+00:02:56,810 --> 00:03:01,740
+This is not mandatory unless your table name is different from the class name.
+
+35
+00:03:01,840 --> 00:03:07,730
+That is when we use this @Table. But it will be much more clear if we use this annotation,
+
+36
+00:03:07,830 --> 00:03:13,100
+doesn't hurt. And the next set of annotations are @Column, the last annotation is
+
+37
+00:03:13,120 --> 00:03:16,760
+@Column from javax.persistence again.
+
+38
+00:03:17,010 --> 00:03:29,750
+Inside this we can use name is equal to name, copy that, paste it above id, also paste it for description
+
+39
+00:03:29,870 --> 00:03:31,010
+and price.
+
+40
+00:03:31,340 --> 00:03:40,040
+Change the names, name is equal to id. For a description column name is not desc, it should be description,
+
+41
+00:03:40,040 --> 00:03:44,630
+description, that is what it is in the database.
+
+42
+00:03:44,630 --> 00:03:47,510
+And finally, the last one is price.
+
+43
+00:03:47,580 --> 00:03:55,090
+Now our Java bean has turned into an entity. In this lecture, you've successfully created our product entity.
+

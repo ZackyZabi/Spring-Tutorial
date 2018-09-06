@@ -1,0 +1,24 @@
+1
+00:00:00,330 --> 00:00:06,750
+As an assignment, I want you to implement the deleteProduct method. Tha DELETE method will be very similar
+
+2
+00:00:06,750 --> 00:00:13,000
+to the find one. We'll be mapping it to a DeleteMapping with a HTTP delete method.
+
+3
+00:00:13,050 --> 00:00:20,240
+It will take an ID, and you will bind it as a path variable and instead of calling the repository.findOne,
+
+4
+00:00:20,260 --> 00:00:26,760
+you should be calling repository.delete and pass in the ID. And the response should
+
+5
+00:00:26,760 --> 00:00:30,690
+be void. The DELETE operation will not return anything except for a 200.
+
+6
+00:00:30,810 --> 00:00:33,980
+So you need not return anything from your method.
+

@@ -1,0 +1,59 @@
+0
+00:00.240 --> 00:06.060
+Two masters java based configuration you are going to work on a very simple use case where-in you will creative
+
+1
+00:06.360 --> 00:08.980
+DAO class which is a data access class
+
+2
+00:09.120 --> 00:10.620
+it will not really talk to a database
+
+3
+00:10.620 --> 00:15.570
+in this case and a Service class , service class uses the
+
+4
+00:15.630 --> 00:21.720
+services provided by the dao class you will define a Java based configuration so we'll create a
+
+5
+00:21.720 --> 00:27.300
+spring config dot file within which you will define all your beans and then it will create a test
+
+6
+00:27.300 --> 00:31.730
+class that will read the beans from the container which is
+
+7
+00:31.770 --> 00:34.260
+Annotation config application context.
+
+8
+00:34.270 --> 00:36.900
+It will pass this spring conflict to this container.
+
+9
+00:36.900 --> 00:38.060
+It will create the beans.
+
+10
+00:38.080 --> 00:39.080
+Then it will read it
+
+11
+00:39.140 --> 00:42.520
+from your test class first will do it in steps.
+
+12
+00:42.600 --> 00:44.400
+First create the Tao.
+
+13
+00:44.490 --> 00:50.850
+Wire it using spring config that is the Java config and then test it out and then we'll create
+
+14
+00:50.850 --> 00:56.900
+the service class which will use the dao will wire service as well and then test that piece as well.

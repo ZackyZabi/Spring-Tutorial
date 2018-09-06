@@ -1,0 +1,84 @@
+1
+00:00:00,170 --> 00:00:05,700
+In this lecture you are going to learn the important aspects the annotations that you are going to use
+
+2
+00:00:05,700 --> 00:00:10,130
+in the next few lectures to create and apply aspects.
+
+3
+00:00:10,530 --> 00:00:18,000
+The very first annotation is the aspect annotation which will be mocking our class with to make it class
+
+4
+00:00:18,000 --> 00:00:18,670
+an aspect.
+
+5
+00:00:18,690 --> 00:00:26,040
+We use this annotation on the class once we have aspect inside an aspect we'll have multiple methods
+
+6
+00:00:26,460 --> 00:00:33,630
+which will be our advisors will mock those advisors with different types of annotations such as ET before
+
+7
+00:00:33,920 --> 00:00:41,760
+and after after returning at around and after throwing each of these will provide a special meaning
+
+8
+00:00:41,790 --> 00:00:50,470
+to our advice or the method in our aspect and before we use this to mock him and that all that mattered
+
+9
+00:00:50,560 --> 00:00:57,910
+in that aspect will be applied before a particular business mid-thirties invoked an Paraguay's.
+
+10
+00:00:57,930 --> 00:01:03,610
+Any method that is modeled with it after that will be applied after it will declare a business mid-thirties
+
+11
+00:01:03,630 --> 00:01:11,410
+in walked after returning as the name itself says if we mock advise with this particular annotation
+
+12
+00:01:11,860 --> 00:01:18,540
+then that particular method will be applied just before the matter returns of value.
+
+13
+00:01:18,700 --> 00:01:25,770
+But we can access that return value inside our advice at our own.
+
+14
+00:01:25,960 --> 00:01:32,920
+If you Mocket particular advice with at owned then that advice will be applied before our business matter
+
+15
+00:01:32,940 --> 00:01:37,140
+is invoked as well as after our business method is invoked.
+
+16
+00:01:37,390 --> 00:01:40,260
+It's right around our business method.
+
+17
+00:01:40,270 --> 00:01:47,650
+Finally after throwing as you can guess if our business met throws an exception then this particular
+
+18
+00:01:47,650 --> 00:01:49,990
+advise will be applied.
+
+19
+00:01:50,170 --> 00:01:54,760
+Remember these annotations are not applied on our business metrics.
+
+20
+00:01:55,000 --> 00:02:02,050
+We are playing these annotations on the aspect classis we create and the methods inside them which are
+
+21
+00:02:02,070 --> 00:02:03,310
+our advisors.
+

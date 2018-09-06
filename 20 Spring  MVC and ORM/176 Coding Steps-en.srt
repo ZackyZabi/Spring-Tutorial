@@ -1,0 +1,76 @@
+1
+00:00:00,370 --> 00:00:04,920
+In this lecture I will walk you through the simple coding steps that you will be following in the next
+
+2
+00:00:04,920 --> 00:00:07,560
+few lectures to create our application.
+
+3
+00:00:07,650 --> 00:00:14,120
+The very first step is to create a moral class called user that represents that database table will
+
+4
+00:00:14,280 --> 00:00:21,020
+mark this moral class with the hibernate annotations the JPA annotations to make it entity so that Hibernate
+
+5
+00:00:21,030 --> 00:00:25,980
+can stick to the database and read it back from the database.
+
+6
+00:00:25,980 --> 00:00:31,890
+Next we'll start courting our players for the application starting with data access layer.
+
+7
+00:00:31,910 --> 00:00:38,670
+So we just layer and then that controller the data access layer will how that user doll which is an
+
+8
+00:00:38,670 --> 00:00:41,270
+interface implemented by user impulse.
+
+9
+00:00:41,280 --> 00:00:49,180
+You already know this pattern you use it in spring JTB Z as of last spring or autumn it uses the hibernate
+
+10
+00:00:49,210 --> 00:00:57,770
+template to perform the database work using the model class that we create next to the services layer
+
+11
+00:00:57,800 --> 00:01:04,820
+typically holds the business logic will create a user service and use a service impellor which implements
+
+12
+00:01:04,820 --> 00:01:09,280
+that interface and it uses the user are dull.
+
+13
+00:01:09,530 --> 00:01:15,580
+Finally the controller class will use the services provided the methods provided by the user service.
+
+14
+00:01:15,590 --> 00:01:18,800
+So each layer here depends on our users.
+
+15
+00:01:18,950 --> 00:01:26,300
+The other layer they have it has a relationship and within the layer they have an easy relationship
+
+16
+00:01:26,390 --> 00:01:34,350
+has an easy let's get started in the next lecture by creating all the classes and interfaces for these
+
+17
+00:01:34,350 --> 00:01:35,730
+layers across these layers.
+
+18
+00:01:35,730 --> 00:01:41,520
+First we'll carry the mordent then in the next few letters we will create all the classes and then we'll
+
+19
+00:01:41,520 --> 00:01:42,860
+implement the methods.
+

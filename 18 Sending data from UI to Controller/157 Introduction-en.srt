@@ -1,0 +1,128 @@
+1
+00:00:00,300 --> 00:00:06,100
+In this lecture, you will learn how to send the data from the UI to the Controller.
+
+2
+00:00:06,150 --> 00:00:14,050
+It can be done in two ways, one using HTML form, two using query parameters.
+
+3
+00:00:14,050 --> 00:00:20,300
+Let's explore the HTML form concept first. When we submit form data from the web browser,
+
+4
+00:00:21,190 --> 00:00:28,920
+we can access that data in our Controller class as an object. When we submit a HTML form, the Spring
+
+5
+00:00:28,920 --> 00:00:35,460
+container does four things. It will first read all the data that is submitted that comes in the request
+
+6
+00:00:35,670 --> 00:00:44,140
+using the request.getParameter methods. Once it reads them it will convert them into the appropriate
+
+7
+00:00:44,140 --> 00:00:50,860
+Java type using integer.parseInt, double.parseDouble and all the other parse methods that are
+
+8
+00:00:50,980 --> 00:00:51,830
+available.
+
+9
+00:00:52,060 --> 00:00:57,310
+Once parsed, it will create a object of the model class that we created.
+
+10
+00:00:57,310 --> 00:01:00,310
+For example, in this scenario here,
+
+11
+00:01:00,430 --> 00:01:07,390
+this is the user information that is being submitted and we create a class called user, which the
+
+12
+00:01:07,390 --> 00:01:12,970
+container will create an object of and it will set all the values that come in automatically into that
+
+13
+00:01:13,060 --> 00:01:14,050
+object.
+
+14
+00:01:14,050 --> 00:01:22,420
+It will then handover that object by setting the values to the Controller. To get this to work, to get this
+
+15
+00:01:22,420 --> 00:01:23,590
+whole thing to work,
+
+16
+00:01:23,590 --> 00:01:29,370
+we'll have to follow certain steps starting with defining a model class.
+
+17
+00:01:29,380 --> 00:01:40,230
+We first need to define a class, like user, in which the number of fields should exactly match the number
+
+18
+00:01:40,230 --> 00:01:47,550
+of fields in the HTML form. And also the names that we use in the HTML form should match the names
+
+19
+00:01:47,550 --> 00:01:50,370
+that we have in the Java class.
+
+20
+00:01:50,370 --> 00:01:55,800
+These two are very important. Names should match, the number of fields in the form should match the number
+
+21
+00:01:55,800 --> 00:01:59,550
+of fields in the class that we create.
+
+22
+00:01:59,580 --> 00:02:05,910
+Once we do that, the container will automatically read the data that comes in, creates an object of this
+
+23
+00:02:05,910 --> 00:02:14,480
+model, sets the values and it hands it over to the Controller. To read those values inside the Controller,
+
+24
+00:02:14,490 --> 00:02:20,970
+we use the @ModelAttribute annotation on the method parameters.
+
+25
+00:02:21,100 --> 00:02:27,730
+When we create methods in the Controller, we are going to use the @ModelAttribute and add a parameter
+
+26
+00:02:28,120 --> 00:02:28,660
+to it
+
+27
+00:02:29,430 --> 00:02:33,900
+which will automatically have this object given by the container.
+
+28
+00:02:34,050 --> 00:02:40,470
+To summarize, in this lecture you have learnt that there are two ways to send data from UI to the Controller,
+
+29
+00:02:40,470 --> 00:02:46,800
+HTML form and Query parameters. When we use HTML form the container automatically converts
+
+30
+00:02:46,800 --> 00:02:52,660
+it into an object so that the Controller can deal with objects directly instead of doing request.getParameter
+
+31
+00:02:52,690 --> 00:02:59,880
+etc; And to get that to work, we need to define a Model class,  follow certain rules and use the
+
+32
+00:03:00,140 --> 00:03:04,130
+@ModelAttribute on our method parameters.
+

@@ -1,0 +1,64 @@
+1
+00:00:00,570 --> 00:00:03,780
+We have used annotations everywhere in our project.
+
+2
+00:00:03,990 --> 00:00:08,910
+But we haven't enabled them in their dispatcher so servlet dart example to do that.
+
+3
+00:00:08,910 --> 00:00:09,930
+Go to the dispatcher.
+
+4
+00:00:10,000 --> 00:00:16,030
+Let go up top right here right after the bean starting element.
+
+5
+00:00:16,110 --> 00:00:25,090
+You know how to do it using text call and component scan and the base package.
+
+6
+00:00:25,310 --> 00:00:31,950
+In this case we have our POJO classes spread across the different packages for the different layers.
+
+7
+00:00:32,060 --> 00:00:40,610
+So we need to pick a base package which could be putting NBC Autum up to that or even user because controller
+
+8
+00:00:41,100 --> 00:00:47,930
+Dow Dow temple and services they are all sub packages off the user which is already you scarce or right
+
+9
+00:00:47,930 --> 00:00:50,300
+click on any one of the packages.
+
+10
+00:00:50,580 --> 00:00:56,300
+Autorefractor rename say that is better so that's fine.
+
+11
+00:00:56,300 --> 00:00:59,780
+Grab it up to the user handsel
+
+12
+00:01:03,740 --> 00:01:09,440
+come back to the dispatcher servlet paste that package up to the user and you can close this context
+
+13
+00:01:09,440 --> 00:01:11,300
+component's can right there.
+
+14
+00:01:11,540 --> 00:01:14,000
+Contradictive to format.
+
+15
+00:01:14,080 --> 00:01:20,220
+So this spring that you should scan all the back pages of this particular package.
+
+16
+00:01:20,230 --> 00:01:22,580
+This package as well as its sub package is.
+

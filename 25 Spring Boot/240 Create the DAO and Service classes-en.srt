@@ -1,0 +1,104 @@
+1
+00:00:00,390 --> 00:00:07,350
+In this lecture, you will start working on a tiny little use case which is to create a DAO class and a service
+
+2
+00:00:07,350 --> 00:00:14,250
+class and inject the DAO into the service using Spring Boot so that we can see a standalone application
+
+3
+00:00:14,250 --> 00:00:15,720
+running end to end.
+
+4
+00:00:15,780 --> 00:00:21,260
+I'm going to explain the entire flow once again once you complete this use case.
+
+5
+00:00:21,360 --> 00:00:27,970
+So let's get started by creating a DAO class, the Data Access Layer class.
+
+6
+00:00:27,980 --> 00:00:34,860
+We're not going to put any database logic into it. Right click on this package here, say New -> Class.
+
+7
+00:00:34,960 --> 00:00:45,000
+Call it DAO and put it in a package called .dao which is a subpackage of Spring Boot. Finish. Dao will
+
+8
+00:00:45,210 --> 00:00:49,470
+have one single method, public void create(){
+
+9
+00:00:55,910 --> 00:01:03,320
+Use a sysout. Within double quotes, Created.
+
+10
+00:01:03,360 --> 00:01:07,600
+It simply displays a string.
+
+11
+00:01:07,750 --> 00:01:14,880
+Next, right click, create a new service. New -> Class, Service.
+
+12
+00:01:15,230 --> 00:01:18,740
+This service will use the services provided by the Dao.
+
+13
+00:01:18,750 --> 00:01:24,780
+We are going to autowire the Dao into the service using constructor injection.
+
+14
+00:01:25,820 --> 00:01:28,230
+This needs the dao to function. Dao dao;
+
+15
+00:01:28,260 --> 00:01:36,820
+Service(). I am using constructor injection here so that we can atleast see some text being printed whenever
+
+16
+00:01:36,870 --> 00:01:47,380
+these beans are created. @Autowired and this constructor takes a Dao dao.
+
+17
+00:01:47,370 --> 00:01:52,480
+this.dao = dao;
+
+18
+00:01:56,120 --> 00:01:57,790
+Save it.
+
+19
+00:01:58,460 --> 00:02:05,520
+Hit control+1 to import the dao because it's in a different package and all the errors are gone. Add a method
+
+20
+00:02:05,520 --> 00:02:12,580
+public void save(){ and this method calls the dao.create().
+
+21
+00:02:12,600 --> 00:02:14,940
+That's all the service does.
+
+22
+00:02:15,380 --> 00:02:24,590
+So you have successfully created the Dao. You need to mark this with @Component and the same for @Service
+
+23
+00:02:24,590 --> 00:02:29,960
+You can either mark it with @Service or @Component annotations from Spring.
+
+24
+00:02:33,180 --> 00:02:34,020
+And that's it.
+
+25
+00:02:34,020 --> 00:02:36,980
+So you have created a service and a Dao. In the next lecture,
+
+26
+00:02:37,080 --> 00:02:40,610
+we'll wire these two and come up with a test class.
+

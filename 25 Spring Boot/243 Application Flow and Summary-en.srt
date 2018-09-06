@@ -1,0 +1,168 @@
+1
+00:00:00,330 --> 00:00:06,190
+Now that you have learnt all the important concepts of Spring boot and also saw a standalone Spring
+
+2
+00:00:06,190 --> 00:00:11,340
+Boot application working end to end, I will summarize all the concepts while walking you through the
+
+3
+00:00:11,340 --> 00:00:13,040
+flow of our application.
+
+4
+00:00:13,380 --> 00:00:21,460
+You have started by creating a Spring Boot project by going to the Spring initialiser website. Once that created
+
+5
+00:00:21,460 --> 00:00:27,220
+the project, which is the Maven project, you have imported it into Eclipse and the very starting point is the
+
+6
+00:00:27,220 --> 00:00:28,540
+pom.xml.
+
+7
+00:00:28,540 --> 00:00:36,720
+If you open it, you have seen it has the starter dependencies. Spring Boot gives us Starter dependencies
+
+8
+00:00:36,970 --> 00:00:44,290
+or jars or the starter poms, which when used will pull all the additional dependencies for us. Instead
+
+9
+00:00:44,290 --> 00:00:46,410
+of us including all the dependencies
+
+10
+00:00:46,430 --> 00:00:48,500
+in our Maven project's pom.xml,
+
+11
+00:00:48,820 --> 00:00:57,200
+we include the starter poms and automatically Maven will pull the other dependencies. If you see, there
+
+12
+00:00:57,200 --> 00:00:59,920
+are tons of jars here under Maven dependencies,
+
+13
+00:00:59,990 --> 00:01:06,320
+but we didn't include all of them in our Maven. They are transitively pulled because these projects in turn tell
+
+14
+00:01:06,320 --> 00:01:11,090
+Maven that we need all these jars. When you are building a web application,
+
+15
+00:01:11,090 --> 00:01:16,940
+you will use a starter for web and that will bring a few other additional jars that are required to
+
+16
+00:01:16,940 --> 00:01:19,720
+build a Spring web application.
+
+17
+00:01:19,860 --> 00:01:26,670
+You have then looked at the Spring application or SpringbootApplication project or SpringbootApplication Java class
+
+18
+00:01:26,670 --> 00:01:28,260
+that got generated.
+
+19
+00:01:28,350 --> 00:01:29,170
+It is market with
+
+20
+00:01:29,220 --> 00:01:36,820
+@SpringbootApplication, telling the Spring container that this is the starting point of your Spring application.
+
+21
+00:01:36,840 --> 00:01:44,040
+It has a main method which will be run by the container which inturn uses this particular class as
+
+22
+00:01:44,040 --> 00:01:46,000
+a configuration.
+
+23
+00:01:46,100 --> 00:01:51,110
+So this is the starting point of your Spring Boot application. Every Spring Boot application will have
+
+24
+00:01:51,200 --> 00:01:52,790
+a class that is marked with
+
+25
+00:01:52,780 --> 00:01:59,510
+@SpringbootApplication. You have then worked on a tiny little use case which is to create two beans, a Dao
+
+26
+00:01:59,570 --> 00:02:04,200
+with a create method and service with a save method.
+
+27
+00:02:04,280 --> 00:02:11,360
+The service uses the Dao and we have then went to the test class which also got generated.
+
+28
+00:02:11,380 --> 00:02:15,850
+It uses the SpringRunner which is a JUnit runner for Spring.
+
+29
+00:02:15,850 --> 00:02:23,690
+This class is marked with SpringBootTest and it has a test method. Inside the test method,
+
+30
+00:02:23,690 --> 00:02:28,870
+you have retrieved the ApplicationContext by autowiring it. And you got the service bean and invoked the
+
+31
+00:02:28,870 --> 00:02:31,480
+save method. When this test is run,
+
+32
+00:02:31,690 --> 00:02:35,180
+since you have marked this test with @SpringBootTest,
+
+33
+00:02:35,230 --> 00:02:37,740
+it knows that it should look for a class
+
+34
+00:02:37,750 --> 00:02:43,120
+in your application marked with SpringbootApplication and use that class
+
+35
+00:02:44,390 --> 00:02:46,180
+to run your application.
+
+36
+00:02:46,360 --> 00:02:53,530
+So that is what happened. And when this class is run, the Spring containers scans through all the the,
+
+37
+00:02:53,560 --> 00:02:57,280
+this package as well as all subpackages for the Spring components.
+
+38
+00:02:57,280 --> 00:03:03,800
+That is how this annotation is created by Spring guys. And it has scanned through, it find these beans.
+
+39
+00:03:03,910 --> 00:03:08,970
+it wires them. And then in the test we invoke the save method.
+
+40
+00:03:09,070 --> 00:03:13,180
+We didn't do any assertions but we simply invoked it and it worked.
+
+41
+00:03:13,180 --> 00:03:20,470
+So to summarize, you have successfully created, learnt all the concepts of Spring Boot and you've seen it in
+
+42
+00:03:20,770 --> 00:03:21,530
+action.
+

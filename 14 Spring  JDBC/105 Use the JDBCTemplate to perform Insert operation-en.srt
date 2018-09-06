@@ -1,0 +1,184 @@
+1
+00:00:00,190 --> 00:00:05,850
+In this lecture you will create the test class and we insert a card into our database table that is
+
+2
+00:00:05,850 --> 00:00:08,780
+the Employee table which doesn't have any records.
+
+3
+00:00:08,790 --> 00:00:14,020
+Currently if we exclude the SAT ACT right now it doesn't break down any ID cards.
+
+4
+00:00:14,220 --> 00:00:21,600
+So let's insert a card by using the basic template in our best plus create a new test last night on
+
+5
+00:00:21,610 --> 00:00:33,280
+the package new class based with the main Mathare finish by now you know each and every step to create
+
+6
+00:00:33,280 --> 00:00:36,730
+a test class application context.
+
+7
+00:00:36,970 --> 00:00:46,440
+Context is equal to a new class but some model application context has in the configuration conflict
+
+8
+00:00:46,740 --> 00:00:55,140
+darte example the package from here based the package slash If you want to I wired this package thing
+
+9
+00:00:55,140 --> 00:00:59,350
+you can copy the config file directly under the SLC folder.
+
+10
+00:00:59,550 --> 00:01:08,350
+In that case we need not you the entire package you know that from spring core use forward slash.
+
+11
+00:01:08,830 --> 00:01:15,460
+But since we are creating so many config files we better keep them under package just under one.
+
+12
+00:01:15,920 --> 00:01:18,760
+Add the import for application context.
+
+13
+00:01:18,790 --> 00:01:23,180
+You can also call this DBI context or beby conflict dot.
+
+14
+00:01:23,380 --> 00:01:30,210
+If you want to do context Daut get B in the B name.
+
+15
+00:01:30,280 --> 00:01:33,980
+If you remember is JTB template.
+
+16
+00:01:34,480 --> 00:01:40,990
+The capital Ribisi template semi-colon.
+
+17
+00:01:41,000 --> 00:01:47,820
+Control one assign statement be a local variable that will make it the object change to JTB see it control
+
+18
+00:01:47,820 --> 00:01:50,370
+space for template from Spring Framework.
+
+19
+00:01:50,370 --> 00:01:57,900
+Select that one again add cost to get EBC template been.
+
+20
+00:01:58,170 --> 00:02:01,590
+Call it Ribisi template.
+
+21
+00:02:02,020 --> 00:02:07,960
+Now we have the Daily Beast template we can use the update operation that are overloaded wash and software
+
+22
+00:02:08,050 --> 00:02:18,030
+update and we are going to use one that big sequel and variable arguments pass in the sequel.
+
+23
+00:02:18,070 --> 00:02:25,780
+You can create a string sequel spritely string Escurial is equal to insert within double court insert
+
+24
+00:02:25,930 --> 00:02:30,940
+into the table name which is employee values.
+
+25
+00:02:30,940 --> 00:02:39,790
+If you go to the table its employees small and we have three fields Id first name and last name employee.
+
+26
+00:02:39,820 --> 00:02:48,890
+All small values within brackets question mark comma question mark comma question mark.
+
+27
+00:02:48,930 --> 00:02:53,050
+Close the double quotes so I am not providing the values here.
+
+28
+00:02:53,050 --> 00:02:54,920
+If you know the Daily Beast prepared statement.
+
+29
+00:02:54,920 --> 00:03:01,600
+This question marks are placeholders and will provide the values here so pass in the Escuela to the
+
+30
+00:03:01,600 --> 00:03:08,620
+update method as the first parameter and the next three arguments are the values which will be replacing
+
+31
+00:03:08,620 --> 00:03:10,100
+the question marks.
+
+32
+00:03:10,200 --> 00:03:12,030
+So the first value is the ID.
+
+33
+00:03:12,050 --> 00:03:17,670
+Let's say the here in argument one is diety.
+
+34
+00:03:18,110 --> 00:03:22,750
+Or you can create a new bigger one diety.
+
+35
+00:03:22,760 --> 00:03:24,030
+That's the first argument.
+
+36
+00:03:24,160 --> 00:03:31,970
+Comma part is the first name you can use your first name and sort of part and last name is period.
+
+37
+00:03:32,230 --> 00:03:38,160
+I'm passing in three parameters which will be used by spring to replace these three question marks when
+
+38
+00:03:38,170 --> 00:03:42,350
+it prepares the prepared statement and it's and this update.
+
+39
+00:03:42,520 --> 00:03:49,060
+It returns the integer value back which tells us the number of cards that got inserted or updated or
+
+40
+00:03:49,090 --> 00:03:49,880
+deleted.
+
+41
+00:03:50,050 --> 00:03:54,510
+End result is equal to that 6 out
+
+42
+00:03:57,480 --> 00:04:08,960
+number of records inserted our colon space plus the result and that's it.
+
+43
+00:04:09,040 --> 00:04:21,980
+And third shift to format right click on and see job allocation and the inserted number of girds inserted.
+
+44
+00:04:21,990 --> 00:04:23,990
+Are 1 go to the database
+
+45
+00:04:27,000 --> 00:04:32,120
+the select one more time and you see that data 1 but not in the period.
+
+46
+00:04:32,210 --> 00:04:34,470
+I will explain the flow in that next lecture.
+

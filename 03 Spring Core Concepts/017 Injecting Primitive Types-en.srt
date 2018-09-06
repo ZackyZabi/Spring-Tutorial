@@ -1,0 +1,48 @@
+1
+00:00:00,240 --> 00:00:06,870
+The primitive type dependencies can be injected using constructor injection or setter injection and
+
+2
+00:00:06,870 --> 00:00:08,990
+using the value tag.
+
+3
+00:00:09,300 --> 00:00:16,310
+Here I have a class called product which needs or which has a dependency called ID which is of type integer
+
+4
+00:00:16,310 --> 00:00:22,830
+we are injecting it using the property element that is through setter injection and using the value
+
+5
+00:00:22,840 --> 00:00:25,120
+tag we are providing a value to it.
+
+6
+00:00:26,470 --> 00:00:29,650
+The value can be used as an xml element.
+
+7
+00:00:29,650 --> 00:00:35,740
+It can also be used as an attribute instead of defining a separate element here on the property element.
+
+8
+00:00:35,770 --> 00:00:42,340
+We can use a attribute called value and assign this value to it. A third and compact way of
+
+9
+00:00:42,410 --> 00:00:50,650
+assigning or injecting primitive types is using p schema or P namespace with very few lines of xml will
+
+10
+00:00:50,650 --> 00:00:53,210
+be able to inject values using P schema.
+
+11
+00:00:53,290 --> 00:00:59,530
+Right on this bean element we use the P schema attributes you we will learn all these three ways and work
+
+12
+00:00:59,530 --> 00:01:01,600
+on them in the next few lectures.
+

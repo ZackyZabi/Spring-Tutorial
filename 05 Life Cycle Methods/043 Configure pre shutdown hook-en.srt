@@ -1,0 +1,127 @@
+0
+00:00.330 --> 00:06.040
+The previous lecture you have successfully configured and seen the init method in action the result
+
+1
+00:06.090 --> 00:12.310
+object was instantiated the setter methods were invoked and then our init method which is the high method was invoked
+
+2
+00:12.330 --> 00:13.990
+then we have used the object
+
+3
+00:14.160 --> 00:19.540
+but at the end the destroy method or the bye method on the patient wasn't invoked.
+
+4
+00:19.560 --> 00:25.100
+So in this lecture you will see why that is the reason that the bye method was not invoked all though we
+
+5
+00:25.110 --> 00:27.290
+configured it and the config dot xml 
+
+6
+00:27.510 --> 00:31.620
+is that the spring container before it shuts down.
+
+7
+00:31.620 --> 00:35.130
+We need to tell it that it needs to invoke the destroy method
+
+8
+00:35.130 --> 00:44.520
+we need to configure or register a pre destruction hook or pre shutdown hook.
+
+9
+00:44.610 --> 00:48.460
+We do that programmatically in our test dot java
+
+10
+00:50.350 --> 00:57.020
+on the context we need to tell the container or we need to enable a pre destruction hook
+
+11
+00:57.130 --> 00:59.670
+before the container gets destroyed.
+
+12
+00:59.770 --> 01:04.620
+We should it should also invoke the destroy methods
+
+13
+01:04.660 --> 01:07.220
+That is exactly what we are going to tell the container.
+
+14
+01:07.300 --> 01:15.970
+We do that using the context but the application context class does not have the registration method to configure
+
+15
+01:16.030 --> 01:24.370
+the pre shutdown hook we need to do it on the abstract application context is a parent class of application
+
+16
+01:24.370 --> 01:25.840
+context abstract.
+
+17
+01:25.840 --> 01:28.540
+So you need to abstract at the beginning.
+
+18
+01:28.540 --> 01:35.010
+hit control one to import that from Spring Framework do a control shift O to organize the imports.
+
+19
+01:36.010 --> 01:39.240
+Now context dot register.
+
+20
+01:39.290 --> 01:40.110
+Shut down.
+
+21
+01:40.100 --> 01:40.800
+Hook.
+
+22
+01:40.870 --> 01:47.320
+So this is a method that we need to invoke on the abstract application context which tells the spring
+
+23
+01:47.320 --> 01:51.630
+container that it needs to invoke the destroy methods
+
+24
+01:51.710 --> 01:54.610
+we are enabling that feature
+
+25
+01:54.670 --> 01:55.760
+Run the test again.
+
+26
+01:57.660 --> 02:03.080
+And this time we will see that it goes inside the by method as well.
+
+27
+02:03.270 --> 02:08.190
+So the setters get invoked after the object creation it goes into the init method
+
+28
+02:08.250 --> 02:10.890
+We use the object in our program as we need it.
+
+29
+02:10.920 --> 02:13.320
+In this case we are simply displaying the details.
+
+30
+02:13.470 --> 02:16.970
+Then it also invokes the destroy method 
+
+31
+02:17.670 --> 02:22.820
+And from that bye method we are getting this text which sits inside the bye method.

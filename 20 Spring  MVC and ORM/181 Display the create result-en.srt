@@ -1,0 +1,32 @@
+1
+00:00:00,240 --> 00:00:06,150
+This lecture will display the result in the view we are sending this result back saying user created
+
+2
+00:00:06,150 --> 00:00:09,900
+with ID do the user registration got GSB.
+
+3
+00:00:09,990 --> 00:00:16,370
+So go to the GSB page and there have been James Speace open and below the form here.
+
+4
+00:00:16,500 --> 00:00:24,540
+Simply display the result dollar to use the expression language within Brace's or flower records or
+
+5
+00:00:24,660 --> 00:00:29,160
+result that set that will display the end result to the user.
+
+6
+00:00:29,160 --> 00:00:31,100
+Here we can add a line break.
+
+7
+00:00:32,560 --> 00:00:38,440
+So that the result will be in a new line so it has successfully finished displaying the result to the
+
+8
+00:00:38,560 --> 00:00:39,490
+end user.
+

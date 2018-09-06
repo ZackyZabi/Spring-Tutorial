@@ -1,0 +1,144 @@
+1
+00:00:00,640 --> 00:00:06,260
+From the spring container introduction lecture you have learnt that the spring container takes two inputs.
+
+2
+00:00:06,260 --> 00:00:09,170
+The first is the Java Beans or the Java classes
+
+3
+00:00:09,170 --> 00:00:13,530
+in our application of which the container will create the objects of
+
+4
+00:00:13,760 --> 00:00:19,280
+and the second is xml configuration file which we create through which we tell the container
+
+5
+00:00:19,520 --> 00:00:22,060
+how it should do the dependency injection
+
+6
+00:00:22,100 --> 00:00:25,570
+when it creates these objects. In this lecture,
+
+7
+00:00:25,670 --> 00:00:31,010
+I'm going to quickly show you a couple of these configuration files which you will be creating from
+
+8
+00:00:31,010 --> 00:00:33,480
+scratch starting the next section.
+
+9
+00:00:36,330 --> 00:00:43,440
+The root element of the spring configuration xml file is the beans element and it wraps all the other
+
+10
+00:00:43,440 --> 00:00:45,200
+elements inside it.
+
+11
+00:00:46,240 --> 00:00:51,610
+It has several name spaces here and prefixes for them the default name space is right here xmlnx
+
+12
+00:00:51,610 --> 00:00:54,040
+and that stands for xml namespace.
+
+13
+00:00:54,040 --> 00:01:00,500
+All the elements that we use here without any prefix belong to this particular namespace.
+
+14
+00:01:00,730 --> 00:01:06,090
+spring framework dot org forward slash schema slash beans.
+
+15
+00:01:06,180 --> 00:01:15,630
+There are several other name spaces and prefixes defined here like context C schema B schema util etc. which
+
+16
+00:01:15,670 --> 00:01:19,580
+you'll be learning and using in the next few sections.
+
+17
+00:01:20,580 --> 00:01:26,560
+The bean element is what we use to define a particular bean or a class.
+
+18
+00:01:26,610 --> 00:01:32,800
+Spring will create an instance of this particular class which we define here and we also assign it a
+
+19
+00:01:32,970 --> 00:01:33,960
+name.
+
+20
+00:01:33,960 --> 00:01:38,150
+Again you will be typing all this from scratch in the next few lectures.
+
+21
+00:01:38,400 --> 00:01:42,640
+when we use constructor injection here for this addition class.
+
+22
+00:01:42,660 --> 00:01:45,650
+It requires two arguments two numbers.
+
+23
+00:01:45,840 --> 00:01:47,760
+I'm using constructor injection.
+
+24
+00:01:47,940 --> 00:01:55,170
+So I'm using elements sub element for bean called constructor hypen arg im providing the dependency.
+
+25
+00:01:55,170 --> 00:02:00,980
+Similarly I am using it again to provide the second parameter to that constructor.
+
+26
+00:02:01,170 --> 00:02:06,540
+If we are using setter injection this is how it would look like instead of the constructor arg
+
+27
+00:02:06,800 --> 00:02:15,210
+inside the bean element the subelements will be property a name and a value, the spring container will then do the
+
+28
+00:02:16,120 --> 00:02:18,680
+setter injection instead of constructor injection.
+
+29
+00:02:18,680 --> 00:02:26,800
+It will invoke the set numb one method on this object and set numb 2 method and inject this value.
+
+30
+00:02:27,140 --> 00:02:33,200
+Whereas incase of constructor it will invoke the parameterized constructor and it'll pass in these two values
+
+31
+00:02:33,200 --> 00:02:35,110
+to that constructor.
+
+32
+00:02:35,450 --> 00:02:41,410
+So in this lecture you have learnt about the spring configuration file which is a dot xml file,
+
+33
+00:02:42,320 --> 00:02:46,280
+the root element is beans which has all the namespace is defined.
+
+34
+00:02:46,490 --> 00:02:52,450
+And one of the child elements which you use the most to define classes and objects is the bean.
+
+35
+00:02:52,700 --> 00:02:59,100
+Each bean element tells the spring that it should create an object of a particular class by using either
+
+36
+00:02:59,100 --> 00:03:02,350
+constructor injection or setter injection.
+

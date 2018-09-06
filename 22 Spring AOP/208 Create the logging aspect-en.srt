@@ -1,0 +1,40 @@
+1
+00:00:00,330 --> 00:00:07,340
+This lecture you will create one aspect that is a class and market with that aspect annotation aspect
+
+2
+00:00:07,370 --> 00:00:19,350
+just right click on the source for the new class the class name will be logging aspect in the package
+
+3
+00:00:19,430 --> 00:00:22,800
+spring it will be Daut aspects.
+
+4
+00:00:23,100 --> 00:00:25,050
+We are going to create only one aspect here.
+
+5
+00:00:25,060 --> 00:00:35,200
+But if you want to create more aspects you can put them in the same package finish market with it.
+
+6
+00:00:35,470 --> 00:00:40,810
+Aspect is the annotation from our dot aspect j dot Lange.
+
+7
+00:00:40,980 --> 00:00:43,690
+Our annotation Daut aspect.
+
+8
+00:00:43,990 --> 00:00:48,010
+So it's not easy to create it aspect class and this annotation here.
+
+9
+00:00:49,030 --> 00:00:55,330
+Insurers are Pells that this particular class is it aspect and the next lecture will create our fullest
+
+10
+00:00:55,380 --> 00:00:57,570
+Edwy is inside this aspect.
+

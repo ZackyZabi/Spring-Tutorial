@@ -1,0 +1,192 @@
+1
+00:00:00,150 --> 00:00:05,340
+In this lecture you will create an object in two simple steps. That is, you are going to create an instructor
+
+2
+00:00:05,340 --> 00:00:12,390
+class, mark it with the @Component annotation and then create the configuration which will have the context:
+
+3
+00:00:12,390 --> 00:00:14,050
+component-scan element.
+
+4
+00:00:14,130 --> 00:00:22,450
+And ofcourse finally you will create a test class to see it all in action. Go to Eclipse, right click,
+
+5
+00:00:22,460 --> 00:00:28,120
+create a new class called Instructor or Teacher.
+
+6
+00:00:28,540 --> 00:00:44,810
+com.bharath.springcoreadvanced.stereotype.annotations. Finish. The instructor will
+
+7
+00:00:44,810 --> 00:00:51,710
+have an int id to start with, the String name.
+
+8
+00:00:51,830 --> 00:00:59,180
+Let's start with those two fields. Control+1, create getter and setters. Control+1 for the name, create getters and
+
+9
+00:00:59,180 --> 00:01:00,940
+setters as well.
+
+10
+00:01:01,040 --> 00:01:05,110
+Hit Ok. Control+shift+f to format. Source,
+
+11
+00:01:05,110 --> 00:01:07,280
+generate the toString method.
+
+12
+00:01:07,680 --> 00:01:15,130
+OK and we have the toString method. The second step is to create the configuration file. Grab the earlier
+
+13
+00:01:15,130 --> 00:01:22,680
+configuration, paste it. Open it. Get rid of everything in the configuration.
+
+14
+00:01:22,680 --> 00:01:29,110
+We need only one single element, that is the beauty of using stereotype annotations. From the context
+
+15
+00:01:29,110 --> 00:01:37,540
+namespace, it is not annotation-config, it is context:component-scan. We can close it right here.
+
+16
+00:01:37,540 --> 00:01:43,760
+We don't need an ending element. And for the attribute base-package, we should provide the package
+
+17
+00:01:43,850 --> 00:01:49,130
+the Spring container needs to scan for the classes marked with @Component annotation.
+
+18
+00:01:49,330 --> 00:01:52,870
+We haven't marked our instructor with the @Component annotation.
+
+19
+00:01:52,930 --> 00:02:05,070
+Let's do that. @Compo, control+space from org.springframework.stereotype. This is the package,
+
+20
+00:02:05,110 --> 00:02:08,730
+org.springframework.stereotype.Component is the annotation.
+
+21
+00:02:08,740 --> 00:02:16,060
+Once we do that, grab this package name and put it in the configuration file.
+
+22
+00:02:16,060 --> 00:02:23,720
+We can also use subpackages even if you say com.bharath.springcoreadvanced, Spring container will
+
+23
+00:02:23,770 --> 00:02:25,960
+scan the sub packages of it as well.
+
+24
+00:02:26,020 --> 00:02:30,120
+But let's be very specific and give the complete package.
+
+25
+00:02:30,120 --> 00:02:35,100
+Remove any spaces and that's it. The last step is to create a test.
+
+26
+00:02:35,100 --> 00:02:43,710
+This particular element here also internally enables the annotation config. So it also enables all the
+
+27
+00:02:43,710 --> 00:02:46,730
+annotations and then it also scans this package.
+
+28
+00:02:46,740 --> 00:02:51,090
+We need not use the context:annotation-config anymore.
+
+29
+00:02:51,180 --> 00:02:53,910
+You are welcome to use it, but it is not required.
+
+30
+00:02:55,780 --> 00:02:56,910
+Copy the test.
+
+31
+00:02:57,040 --> 00:02:58,440
+That is the last step.
+
+32
+00:02:58,690 --> 00:03:04,750
+Paste it. Open the test. We've got to change the package names as well as the objects.
+
+33
+00:03:04,750 --> 00:03:07,140
+The object is Instructor.
+
+34
+00:03:07,600 --> 00:03:10,160
+Copy it, paste it on the left side.
+
+35
+00:03:10,720 --> 00:03:18,880
+Call it instructor, and display the instructor. The bean name if you remember, by default,
+
+36
+00:03:18,920 --> 00:03:25,580
+if you go back to the theory portion, Spring will create an object with this name, the same name as the
+
+37
+00:03:26,050 --> 00:03:27,070
+class,
+
+38
+00:03:27,160 --> 00:03:35,630
+but in camel case. So instructor will be the name of the bean. Grab the package name from here.
+
+39
+00:03:35,660 --> 00:03:37,860
+stereotype.annotations.
+
+40
+00:03:37,880 --> 00:03:45,170
+Copy that, get rid of standalone and collections or whichever package you have and change it to
+
+41
+00:03:45,210 --> 00:03:56,530
+stereotype/annotations/config.xml. And that's it. Right click, run the java application and
+
+42
+00:03:56,530 --> 00:03:57,940
+you will see the instructor object.
+
+43
+00:03:57,940 --> 00:04:01,580
+Ofcourse it has the default values, we are not injecting any values.
+
+44
+00:04:01,580 --> 00:04:04,360
+I will show you how to inject values later on.
+
+45
+00:04:04,390 --> 00:04:10,770
+To summarize, in this lecture you have created an object or a class called Instructor. You have marked
+
+46
+00:04:10,780 --> 00:04:17,020
+it with @Component annotation which tells the Spring container that an object of this class can be
+
+47
+00:04:17,020 --> 00:04:23,990
+created or should be created. And the second step was in a configuration file, you've told Spring which packages
+
+48
+00:04:24,010 --> 00:04:31,530
+it needs to scan for the classes to create objects for using the context:component-scan.
+

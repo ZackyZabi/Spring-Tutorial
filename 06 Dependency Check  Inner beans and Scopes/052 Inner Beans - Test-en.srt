@@ -1,0 +1,183 @@
+0
+00:00.140 --> 00:06.630
+In this lecture you will finish the last step which is creating a test and see the inner  beans in action.
+
+1
+00:06.690 --> 00:11.520
+We have started by right clicking on the package say new class let's do it from scratch.
+
+2
+00:11.510 --> 00:13.540
+It has been a while since we wrote a test 
+
+3
+00:13.820 --> 00:22.470
+Select the main method finish the very first step is to create the spring container or get access to the
+
+4
+00:22.470 --> 00:26.110
+spring container we do that using application context.
+
+5
+00:26.220 --> 00:35.810
+Context is equal to new class path xml application context that takes a configuration file which
+
+6
+00:35.820 --> 00:40.720
+is the config Dot xml with the entire package.
+
+7
+00:40.800 --> 00:48.790
+So copy that package name and paste it right before config add a forward slash and change all the dots to
+
+8
+00:49.050 --> 00:50.050
+forward slashes
+
+9
+00:57.370 --> 01:02.640
+the spring container and the classpath xml application context will search for this file on the
+
+10
+01:02.730 --> 01:03.060
+classpath
+
+11
+01:03.060 --> 01:09.980
+at this path control one import the application context from Spring.
+
+12
+01:09.980 --> 01:13.520
+Second step is to retrieve the bean from the container.
+
+13
+01:13.520 --> 01:21.110
+We use the get bean method and pass in the B name which is employee.
+
+14
+01:21.440 --> 01:23.380
+We haven't added the two string methods,
+
+15
+01:23.420 --> 01:31.820
+So let's go to employee along with ID and address we need along with the setter and getter methods lets add a
+
+16
+01:31.820 --> 01:33.000
+two string method.
+
+17
+01:33.020 --> 01:36.640
+Source generate two string hit.
+
+18
+01:36.710 --> 01:37.440
+OK.
+
+19
+01:37.880 --> 01:39.010
+That will do it.
+
+20
+01:39.050 --> 01:40.720
+Same for address.
+
+21
+01:40.820 --> 01:44.400
+Source generate 2 string.
+
+22
+01:44.640 --> 01:45.830
+OK.
+
+23
+01:46.400 --> 01:55.140
+save It come back to test retrieve the employee and hit control 1 assign statement to a new local variable
+
+24
+01:55.290 --> 02:03.190
+it returns an object change to employee and change the name to employee as well.
+
+25
+02:03.220 --> 02:15.740
+control one add down casting two employee from object sysout employee do a control  shift F to format right
+
+26
+02:15.900 --> 02:21.410
+click run our test.
+
+27
+02:21.470 --> 02:22.600
+It is an exception.
+
+28
+02:22.600 --> 02:29.910
+Let's scroll up and see what the error is, error creating bean with employee defined on the classpath 
+
+29
+02:29.950 --> 02:31.420
+error setting property values.
+
+30
+02:31.430 --> 02:36.290
+That's not rightable property invalid property address.
+
+31
+02:36.490 --> 02:39.940
+So we have used the wrong name instead of ADD.
+
+32
+02:39.970 --> 02:41.720
+We have used AD somewhere.
+
+33
+02:41.740 --> 02:45.530
+So let's get let's go and see the config file.
+
+34
+02:45.880 --> 02:47.360
+go to config dot xml.
+
+35
+02:47.500 --> 02:54.180
+And here the property name should be address and not our adress run the test
+
+36
+02:54.200 --> 03:02.340
+again and this time it passes and we get the employee object along with the address inside it.
+
+37
+03:02.340 --> 03:07.850
+So you have successfully configured the inner bean address for the employee.
+
+38
+03:07.840 --> 03:13.870
+And spring has instantiated the inner bean and it has set it in to the address of the employee.
+
+39
+03:13.900 --> 03:15.310
+And we got it back.
+
+40
+03:15.700 --> 03:22.840
+So now you know that there are four ways to inject an object using the reference as element reference
+
+41
+03:22.840 --> 03:28.650
+as attribute using P schema and also using inner bean.
+
+42
+03:28.720 --> 03:37.030
+The inner bean can be used only in case of reference types and also only when the bean above or the  dependent bean
+
+43
+03:37.100 --> 03:43.160
+has a has a relationship with the dependent bean or depende
+
+44
+03:43.450 --> 03:49.300
+So in this case the employee has a has a relationship with the address only in that case we can use
+
+45
+03:49.300 --> 03:50.440
+the inner beans.

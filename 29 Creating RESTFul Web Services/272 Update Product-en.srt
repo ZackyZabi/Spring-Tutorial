@@ -1,0 +1,76 @@
+1
+00:00:00,240 --> 00:00:10,810
+In this lecture, you will implement the UPDATE method of the product for the RESTful API. So go to STS. And it's very simple
+
+2
+00:00:10,810 --> 00:00:17,230
+because you can copy the CREATE method, paste it and change this mapping to @
+
+3
+00:00:17,560 --> 00:00:18,840
+instead of PostMapping,
+
+4
+00:00:18,910 --> 00:00:20,880
+it should be PutMapping.
+
+5
+00:00:20,890 --> 00:00:27,100
+You are going to use or our clients are going to use the PUT method. Change the method name to UPDATE. These
+
+6
+00:00:27,100 --> 00:00:33,440
+method names could be anything, the important piece is you are using the appropriate or the correct mappings
+
+7
+00:00:33,580 --> 00:00:37,490
+and bindings and the request and responses.
+
+8
+00:00:37,690 --> 00:00:43,800
+So the request will still be the entire product and we'll still be invoking repository.save. This save
+
+9
+00:00:43,800 --> 00:00:44,720
+method internally,
+
+10
+00:00:44,830 --> 00:00:48,220
+it knows whether a particular product is already there.
+
+11
+00:00:48,370 --> 00:00:54,550
+If it's there it will update that information instead of creating it by looking at the ID field in the
+
+12
+00:00:54,580 --> 00:01:01,260
+request and it returns that product back. Stop the application, start it again.
+
+13
+00:01:02,310 --> 00:01:10,350
+While it starts, go to Postman, open up a new tab. Change the method to PUT. Grab the URL by going
+
+14
+00:01:10,350 --> 00:01:22,240
+to the previous tab. Come back, paste it. Go to Body, go to raw, change this to json.
+
+15
+00:01:22,270 --> 00:01:27,460
+You could have used the previous tab, but I just want you to go through this exercise if you are new to Postman.
+
+16
+00:01:30,010 --> 00:01:37,800
+And we are updating an id or a product with id 2. Change the price from 800 to 900.
+
+17
+00:01:40,510 --> 00:01:45,940
+Send it and we get a 200 OK response. The id is still 2.
+
+18
+00:01:46,060 --> 00:01:48,040
+And the price has changed to 900.
+
+19
+00:01:48,040 --> 00:01:54,880
+You can go to the database and execute a select and the price has changed to 900.
+

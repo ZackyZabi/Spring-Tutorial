@@ -1,0 +1,220 @@
+1
+00:00:00,170 --> 00:00:04,770
+In this lecture, you will learn the ambiguity problem with constructor injection.
+
+2
+00:00:04,820 --> 00:00:11,310
+You will do that by creating a class called addition and constructors with different types of parameters
+
+3
+00:00:11,670 --> 00:00:22,710
+and see how the spring container invokes those constructors. Right click, new -> class. Call it Addition. We'll
+
+4
+00:00:22,710 --> 00:00:27,580
+not be performing any operations, we'll simply create constructors with some system.out.println
+
+5
+00:00:27,660 --> 00:00:28,770
+statements.
+
+6
+00:00:28,950 --> 00:00:42,340
+com.bharath.springcore.constructorinjection.ambiguity. Finish.
+
+7
+00:00:45,600 --> 00:00:56,020
+Create the first constructor, Addition(int a,int b) two integer values.
+
+8
+00:00:58,260 --> 00:01:08,120
+System.out.println("Inside constructor INT")
+
+9
+00:01:08,720 --> 00:01:11,790
+Just to differentiate it from other constructs that we create,
+
+10
+00:01:11,810 --> 00:01:19,040
+we are saying "Inside constructor INT". Create another constructor, copy and paste this, double.
+
+11
+00:01:25,250 --> 00:01:32,330
+And change this to double as well in the sysout. Save it, create the config file, you can grab it from earlier
+
+12
+00:01:32,330 --> 00:01:33,140
+lectures.
+
+13
+00:01:33,140 --> 00:01:34,080
+Copy that.
+
+14
+00:01:35,200 --> 00:01:46,740
+Paste it on the package. Expand it, close everything else. Open the config.xml. Lets delete everything,
+
+15
+00:01:46,740 --> 00:01:49,670
+all the beans and create the beans from scratch.
+
+16
+00:01:50,000 --> 00:01:59,570
+bean class="Addition" name="addition"
+
+17
+00:02:00,940 --> 00:02:03,820
+Its class, copy the package name.
+
+18
+00:02:08,780 --> 00:02:14,000
+Paste it, dot, close it there. Inside the bean tag
+
+19
+00:02:14,000 --> 00:02:21,360
+we are going to use constructor injection. constructor and pass in a value to it.
+
+20
+00:02:22,730 --> 00:02:26,180
+We can use the value as an attribute as well. So use it right here.
+
+21
+00:02:26,190 --> 00:02:34,730
+value="10" and close the constructor-arg right there. Get rid of this. Copy it.
+
+22
+00:02:34,730 --> 00:02:39,540
+The second argument is 20.
+
+23
+00:02:39,780 --> 00:02:40,900
+And that's it.
+
+24
+00:02:41,140 --> 00:02:49,170
+Let's use the integer constructor. These two values here are integers. Grab the test class from any of
+
+25
+00:02:49,230 --> 00:02:59,290
+your earlier packages. Paste it, open the test class. We are not going to rewrite it. Simply change,
+
+26
+00:02:59,320 --> 00:03:05,040
+make changes to it. Addition is our class and the name of the bean,
+
+27
+00:03:05,050 --> 00:03:15,550
+is also addition. springcore, copy the package, constructorinjection.ambiguity. After springcore,
+
+28
+00:03:15,560 --> 00:03:18,130
+it's not dependencycheck.
+
+29
+00:03:18,420 --> 00:03:25,530
+Change the dot to forward slash. ambiguity/config.xml and change the name of it,
+
+30
+00:03:25,530 --> 00:03:31,510
+name of the variable to addition.
+
+31
+00:03:31,830 --> 00:03:32,960
+Go to Addition.
+
+32
+00:03:33,300 --> 00:03:36,090
+We don't have any,
+
+33
+00:03:36,180 --> 00:03:37,830
+what we want to see,
+
+34
+00:03:37,830 --> 00:03:39,690
+is these getting printed and not
+
+35
+00:03:39,690 --> 00:03:46,110
+any variables. So simply reading the bean will do, because it's going to invoke the constructor and one
+
+36
+00:03:46,110 --> 00:03:47,670
+of these should be printed.
+
+37
+00:03:47,870 --> 00:03:57,310
+So run the test. Right click, run as -> Java application. And it says Inside constructor INT,
+
+38
+00:03:57,370 --> 00:03:58,280
+which is okay.
+
+39
+00:03:58,300 --> 00:03:59,020
+That's expected.
+
+40
+00:03:59,020 --> 00:03:59,950
+That's what we wanted.
+
+41
+00:03:59,950 --> 00:04:02,140
+We passed in two integer values.
+
+42
+00:04:02,170 --> 00:04:06,190
+So spring should invoke the constructor that takes integer values.
+
+43
+00:04:06,190 --> 00:04:09,010
+Now let's switch the order of these constructors.
+
+44
+00:04:09,250 --> 00:04:18,370
+Double comes first and then the int constructor. Save it. Rerun the test and you will see that it invokes
+
+45
+00:04:18,370 --> 00:04:20,810
+the double constructor.
+
+46
+00:04:21,310 --> 00:04:24,320
+Let's see how the problem becomes even more complex.
+
+47
+00:04:24,340 --> 00:04:27,730
+Copy paste the constructor one more time. At the end of it,
+
+48
+00:04:28,000 --> 00:04:29,860
+String, String.
+
+49
+00:04:29,860 --> 00:04:34,290
+I'm adding a method that string and inside constructor string type.
+
+50
+00:04:34,380 --> 00:04:35,150
+Save it.
+
+51
+00:04:37,930 --> 00:04:44,370
+Run it again. And this time, instead of invoking the double constructor or the int constructor, it
+
+52
+00:04:44,380 --> 00:04:50,350
+invokes the string constructor. It says Inside constructor String.
+
+53
+00:04:51,000 --> 00:04:53,140
+So this is the ambiguity problem.
+
+54
+00:04:53,190 --> 00:04:56,120
+I'll explain why it is happening,
+
+55
+00:04:56,130 --> 00:05:01,310
+why spring container is behaving this way and how to fix it in the next lecture.
+

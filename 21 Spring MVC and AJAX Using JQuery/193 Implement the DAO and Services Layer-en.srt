@@ -1,0 +1,108 @@
+1
+00:00:00,120 --> 00:00:02,730
+In this lecture We'll work on the first step.
+
+2
+00:00:02,760 --> 00:00:05,430
+That is partially we'll implement that Dow method.
+
+3
+00:00:05,520 --> 00:00:11,570
+And so it's a Slayer method to fetch a user with a given ID.
+
+4
+00:00:12,000 --> 00:00:16,560
+So when a user enters ID here we are going to make a call to the server side.
+
+5
+00:00:16,620 --> 00:00:22,920
+So we need a method in the Dow that will dig that ID and check if our database record exists with that
+
+6
+00:00:22,930 --> 00:00:25,250
+given ID here.
+
+7
+00:00:26,040 --> 00:00:33,420
+So go to that Dow Plus in our application stop the server before you do that because it's going to reload
+
+8
+00:00:33,450 --> 00:00:40,740
+it every time we change and save something or do the user be able the new method will return a user
+
+9
+00:00:40,740 --> 00:00:41,520
+back.
+
+10
+00:00:41,640 --> 00:00:53,510
+It's called Find user on single user with that given ID integer ID or to use a Dow impel and implement
+
+11
+00:00:53,510 --> 00:00:56,410
+that he'd control one or the unimplemented amateurs.
+
+12
+00:00:56,940 --> 00:00:58,550
+They need that to do.
+
+13
+00:00:58,550 --> 00:01:03,680
+And you know how to load one single user if you remember from the Autumn section we use the hibernate
+
+14
+00:01:04,550 --> 00:01:05,370
+template.
+
+15
+00:01:05,440 --> 00:01:11,610
+Dot Net is the matter and you pass it the entity class and the ID
+
+16
+00:01:14,420 --> 00:01:20,350
+entity class is user got class and ID is what comes in as that parameter.
+
+17
+00:01:20,350 --> 00:01:23,970
+And our third has been implemented in the area.
+
+18
+00:01:24,020 --> 00:01:36,370
+Now go to the services layer use the service or do the interface user it returns a user back get user
+
+19
+00:01:37,320 --> 00:01:38,230
+is the method.
+
+20
+00:01:38,550 --> 00:01:40,980
+And it takes the picture ID.
+
+21
+00:01:42,880 --> 00:01:50,810
+The user service impulse control one of the unimplemented amateur's the lead the Tulu and return whatever
+
+22
+00:01:50,820 --> 00:01:51,880
+that doubt returns.
+
+23
+00:01:51,890 --> 00:01:56,290
+Dow d'arte find use it and pass in the ID.
+
+24
+00:01:56,380 --> 00:01:57,640
+Thats it.
+
+25
+00:01:57,640 --> 00:02:03,280
+So in this letter we have successfully implemented the dollar as well as the so we just need to find
+
+26
+00:02:03,300 --> 00:02:08,890
+Ifat use that exists in that database with a given ID in the next lecture we will implement the controller
+
+27
+00:02:08,890 --> 00:02:09,770
+method.
+

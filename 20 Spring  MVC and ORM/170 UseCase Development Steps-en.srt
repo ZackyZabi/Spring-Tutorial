@@ -1,0 +1,72 @@
+1
+00:00:00,240 --> 00:00:05,100
+This lecture I will walk you through the simple steps that you are going to follow in the next few lectures
+
+2
+00:00:05,100 --> 00:00:08,560
+to implement the user registration use case.
+
+3
+00:00:08,560 --> 00:00:15,930
+By then they will cease paying NBC and autumn inaction and doing the first step is to create them even
+
+4
+00:00:15,930 --> 00:00:22,150
+project in Eclipse and update the bomb dot ex-model with the dependencies.
+
+5
+00:00:22,160 --> 00:00:29,030
+Secondly will configure the front controller or the dispatcher solve for our MVC application by creating
+
+6
+00:00:29,030 --> 00:00:29,140
+it.
+
+7
+00:00:29,140 --> 00:00:35,930
+Bob Daut accessible we are going to reuse several components from earlier projects like Labrada example
+
+8
+00:00:36,140 --> 00:00:38,710
+and even spring configuration.
+
+9
+00:00:38,720 --> 00:00:45,440
+Third step is to come up with this bring configuration file with them which will configure the autumn
+
+10
+00:00:45,440 --> 00:00:51,260
+stuff starting with Hibernate template which needs session factory data source and finally the view
+
+11
+00:00:51,260 --> 00:00:54,410
+resolver for spring MVC.
+
+12
+00:00:54,460 --> 00:00:59,420
+So all in one configuration file.
+
+13
+00:00:59,640 --> 00:01:03,940
+Last but not least we will code and we get to the coding portion.
+
+14
+00:01:03,940 --> 00:01:09,240
+I'll explain the steps in detail but at the high level it will create the middle class create the data
+
+15
+00:01:09,270 --> 00:01:12,480
+access layer which will use the hibernate template.
+
+16
+00:01:12,480 --> 00:01:18,640
+Then a new layer will be introducing a new layer and a set of interface and classes.
+
+17
+00:01:18,780 --> 00:01:20,580
+So is this layer.
+
+18
+00:01:20,720 --> 00:01:27,470
+And finally the controller layer or the UI layer so will do all this in the next few lectures.
+

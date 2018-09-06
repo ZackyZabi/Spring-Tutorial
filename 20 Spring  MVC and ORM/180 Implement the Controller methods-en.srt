@@ -1,0 +1,172 @@
+1
+00:00:00,160 --> 00:00:05,520
+In this lecture will implement the controller matters so that our application will be wired and ready
+
+2
+00:00:05,520 --> 00:00:10,590
+to go and do and go to eclipse go to use the controller.
+
+3
+00:00:10,740 --> 00:00:16,620
+We're going to get some help from the earlier project which is putting MVC because we have already implemented
+
+4
+00:00:16,860 --> 00:00:22,380
+the very same methods in the use of controller in that project or do the controller package in spring
+
+5
+00:00:22,500 --> 00:00:30,630
+MVC open that controller grabbed these two methods we are going to modify one of them copy them come
+
+6
+00:00:30,630 --> 00:00:32,920
+back to the new controller.
+
+7
+00:00:33,000 --> 00:00:40,920
+Those methods are shift to format and closed the controller so that will not modify that accidentally.
+
+8
+00:00:41,900 --> 00:00:50,270
+Maximize delete this model object from the old project control the control one on the user imported
+
+9
+00:00:50,390 --> 00:00:53,130
+from our new package in the new project.
+
+10
+00:00:55,090 --> 00:01:00,610
+The very first method in the controller is going to return the registration page to the end user when
+
+11
+00:01:00,650 --> 00:01:01,430
+he accesses.
+
+12
+00:01:01,440 --> 00:01:02,600
+There you are.
+
+13
+00:01:03,030 --> 00:01:07,990
+If we lose the registration page in the water and we'll send him a page called use the range which will
+
+14
+00:01:07,990 --> 00:01:10,040
+have the DML form.
+
+15
+00:01:10,560 --> 00:01:17,480
+So copy that use the range from the earlier project as sarcy webapp.
+
+16
+00:01:17,760 --> 00:01:24,970
+We have been for views use the range dark speak copy that close this project can put the new ones being
+
+17
+00:01:25,000 --> 00:01:30,630
+NBC Warham or SIRC webapp that Benford.
+
+18
+00:01:31,180 --> 00:01:37,720
+But this time it's going to be Diest piece because if you open the dispatcher so that we can figure
+
+19
+00:01:37,720 --> 00:01:41,950
+out the resolver with the prefix Verband of slash GSB.
+
+20
+00:01:42,160 --> 00:01:50,000
+So right click on have been new for the GSB for the finish.
+
+21
+00:01:50,280 --> 00:01:57,820
+Paste the DSP that you have copied which is use the range got TSB which has the form and this submit
+
+22
+00:01:58,110 --> 00:02:05,200
+this gets submitted to the register user and in the controller we have a matter mapped to registered
+
+23
+00:02:05,220 --> 00:02:13,110
+user or register user which basically immortal attributes being container automatically takes the form
+
+24
+00:02:13,110 --> 00:02:19,560
+data that comes in puts it into this object because we have marked it with a model attribute annotation
+
+25
+00:02:20,520 --> 00:02:24,960
+and we also use a model map to send the user data back to the UI.
+
+26
+00:02:25,140 --> 00:02:32,340
+But this time we are not going to send the end user data only saying that they return value from that
+
+27
+00:02:32,340 --> 00:02:33,180
+create method.
+
+28
+00:02:33,210 --> 00:02:35,060
+So get rid of these first two lines.
+
+29
+00:02:37,390 --> 00:02:40,600
+We had lots of changes to his rage result in a second.
+
+30
+00:02:40,660 --> 00:02:51,090
+For now for us we are going to call the service dark save the matter on the service.
+
+31
+00:02:51,120 --> 00:02:55,660
+So whatever he has that information comes in we are taking that and passing it to the service manager
+
+32
+00:02:56,380 --> 00:02:57,510
+control one.
+
+33
+00:02:57,810 --> 00:03:07,390
+And this guy returns the end result back big that result and create a string
+
+34
+00:03:10,050 --> 00:03:27,240
+or create than dot and attribute result and the value will be user created with 80 plus pass the result
+
+35
+00:03:27,240 --> 00:03:30,280
+back whatever Hibernate is returning us back.
+
+36
+00:03:30,290 --> 00:03:37,080
+The idea that we are sending a message to you why and instead of using a new UI we're going to send
+
+37
+00:03:37,080 --> 00:03:45,620
+it back to the same user rage page and we will display this message below the file will do that change
+
+38
+00:03:45,620 --> 00:03:47,150
+in the way in the next lecture.
+
+39
+00:03:47,280 --> 00:03:52,980
+In this lecture we have successfully implemented the controller matters to show the initial UI which
+
+40
+00:03:52,980 --> 00:03:54,340
+has the history of form.
+
+41
+00:03:54,570 --> 00:04:02,280
+And when the user submits it it comes to this particular matter where we are taking the model saving
+
+42
+00:04:02,280 --> 00:04:08,880
+it to the database and then setting a result on the model which goes back to the UI using model map.
+
+43
+00:04:09,180 --> 00:04:14,560
+Inside that we have a message along with the result that comes back from the same operation.
+

@@ -1,0 +1,63 @@
+0
+00:00.480 --> 00:06.840
+In the previous lecture you have enabled support for these two antotations the life cycle annotations by configuring
+
+1
+00:06.900 --> 00:11.850
+a bean called common annotation been post-process in the configuration file.
+
+2
+00:12.120 --> 00:17.430
+There is also a way to configure all the annotations support in spring.
+
+3
+00:17.430 --> 00:24.150
+We do that using the context namespace or an element from the context namespace in spring which is defined
+
+4
+00:24.150 --> 00:24.690
+here.
+
+5
+00:25.570 --> 00:28.340
+Here is the namespace prefix called context.
+
+6
+00:28.690 --> 00:35.080
+And this is the schema for it and the name of the element is this the recommended way and the most
+
+7
+00:35.080 --> 00:41.340
+used way and most of the realtime applications context colon annotation config.
+
+8
+00:42.140 --> 00:49.640
+Thats it you can close that element right here and we don't need this bean anymore because we are asking
+
+9
+00:49.640 --> 00:56.540
+springe to enable annotation support for all the annotations although we only use two annotations right
+
+10
+00:56.540 --> 01:00.940
+now post construct and pre-destroy run the test again.
+
+11
+01:02.610 --> 01:05.960
+And the output inside the setter method 
+
+12
+01:06.010 --> 01:08.740
+Inside the hi method we use the object
+
+13
+01:08.740 --> 01:11.980
+And finally inside the Bye method.
+
+14
+01:12.140 --> 01:18.540
+So in this lecture you have successfully learnt how to enable annotation support in spring for all the annotations
+
+15
+01:18.570 --> 01:24.710
+using context namespace and an element called annotation hyphen config.

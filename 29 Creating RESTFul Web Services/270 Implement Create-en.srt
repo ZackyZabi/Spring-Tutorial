@@ -1,0 +1,76 @@
+1
+00:00:00,190 --> 00:00:08,070
+In this lecture you will implement a product creation, the CREATE method by using the PostMapping. To do that,
+
+2
+00:00:08,070 --> 00:00:17,840
+start with a new method, public create() is the method. It takes a Product product and it returns the
+
+3
+00:00:17,840 --> 00:00:19,120
+created product.
+
+4
+00:00:23,090 --> 00:00:27,460
+And within the method, we'll be using repository.
+
+5
+00:00:27,860 --> 00:00:31,370
+Rename this repository. I have spelled it wrong. If you have spelled it right,
+
+6
+00:00:31,370 --> 00:00:43,310
+you are awesome. Right click and I want to Refactor -> Rename it correctly. It's not respository, it should be
+
+7
+00:00:43,310 --> 00:00:44,250
+repository.
+
+8
+00:00:48,880 --> 00:00:55,610
+For some reason it couldn't rename it. So I changed it to repository.save, is the method
+
+9
+00:00:55,620 --> 00:01:03,770
+we want and pass it the incoming product in the request that the client will send and return it back.
+
+10
+00:01:03,780 --> 00:01:11,280
+So whatever is saved to the database, we are returning it back. And here, this product, this request parameter
+
+11
+00:01:11,460 --> 00:01:20,730
+should be marked with @RequestBody, that tells spring that this parameter is being expected from
+
+12
+00:01:20,730 --> 00:01:28,440
+the RequestBody in the post body. Control+1, import RequestBody from Spring. And the next and the last
+
+13
+00:01:28,440 --> 00:01:34,570
+important piece, mark this method with the @PostMapping this time.
+
+14
+00:01:34,860 --> 00:01:37,610
+So for creation, we use a HTTP POST method.
+
+15
+00:01:37,630 --> 00:01:42,860
+So we are telling that this particular method is being binded to the HTTP POST method,
+
+16
+00:01:43,020 --> 00:01:49,920
+and in the incoming POST request we'll get the product details as JSON. Spring will automatically
+
+17
+00:01:50,610 --> 00:01:53,030
+convert that into this object.
+
+18
+00:01:53,030 --> 00:01:57,830
+And we are taking that object and saving it into the database. In the next lecture, we'll test
+
+19
+00:01:57,840 --> 00:01:58,650
+this POST method.
+

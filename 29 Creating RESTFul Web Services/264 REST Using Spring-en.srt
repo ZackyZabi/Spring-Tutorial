@@ -1,0 +1,72 @@
+1
+00:00:00,300 --> 00:00:06,680
+Creating RESTful web applications is very easy using Spring because you need not learn a new module.
+
+2
+00:00:07,070 --> 00:00:14,010
+You will be using the Spring MVC or the Spring WEB module to create a web application. And to create a RESTful
+
+3
+00:00:14,010 --> 00:00:18,300
+endpoint, we'll create a Controller class and mark it with
+
+4
+00:00:18,320 --> 00:00:24,690
+@RestController. Instead of simple Controller which you used to mark when you worked on the web applications,
+
+5
+00:00:24,990 --> 00:00:32,370
+here you'll mark it with @RestController annotation. And to map it to a path, you'll use @RequestMapping
+
+6
+00:00:32,370 --> 00:00:34,860
+which you are already aware of, from Spring Web.
+
+7
+00:00:34,890 --> 00:00:41,570
+And once you have the controller in place, this is your RESTful endpoint, and you can define as many
+
+8
+00:00:41,570 --> 00:00:43,640
+methods as you want in the controller
+
+9
+00:00:43,660 --> 00:00:46,230
+for your RESTful web service to serve.
+
+10
+00:00:46,400 --> 00:00:51,020
+And each of these methods will be marked with the appropriate annotation.
+
+11
+00:00:51,020 --> 00:00:58,100
+Each of these annotations bind your java methods to a incoming HTTP method from the client.
+
+12
+00:00:58,340 --> 00:01:05,810
+You can use a GET, POST, PUT, DELETE and so on. For each of the HTTP methods, there is a annotation from
+
+13
+00:01:05,930 --> 00:01:08,310
+Spring that you can use.
+
+14
+00:01:08,360 --> 00:01:09,350
+So it's that simple.
+
+15
+00:01:09,380 --> 00:01:15,680
+You'll define a controller, mark it with @RestController annotation, give it a path and then you can define
+
+16
+00:01:15,710 --> 00:01:18,410
+as many number of methods you want, you can define
+
+17
+00:01:18,410 --> 00:01:19,920
+paths, relative paths to
+
+18
+00:01:19,970 --> 00:01:25,310
+your methods and also bind them to the HTTP methods using these annotations.
+

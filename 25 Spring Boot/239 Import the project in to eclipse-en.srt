@@ -1,0 +1,220 @@
+1
+00:00:00,260 --> 00:00:05,610
+In this lecture, you will import the standalone Spring Boot project that you have generated in the last
+
+2
+00:00:05,610 --> 00:00:13,660
+lecture into Eclipse and we'll walk through the contents of it. Go to eclipse, to the Spring workspace. Right
+
+3
+00:00:13,710 --> 00:00:23,300
+click, click on import and search for or type in existing Maven projects.
+
+4
+00:00:23,400 --> 00:00:27,520
+Select this option from under Maven, Next.
+
+5
+00:00:27,840 --> 00:00:34,260
+Browse, browse to the downloads folder under which I have my springboot project. You can copy it
+
+6
+00:00:34,500 --> 00:00:43,230
+to your workspace and you can import it from there if you want to. Open, and the pom.xml, select it,
+
+7
+00:00:43,280 --> 00:00:44,110
+Finish.
+
+8
+00:00:46,030 --> 00:00:51,100
+And the spring boot project now has been imported to Eclipse with all the folders.
+
+9
+00:00:51,190 --> 00:00:52,900
+Get rid of these two files.
+
+10
+00:00:52,960 --> 00:00:54,150
+We never use them.
+
+11
+00:00:54,150 --> 00:01:03,080
+They are command line files to run our project from the command line. Right click, delete those two, hit OK.
+
+12
+00:01:04,120 --> 00:01:10,810
+The important file here is the pom.xml which is the Maven configuration file. Go to the last
+
+13
+00:01:10,810 --> 00:01:12,890
+tab, pom.xml.
+
+14
+00:01:13,030 --> 00:01:16,260
+By now you are familiar with the maven coordinates.
+
+15
+00:01:16,330 --> 00:01:19,710
+These are what you entered on the webpage in the last lecture.
+
+16
+00:01:19,780 --> 00:01:21,990
+The project name, which is the artifact id.
+
+17
+00:01:22,270 --> 00:01:26,530
+It has a parent project. By default,
+
+18
+00:01:26,620 --> 00:01:33,740
+when you create a spring boot, all of them will have a parent project which is the Spring project,
+
+19
+00:01:36,100 --> 00:01:40,480
+so that we can refer to it and get the dependencies from that project.
+
+20
+00:01:40,480 --> 00:01:42,340
+The properties, it has the java version.
+
+21
+00:01:42,340 --> 00:01:44,110
+If you scroll down the important section
+
+22
+00:01:44,110 --> 00:01:49,740
+here is the dependency section where you see Spring-boot-starter.
+
+23
+00:01:50,230 --> 00:01:54,820
+So for different types of projects there are different starters available.
+
+24
+00:01:54,820 --> 00:02:00,100
+In our case we are creating a standalone project, so we have spring-boot-starter.
+
+25
+00:02:00,100 --> 00:02:05,760
+Similarly we have spring-boot-starter-test for unit testing support.
+
+26
+00:02:05,800 --> 00:02:14,410
+Finally you see the build section which has the spring-boot-maven-plugin. This plugin allows us to run our
+
+27
+00:02:14,410 --> 00:02:16,900
+project as a jar file.
+
+28
+00:02:16,900 --> 00:02:19,660
+It knows how to run a Spring Boot application.
+
+29
+00:02:22,060 --> 00:02:28,740
+If you see here there are no versions mentioned inside the dependencies. It is because we get the versions
+
+30
+00:02:28,890 --> 00:02:33,570
+from the parent. So the parent project has all the version information.
+
+31
+00:02:33,770 --> 00:02:39,890
+If you see here, 1.5.4.RELEASE and the dependency management section in the parent
+
+32
+00:02:39,890 --> 00:02:41,680
+will have all that information.
+
+33
+00:02:41,880 --> 00:02:47,040
+So that is the pom.xml. Go under src/main/java,
+
+34
+00:02:47,070 --> 00:02:57,840
+we have a class called SpringbootApplication. Open that up. Its marked with @SpringBootApplication annotation
+
+35
+00:02:58,440 --> 00:03:01,830
+which is equivalent to
+
+36
+00:03:01,830 --> 00:03:13,110
+@Configuration, @ContextComponentScan which you have learnt earlier as well as EnableAutoConfiguration.
+
+37
+00:03:13,110 --> 00:03:22,300
+So it's equivalent to all these annotations from Spring.
+
+38
+00:03:22,590 --> 00:03:30,770
+So internally when you mark a class with @SpringBootApplication, all these are or all these come for free
+
+39
+00:03:30,850 --> 00:03:36,230
+from Spring. Spring will automatically consider this class as a configuration class.
+
+40
+00:03:36,240 --> 00:03:44,160
+It will also do the context component scan as well as enable automatically configuring your spring beans.
+
+41
+00:03:44,190 --> 00:03:52,050
+So this is the starting point for your Spring Boot application. It has a main method within which we
+
+42
+00:03:52,050 --> 00:03:53,850
+use SpringApplication,
+
+43
+00:03:53,900 --> 00:03:57,670
+is a class from Spring Boot, dot run.
+
+44
+00:03:57,690 --> 00:04:05,710
+It will start running our spring Boot application and it gives our class to it as the configuration.
+
+45
+00:04:05,850 --> 00:04:16,580
+So right click, do a Run As -> Java Application and you will see that it starts Spring boot and it runs our
+
+46
+00:04:16,880 --> 00:04:19,260
+application successfully.
+
+47
+00:04:19,340 --> 00:04:21,290
+Let me do it one more time.
+
+48
+00:04:21,290 --> 00:04:27,190
+Right click, Run As -> Java Application, there we go.
+
+49
+00:04:30,540 --> 00:04:31,180
+It loads
+
+50
+00:04:31,200 --> 00:04:34,470
+the Spring context and at the end of it, it shuts it down.
+
+51
+00:04:34,560 --> 00:04:39,540
+So, so far we haven't created any beans, we haven't configured anything but you have learnt about the
+
+52
+00:04:39,570 --> 00:04:42,560
+pom.xml and all the important dependencies in there
+
+53
+00:04:42,780 --> 00:04:48,960
+and the spring boot application project. And you have learnt that the SpringBootApplication annotation is
+
+54
+00:04:48,960 --> 00:04:51,700
+equivalent to @Configuration,
+
+55
+00:04:51,780 --> 00:04:58,200
+@EnableAutoConfiguration as well as @ContextComponentScan.
+

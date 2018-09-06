@@ -1,0 +1,111 @@
+0
+00:00.250 --> 00:04.720
+Spring provides two life cycle methods to every bean it creates.
+
+1
+00:04.830 --> 00:09.170
+They are the init method and the destroy method.
+
+2
+00:09.250 --> 00:15.040
+The names need not be the same but the signature should be exactly the same it should be public void
+
+3
+00:15.340 --> 00:16.870
+and no parameters.
+
+4
+00:17.730 --> 00:23.160
+Any initialization code such as loading some configuration file from the file system or connecting to
+
+5
+00:23.160 --> 00:27.950
+the database or connecting to a web service or a server can go into the  init method 
+
+6
+00:28.050 --> 00:34.920
+We put that code inside the init method and all the cleanup code that is closing the connections or cleaning
+
+7
+00:34.920 --> 00:39.110
+up all the objects should go into the destroy method.
+
+8
+00:39.220 --> 00:45.730
+The lifecycle looks as follows given a spring bean and xml configuration to the spring container the
+
+9
+00:45.730 --> 00:50.310
+spring container will first instantiate an object of the bean.
+
+10
+00:50.380 --> 00:53.710
+It will then set all the values onto that object.
+
+11
+00:53.920 --> 00:59.830
+Then it will invoke the init method whatever code we put into the init method will be executed at that
+
+12
+00:59.830 --> 01:00.220
+point.
+
+13
+01:00.250 --> 01:05.330
+After the data is set into the object.
+
+14
+01:05.380 --> 01:12.040
+Then we read the bean make use of that bean in our application and once we are done and before the container
+
+15
+01:12.040 --> 01:18.640
+is destroyed or object is destroyed the destroy method  will be invoked before the destruction of the object
+
+16
+01:18.730 --> 01:24.910
+the destroy method will be invoked and we put all the cleanup code inside the destroy method and then
+
+17
+01:24.910 --> 01:32.830
+spring will destroy that object if we are aware of servlets  then you know the init and destroy method in
+
+18
+01:32.840 --> 01:33.200
+servlet,
+
+19
+01:33.250 --> 01:38.620
+these are very similar but what you need to remember is that the init method is called after the object
+
+20
+01:38.620 --> 01:45.560
+is instantiated and all the properties are set on to the object that is all the dependencies are injected.
+
+21
+01:45.640 --> 01:52.060
+After that the init method is invoked and just before the object is destroyed the destroy method is
+
+22
+01:52.300 --> 01:53.930
+invoked.
+
+23
+01:53.960 --> 02:00.440
+You can configure the lifecycle methods in three ways using xml configuration using or implementing
+
+24
+02:00.440 --> 02:02.190
+some sring interfaces.
+
+25
+02:02.530 --> 02:06.420
+our bean classes will implement these interfaces and override some methods
+
+26
+02:06.650 --> 02:10.790
+And finally a simple way by using annotations.
+
+27
+02:10.790 --> 02:15.210
+You are going to explore all these three handson in the next few lectures.

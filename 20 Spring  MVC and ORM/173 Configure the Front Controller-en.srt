@@ -1,0 +1,84 @@
+1
+00:00:00,210 --> 00:00:05,240
+The second step is to update the web dot ECOMIL file by adding dispatcher.
+
+2
+00:00:05,250 --> 00:00:14,130
+So let's go back to Eclipse and that's spring NBC or go to a sarcy mean webapp web.
+
+3
+00:00:14,560 --> 00:00:18,980
+Enough have been put on the Web got a sample file right now.
+
+4
+00:00:19,080 --> 00:00:21,900
+It has very few elements in here.
+
+5
+00:00:22,410 --> 00:00:32,150
+Open up the spring MVC project go to as SEE main webapp Labrinth Labrador sambal.
+
+6
+00:00:32,170 --> 00:00:37,700
+You are welcome to copy paste everything or you can start typing.
+
+7
+00:00:37,730 --> 00:00:43,650
+I suggest you do it at least one more time so that you remember what goes into the library.
+
+8
+00:00:43,730 --> 00:00:46,590
+Select is the first element.
+
+9
+00:00:46,670 --> 00:00:55,730
+Give it the names of let my fun name is DISPATCHER You can do whatever name you want.
+
+10
+00:00:56,120 --> 00:01:00,300
+Next is selve left and class.
+
+11
+00:01:00,320 --> 00:01:06,230
+You can search for the dispatcher select by hitting control shift key or go to disrupt R-TX symbol and
+
+12
+00:01:06,330 --> 00:01:10,190
+drop this name along with the package name.
+
+13
+00:01:10,700 --> 00:01:12,170
+Ambac Bastet.
+
+14
+00:01:12,420 --> 00:01:17,010
+Save it next is the select mapping cell.
+
+15
+00:01:17,050 --> 00:01:22,440
+Let mapping copy the cell name from here.
+
+16
+00:01:27,690 --> 00:01:29,250
+And the second element is.
+
+17
+00:01:29,280 --> 00:01:36,330
+I'll let you waddle pattern one forward slash just like how we have use of the word pattern.
+
+18
+00:01:36,330 --> 00:01:42,030
+You can also use other water patterns like Slash MBC if you want to but then we'll have to include that
+
+19
+00:01:42,060 --> 00:01:46,500
+in Alaba requests that we want to go through the dispatcher so late.
+
+20
+00:01:46,810 --> 00:01:52,350
+So in this Lechter you have successfully finished the second step which is to configure the dispatcher
+
+21
+00:01:52,520 --> 00:01:53,100
+servlet.
+

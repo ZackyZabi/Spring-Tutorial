@@ -1,0 +1,120 @@
+1
+00:00:00,330 --> 00:00:06,590
+Spring MVC is one of the most used web frameworks in the Java EE space.
+
+2
+00:00:06,810 --> 00:00:13,500
+It uses three different patterns namely the FrontController, HandlerMapper and ViewResolver to implement
+
+3
+00:00:13,650 --> 00:00:15,690
+the MVC framework.
+
+4
+00:00:15,700 --> 00:00:23,130
+When a request comes in from the end client, it first reaches the FrontController which is a dispatcher
+
+5
+00:00:23,130 --> 00:00:28,120
+servlet that we'll configure in the web.xml of our application.
+
+6
+00:00:28,250 --> 00:00:34,920
+This dispatcher-servlet will then forward this request to a HandlerMapper. The HandlerMapper is responsible
+
+7
+00:00:34,920 --> 00:00:40,130
+for mapping the incoming request to a Controller class that we create.
+
+8
+00:00:40,200 --> 00:00:47,490
+We mark these classes with @Controller annotations. The HandlerMapper uses the URL in the
+
+9
+00:00:47,490 --> 00:00:52,100
+request and it maps it to the appropriate Controller. When we define a Controller,
+
+10
+00:00:52,110 --> 00:00:56,420
+we also do the RequestMapping on the methods inside that Controller.
+
+11
+00:00:57,650 --> 00:01:01,980
+The Controller handles the request, takes the appropriate action
+
+12
+00:01:02,210 --> 00:01:09,020
+and finally at the end it returns a ModelAndView. Model represents the data and view represents the
+
+13
+00:01:09,020 --> 00:01:12,460
+next UI to which the response should be sent.
+
+14
+00:01:13,330 --> 00:01:17,710
+The Controller returns ModelAndView back to the FrontController which is our dispatcher-servlet.
+
+15
+00:01:17,770 --> 00:01:24,130
+The dispatcher-servlet will then invoke the ViewResolver which is the component which is responsible
+
+16
+00:01:24,130 --> 00:01:32,820
+for adding a location and the extension for the view that the Controller returns. Once the FrontController
+
+17
+00:01:32,820 --> 00:01:34,320
+has the complete view,
+
+18
+00:01:34,380 --> 00:01:39,100
+it will generate that view and send the response back to the end client.
+
+19
+00:01:40,300 --> 00:01:49,410
+And to exchange data from the Controller to the UI we use the ModelAndView object and to get the
+
+20
+00:01:49,410 --> 00:01:53,350
+data from the UI to the Controller
+
+21
+00:01:53,400 --> 00:01:59,850
+we use @ModelAttribute. Whatever form data comes in, automatically that will be mapped to a
+
+22
+00:01:59,880 --> 00:02:05,700
+Java object when we use the @ModelAttribute annotation. The Spring container will take care of the mapping
+
+23
+00:02:05,700 --> 00:02:13,650
+for us, provided the names in the HTML form should be same as the names on our Java class. You've
+
+24
+00:02:13,770 --> 00:02:21,210
+also learnt that in the recent versions of Spring this ModelAndView has been split into model and
+
+25
+00:02:21,210 --> 00:02:22,680
+view separated out.
+
+26
+00:02:22,680 --> 00:02:30,400
+We use the ModelMap to send the data back and we use a String type for the ViewName.
+
+27
+00:02:30,470 --> 00:02:37,480
+So instead of using ModelAndView, we use the ModelMap for data and a string that represents the ViewName.
+
+28
+00:02:37,500 --> 00:02:39,920
+Everything else remains the same.
+
+29
+00:02:39,930 --> 00:02:48,350
+The ViewResolver will take the String ViewName, it will append or prefix it with the location and suffix
+
+30
+00:02:48,350 --> 00:02:50,380
+it with a extension.
+

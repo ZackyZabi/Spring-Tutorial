@@ -1,0 +1,44 @@
+1
+00:00:00,180 --> 00:00:05,640
+In this lecture, you'll create the Spring configuration file and configure the very first bean which
+
+2
+00:00:05,640 --> 00:00:13,220
+is the DataSource bean. Go to Eclipse, double click to minimize, grab the configuration from the previous
+
+3
+00:00:13,220 --> 00:00:19,580
+project, go to Spring JDBC, src/main/java. Go to the test folder under Employee.
+
+4
+00:00:19,580 --> 00:00:26,200
+That is where we have created our config. Copy that config, close that, come back.
+
+5
+00:00:26,360 --> 00:00:34,340
+Right click on this package, say New -> Package. We'll create a subpackage called test. springorm dot product
+
+6
+00:00:34,520 --> 00:00:39,230
+dot test, finish. Paste the configuration.
+
+7
+00:00:39,290 --> 00:00:47,780
+Maximize it or expand it. Open the config.xml. Get rid of everything except for the DataSource. Leave the
+
+8
+00:00:47,780 --> 00:00:53,160
+DriverManagerDataSource as it is because we are going to need that bean. Delete this context:component-scan
+
+9
+00:00:53,210 --> 00:01:03,440
+and JdbcTemplate. We'll add whatever we need later on. And remove all the spaces. And you have successfully
+
+10
+00:01:03,710 --> 00:01:09,230
+created the configuration and also configured the DriverManagerDataSource. In the next few lectures
+
+11
+00:01:09,350 --> 00:01:12,860
+we'll create all the other beans or we'll configure all the other beans.
+

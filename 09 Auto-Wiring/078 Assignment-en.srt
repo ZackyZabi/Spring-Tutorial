@@ -1,0 +1,24 @@
+1
+00:00:00,200 --> 00:00:07,440
+For this assignment, you need to put on your hotel management or a restaurant management cap on. Assume that
+
+2
+00:00:07,440 --> 00:00:13,500
+you are working on s restaurant management application and you are going to create a customer POJO and a reservation
+
+3
+00:00:13,500 --> 00:00:19,440
+POJO. The customer POJO will have a name for the customer and ofcourse the reservation object will
+
+4
+00:00:19,440 --> 00:00:25,190
+be a part of the customer POJO. Customer depends on the reservation and the reservation
+
+5
+00:00:25,190 --> 00:00:33,270
+POJO will have an int Id and the time of the customer's reservation. And you need to wire this reservation
+
+6
+00:00:33,440 --> 00:00:37,020
+into the customer using autowiring.
+

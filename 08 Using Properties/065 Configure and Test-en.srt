@@ -1,0 +1,224 @@
+1
+00:00:00,310 --> 00:00:03,470
+In the previous lecture we have created a properties file.
+
+2
+00:00:03,600 --> 00:00:09,420
+In this lecture, you'll create a POJO class and the configuration to link up this property file and
+
+3
+00:00:09,480 --> 00:00:13,070
+inject one of these properties into our POJO.
+
+4
+00:00:13,440 --> 00:00:21,480
+Let's get started. Right click on the propertyplaceholder package, New -> Class, call it MyDAO.
+
+5
+00:00:21,540 --> 00:00:27,510
+Let's assume that this is a class that does the database work and it needs that information in the properties
+
+6
+00:00:27,510 --> 00:00:27,970
+file.
+
+7
+00:00:29,350 --> 00:00:34,500
+At a single property called private String dbServer;
+
+8
+00:00:34,630 --> 00:00:43,610
+Let's use constructor injection, because you have just learnt how to do that and this constructor
+
+9
+00:00:43,610 --> 00:00:47,000
+takes one argument, string dbServer
+
+10
+00:00:47,010 --> 00:00:57,760
+which we are going to inject from the property file. this.dbServer = dbServer;
+
+11
+00:00:59,630 --> 00:01:07,190
+Generate a toString method. Go to source, generate toString, save it.
+
+12
+00:01:07,230 --> 00:01:10,410
+The next step is to come up with the configuration file.
+
+13
+00:01:10,410 --> 00:01:13,760
+Grab any configuration file of your choice from any packages.
+
+14
+00:01:13,770 --> 00:01:16,020
+I'm getting it from constructorinjection,
+
+15
+00:01:16,050 --> 00:01:20,360
+Ambiguity, paste it on the new package.
+
+16
+00:01:20,380 --> 00:01:21,030
+Open it.
+
+17
+00:01:23,420 --> 00:01:28,100
+Delete the bean. And let's create the bean file from scratch.
+
+18
+00:01:28,330 --> 00:01:33,640
+bean name="MyDAO"
+
+19
+00:01:33,650 --> 00:01:35,780
+get the package name,
+
+20
+00:01:39,560 --> 00:01:41,650
+paste it before the DAO.
+
+21
+00:01:41,720 --> 00:01:53,810
+name is equal to myDAO. Close it there and within the bean tag, we need to use constructor argument.
+
+22
+00:01:53,810 --> 00:01:58,030
+const and then the control+space will give you constructor-arg.
+
+23
+00:01:58,030 --> 00:02:04,490
+Only one value is required and that value we want to read from the property file.
+
+24
+00:02:04,490 --> 00:02:06,540
+We don't want to hardcode it here.
+
+25
+00:02:06,620 --> 00:02:12,880
+That is where Spring's propertyplaceholder comes in. It is from the Spring's context namespace
+
+26
+00:02:12,890 --> 00:02:14,330
+which you have already used.
+
+27
+00:02:14,330 --> 00:02:18,530
+You have used context namespace to enable annotations earlier on.
+
+28
+00:02:18,590 --> 00:02:24,170
+Now you'll use one more element from that namespace. context: hit control+space and we'll see all
+
+29
+00:02:24,170 --> 00:02:29,870
+the options, property-placeholder. property-placeholder.
+
+30
+00:02:29,870 --> 00:02:36,830
+That is the one you need to use. And the attribute, location. We need to provide the location of the property
+
+31
+00:02:36,830 --> 00:02:43,680
+file that will load up the property file and we can use those properties in our configuration file or
+
+32
+00:02:43,880 --> 00:02:53,630
+inject them into our beans. The location is database.properties and copy the complete package name
+
+33
+00:02:53,930 --> 00:03:03,020
+from here, because on the classpath we need to provide the package path as well.
+
+34
+00:03:07,560 --> 00:03:16,580
+Change all the dots to forward slashes and get the name correct, database.properties. And here bean
+
+35
+00:03:16,590 --> 00:03:22,880
+name and this should be class, not the name. The first attribute is class and the second attribute is
+
+36
+00:03:23,240 --> 00:03:24,010
+name.
+
+37
+00:03:24,020 --> 00:03:29,830
+Now to read a property from here, inside the value element in between those elements,
+
+38
+00:03:29,840 --> 00:03:34,120
+use dollar. That is how we read it. And within flower brackets our braces,
+
+39
+00:03:34,160 --> 00:03:37,000
+the name of the property which is dbServer.
+
+40
+00:03:37,010 --> 00:03:42,080
+In the database.properties dbServer is the name of the property.
+
+41
+00:03:42,200 --> 00:03:43,220
+So use that.
+
+42
+00:03:43,400 --> 00:03:45,020
+Save it.
+
+43
+00:03:45,020 --> 00:03:50,390
+So using the dollar symbol and within braces, if we put a property name automatically that will be
+
+44
+00:03:50,390 --> 00:03:57,110
+read from the property file which we have configured using context:property-placeholder. Go to the
+
+45
+00:03:57,110 --> 00:04:07,000
+test class, let's create the test and run it. main, control+space, Enter. Control+shift+f to format.
+
+46
+00:04:07,010 --> 00:04:15,970
+ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+
+47
+00:04:20,240 --> 00:04:27,490
+config.xml need to provide the path, paste the package, we have already copied it earlier.
+
+48
+00:04:29,340 --> 00:04:33,860
+Forward slashes, dots get replaced with forward slashes.
+
+49
+00:04:37,830 --> 00:04:47,920
+Save it. context.getbean("myDAO") within double quotes name of the bean is myDAO. In the configuration file the name
+
+50
+00:04:47,920 --> 00:04:50,320
+is myDAO, DAO capital.
+
+51
+00:04:53,290 --> 00:04:58,100
+myDAO is what we want it to assign to. Call it dao.
+
+52
+00:04:58,090 --> 00:05:11,390
+Typecast it, myDAO within brackets, System.out.println(dao); do a control+shift+f to format. So we have successfully
+
+53
+00:05:11,390 --> 00:05:15,800
+used the properties in the config file and also created a test class.
+
+54
+00:05:15,810 --> 00:05:17,750
+Let's run it and see it in action.
+
+55
+00:05:19,250 --> 00:05:28,340
+Run as -> Java application and it prints the dbServer name. So spring container loads the property file, links it up.
+
+56
+00:05:28,420 --> 00:05:34,940
+In the XML, we can read the property and it injects it using constructor injection into our DAO.
+

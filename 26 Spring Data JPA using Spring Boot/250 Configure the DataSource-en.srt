@@ -1,0 +1,68 @@
+1
+00:00:00,330 --> 00:00:06,410
+In this lecture, you will configure a datasource for our application without writing a single line of XML
+
+2
+00:00:06,440 --> 00:00:14,150
+or java code. That's right! Spring boot allows us to pass in all that information through application.properties file.
+
+3
+00:00:14,360 --> 00:00:16,470
+So go to src/main/resources,
+
+4
+00:00:16,680 --> 00:00:25,050
+open the application.properties and start adding four properties. spring.datasource and
+
+5
+00:00:25,080 --> 00:00:26,690
+STS will help you out and
+
+6
+00:00:26,700 --> 00:00:35,060
+fill it in, datasource.name is the first property, is equal to, give it a unique name.
+
+7
+00:00:35,190 --> 00:00:38,910
+Let's call it simply mydatabase.
+
+8
+00:00:38,910 --> 00:00:46,830
+You can give any name. spring.datasource.url is the second parameter and you know what that
+
+9
+00:00:46,830 --> 00:00:48,370
+URL is.
+
+10
+00:00:48,880 --> 00:01:02,040
+jdbc:mysql://localhost:3306/mydb
+
+11
+00:01:02,210 --> 00:01:12,630
+The next two properties are spring.datasource.username=root
+
+12
+00:01:12,660 --> 00:01:19,300
+in my case. Even in your case I think it is root. datasource,
+
+13
+00:01:19,390 --> 00:01:24,200
+one last property, dot password is equal to test
+
+14
+00:01:24,210 --> 00:01:26,470
+in my case. That could be different in your case.
+
+15
+00:01:26,670 --> 00:01:32,940
+So you have successfully configured a datasource in application.properties. When our application starts up
+
+16
+00:01:32,950 --> 00:01:35,100
+Spring will read this file.
+
+17
+00:01:35,110 --> 00:01:38,830
+Let me take an extra '=' right there.
+

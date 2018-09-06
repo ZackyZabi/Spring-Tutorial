@@ -1,0 +1,76 @@
+1
+00:00:00,140 --> 00:00:03,500
+Welcome to the "Spring Framework in easy steps" course.
+
+2
+00:00:03,520 --> 00:00:11,000
+In this short lecture I will explain you how this course is organised, so that you can use it effectively.
+
+3
+00:00:11,020 --> 00:00:17,600
+This course is divided into sections, and each section has short and to the point lectures.
+
+4
+00:00:17,620 --> 00:00:25,000
+There will be quizzes at the end of each section for you to evaluate what you have learnt from that section.
+
+5
+00:00:25,010 --> 00:00:29,850
+Consider 70% as a good score on these quizzes.
+
+6
+00:00:29,870 --> 00:00:35,600
+I will also be adding several assignments which I suggest you work right away
+
+7
+00:00:35,620 --> 00:00:43,000
+as soon as you finish a section or a topic. The softwares that are required for this course are Java,
+
+8
+00:00:43,020 --> 00:00:53,000
+Apache Tomcat server, Eclipse IDE or an other IDE of your choice and the MySql database and workbench.
+
+9
+00:00:53,020 --> 00:01:01,000
+The setup of all these softwares is covered in easy steps in the very second section,
+
+10
+00:01:01,020 --> 00:01:09,100
+which I suggest you work on right away so that you will be ready when you reach the hands-on sections pretty soon.
+
+11
+00:01:09,120 --> 00:01:19,400
+At any point if you have any questions, you can post a question on Udemy or you can send me a personal message.
+
+12
+00:01:19,420 --> 00:01:24,000
+And I will respond to them, usually pretty quickly.
+
+13
+00:01:24,020 --> 00:01:31,500
+You will learn all the fundamentals of Spring and also advanced topics and build applications end to end.
+
+14
+00:01:31,520 --> 00:01:39,000
+But for that to really happen, you need to practise and work hands-on along with me.
+
+15
+00:01:39,020 --> 00:01:46,000
+Spring is huge, and when we build enterprise applications, we use parts of Spring framework.
+
+16
+00:01:46,020 --> 00:01:51,200
+I will be adding several new modules to the course on a continuous basis and also
+
+17
+00:01:51,220 --> 00:01:56,000
+I will be upgrading the existing ones as required.
+
+18
+00:01:56,020 --> 00:01:59,800
+Now get started, enjoy the course and remember,
+
+19
+00:01:59,820 --> 00:02:05,700
+that I am always here to listen to your feedback and respond to your questions.
+

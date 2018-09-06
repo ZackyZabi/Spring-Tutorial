@@ -1,0 +1,224 @@
+1
+00:00:00,150 --> 00:00:06,990
+What is Spring Boot? Spring Boot is a module from Spring using which we can speed up our application
+
+2
+00:00:06,990 --> 00:00:08,120
+development.
+
+3
+00:00:08,190 --> 00:00:12,780
+We can create and run a production ready application in a few minutes.
+
+4
+00:00:13,600 --> 00:00:20,170
+It is not a new model that was implemented from scratch, but it wraps all the other Spring modules and
+
+5
+00:00:20,170 --> 00:00:23,920
+makes it easier to configure and use them.
+
+6
+00:00:24,970 --> 00:00:30,640
+Everything that you have learnt from this course can be easily done using Spring Boot. So you can apply
+
+7
+00:00:30,640 --> 00:00:38,030
+all that knowledge and create Spring projects quickly using Spring Boot.
+
+8
+00:00:38,040 --> 00:00:41,670
+It uses convention over configuration.
+
+9
+00:00:41,670 --> 00:00:45,450
+If you have already use tools like Maven, throughout this course you have been using it,
+
+10
+00:00:45,450 --> 00:00:50,650
+or if you have taken my Maven crash course, you know that Maven, which is a build tool uses
+
+11
+00:00:50,650 --> 00:00:57,610
+convention over configuration meaning, it asks you to follow a certain folder structure for your projects.
+
+12
+00:00:58,050 --> 00:01:03,660
+And if you do that, it will automatically compile your classes, compile your tests, create a jar file or
+
+13
+00:01:03,710 --> 00:01:05,080
+a war file for you.
+
+14
+00:01:05,370 --> 00:01:07,320
+It does that automatically.
+
+15
+00:01:07,470 --> 00:01:08,100
+Similar to Maven,
+
+16
+00:01:08,130 --> 00:01:14,130
+Spring expects certain conventions when you create your projects. And if you follow those conventions
+
+17
+00:01:14,220 --> 00:01:22,020
+it will automatically add all the configuration that is required for you without you creating any xml.
+
+18
+00:01:23,350 --> 00:01:29,520
+An other important concept is Opinionated defaults. So two important things, convention over configuration
+
+19
+00:01:30,120 --> 00:01:38,850
+and Opinionated defaults meaning, it will come with some default properties or opinionated defaults which are
+
+20
+00:01:38,850 --> 00:01:42,960
+good enough, but you can always configure them or customize them if you want.
+
+21
+00:01:42,960 --> 00:01:48,260
+For example, when we create MVC projects, Spring MVC or web projects,
+
+22
+00:01:48,330 --> 00:01:53,790
+we always know that we need a dispatcher servlet which we configure in the web.xml and also
+
+23
+00:01:53,790 --> 00:01:57,120
+some view resolvers in our Spring configuration.
+
+24
+00:01:57,240 --> 00:01:58,870
+We need not do that anymore.
+
+25
+00:01:58,910 --> 00:02:04,670
+Spring Boot comes with opinionated defaults, automatically it will configure the dispatcher servlet and
+
+26
+00:02:04,670 --> 00:02:09,570
+all that at runtime, without us coming up with XML files.
+
+27
+00:02:09,690 --> 00:02:13,660
+But if you want to change it, you can change it through a property file.
+
+28
+00:02:13,660 --> 00:02:16,490
+You will see all that in action later on.
+
+29
+00:02:16,710 --> 00:02:25,250
+But two important things, convention over configuration and opinionated default. For example, Spring Boot
+
+30
+00:02:25,250 --> 00:02:32,120
+can scan through our classpath or it scans our classpath and if it finds a mysql-connector which is
+
+31
+00:02:32,120 --> 00:02:40,040
+a JDBCdriver for mysql, and if it also finds JPA related jar files on our classpath, it will automatically
+
+32
+00:02:40,310 --> 00:02:46,790
+configure the JPA unit or the Java persistence unit that is required to connect to the database and
+
+33
+00:02:46,790 --> 00:02:54,450
+do JPA or ORM at runtime for us. We need not create that XML configuration file. Automatically
+
+34
+00:02:54,530 --> 00:02:58,120
+it does it for us by scanning the classpath.
+
+35
+00:02:58,490 --> 00:03:05,910
+Similarly if it finds a Spring MVC dependency or jar on the classpath, it will automatically configure
+
+36
+00:03:05,930 --> 00:03:09,330
+the dispatcher servlet and view resolvers.
+
+37
+00:03:09,500 --> 00:03:13,140
+If you want to customize them again you can customize them. You need not even
+
+38
+00:03:13,550 --> 00:03:20,840
+use the @EnableWebMvc, it will automatically do it for you, because since you have this on the classpath
+
+39
+00:03:20,840 --> 00:03:26,470
+it knows that you we're going to use it in your project.
+
+40
+00:03:26,480 --> 00:03:28,380
+Another big benefit of Spring Boot,
+
+41
+00:03:28,430 --> 00:03:36,380
+it takes a lot of annotations and it merges them into one single annotation. So it simplifies usage of
+
+42
+00:03:36,400 --> 00:03:39,440
+a lot of annotations and it reduces the number of annotations.
+
+43
+00:03:39,500 --> 00:03:45,240
+So here we have @SpringBootApplication which you will see in action in a few lectures.
+
+44
+00:03:46,550 --> 00:03:52,970
+We can use this single annotation on our class and that means @Configuration. So this one annotation
+
+45
+00:03:52,970 --> 00:03:59,450
+is equivalent to @Configuration, @EnableAutoConfiguration and @ComponentScan.
+
+46
+00:03:59,510 --> 00:04:06,400
+So if you mark a class with this particular annotation, it means that it is the starting point of your Spring Boot
+
+47
+00:04:06,440 --> 00:04:07,550
+application.
+
+48
+00:04:07,580 --> 00:04:15,200
+It acts as a configuration file, Java based configuration file. Automatically AutoConfiguration is enabled
+
+49
+00:04:16,070 --> 00:04:24,080
+and also ComponentScan. Spring will scan through this particular package in which a class exists which
+
+50
+00:04:24,080 --> 00:04:29,180
+is marked with this annotation as well as all its sub packages for the beans.
+
+51
+00:04:29,180 --> 00:04:30,740
+I'll explain all that once again
+
+52
+00:04:30,800 --> 00:04:34,300
+when you start working on hands-on lectures.
+
+53
+00:04:34,530 --> 00:04:41,160
+So if, you have to remember two important things, Spring Boot makes it easier to develop Spring based
+
+54
+00:04:41,160 --> 00:04:43,840
+applications easier and quicker.
+
+55
+00:04:43,860 --> 00:04:50,850
+It uses convention over configuration and it comes with opinionated defaults. You are going to see all these
+
+56
+00:04:50,850 --> 00:04:52,830
+in action in the next few lectures.
+

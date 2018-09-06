@@ -1,0 +1,120 @@
+1
+00:00:00,180 --> 00:00:06,480
+In this lecture, we'll launch our web application and see Spring Boot magic on our web application.
+
+2
+00:00:07,020 --> 00:00:16,650
+To do that, right click, do a Run As -> Spring Boot App. We need not run it on the server, we need not create a war file.
+
+3
+00:00:16,730 --> 00:00:19,560
+That's the beauty of Spring Boot. Simply run it as a
+
+4
+00:00:19,580 --> 00:00:23,800
+Spring Boot App. At this point,
+
+5
+00:00:23,970 --> 00:00:28,050
+our application is built, a jar file is created and that jar is run.
+
+6
+00:00:28,080 --> 00:00:36,870
+This particular class runs and automatically it will launch a embedded Tomcat. For every Spring Boot
+
+7
+00:00:36,930 --> 00:00:39,610
+web application, automatically a
+
+8
+00:00:39,610 --> 00:00:41,280
+Tomcat is embedded into it.
+
+9
+00:00:41,290 --> 00:00:44,790
+And as you can see, it is launched and
+
+10
+00:00:44,800 --> 00:00:50,330
+our application is running on that Tomcat and we can access it at localhost:8080.
+
+11
+00:00:50,390 --> 00:00:52,610
+That is the power of Spring Boot Web.
+
+12
+00:00:52,630 --> 00:01:07,950
+Launch your web browser, hit control+t, localhost:8080/hello?name=bharath.
+
+13
+00:01:08,180 --> 00:01:13,020
+So localhost:8080, there is no web application name given here.
+
+14
+00:01:13,080 --> 00:01:15,610
+I will tell you why that is and how to configure one.
+
+15
+00:01:17,140 --> 00:01:20,390
+localhost:8080/hello?
+
+16
+00:01:20,410 --> 00:01:25,480
+the parameter we need to pass in, which is name is equal to, whatever name you want. Enter.
+
+17
+00:01:25,900 --> 00:01:28,060
+And the result is hello bharath.
+
+18
+00:01:28,270 --> 00:01:35,280
+So our Spring Boot web application has worked as expected. When we type this in and hit Enter.
+
+19
+00:01:35,320 --> 00:01:41,860
+The request goes to the Tomcat running, and we have mapped the URL in such a way that if it sees
+
+20
+00:01:41,930 --> 00:01:49,050
+hello, it will come to this controller method which will take the name from the query parameter and returns
+
+21
+00:01:49,130 --> 00:01:50,130
+hello.
+
+22
+00:01:51,870 --> 00:01:55,440
+To understand the flow, when the Spring Boot application is launched,
+
+23
+00:01:56,070 --> 00:01:59,310
+and this main method is run internally,
+
+24
+00:01:59,960 --> 00:02:06,150
+Spring will scan through all the base packages within which this class is located which is market with
+
+25
+00:02:06,360 --> 00:02:12,760
+@SpringBootApplication and its subpackages. And it will automatically find the controllers.
+
+26
+00:02:12,760 --> 00:02:17,080
+So it knows about the controllers, the Dispatcher Servlet, the Internal View Resolver,
+
+27
+00:02:17,130 --> 00:02:24,690
+they are all configured for us automatically. And you can customize them using the properties.
+
+28
+00:02:25,050 --> 00:02:29,820
+So within this property file, you can mention whatever custom configuration you want.
+
+29
+00:02:29,810 --> 00:02:36,720
+You can also write Java configuration, but most of the times we can configure everything in application.properties.
+
+30
+00:02:36,720 --> 00:02:39,900
+I will show you a couple of properties in the next few lectures.
+

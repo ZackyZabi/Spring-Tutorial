@@ -1,0 +1,52 @@
+1
+00:00:00,180 --> 00:00:05,400
+When we have injected the primitive types you have learned that we can use the value element value as
+
+2
+00:00:05,490 --> 00:00:07,570
+element inside the property to do it.
+
+3
+00:00:08,410 --> 00:00:12,000
+The second variation of value is instead of using it as an element.
+
+4
+00:00:12,010 --> 00:00:15,900
+We can also use that as an attribute on the property itself.
+
+5
+00:00:16,060 --> 00:00:22,420
+So get rid of this value from here and right on the property element we have a value attribute to which
+
+6
+00:00:22,420 --> 00:00:27,940
+we can assign the value and then we don't need this closing tab we can close it right here.
+
+7
+00:00:28,390 --> 00:00:29,260
+at the end.
+
+8
+00:00:29,470 --> 00:00:32,030
+Similarly the second one as well.
+
+9
+00:00:32,110 --> 00:00:37,960
+Value is equal to bharath.
+
+10
+00:00:38,730 --> 00:00:46,070
+We need the bean get rid of the property and the value, this is called property value as attribute.
+
+11
+00:00:46,140 --> 00:00:50,230
+And the earlier one is called value as element run the test again.
+
+12
+00:00:50,250 --> 00:00:56,620
+Right click run as java application and the output still remains the same.
+
+13
+00:00:56,620 --> 00:00:59,610
+The dependency injection still works.
+

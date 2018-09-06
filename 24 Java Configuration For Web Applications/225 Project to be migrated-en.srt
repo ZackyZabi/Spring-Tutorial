@@ -1,0 +1,104 @@
+1
+00:00:02,190 --> 00:00:09,750
+In this lecture, you'll learn how to migrate the spring MVC web application to use Java configuration instead of xml based configuration.
+
+2
+00:00:10,230 --> 00:00:16,470
+If you expand this project in your Eclipse IDE, go to src/main/webapp/WEB-INF
+
+3
+00:00:16,890 --> 00:00:23,130
+and you will find two configuration files. One ofcourse is the web.xml which is the deployment
+
+4
+00:00:23,130 --> 00:00:29,670
+descriptor for our web application where we have defined the Spring dispatcher servlet which is our front
+
+5
+00:00:29,670 --> 00:00:31,010
+controller.
+
+6
+00:00:31,020 --> 00:00:35,800
+The second configuration file here is the dispatcher-servlet.xml.
+
+7
+00:00:36,000 --> 00:00:40,230
+This is the spring configuration file which we intend to replace.
+
+8
+00:00:40,260 --> 00:00:48,060
+You're also going to get rid of the web.xml and use Java configuration there as well. In the
+
+9
+00:00:48,070 --> 00:00:54,570
+dispatcher-servlet.xml, we have define the context:component-scan telling Spring which packages should
+
+10
+00:00:54,570 --> 00:00:58,450
+be scanned for our controller classes.
+
+11
+00:00:58,670 --> 00:01:04,430
+If you go to src/main/java all our controllers are under this particular package.
+
+12
+00:01:04,750 --> 00:01:11,310
+If we see, atleast one of these controllers working after our migration, then we are good.
+
+13
+00:01:11,400 --> 00:01:18,060
+The second bean here is the InternalViewResolver or InternalResourceViewResolver which resolves our
+
+14
+00:01:18,080 --> 00:01:28,350
+JSP pages. Build this project and run it on the server. Run As -> Maven Clean just to make sure it's still
+
+15
+00:01:28,370 --> 00:01:35,780
+working and we are all set. Right click, Run As -> Maven install.
+
+16
+00:01:38,390 --> 00:01:41,570
+Once that completes, you can run it on the server.
+
+17
+00:01:44,090 --> 00:01:48,880
+Right click, Run As -> Run on Server. Finish.
+
+18
+00:01:52,330 --> 00:01:58,030
+That will launch the default page which is the index.jsp which says Hello World!
+
+19
+00:01:58,030 --> 00:01:59,150
+Type in hello
+
+20
+00:01:59,170 --> 00:02:07,090
+at the end because our hello controller is configured to use that URI pattern. hello, Enter.
+
+21
+00:02:07,390 --> 00:02:14,200
+And that takes us to the HelloController which redirects it, after setting some information it will
+
+22
+00:02:14,290 --> 00:02:20,040
+redirect it to the hello.jsp which is under WEB-INF/views/hello.jsp,
+
+23
+00:02:20,680 --> 00:02:22,390
+and it displays all that information.
+
+24
+00:02:22,390 --> 00:02:24,300
+That is what we are seeing here.
+
+25
+00:02:24,580 --> 00:02:31,750
+So this should exactly work the same once we get rid of the web.xml and dispatcher-servlet.xml
+
+26
+00:02:31,780 --> 00:02:34,150
+and replace it with Java configuration.
+

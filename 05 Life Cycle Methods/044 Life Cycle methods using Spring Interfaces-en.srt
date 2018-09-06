@@ -1,0 +1,207 @@
+0
+00:00.240 --> 00:06.200
+This lecture you will learn how to configure the spring life cycle methods using spring interfaces.
+
+1
+00:06.390 --> 00:09.180
+So far you have done it using spring configuration.
+
+2
+00:09.240 --> 00:14.190
+Now you're going to do it using spring interfaces you're going to reuse these three classes from this
+
+3
+00:14.190 --> 00:17.520
+package by creating a new package.
+
+4
+00:17.520 --> 00:25.470
+So right click on this folder or package say new package instead of xml config
+
+5
+00:25.480 --> 00:27.810
+Change it to interfaces.
+
+6
+00:27.810 --> 00:34.500
+We are going to use the spring interfaces to implement the lifecycle methods copy these three from
+
+7
+00:34.500 --> 00:40.980
+xml config package paste it expand open those three patient
+
+8
+00:40.990 --> 00:46.460
+dot java or pojo the test dot java will remain the same no matter whether it is xml config or 
+
+9
+00:46.580 --> 00:51.190
+using interfaces we are not going to change anything here.
+
+10
+00:51.420 --> 01:04.530
+Goto patient dot Java and we are going to implement implements initializing bean control one import
+
+11
+01:04.600 --> 01:12.020
+initializing bean from spring or dot string framework dot beans dot factory that is the package for it
+
+12
+01:12.020 --> 01:19.370
+control one had control one and implemented amateur's the very first method is after property set
+
+13
+01:19.620 --> 01:21.410
+is amateur's in this interface we need.
+
+14
+01:21.440 --> 01:22.370
+All right.
+
+15
+01:22.370 --> 01:25.640
+This is the init method public void
+
+16
+01:25.670 --> 01:26.790
+No parameters
+
+17
+01:26.850 --> 01:30.620
+the method name is after properties or set.
+
+18
+01:30.680 --> 01:35.430
+This method will be invoked sysout within double coats.
+
+19
+01:35.540 --> 01:47.340
+Inside after properties set save it the next interface for the destruction or the destroy method is
+
+20
+01:47.370 --> 01:52.200
+comma after initializing bean we need to implement  disposable
+
+21
+01:55.920 --> 02:03.680
+bean disposable bean from Spring Framework import that it's from the same package control one
+
+22
+02:03.690 --> 02:08.550
+control one again to implement the methods
+
+23
+02:08.630 --> 02:14.120
+go to the end just scroll it down and you see the destroy method. The destroy method
+
+24
+02:14.130 --> 02:16.860
+the name is also destroy
+
+25
+02:17.120 --> 02:27.720
+do a sysout double coats inside destroy and in the config dot xml we don't need these
+
+26
+02:27.710 --> 02:28.890
+two the init method
+
+27
+02:28.940 --> 02:29.840
+And destroy method
+
+28
+02:29.840 --> 02:33.340
+Because we are already implementing those interfaces.
+
+29
+02:33.410 --> 02:40.880
+We only configure the bean in the config dot xml spring will automatically see that this bean is implementing
+
+30
+02:40.880 --> 02:47.820
+these two interfaces from spring and it will invoke the after property set and destroy methods. In the
+
+31
+02:47.940 --> 02:48.310
+test
+
+32
+02:48.310 --> 02:50.870
+We still need this register shutdown hook.
+
+33
+02:50.990 --> 02:58.370
+This tells the container that before the container is shut down it needs to use this hook which will
+
+34
+02:58.370 --> 03:06.420
+invoke the destroy methods lets run  the test right click change the configuration instead of xml
+
+35
+03:06.420 --> 03:07.260
+config
+
+36
+03:07.260 --> 03:14.180
+The conflict is now under spring core LC hype forward slash interfaces.
+
+37
+03:14.550 --> 03:22.810
+That is the package name we have used LC dot interfaces that becomes LC forward slash interfaces
+
+38
+03:23.160 --> 03:34.050
+right click run as Java application inside the setter method there is a class cast exception.
+
+39
+03:34.190 --> 03:36.420
+We should go back to the test
+
+40
+03:36.440 --> 03:37.520
+We need to change this
+
+41
+03:40.240 --> 03:41.050
+patient here
+
+42
+03:44.180 --> 03:50.810
+should be patient from patient dot java but in the config dot xml we need to change the package name this
+
+43
+03:50.810 --> 03:53.760
+here should not be xml config
+
+44
+03:53.780 --> 03:56.070
+This should be interface's as well.
+
+45
+03:56.090 --> 04:02.270
+So we are trying to cast one type of patient to another type or class type that is the reason we are
+
+46
+04:02.270 --> 04:08.150
+seeing that exceptions are changed to interface's rerun the test.
+
+47
+04:08.200 --> 04:14.810
+Now we will see that it creates the object invokes the setter methods then it invokes the after property
+
+48
+04:14.830 --> 04:16.370
+set method which is the init method
+
+49
+04:16.390 --> 04:21.060
+then we use the object and then the destroy gets called.
+
+50
+04:21.370 --> 04:28.840
+So in this lecture you  we have successfully learned how to configure it and estimators by implementing initialising
+
+51
+04:28.840 --> 04:35.560
+being disposable bean and by operating the after property set then that's try methods.

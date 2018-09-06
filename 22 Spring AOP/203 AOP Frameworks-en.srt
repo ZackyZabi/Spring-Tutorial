@@ -1,0 +1,60 @@
+1
+00:00:00,630 --> 00:00:06,010
+So far you have learned all the important concepts of Aspect Oriented Programming.
+
+2
+00:00:06,150 --> 00:00:09,610
+In this lecture we learn the various books that are available out there.
+
+3
+00:00:09,690 --> 00:00:17,610
+And this brings support to use aspects in our application that three popular frameworks are aspect J.
+
+4
+00:00:17,650 --> 00:00:20,220
+Spring will be and da boss will be.
+
+5
+00:00:20,220 --> 00:00:27,180
+There are many more but these are the most used frameworks using which we can implement Aspect Oriented
+
+6
+00:00:27,210 --> 00:00:31,840
+Programming or play and use aspects in our Java application.
+
+7
+00:00:32,760 --> 00:00:36,300
+And within spring the spring it will be support internally.
+
+8
+00:00:36,370 --> 00:00:42,650
+Spring uses aspect J which is open source for him but there are two ways to use Springle aspect to get
+
+9
+00:00:42,660 --> 00:00:48,330
+that aspect annotation driven which is the most popular and most used in a lot of applications today.
+
+10
+00:00:48,450 --> 00:00:54,340
+This is what you will be learning in the next few lectures aspect Exxon-Mobile driven which we use that
+
+11
+00:00:54,360 --> 00:00:59,500
+we use Exxon-Mobile configuration and finally classic spring proxy base.
+
+12
+00:00:59,520 --> 00:01:00,530
+This is outdated.
+
+13
+00:01:00,660 --> 00:01:07,650
+This is putting its own way off implementing or enabling aspects we are not going to use this we are
+
+14
+00:01:07,650 --> 00:01:09,420
+going to learn aspect J.
+
+15
+00:01:09,540 --> 00:01:12,450
+Annotation driven in the next few lectures.
+

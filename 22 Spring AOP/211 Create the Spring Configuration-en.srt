@@ -1,0 +1,112 @@
+1
+00:00:00,270 --> 00:00:07,160
+In this lecture you will create this configuration file and it will be elements to it or the it will
+
+2
+00:00:07,170 --> 00:00:15,820
+be namespace to it and use that aspect the auto proxy element go to the spring quarter or any other
+
+3
+00:00:15,820 --> 00:00:19,040
+project you want and grab one of the configuration files.
+
+4
+00:00:19,180 --> 00:00:24,970
+Copy the conflict or text someone close it come back to spring.
+
+5
+00:00:24,970 --> 00:00:27,690
+It will be rightly consulate's main Java.
+
+6
+00:00:27,700 --> 00:00:29,830
+Create a new package.
+
+7
+00:00:30,170 --> 00:00:40,630
+Com dot dot dot spring dot spring it will be dot test finish based conflict direct sample inside that
+
+8
+00:00:40,960 --> 00:00:44,680
+open the Banfi guard ask someone get it off the beans.
+
+9
+00:00:44,680 --> 00:00:46,380
+Delete any beans in there.
+
+10
+00:00:46,450 --> 00:00:53,060
+Maximize we need to add that it will be namespace and a prefix forward.
+
+11
+00:00:53,060 --> 00:00:55,860
+So copy any one of these here start with.
+
+12
+00:00:55,940 --> 00:00:59,120
+I'm starting with the C schema.
+
+13
+00:00:59,120 --> 00:01:02,270
+Bastet it will be.
+
+14
+00:01:02,300 --> 00:01:08,020
+Is the prefix I want to use and the namespace schema slash.
+
+15
+00:01:08,290 --> 00:01:09,810
+A or B.
+
+16
+00:01:10,010 --> 00:01:17,230
+That is the namespace that I need to at the end and grabbing the context.
+
+17
+00:01:18,070 --> 00:01:20,170
+And the schema file for it.
+
+18
+00:01:20,400 --> 00:01:29,810
+Enter Bastet changing from schema I-Slash context through schema I-Slash it or.
+
+19
+00:01:31,930 --> 00:01:38,060
+The same namespace we have used here and for that namespace the schema file will be instead of context.
+
+20
+00:01:38,140 --> 00:01:40,400
+It Off context.
+
+21
+00:01:40,540 --> 00:01:42,740
+It will be spring.
+
+22
+00:01:42,750 --> 00:01:46,840
+Hyphen it will be not exist.
+
+23
+00:01:46,850 --> 00:01:55,180
+The so all the elements will be using be only using one element as of now that is from the schema and
+
+24
+00:01:55,180 --> 00:02:06,630
+that element is a or b is the prefix colon aspect G or proxy that will enable the annotation based
+
+25
+00:02:09,260 --> 00:02:10,390
+aspects for us.
+
+26
+00:02:10,400 --> 00:02:14,770
+So in this lecture we have successfully created a spring configuration file added.
+
+27
+00:02:14,840 --> 00:02:22,990
+It will be spring it will be named spaces and also use the IT WILL BE aspect the Arto proxy element
+
+28
+00:02:23,110 --> 00:02:28,640
+which will enable all the annotation based aspects for us.
+

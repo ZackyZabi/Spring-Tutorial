@@ -1,0 +1,120 @@
+1
+00:00:00,300 --> 00:00:05,740
+In this lecture, I will briefly introduce you to JPA and Spring Data JPA.
+
+2
+00:00:05,780 --> 00:00:10,520
+JPA stands for Java Persistence API.
+
+3
+00:00:10,620 --> 00:00:16,890
+It is a standard from Oracle to do object relational mapping, that is to store our objects into the database
+
+4
+00:00:17,460 --> 00:00:23,700
+and convert the database rows into objects and deal with them in our object oriented applications.
+
+5
+00:00:24,710 --> 00:00:28,150
+The providers or the implementations of this standard are Hibernate,
+
+6
+00:00:28,160 --> 00:00:31,590
+EclipseLink, OpenJPA and more.
+
+7
+00:00:31,670 --> 00:00:38,030
+We as developers learn the JPA API and these providers, they look at the JPA specification and
+
+8
+00:00:38,030 --> 00:00:39,860
+do the implementation for us.
+
+9
+00:00:39,860 --> 00:00:43,330
+So beneath the covers, we'll be using one of these implementations,
+
+10
+00:00:43,500 --> 00:00:51,090
+Hibernate being the most popular. The JPA standard provides EntityManagerFactory and entityManager, two
+
+11
+00:00:51,150 --> 00:00:57,180
+key interfaces which we use throughout our application or at least in the Data Access Layer to perform
+
+12
+00:00:57,480 --> 00:01:01,250
+create, update, read and delete against the database.
+
+13
+00:01:01,380 --> 00:01:04,590
+We deal with objects in these methods, internally
+
+14
+00:01:04,770 --> 00:01:10,560
+these providers will do the SQL for us. They will convert the objects into relational world and back to
+
+15
+00:01:11,220 --> 00:01:14,610
+objects which you would have seen in the hibernate section in the Spring course.
+
+16
+00:01:15,700 --> 00:01:22,630
+So we repeat these operations across applications, that is every time we create a Java EE application and
+
+17
+00:01:22,630 --> 00:01:28,660
+we create a Data Access layer, we create a repository class or a Data Access layer class, the DAO class
+
+18
+00:01:29,080 --> 00:01:35,930
+and we implement these four methods. That is where Spring Data comes in, Spring Data JPA comes
+
+19
+00:01:35,930 --> 00:01:43,520
+in. And it asks us to get rid of all that boilerplate coding. Without writing all that boilerplate coding
+
+20
+00:01:43,520 --> 00:01:49,700
+in our application, we can perform all the CRUD operations and many more that you'll see in the future.
+
+21
+00:01:49,700 --> 00:01:57,710
+For example, if you have a database table called Product and you created a entity, JPA entity. Mark it
+
+22
+00:01:57,710 --> 00:02:04,810
+with all the annotations and it's called Product. Now to perform CRUD operations on this entity,
+
+23
+00:02:04,880 --> 00:02:13,100
+you simply create an interface called ProductRepository and that interface will extend an interface
+
+24
+00:02:13,110 --> 00:02:17,420
+from Spring called CRUDRepository. That is all you need to do.
+
+25
+00:02:17,420 --> 00:02:22,360
+You need not implement any boilerplate code, any methods inside this.
+
+26
+00:02:22,390 --> 00:02:26,070
+This is an interface. You simply extend an other interface from Spring,
+
+27
+00:02:26,330 --> 00:02:32,150
+and you can perform all the CRUD operations on this interface for this Product.
+
+28
+00:02:32,150 --> 00:02:34,580
+You'll be seeing all that in action in the next few lectures.
+
+29
+00:02:34,580 --> 00:02:40,710
+We are going to use Spring BOOT, which inturn will make it easy for us to create a Spring Data.
+
+30
+00:02:40,740 --> 00:02:45,420
+JPA project and boot it up and see it in action.
+

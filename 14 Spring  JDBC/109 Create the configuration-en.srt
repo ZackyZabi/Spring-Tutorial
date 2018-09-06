@@ -1,0 +1,100 @@
+1
+00:00:00,240 --> 00:00:05,740
+The previous lecture we have either a field called Julie B template which the employee of the wimple
+
+2
+00:00:05,850 --> 00:00:10,760
+used in the create method we have underwired that though using spring.
+
+3
+00:00:10,980 --> 00:00:16,330
+So we need to do that in this lecture will create a configuration file and also copy or the test and
+
+4
+00:00:16,350 --> 00:00:18,780
+we'll work on the test in the next lecture.
+
+5
+00:00:18,960 --> 00:00:23,560
+Right click on the door package see new package.
+
+6
+00:00:23,790 --> 00:00:27,700
+The mother doll and another employee will create a package card.
+
+7
+00:00:27,720 --> 00:00:31,830
+Best finish is where we'll put our configuration and the test.
+
+8
+00:00:31,950 --> 00:00:41,500
+So grab the best and the config from our earlier work based on the test package open the conflict and
+
+9
+00:00:41,590 --> 00:00:45,150
+we'll work on the best in the next lecture configured example.
+
+10
+00:00:45,320 --> 00:00:50,420
+We already have the JD b c template or the data source and The Daily Beast the template being defined
+
+11
+00:00:50,420 --> 00:00:52,090
+here.
+
+12
+00:00:52,110 --> 00:00:58,050
+Now if you remember our use case we know how to configure the employee will simple which uses the very
+
+13
+00:00:58,050 --> 00:00:59,790
+basic template.
+
+14
+00:00:59,790 --> 00:01:07,040
+So let's create a new bean class is equal to grab the class name.
+
+15
+00:01:07,050 --> 00:01:10,740
+We need to inject the employee or impled not the interface.
+
+16
+00:01:10,920 --> 00:01:17,230
+We learned it earlier and it worked with injection of interfaces copy the package name come back to
+
+17
+00:01:17,350 --> 00:01:25,600
+configure based or class dot or the package go back grab the class name which is the employee the impulse
+
+18
+00:01:25,630 --> 00:01:35,690
+come back Bastet space name is equal to give it a name call it employee be able to close the bean tag
+
+19
+00:01:35,800 --> 00:01:39,150
+and within the being that we'll use property injection.
+
+20
+00:01:39,150 --> 00:01:45,020
+So a property name is equal to DBC template.
+
+21
+00:01:45,100 --> 00:01:48,820
+That is the field which we have defined in the doll symbol right here.
+
+22
+00:01:48,880 --> 00:02:08,630
+That is the field name laws it use ref element and being is equal to the name of the bean which is EBC
+
+23
+00:02:08,670 --> 00:02:10,650
+template which is defined right here.
+
+24
+00:02:11,320 --> 00:02:20,620
+So copy that and based on Baulch f format and we are all set in the next lecture we'll create a test
+
+25
+00:02:20,620 --> 00:02:23,180
+class and test this employee in.
+

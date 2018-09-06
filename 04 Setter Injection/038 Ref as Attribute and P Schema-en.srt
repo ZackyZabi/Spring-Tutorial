@@ -1,0 +1,87 @@
+0
+00:00.400 --> 00:05.170
+When you injected the reference type you have used the ref as element.
+
+1
+00:05.210 --> 00:12.190
+They can also be used as an attribute if you learn how to do that in this lecture and more to use ref 
+
+2
+00:12.340 --> 00:13.220
+as an attribute
+
+3
+00:13.270 --> 00:18.670
+You will start using it inside the property as an attribute there is a ref attribute on that element
+
+4
+00:18.730 --> 00:20.580
+is equal to scores
+
+5
+00:20.770 --> 00:26.190
+And then we can end that element right here and get rid of these two.
+
+6
+00:26.190 --> 00:34.010
+We don't need the end tag this is how we can use ref as attribute instead of element run it
+
+7
+00:34.040 --> 00:37.560
+run the test again and the output still remains the same.
+
+8
+00:37.560 --> 00:44.430
+The score object is created and it is injected into students.
+
+9
+00:44.440 --> 00:46.730
+Now let's learn another way of doing it.
+
+10
+00:46.730 --> 00:51.320
+The P schema way you have used P schema to inject primitive types
+
+11
+00:51.390 --> 00:56.030
+So for now you're going to learn how to inject the reference type as well.
+
+12
+00:56.030 --> 01:05.390
+So right on bean here the student bean use P colon the syntax is variable name hyphen ref.
+
+13
+01:05.420 --> 01:12.960
+So the variable name on the student is scores so will have to use variable name which is scores
+
+14
+01:13.070 --> 01:13.580
+hyphen
+
+15
+01:13.580 --> 01:15.710
+We need to tell that it is a reference type.
+
+16
+01:15.800 --> 01:23.060
+We do that using a ref is equal to within double quotes the name of the bean or the reference of the
+
+17
+01:23.060 --> 01:30.950
+bean which is scores then we don't need all this get rid of that and we can close the bean tag right
+
+18
+01:31.040 --> 01:31.650
+there.
+
+19
+01:31.730 --> 01:38.040
+save it rerun the test and the output still remains the same.
+
+20
+01:38.040 --> 01:44.070
+So we have successfully learnt all the three ways of injecting reference type that is using a reference
+
+21
+01:44.780 --> 01:52.030
+as element using ref as an attribute and also using the P schema to inject reference types.

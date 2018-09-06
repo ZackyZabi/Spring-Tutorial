@@ -1,0 +1,144 @@
+1
+00:00:00,390 --> 00:00:06,370
+In this lecture, you will learn and use the Qualifier annotation along with the Autowired annotation.
+
+2
+00:00:06,370 --> 00:00:12,570
+The Qualifier annotation tells the container that it should find a bean with the given name and then
+
+3
+00:00:12,660 --> 00:00:14,680
+inject that bean.
+
+4
+00:00:14,950 --> 00:00:22,090
+If the container find a bean with that name in the configuration, it will throw a NoSuchBeanException. Go
+
+5
+00:00:22,110 --> 00:00:30,170
+to Eclipse. To use the qualifier, we need two beans here which we already have. Instead of having address
+
+6
+00:00:30,260 --> 00:00:36,180
+and address2, let's change this address to address123
+
+7
+00:00:36,440 --> 00:00:43,610
+and the value to 5 or let's leave it as 123 and change the value of the second bean to 567 so that
+
+8
+00:00:43,610 --> 00:00:45,220
+we can differentiate them.
+
+9
+00:00:45,680 --> 00:00:47,000
+Now if we run this test,
+
+10
+00:00:50,300 --> 00:00:59,730
+run it and we see an exception because it can't find a matching bean for this address. We have multiple
+
+11
+00:00:59,730 --> 00:01:00,030
+beans,
+
+12
+00:01:00,030 --> 00:01:02,430
+that's the reason we are seeing an exception.
+
+13
+00:01:02,430 --> 00:01:04,520
+Now go back to the config.xml.
+
+14
+00:01:04,740 --> 00:01:13,860
+We have address123 and address2, multiple beans but no match is found. Use the qualifier annotation
+
+15
+00:01:13,860 --> 00:01:16,500
+on the Employee class. @Qualifier,
+
+16
+00:01:16,530 --> 00:01:25,750
+control+space import it from org.springframework. And within brackets give it a value. In the config.xml
+
+17
+00:01:25,760 --> 00:01:27,870
+you can use either of these beans.
+
+18
+00:01:27,880 --> 00:01:36,340
+Use address123, copy it, paste it. Rerun the test and this time the container will be able to find the bean
+
+19
+00:01:36,430 --> 00:01:39,670
+and it injects it with the house number 123.
+
+20
+00:01:39,880 --> 00:01:45,890
+So it is this bean here. The container, the qualifier tells the container that it should find
+
+21
+00:01:45,890 --> 00:01:50,270
+a bean with the given name instead of the field name.
+
+22
+00:01:50,350 --> 00:01:53,350
+It goes here and searches for a bean with that name.
+
+23
+00:01:53,350 --> 00:02:03,740
+Let's use address2. Go back to Employee. Change this to address2, save it. Rerun and this time it injects
+
+24
+00:02:03,750 --> 00:02:07,720
+the second bean, the house number is 567 and not 123.
+
+25
+00:02:07,860 --> 00:02:11,360
+So it creates this bean, it matches this bean here.
+
+26
+00:02:14,430 --> 00:02:19,750
+Now if it can't find it, for example if I say 789, this bean doesn't even exist, a bean
+
+27
+00:02:19,770 --> 00:02:21,230
+with this name doesn't even exist.
+
+28
+00:02:21,270 --> 00:02:26,230
+And if I remove this required=false, that is,
+
+29
+00:02:26,250 --> 00:02:34,480
+this has to be injected, then if we run the test, we should see an exception because it's not finding a match,
+
+30
+00:02:34,480 --> 00:02:39,650
+it says No qualifying bean of type address is found.
+
+31
+00:02:39,890 --> 00:02:47,750
+And we are seeing a NoSuchBeanDefinitionException. If you want to avoid that, you can put the attribute called
+
+32
+00:02:47,760 --> 00:02:50,070
+required=false.
+
+33
+00:02:50,220 --> 00:02:54,440
+Rerun the test and it will inject a null value.
+
+34
+00:02:54,450 --> 00:02:59,300
+So in this lecture, you have learnt about the @Qualifier annotation using which we can tell the Spring
+
+35
+00:02:59,320 --> 00:03:04,960
+container that it should use the name we are providing it instead of the field name, using the field name.
+
+36
+00:03:05,240 --> 00:03:13,950
+Let's change this back to address123, something that works. Run the test and it injects the bean.
+

@@ -1,0 +1,228 @@
+1
+00:00:00,140 --> 00:00:05,280
+In this lecture, you'll configure the LocalSessionFactoryBean which is an implementation of the
+
+2
+00:00:05,280 --> 00:00:09,320
+SessionFactory and which does most of the work.
+
+3
+00:00:09,330 --> 00:00:12,060
+This is the biggest portion in our configuration file.
+
+4
+00:00:12,210 --> 00:00:17,610
+So let's get started. This LocalSessionFactoryBean needs three properties or three dependencies, the
+
+5
+00:00:17,710 --> 00:00:24,500
+DataSource, HibernateProperties, a property called HibernateProperties which are key value pairs or
+
+6
+00:00:24,510 --> 00:00:25,640
+properties.
+
+7
+00:00:25,650 --> 00:00:29,760
+And finally, a list of entity classes.
+
+8
+00:00:29,790 --> 00:00:33,330
+Let's get started by going to Eclipse, the configuration file.
+
+9
+00:00:33,900 --> 00:00:38,890
+Create a new bean, class is equal to, within double quotes,
+
+10
+00:00:39,210 --> 00:00:42,330
+its the LocalSessionFactoryBean.
+
+11
+00:00:42,350 --> 00:00:44,740
+We know the class name but we don't know the package.
+
+12
+00:00:44,760 --> 00:00:51,430
+So do a control+shift+t, search for LocalSessionFactoryBean
+
+13
+00:00:51,460 --> 00:00:59,440
+and you will find that. Grab the one which has the package as hibernate5. Don't use 4 or 3.
+
+14
+00:00:59,460 --> 00:01:06,360
+We are using the latest, select that. Grab the entire qualified class name which has the package name,
+
+15
+00:01:06,710 --> 00:01:07,450
+copy it.
+
+16
+00:01:07,470 --> 00:01:10,580
+Go back to the config, paste it within double quotes.
+
+17
+00:01:10,590 --> 00:01:17,220
+Make sure you don't have any spaces. Name is equal to, call it sessionFactory.
+
+18
+00:01:17,490 --> 00:01:19,260
+Close it right there.
+
+19
+00:01:19,800 --> 00:01:28,750
+And the very first property is the DataSource. Let's use p-schema. P colon, data, s capital, source
+
+20
+00:01:28,840 --> 00:01:30,460
+is equal to, within double quotes,
+
+21
+00:01:30,480 --> 00:01:33,940
+grab the dataSource name from here and paste it.
+
+22
+00:01:33,940 --> 00:01:37,480
+We already have the dataSource bean. It has two more properties.
+
+23
+00:01:37,480 --> 00:01:49,580
+Let's set them. Property, the first one name is equal to hibernateProperties, p capital.
+
+24
+00:01:49,930 --> 00:01:52,190
+It's hibernateProperties.
+
+25
+00:01:52,430 --> 00:01:57,810
+Close that. And within the property element we need to configure key value pairs.
+
+26
+00:01:58,350 --> 00:02:06,650
+Props is the element because it is of type properties. The first prop, key is,
+
+27
+00:02:06,680 --> 00:02:08,120
+you know this,
+
+28
+00:02:08,430 --> 00:02:16,730
+hiberate dot dialect. This is the dialect class that generates the SQL queries from our entities
+
+29
+00:02:16,800 --> 00:02:18,870
+or for our entities.
+
+30
+00:02:19,130 --> 00:02:26,840
+Since I am using MySQL database, we need to search for MySQL dialect. Do a control+shift+t, search
+
+31
+00:02:26,840 --> 00:02:29,100
+for Mysqldialect.
+
+32
+00:02:29,270 --> 00:02:33,890
+If you are using Oracle, you will search for Oracledialect.
+
+33
+00:02:33,890 --> 00:02:41,160
+Select that from hibernate. Copy the entire package name starting from here.
+
+34
+00:02:41,400 --> 00:02:44,810
+Package, grab that, go back to config.xml,
+
+35
+00:02:44,820 --> 00:02:50,610
+paste it in between the prop tag for value.
+
+36
+00:02:50,610 --> 00:02:58,140
+Create another property, the second and the last property that we'll be configuring. Prop key is equal
+
+37
+00:02:58,140 --> 00:02:59,280
+to, within double quotes,
+
+38
+00:02:59,310 --> 00:03:07,170
+hibernate.show_sql. This is a boolean property, by default it is false.
+
+39
+00:03:08,470 --> 00:03:16,950
+It should be prop, not prope. Make it true. This tells hibernate that when it generates the queries, when
+
+40
+00:03:16,950 --> 00:03:18,390
+this dialect generates the queries,
+
+41
+00:03:18,390 --> 00:03:21,580
+those queries should also be displayed on the console.
+
+42
+00:03:24,350 --> 00:03:26,840
+You have successfully configured both the properties.
+
+43
+00:03:26,840 --> 00:03:39,570
+The last property that we need to set on the SessionFactory, the name is annotatedClasses,
+
+44
+00:03:39,580 --> 00:03:46,160
+c capital. And its list of strings.
+
+45
+00:03:46,180 --> 00:03:51,640
+Use the list element and we need to pass in the class names which are our entities. Within the list,
+
+46
+00:03:51,650 --> 00:04:00,480
+we can use value. Go to the product entity, grab the package name up to entity, come back to the config.xml,
+
+47
+00:04:00,590 --> 00:04:05,540
+paste it, dot, p capital, product.
+
+48
+00:04:05,690 --> 00:04:14,630
+This property tells hibernate what all are our entities and it will grab them and it knows how to interpret
+
+49
+00:04:14,630 --> 00:04:17,340
+these annotations inside that entity.
+
+50
+00:04:17,360 --> 00:04:22,290
+So in this lecture, you have successfully configured the SessionFactory, the LocalSessionFactory from
+
+51
+00:04:22,430 --> 00:04:26,990
+Spring which implements the SessionFactory interface from hibernate.
+
+52
+00:04:27,290 --> 00:04:30,410
+You have injected the dataSource which is the first dependency.
+
+53
+00:04:30,560 --> 00:04:33,080
+You have also provided the hibernateProperties,
+
+54
+00:04:33,230 --> 00:04:39,290
+the two key properties, hibernate.dialect which generates the SQL queries and also a property called
+
+55
+00:04:39,290 --> 00:04:45,800
+hibernate.show_sql which prints the, which tells hibernate that it should print the SQL queries
+
+56
+00:04:45,800 --> 00:04:46,960
+on the console.
+
+57
+00:04:47,090 --> 00:04:51,880
+And finally, a list of annotated classes, in our case we only have one entity.
+

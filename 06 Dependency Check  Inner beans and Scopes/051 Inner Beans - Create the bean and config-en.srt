@@ -1,0 +1,215 @@
+0
+00:00.460 --> 00:04.840
+In this lecture you will learn how to configure and use inner beans.
+
+1
+00:04.860 --> 00:11.240
+You will work on a usecase where a employee class has a has a relationship with a address class.
+
+2
+00:11.280 --> 00:18.480
+Every employee will have an address along with ID and the address will have a house number street and
+
+3
+00:18.600 --> 00:19.060
+city.
+
+4
+00:19.060 --> 00:20.690
+We are going to keep it simple.
+
+5
+00:21.030 --> 00:22.500
+You will create these two classes
+
+6
+00:22.530 --> 00:31.080
+and then in the spring configuration will configure the address as a inner bean for the employee go to eclipse
+
+7
+00:31.980 --> 00:32.650
+right click
+
+8
+00:32.690 --> 00:46.560
+create a new class called employee and the package will be com dot bharath dot springcore dot inner beans
+
+9
+00:47.090 --> 00:47.600
+finish
+
+10
+00:50.200 --> 00:59.200
+employee will have private int ID and private address which doesn't exist yet.
+
+11
+00:59.860 --> 01:01.360
+A d d r e s s
+
+12
+01:01.420 --> 01:10.000
+address will create it hit control one get eclipse help create class address in the same package
+
+13
+01:10.520 --> 01:11.000
+Finish
+
+14
+01:14.280 --> 01:25.800
+address will have a house number private int H  number private string street and private string
+
+15
+01:26.360 --> 01:27.150
+city.
+
+16
+01:27.440 --> 01:31.290
+just three fields select them all source
+
+17
+01:31.300 --> 01:32.870
+Generate getters and setters.
+
+18
+01:33.120 --> 01:37.970
+Select all OK control shift F to format.
+
+19
+01:38.010 --> 01:43.560
+Go back to employee do the same generate the getters and  setters right click.
+
+20
+01:43.740 --> 01:48.210
+You can either go to source here or up at the menu level.
+
+21
+01:48.360 --> 01:56.390
+Generate getters and setters select all OK and that generates the getters and setters do a control shift F to format save
+
+22
+01:56.390 --> 01:57.610
+it.
+
+23
+01:57.630 --> 02:01.240
+The second step is to come up with the configuration file.
+
+24
+02:01.380 --> 02:05.490
+Copy over the configuration file from any of the earlier lectures.
+
+25
+02:05.560 --> 02:06.700
+Dependency check.
+
+26
+02:06.780 --> 02:08.200
+Come back to inner  beans.
+
+27
+02:08.490 --> 02:09.110
+paste it
+
+28
+02:13.500 --> 02:18.180
+clean up all the beans and will start with the employee bean.
+
+29
+02:18.640 --> 02:21.610
+Typically we start with that dependency bean.
+
+30
+02:21.610 --> 02:27.440
+That is address but in this case we want to use addresses as inner bean for employee.
+
+31
+02:27.460 --> 02:29.840
+So let's get started with that.
+
+32
+02:29.880 --> 02:35.440
+Class is equal to employee and it's in the long package.
+
+33
+02:35.440 --> 02:38.770
+Com dot bharath dot spring core dot inner beans 
+
+34
+02:38.770 --> 02:42.020
+Copy that package paste it
+
+35
+02:42.170 --> 02:42.860
+Give it a name.
+
+36
+02:42.860 --> 02:45.320
+Name is equal to within double quotes.
+
+37
+02:45.330 --> 02:54.030
+Employee and set the properties using P schema p colon the only field we have is ID and then the address
+
+38
+02:54.120 --> 03:00.200
+id is equal to 1 2 3 its not mandatory to give it a value but let's give it a value.
+
+39
+03:00.330 --> 03:10.070
+Next comes property the property name is address and we are going to set that property not by using
+
+40
+03:10.070 --> 03:16.560
+ref tag but as a in inner bean simply inside the property we use the bean tag one more time
+
+41
+03:17.640 --> 03:24.570
+class is equal to address and copy the package name from here.
+
+42
+03:27.800 --> 03:31.530
+paste it right before I address at the class level.
+
+43
+03:33.090 --> 03:38.440
+And the name for inner bean is optional because we cannot use an inner bean outside anyways so the
+
+44
+03:38.440 --> 03:42.800
+name is optional we need not provide the name to set the properties.
+
+45
+03:42.880 --> 03:44.000
+We can use properties.
+
+46
+03:44.020 --> 03:52.150
+Inside this bean use the property element or simply use P schema at this level P colon the very
+
+47
+03:52.150 --> 03:59.740
+first field or address is H number house number then the street and the city H number is equal
+
+48
+03:59.800 --> 04:15.850
+to 700 next P colon Street is equal to Mira Mesa blvd 
+
+49
+04:16.100 --> 04:20.100
+P colon city is equal to my city San Diego.
+
+50
+04:20.170 --> 04:28.120
+One of my favorite cities and we can close this bean right here and get rid of this ending tag and we
+
+51
+04:28.120 --> 04:30.670
+have successfully used a Nested bean.
+
+52
+04:30.700 --> 04:37.930
+That is a bean as a property for an other bean in the next lecture will create the test will run
+
+53
+04:37.940 --> 04:39.970
+it end to end and I'll explain further.

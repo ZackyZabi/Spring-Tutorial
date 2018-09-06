@@ -1,0 +1,123 @@
+0
+00:00.660 --> 00:06.390
+This lecture you will work on the next layer which is the service layer, we'll create a service class that will
+
+1
+00:06.390 --> 00:09.830
+use the Dao by Auto wiring the dao onto it.
+
+2
+00:09.840 --> 00:12.290
+And then we will use it in the Test class.
+
+3
+00:13.670 --> 00:14.910
+go back to the project.
+
+4
+00:14.930 --> 00:19.710
+Right click on the package new class call 
+
+5
+00:19.760 --> 00:22.540
+it service finish
+
+6
+00:27.330 --> 00:34.440
+this service is going to use the services provided by Dao  at Auto wired.
+
+7
+00:34.440 --> 00:35.080
+We want to.
+
+8
+00:35.160 --> 00:36.140
+auto wire.
+
+9
+00:36.180 --> 00:46.890
+This dao onto the service and within service will again have a method called public void safe which will
+
+10
+00:46.890 --> 00:50.460
+invoke the Dao dot create
+
+11
+00:53.570 --> 00:59.980
+go back to the spring config and we need to add one more method that will return the new bean public
+
+12
+01:00.370 --> 01:01.460
+service.
+
+13
+01:01.730 --> 01:08.430
+Service is the method name return new service.
+
+14
+01:08.750 --> 01:16.360
+Again this is similar to bean element in spring configuration if you are doing a xml based configuration.
+
+15
+01:16.370 --> 01:21.020
+This is like a bean element when you mark it  with at bean annotation.
+
+16
+01:21.020 --> 01:24.360
+If you don't mark it then it doesn't have any value.
+
+17
+01:24.360 --> 01:27.950
+Spring will not invoke this method it will not create a bean.
+
+18
+01:27.950 --> 01:30.930
+So this is important here.
+
+19
+01:31.160 --> 01:34.860
+Go back to the test instead of Dao dot class.
+
+20
+01:34.870 --> 01:42.640
+This time we are going to retrieve service class and on the left hand side it'll be service bean.
+
+21
+01:43.060 --> 01:48.490
+And it not be create, it will be save instead on the service it is called Save on the dao
+
+22
+01:48.490 --> 01:51.600
+It's called create rerun the test
+
+23
+01:54.580 --> 01:56.410
+and it still says it is created.
+
+24
+01:56.410 --> 02:03.040
+That is the method on the servies is invoked which is say which in turn invokes creates the container
+
+25
+02:03.040 --> 02:04.040
+starts
+
+26
+02:04.060 --> 02:05.970
+It will go to the configuration file.
+
+27
+02:06.100 --> 02:12.290
+It will create these two beans it knows that the service bean needs the dao bean so it will first create
+
+28
+02:12.330 --> 02:18.440
+the dao bean then it would inject that in because we have auto void that on to the service part of
+
+29
+02:18.620 --> 02:19.430
+it.
+
+30
+02:19.450 --> 02:27.060
+Then when we get that bean in the test class and invoke the method at the appropriate save method is called.

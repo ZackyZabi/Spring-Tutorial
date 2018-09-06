@@ -1,0 +1,164 @@
+1
+00:00:00,170 --> 00:00:06,750
+In this lecture, you will learn an advanced Springcore concept called Bean externalization or reading
+
+2
+00:00:06,840 --> 00:00:14,340
+properties from a file and injecting it into a bean. In realtime applications, we often have some properties
+
+3
+00:00:14,460 --> 00:00:22,440
+or key value pairs such as the db name, the port number of the server, usernames, passwords etc; which we
+
+4
+00:00:22,440 --> 00:00:28,490
+do not hardcode in our application code and use a properties file instead.
+
+5
+00:00:29,570 --> 00:00:34,580
+If we have to change these values, the values for these keys, we need not change it everywhere in the
+
+6
+00:00:34,580 --> 00:00:35,070
+code.
+
+7
+00:00:35,150 --> 00:00:40,470
+Simply we go to this one global property file and change the value right there.
+
+8
+00:00:40,610 --> 00:00:47,990
+And it can be reused without recompiling our application or code. In spring applications,
+
+9
+00:00:48,080 --> 00:00:55,130
+we use the property place holder configuration to link these property files with our xml configuration
+
+10
+00:00:55,430 --> 00:00:57,170
+in three steps.
+
+11
+00:00:57,170 --> 00:00:57,830
+The first step,
+
+12
+00:00:57,830 --> 00:01:00,020
+we create the property file ofcourse.
+
+13
+00:01:00,020 --> 00:01:07,550
+The second step is to link this property file in our XML configuration and then we use that property
+
+14
+00:01:07,550 --> 00:01:15,110
+file and inject the values in this property file into our application, or we inject these properties
+
+15
+00:01:15,200 --> 00:01:17,970
+as dependencies to our beans.
+
+16
+00:01:18,980 --> 00:01:25,070
+In this lecture, you will create the property file and in the next lecture you will link it and test it.
+
+17
+00:01:25,760 --> 00:01:37,120
+Go to Eclipse, right click, create -> New, go to other. Type in file. Select file, because we are going to create
+
+18
+00:01:37,120 --> 00:01:49,850
+a property file. Call it database.properties, Finish. We'll move it under a package in a second.
+
+19
+00:01:50,810 --> 00:02:05,160
+Right click, new, create a test class. com.bharath.springcore.propertyplaceholder
+
+20
+00:02:05,180 --> 00:02:12,860
+is the package name, finish. Move this property file into that new package called propertyplaceholder.
+
+21
+00:02:13,400 --> 00:02:17,070
+Open it, add some properties to it.
+
+22
+00:02:17,120 --> 00:02:23,960
+This will have a dbServer is equal to, let's say a bharathserver.
+
+23
+00:02:24,050 --> 00:02:26,790
+You can give a IP address if you want to.
+
+24
+00:02:27,210 --> 00:02:40,690
+dbPort=3306. Let's keep all camel case. dbServer, S capital, dbPort, P capital, dbUser, U capital, test.
+
+25
+00:02:40,890 --> 00:02:45,160
+dbPass is equal to test as well.
+
+26
+00:02:45,650 --> 00:02:46,830
+Save it.
+
+27
+00:02:46,830 --> 00:02:51,190
+So you have successfully created the dot property file. Both the keys and values
+
+28
+00:02:51,240 --> 00:02:59,430
+here are string type. And if we have duplicates, for example, if I add another dbPass here, always the
+
+29
+00:02:59,430 --> 00:03:00,900
+latest will be taken.
+
+30
+00:03:00,900 --> 00:03:08,250
+So the last one will be used. If you want to comment out something, you use hash. That means comment, in
+
+31
+00:03:08,250 --> 00:03:11,540
+a property file and that property will not be read.
+
+32
+00:03:11,550 --> 00:03:14,510
+Comments are useful to give information.
+
+33
+00:03:14,520 --> 00:03:20,600
+For example, you can say #The default port etc;
+
+34
+00:03:20,610 --> 00:03:25,670
+Or if you have multiple configurations, if you have along with dbServer configuration if you have a
+
+35
+00:03:25,680 --> 00:03:33,560
+web service configuration here, you can say #web service configuration. That is the use of comments. And
+
+36
+00:03:33,560 --> 00:03:40,880
+these db properties here or any properties are case sensitive, the keys here are case sensitive. dbUser
+
+37
+00:03:41,150 --> 00:03:44,190
+is not the same as dbuser.
+
+38
+00:03:44,390 --> 00:03:47,980
+So you've got to be careful with the case as well.
+
+39
+00:03:48,010 --> 00:03:54,020
+In the next lecture, we'll link up these properties in our XML configuration and we'll inject them into
+
+40
+00:03:54,020 --> 00:03:56,820
+our bean. Uncomment everything
+
+41
+00:03:57,020 --> 00:04:00,760
+and you can delete this line, we'll have four properties.
+

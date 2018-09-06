@@ -1,0 +1,72 @@
+1
+00:00:00,150 --> 00:00:06,030
+This and the next few lectures you are going to create a list and inject it into a Java class using
+
+2
+00:00:06,030 --> 00:00:07,360
+spring.
+
+3
+00:00:07,380 --> 00:00:13,170
+We'll work on a use case which is very simple you will create a hospital POJO class which will have to
+
+4
+00:00:13,260 --> 00:00:18,690
+fields the name of the hospital which is a spring and then the list of departments in that hospital
+
+5
+00:00:18,840 --> 00:00:25,140
+which is a list of strings will accomplish it in three steps which you already know, you'll first create
+
+6
+00:00:25,140 --> 00:00:32,040
+a spring bean which is a plane Java object the hospital class will then create the spring configuration
+
+7
+00:00:32,040 --> 00:00:32,660
+file.
+
+8
+00:00:32,850 --> 00:00:37,800
+Finally we'll create a test class and see the dependency injection of list.
+
+9
+00:00:39,340 --> 00:00:40,090
+Go to eclipse.
+
+10
+00:00:40,090 --> 00:00:51,040
+Let's get started let's do the first step of creating the spring bean right click new class call it
+
+11
+00:00:51,150 --> 00:01:07,420
+Hospital lets change the package to dot list finish the hospital class will have private string name of
+
+12
+00:01:07,420 --> 00:01:17,280
+the hospital private list of strings which are the departments the names of departments save it hit
+
+13
+00:01:17,290 --> 00:01:26,330
+control one import Java dot util dot list control one generate or create getter and setters for this.
+
+14
+00:01:26,350 --> 00:01:29,500
+We can also do all the getter and setters at once.
+
+15
+00:01:29,500 --> 00:01:32,040
+For now just use this control one shortcut
+
+16
+00:01:35,230 --> 00:01:37,130
+control shift F to format.
+
+17
+00:01:37,180 --> 00:01:41,980
+So you have successfully completed the first step will do the configuration file and the test class in
+
+18
+00:01:41,980 --> 00:01:43,260
+the next few lectures.
+

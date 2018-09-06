@@ -1,0 +1,76 @@
+1
+00:00:00,420 --> 00:00:06,400
+When the spring container creates an object and does the dependency injection for that particular object
+
+2
+00:00:06,700 --> 00:00:09,350
+it does it based on the types of data,
+
+3
+00:00:09,370 --> 00:00:12,400
+that object depends on. Based on it,
+
+4
+00:00:12,400 --> 00:00:16,180
+there are three types of data or dependencies.
+
+5
+00:00:16,450 --> 00:00:23,920
+Number one is primitive type dependencies an object might have primitive type fields and dependencies, spring will consider
+
+6
+00:00:23,950 --> 00:00:31,160
+all the following types java types by short int long float double boolean character and string as primitive
+
+7
+00:00:31,210 --> 00:00:33,000
+type dependencies.
+
+8
+00:00:33,130 --> 00:00:34,470
+That is the first step.
+
+9
+00:00:34,510 --> 00:00:38,290
+The second type is the collection type as soon as I say a collection type,
+
+10
+00:00:38,320 --> 00:00:45,980
+you know that Spring will consider list set map and properties as the collection type dependencies.
+
+11
+00:00:46,000 --> 00:00:51,630
+It knows how to create those objects and inject them into the objects as required.
+
+12
+00:00:52,640 --> 00:00:56,460
+Last but not the least reference types or the object types.
+
+13
+00:00:56,520 --> 00:01:03,440
+This is the most used type in any java application, this is where a class depends not on a primitive type
+
+14
+00:01:03,830 --> 00:01:04,770
+not on a collection.
+
+15
+00:01:04,780 --> 00:01:13,190
+But it depends on an other class object spring will create an object of that type class type and it will inject it
+
+16
+00:01:13,280 --> 00:01:15,770
+into the class that depends on it.
+
+17
+00:01:16,070 --> 00:01:18,370
+So is the reference type.
+
+18
+00:01:18,520 --> 00:01:25,840
+The three types of data or dependencies are new types collection types and a reference type you will
+
+19
+00:01:25,840 --> 00:01:30,250
+be working on all these three as soon as you start working on the handson lectures.
+

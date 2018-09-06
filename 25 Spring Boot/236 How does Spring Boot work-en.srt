@@ -1,0 +1,112 @@
+1
+00:00:00,150 --> 00:00:04,760
+So how does Spring Boot magic work? It's no magic.
+
+2
+00:00:04,830 --> 00:00:10,520
+Spring does not generate any code on the fly, nor does it use any XML configuration.
+
+3
+00:00:10,530 --> 00:00:18,300
+It is all programmatic configuration which you have done in a section earlier on. Instead of we creating a configuration,
+
+4
+00:00:18,490 --> 00:00:27,240
+Java configuration, for web.xml or dispatcher servlet or configuring hibernate etc; Spring already has all
+
+5
+00:00:27,240 --> 00:00:32,730
+those configuration classes in their jar files. The people at Spring have already created them,
+
+6
+00:00:32,910 --> 00:00:37,610
+and they will be enabled based on certain conditions.
+
+7
+00:00:38,010 --> 00:00:44,580
+So to understand that, you already know about the Starter POMs. When you add a Starter POM, it doesn't do
+
+8
+00:00:44,580 --> 00:00:46,530
+any magic, Spring Boot magic.
+
+9
+00:00:46,540 --> 00:00:53,580
+They simply bring in all the jars that are required for a certain type of projects, for standalone, for web,
+
+10
+00:00:53,860 --> 00:00:55,430
+for REST, etc;
+
+11
+00:00:56,330 --> 00:01:03,620
+But once you have these jars, these jars inside them have something called Spring.factories,
+
+12
+00:01:03,680 --> 00:01:05,010
+under META-INF.
+
+13
+00:01:05,300 --> 00:01:07,930
+These are already added by
+
+14
+00:01:07,990 --> 00:01:09,490
+the Spring developers
+
+15
+00:01:09,650 --> 00:01:14,930
+and these decide what should be enabled and what should be disabled,
+
+16
+00:01:14,930 --> 00:01:22,550
+what programatic configuration should be enabled at runtime and what should be disabled. So everything,
+
+17
+00:01:22,610 --> 00:01:28,790
+all the configuration is inside Java classes provided by Spring marked with @Configuration
+
+18
+00:01:29,480 --> 00:01:32,510
+but conditionally. There is an annotation called
+
+19
+00:01:32,550 --> 00:01:39,640
+@Condition. If you open up the spring source code and see how the configuration or the Spring Boot works,
+
+20
+00:01:39,830 --> 00:01:46,190
+the classes they use. For example, for a substitution of web.xml they will have a Java configuration
+
+21
+00:01:46,670 --> 00:01:54,530
+which would be marked with @Configuration and also @Condition. Only if it is a web project, then enable that
+
+22
+00:01:54,530 --> 00:01:55,930
+particular configuration.
+
+23
+00:01:56,060 --> 00:02:01,410
+Similarly, for HibernateJpaAutoConfiguration, only if
+
+24
+00:02:01,420 --> 00:02:08,920
+there are certain hibernate related classes on the classpath, only then will Spring Boot enable the
+
+25
+00:02:08,920 --> 00:02:13,670
+hibernate support or this particular HibernateJpaAutoConfiguration.
+
+26
+00:02:14,600 --> 00:02:16,910
+So that is the magic behind the scenes.
+
+27
+00:02:17,120 --> 00:02:23,780
+How Spring Boot works, it will look for META-INF/spring.factories which will have a list of
+
+28
+00:02:23,810 --> 00:02:31,010
+configuration files and it will enable those configurations based on what it finds on the classpath.
+

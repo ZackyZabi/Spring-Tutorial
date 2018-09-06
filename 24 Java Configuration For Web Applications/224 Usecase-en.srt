@@ -1,0 +1,72 @@
+1
+00:00:01,770 --> 00:00:08,580
+In this lecture we'll migrate the Spring MVC web application that you've developed earlier to use Java based configuration instead
+
+2
+00:00:08,580 --> 00:00:16,930
+of xml configuration. You will create a Spring configuration by extending the WebApplicationInitializer
+
+3
+00:00:16,930 --> 00:00:22,200
+You will create a class that will replace the web.xml and that class will extend the
+
+4
+00:00:22,440 --> 00:00:25,380
+WebApplicationInitializer from Spring.
+
+5
+00:00:26,430 --> 00:00:28,820
+Similarly you will create a configuration file,
+
+6
+00:00:29,010 --> 00:00:37,020
+where we'll configure the internal view resolver etc; and that will extend a WebMvcConfigurerAdapter.
+
+7
+00:00:37,660 --> 00:00:45,720
+And you'll mark this with annotations such as @EnableWebMvc which is equivalent to <mvc:annotation-driven/>.
+
+8
+00:00:45,720 --> 00:00:49,290
+When you used the xml, the dispatcherservlet.xml,
+
+9
+00:00:49,440 --> 00:00:50,770
+this is what we used there.
+
+10
+00:00:50,850 --> 00:00:57,780
+But here you simply annotate this class with @EnableWebMvc. The next one @ComponentScan, instead
+
+11
+00:00:57,780 --> 00:01:02,380
+of defining <context:component-scan/>
+
+12
+00:01:02,760 --> 00:01:09,040
+in the xml, you'll use this annotation and tell Spring which all packages it need to scan for our controllers.
+
+13
+00:01:09,060 --> 00:01:10,140
+Finally, you know what
+
+14
+00:01:10,130 --> 00:01:17,620
+this is. The configuration which tells Spring that this particular been here, SpringConfig encloses
+
+15
+00:01:17,760 --> 00:01:18,900
+spring beans or
+
+16
+00:01:18,930 --> 00:01:21,630
+it acts as a container of Spring beans.
+
+17
+00:01:21,900 --> 00:01:29,460
+This is equivalent to defining beans element in your spring configuration file. So you will do all this
+
+18
+00:01:29,610 --> 00:01:32,600
+in simple steps in the next few lectures.
+

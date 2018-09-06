@@ -1,0 +1,136 @@
+1
+00:00:00,150 --> 00:00:04,690
+The last step is to use the employee roadmap or in our dollar impel.
+
+2
+00:00:04,820 --> 00:00:11,010
+Update our test and test it to use the roadmap or you can create an instance of it right here employee
+
+3
+00:00:11,630 --> 00:00:23,160
+role map to correlate road map is equal to new employee roadmap to big that object and pass it here.
+
+4
+00:00:23,200 --> 00:00:30,960
+Control shift to format and that should return employees so you can take the results that are coming
+
+5
+00:00:30,960 --> 00:00:31,730
+from here.
+
+6
+00:00:31,870 --> 00:00:38,030
+It control one and sign statement to any local variable.
+
+7
+00:00:38,030 --> 00:00:44,700
+And that will return Employee object because we are passing aerial map of pipe which should have done
+
+8
+00:00:44,720 --> 00:00:45,340
+and applied.
+
+9
+00:00:45,350 --> 00:00:50,550
+So we are returning it back at the return statement return.
+
+10
+00:00:50,840 --> 00:00:51,390
+Employee
+
+11
+00:00:54,550 --> 00:01:00,890
+So here once again the reason we see an employee coming back from for object is because the road map
+
+12
+00:01:00,890 --> 00:01:07,660
+or type that we have implemented is for the employee genetic backup.
+
+13
+00:01:07,930 --> 00:01:13,390
+Let's upgrade the test go to test comment board the delete portion
+
+14
+00:01:16,180 --> 00:01:21,020
+Dow dart read and pass in and let's pass.
+
+15
+00:01:21,140 --> 00:01:24,110
+Let's check the database to see what it has right now.
+
+16
+00:01:24,110 --> 00:01:27,830
+All it has is one row with ID 2.
+
+17
+00:01:28,150 --> 00:01:30,910
+Let's use that to is the ID.
+
+18
+00:01:31,060 --> 00:01:35,180
+It controls one to and the statement to a new local variable.
+
+19
+00:01:35,380 --> 00:01:36,940
+Call that employee.
+
+20
+00:01:37,040 --> 00:01:39,370
+That's the result we are getting back.
+
+21
+00:01:39,620 --> 00:01:49,080
+Display the results change this text to employee record Seybert.
+
+22
+00:01:49,260 --> 00:01:56,230
+We already have an employee created up here for updates and leads you can comment out that portion.
+
+23
+00:01:56,850 --> 00:02:03,030
+We don't need the Employee object in this case or comment out portion as well.
+
+24
+00:02:03,190 --> 00:02:12,910
+Right click on that test as job application and we see the employee at a car coming back and the details
+
+25
+00:02:12,910 --> 00:02:14,460
+are being printed.
+
+26
+00:02:14,500 --> 00:02:18,620
+So the flow is the container creates all the beans.
+
+27
+00:02:18,790 --> 00:02:26,370
+Then when we invoke this reed matter in the employee of Ambuhl The Daily Beast it complex query for
+
+28
+00:02:26,370 --> 00:02:27,850
+object will be invoked.
+
+29
+00:02:27,870 --> 00:02:33,090
+The sequel will be passed in along with the roadmap that will be passed so the statement will be executed
+
+30
+00:02:33,090 --> 00:02:39,260
+against the database result set comes back JTB said as an asset is what comes back to spring.
+
+31
+00:02:39,270 --> 00:02:45,620
+Spring Springville use the roadmap that we have provided by invoking the map third it passes in that
+
+32
+00:02:45,620 --> 00:02:46,610
+is all set.
+
+33
+00:02:46,620 --> 00:02:52,860
+It gets Employee object back because that is what we are doing inside that matter and it will return
+
+34
+00:02:52,860 --> 00:02:55,480
+it back to the employee Dol impellor.
+

@@ -1,0 +1,112 @@
+1
+00:00:00,360 --> 00:00:06,300
+So far you have worked with primitive types as well as objects types. You have both types of data from the
+
+2
+00:00:06,300 --> 00:00:08,000
+controller to the view. In this
+
+3
+00:00:08,010 --> 00:00:15,300
+and the next lecture, you'll learn how to send a list, list of objects. Let's start by creating a Controller.
+
+4
+00:00:15,300 --> 00:00:19,160
+Copy the ObjectController, paste it on the controller package.
+
+5
+00:00:19,290 --> 00:00:24,300
+Rename it to ListController, remove the 2 at the end.
+
+6
+00:00:24,380 --> 00:00:25,360
+Hit OK.
+
+7
+00:00:25,680 --> 00:00:27,310
+Open the ListController.
+
+8
+00:00:29,310 --> 00:00:34,890
+Change this from readObject to readList. The method name can be anything.
+
+9
+00:00:34,890 --> 00:00:38,820
+Change it as well to sendList instead.
+
+10
+00:00:40,540 --> 00:00:43,580
+The view name will be displayList. From object
+
+11
+00:00:43,580 --> 00:00:49,940
+everything changes to list. On the ModelAndView, instead of setting one single object,
+
+12
+00:00:49,970 --> 00:00:56,850
+this time we are going to create a new array list of employees.
+
+13
+00:00:57,860 --> 00:01:02,270
+Create a new array list of employee. Hit control+1, import array list from java.util.
+
+14
+00:01:02,330 --> 00:01:06,590
+Control+1, assign statement to a new local variable.
+
+15
+00:01:06,590 --> 00:01:17,540
+Call it employee. Copy this entire employee creation and setting of data and paste it couple of times,
+
+16
+00:01:17,540 --> 00:01:27,790
+employee2 and employee3. Change this from, set employee id to 2, John, you can change to Bharath and his salary
+
+17
+00:01:27,860 --> 00:01:33,420
+is 10000. Change the id to 3.
+
+18
+00:01:33,660 --> 00:01:38,560
+Bob is the third guy and his salary is 7000 dollars.
+
+19
+00:01:41,840 --> 00:01:44,670
+And this list is a list of employees.
+
+20
+00:01:44,990 --> 00:01:52,350
+So add those three employees to this list, employees dot add employee.
+
+21
+00:01:52,370 --> 00:01:53,810
+That is the first one.
+
+22
+00:01:56,150 --> 00:02:08,910
+employees.add(employee2) and one more to go. Copy this, paste it, employee 3.
+
+23
+00:02:09,040 --> 00:02:12,670
+So we have set all the three employees into the list. Now set
+
+24
+00:02:12,730 --> 00:02:14,880
+that list into the ModelAndView.
+
+25
+00:02:14,950 --> 00:02:17,680
+Call it employees. Instead of employee,
+
+26
+00:02:17,680 --> 00:02:20,150
+the key should be, give it a meaningful name,
+
+27
+00:02:20,200 --> 00:02:27,220
+employees. And this object here should also be employees. Instead of object you are sending an entire list
+
+28
+00:02:27,460 --> 00:02:33,230
+back to the view. In the next lecture you will create the view and see it all in action.
+

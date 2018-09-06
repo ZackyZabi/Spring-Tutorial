@@ -1,0 +1,88 @@
+1
+00:00:00,230 --> 00:00:05,410
+In this lecture, we'll create the test class and see the constructor injection in action.
+
+2
+00:00:05,610 --> 00:00:13,690
+So get started by right clicking on the new package, Class, Test with s main method, finish.
+
+3
+00:00:13,700 --> 00:00:19,000
+You can copy over the prior tests if you want to, but I'm going to type.
+
+4
+00:00:19,010 --> 00:00:28,620
+ApplicationContext context = new ClassPathXmlApplicationContext("");
+
+5
+00:00:28,700 --> 00:00:30,120
+Pass in the config.xml.
+
+6
+00:00:35,290 --> 00:00:41,390
+Grab the package name so that it will find the conflig.xml under the appropriate folders
+
+7
+00:00:41,480 --> 00:00:46,690
+on the classpath. Forward slash, change all the dots to forward slashes.
+
+8
+00:00:51,350 --> 00:01:03,290
+Two more. Hit control+1 on ApplicationContext. Spell it correctly, ApplicationContext. Control+1, import it
+
+9
+00:01:03,290 --> 00:01:04,970
+from Spring.
+
+10
+00:01:04,970 --> 00:01:08,280
+context.getBean(); read the bean.
+
+11
+00:01:08,310 --> 00:01:10,400
+That's the second step, so that we can use it.
+
+12
+00:01:10,400 --> 00:01:18,350
+The bean is employee in the config.xml, that is the name of our main bean, Employee.
+
+13
+00:01:21,020 --> 00:01:28,290
+Employee e is equal to, typecast it because it is an object
+
+14
+00:01:28,290 --> 00:01:36,500
+sysout, e. Do a control+shift+f to format. Run the test, right
+
+15
+00:01:36,510 --> 00:01:46,140
+click, Run as -> Java Application. That runs and prints the employee details for us along with the address
+
+16
+00:01:46,140 --> 00:01:47,130
+that we have configured.
+
+17
+00:01:47,130 --> 00:01:48,560
+House number is 123,
+
+18
+00:01:48,570 --> 00:01:51,680
+Street is mira mesa and city is san diego.
+
+19
+00:01:51,840 --> 00:01:54,970
+So we have successfully used constructor injection.
+
+20
+00:01:55,230 --> 00:02:01,620
+And if you see, we have mixed both property as well as constructor injection here. The address itself
+
+21
+00:02:01,750 --> 00:02:10,080
+we have used P schema. That is, using setter injection we have injected the values into address. And then, when we created
+
+22
+00:02:10,080 --> 00:02:17,400
+the employee, the spring container, we configured it to create the employee using the constructor injection.
+

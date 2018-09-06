@@ -1,0 +1,116 @@
+1
+00:00:00,790 --> 00:00:07,460
+In the previous lecture, you have seen how to send the data from the Controller back to the UI but
+
+2
+00:00:07,610 --> 00:00:09,190
+when we send the response back,
+
+3
+00:00:09,190 --> 00:00:14,140
+we were sending it back to the same registrationPage once the registration completes successfully.
+
+4
+00:00:14,150 --> 00:00:19,520
+Instead of that, let's complete the flow end to end. That is, from the UI to the Controller and from
+
+5
+00:00:19,520 --> 00:00:22,660
+the Controller to an other new UI.
+
+6
+00:00:22,890 --> 00:00:29,150
+Go back to the UserController. Instead of sending it to the UserRegistrationPage, we'll send it
+
+7
+00:00:29,150 --> 00:00:37,340
+to a regResult, r capital, regResult will be our new view which will simply say user registered
+
+8
+00:00:37,340 --> 00:00:43,750
+successfully and it will display the model which we are going to set into the ModelAndView.
+
+9
+00:00:43,780 --> 00:00:52,840
+So here into this ModelAndView, stop the Tomcat server. Come back, dot, addObject.
+
+10
+00:00:55,520 --> 00:01:00,410
+Set the user information again so that we can access it in the next view.
+
+11
+00:01:08,420 --> 00:01:10,830
+Double click to minimize, create a new view.
+
+12
+00:01:10,960 --> 00:01:16,290
+Right click on the view and the view name should be regResult. JSP file,
+
+13
+00:01:19,650 --> 00:01:24,540
+reg, r capital, result, dot jsp.
+
+14
+00:01:24,700 --> 00:01:30,630
+The title is User Registration Response
+
+15
+00:01:30,640 --> 00:01:41,870
+or Result. And within the body, say User Registered Successfully.
+
+16
+00:01:44,340 --> 00:01:49,820
+User details are, you can display them however you want.
+
+17
+00:01:49,820 --> 00:02:00,500
+I am going to simply use the JSP expression and say request.getAttribute and the key that we
+
+18
+00:02:00,500 --> 00:02:08,420
+have used in the Controller is user. So use that key and the toString method will be invoked and it should
+
+19
+00:02:08,420 --> 00:02:19,070
+be displaying the user details. Go to the server, right click, restart or just talk because I have stopped it.
+
+20
+00:02:19,870 --> 00:02:21,060
+Go back to the browser
+
+21
+00:02:21,130 --> 00:02:25,970
+within Eclipse or even outside Eclipse. Start the registration,
+
+22
+00:02:25,970 --> 00:02:33,370
+let's say test is the, or 1234 is the id, test is the name, test@gmail.com is the
+
+23
+00:02:33,370 --> 00:02:37,250
+email id. Hit the submit button.
+
+24
+00:02:37,350 --> 00:02:42,330
+This time the registration completes and it goes back to the result page. Instead of going back to the
+
+25
+00:02:43,560 --> 00:02:44,550
+registrationPage,
+
+26
+00:02:44,550 --> 00:02:50,670
+now it goes to a new page, the JSP which we have just created. And it displays User Registered Successfully.
+
+27
+00:02:50,910 --> 00:02:53,990
+User details are and the user object.
+
+28
+00:02:54,300 --> 00:03:00,180
+So you have completed the flow end to end. You have used both sending data from the UI to the Controller as
+
+29
+00:03:00,180 --> 00:03:05,710
+well as sending data from the Controller to the UI in one single mini application.
+

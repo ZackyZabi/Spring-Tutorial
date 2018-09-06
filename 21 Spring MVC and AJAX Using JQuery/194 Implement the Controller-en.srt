@@ -1,0 +1,192 @@
+1
+00:00:00,240 --> 00:00:05,760
+This lecture We'll wrap up our back end development by implementing the control of matter.
+
+2
+00:00:06,060 --> 00:00:12,480
+So we typically call this portion as the Bakken development and whatever we do on the white pages or
+
+3
+00:00:12,480 --> 00:00:16,630
+the page is just using javascript is called Frente in court.
+
+4
+00:00:16,650 --> 00:00:27,720
+We'll get to it once we wrap up the controller or go to eclipse user controller add a new method right
+
+5
+00:00:27,720 --> 00:00:33,090
+after get users start typing in public string miscall it up
+
+6
+00:00:37,670 --> 00:00:39,260
+public string.
+
+7
+00:00:40,100 --> 00:00:49,920
+Validate email is the matter on the controller map it at request mapping.
+
+8
+00:00:49,950 --> 00:00:54,660
+Is that iteration within brackets.
+
+9
+00:00:54,660 --> 00:00:57,520
+Map it to validate e-mail.
+
+10
+00:00:57,620 --> 00:00:58,810
+This is there you are.
+
+11
+00:00:58,860 --> 00:01:03,120
+Are you all right that we are going to use in our AJAX call later on.
+
+12
+00:01:04,580 --> 00:01:06,270
+Validate e-mail.
+
+13
+00:01:06,370 --> 00:01:08,420
+The logic here is going to be simple.
+
+14
+00:01:08,950 --> 00:01:14,010
+But first we need a request parameter that should come in which is the I.B..
+
+15
+00:01:14,080 --> 00:01:25,840
+So integer into the use their request Param annotation which you learned from spring NBC and we lose
+
+16
+00:01:25,840 --> 00:01:35,730
+the name as ID and here return we'll get some response for now return NULL.
+
+17
+00:01:35,730 --> 00:01:41,840
+Which means that in a second so we got the incoming parameters and we have also mapped the method to
+
+18
+00:01:41,880 --> 00:01:43,140
+where you are right.
+
+19
+00:01:43,320 --> 00:01:45,870
+The next step is to use the service
+
+20
+00:01:48,470 --> 00:01:58,790
+service Daut get user when we pass in the ID that comes in the request if that returns Eyrecourt control
+
+21
+00:01:58,790 --> 00:02:02,420
+one Assane statement to our new local variable user.
+
+22
+00:02:02,590 --> 00:02:08,170
+So hibernate if it finds a card with the given ID it will return that entity back.
+
+23
+00:02:08,210 --> 00:02:13,030
+If not it will return the null object or NULL.
+
+24
+00:02:13,040 --> 00:02:23,230
+So we are going to use user is not equal to null then we will send back one response.
+
+25
+00:02:23,240 --> 00:02:29,630
+Otherwise we are going to send the response so if the user is not equal to null that means the validation
+
+26
+00:02:29,630 --> 00:02:31,160
+has failed.
+
+27
+00:02:31,160 --> 00:02:36,470
+A user with the given ID already exists in the database so it should be displaying an error message
+
+28
+00:02:36,470 --> 00:02:42,530
+to the user create a message string a message that is equal to blank.
+
+29
+00:02:42,530 --> 00:02:45,950
+Nothing to start with do not have anything.
+
+30
+00:02:45,980 --> 00:02:54,350
+If the user is not equal to null message is equal to ID plus whatever came in the request plus error
+
+31
+00:02:54,350 --> 00:02:58,310
+message already exists.
+
+32
+00:03:02,770 --> 00:03:07,680
+And returned the message.
+
+33
+00:03:07,690 --> 00:03:09,040
+This is something new here.
+
+34
+00:03:09,040 --> 00:03:10,240
+Get rid of it.
+
+35
+00:03:10,720 --> 00:03:15,260
+You have been returning a view Buhl name back so far from the controller.
+
+36
+00:03:15,520 --> 00:03:18,040
+But here we are returning a message back.
+
+37
+00:03:18,040 --> 00:03:24,610
+It's not a view Meem So we need to do any additional step if we don't do that Springville think that
+
+38
+00:03:24,620 --> 00:03:29,350
+whatever we are running from here IIS view me and it will try to resolve it.
+
+39
+00:03:29,800 --> 00:03:37,240
+Well-spring that is not a new name and this is a response to the AJAX call we simply use another annotation
+
+40
+00:03:37,810 --> 00:03:45,770
+here wherever we specify that it downpipe just before that Al-Odah annotation called response Wardy.
+
+41
+00:03:45,940 --> 00:03:52,870
+I'm spitting hate control one imported from Spring Framework that HealthSpring that whatever we are
+
+42
+00:03:52,870 --> 00:04:01,980
+returning from this method should be used in response Wardy and no need to resolve Foret view name that
+
+43
+00:04:01,980 --> 00:04:09,100
+set we have successfully implemented the method in the controller will call this or will use this try
+
+44
+00:04:09,540 --> 00:04:12,390
+in the next call automatically This method will be invoked.
+
+45
+00:04:12,390 --> 00:04:17,740
+The ID will be passed in and this calls into the service to check if the user exists.
+
+46
+00:04:17,970 --> 00:04:21,570
+If they use that exists with that ID it returns this error message.
+
+47
+00:04:21,570 --> 00:04:28,620
+If not it will return a blank message and this response Bardy HealthSpring that whatever we are returning
+
+48
+00:04:28,680 --> 00:04:33,390
+is not a view but that the response that should go back in the response Bartie.
+

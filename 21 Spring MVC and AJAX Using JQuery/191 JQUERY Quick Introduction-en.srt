@@ -1,0 +1,124 @@
+1
+00:00:00,250 --> 00:00:03,930
+In this lecture I'm going to very briefly introduce you to a.
+
+2
+00:00:03,960 --> 00:00:09,330
+I'm going to explain just that piece which is required for this course.
+
+3
+00:00:09,390 --> 00:00:11,750
+Remember that this is not a Jew equity course.
+
+4
+00:00:11,790 --> 00:00:19,590
+So J.A.G. is a javascript framework which makes the life offer quite easy to use javascript.
+
+5
+00:00:19,700 --> 00:00:27,600
+It isn't laya or javascript and everything in equity starts with a dollar symbol it hides a lot of things
+
+6
+00:00:27,600 --> 00:00:29,820
+that we could do in Javascript.
+
+7
+00:00:29,970 --> 00:00:35,900
+And it does the work for us automatically we simply use the dollar symbol and perform a lot of operations
+
+8
+00:00:35,910 --> 00:00:36,760
+for example.
+
+9
+00:00:37,930 --> 00:00:45,540
+To access a field called user id in HDMI within javascript core we might have to write this much but
+
+10
+00:00:45,630 --> 00:00:52,110
+using J.A.G. it becomes very simple dollar within Doublecross within braces use that poem and use that
+
+11
+00:00:52,110 --> 00:00:55,610
+ID and will be able to access the user id field.
+
+12
+00:00:55,620 --> 00:01:01,710
+This is a very small example there are many other things which we can do using J.A.G. in very simple
+
+13
+00:01:01,710 --> 00:01:07,650
+manner and to perform an AJAX call using J.A.G. again it simplifies a lot of things for us.
+
+14
+00:01:07,770 --> 00:01:11,230
+We need not use the javascript code and function calls.
+
+15
+00:01:11,430 --> 00:01:14,600
+We simply use the daughter symbol dot.
+
+16
+00:01:14,640 --> 00:01:20,390
+Ajax is the function and within which we give it you are l.
+
+17
+00:01:20,470 --> 00:01:27,280
+So what we will do for that particular request at a particular function for a particular task.
+
+18
+00:01:27,300 --> 00:01:34,050
+Basically what we want to do we have a model and then we provide the data that needs to be sent as a
+
+19
+00:01:34,050 --> 00:01:36,240
+part of that AJAX call.
+
+20
+00:01:36,240 --> 00:01:41,510
+This data is sent as key value pairs within braces.
+
+21
+00:01:41,530 --> 00:01:46,030
+This is also called Jason javascript object notation.
+
+22
+00:01:46,260 --> 00:01:52,220
+And finally the third and last parameter is success colon function which is right.
+
+23
+00:01:52,230 --> 00:01:57,960
+It is a callback function and the response comes back for this call and response comes back at some
+
+24
+00:01:57,960 --> 00:01:59,810
+point from the server.
+
+25
+00:02:00,000 --> 00:02:05,850
+This function will be called on whatever code you write inside it will be executed.
+
+26
+00:02:05,860 --> 00:02:12,900
+To summarize equity is an abstraction but what step it makes our life as it don't appear very easy to
+
+27
+00:02:12,900 --> 00:02:17,700
+use as easy syntax to use instead of better using the javascript syntax.
+
+28
+00:02:17,700 --> 00:02:25,020
+You can implement it using javascript and to make it Ajax call we need to pass in three parameters to
+
+29
+00:02:25,020 --> 00:02:28,080
+the Ajax caught in J.A.G. API.
+
+30
+00:02:28,310 --> 00:02:35,460
+You want to hit that data or to send that callback function which will be invoked when the response
+
+31
+00:02:35,460 --> 00:02:36,140
+comes back.
+

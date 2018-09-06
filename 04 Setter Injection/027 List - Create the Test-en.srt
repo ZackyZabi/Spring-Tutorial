@@ -1,0 +1,96 @@
+1
+00:00:00,180 --> 00:00:04,870
+The last step is to create a test class and see the dependency injection in action.
+
+2
+00:00:04,980 --> 00:00:12,080
+To do that go to eclipse right click on the package say new class test
+
+3
+00:00:12,480 --> 00:00:17,640
+with a main method this class will look exactly same as the earlier test.
+
+4
+00:00:17,700 --> 00:00:22,950
+But I want you to type so that you will remember the API better after some time you can start copying
+
+5
+00:00:22,950 --> 00:00:30,190
+and pasting the code classpath XML application context that is what we want to create so new
+
+6
+00:00:30,190 --> 00:00:37,120
+class path xml application context which takes a location of the file control one assign statement
+
+7
+00:00:37,120 --> 00:00:45,010
+to a new local variable call it context on the left hand side instead of classpath application context.
+
+8
+00:00:45,010 --> 00:00:49,550
+You can simply use the parent interface which is application context.
+
+9
+00:00:49,550 --> 00:00:57,000
+hit control one import that to provide the file location this time will have to provide the entire package
+
+10
+00:00:57,000 --> 00:00:59,820
+because we have put the config under the package.
+
+11
+00:00:59,970 --> 00:01:02,860
+So go to hospital grab this package from here.
+
+12
+00:01:02,910 --> 00:01:11,910
+Package name come back to the test paste it and change the dots to forward slashes because there are
+
+13
+00:01:11,910 --> 00:01:13,070
+folders.
+
+14
+00:01:13,440 --> 00:01:18,450
+The packages will have corresponding folders and that is where it should be searched
+
+15
+00:01:18,450 --> 00:01:23,260
+Slash list config dot xml
+
+16
+00:01:25,090 --> 00:01:29,590
+Next step is to get the bean bean context Dot get
+
+17
+00:01:29,600 --> 00:01:38,260
+Bean within double coats the name of the bin which is Hospital take that paste it here.
+
+18
+00:01:38,260 --> 00:01:39,120
+Control one.
+
+19
+00:01:39,130 --> 00:01:47,050
+assign statement to a new local variable that will be an object changed to hospital automatically
+
+20
+00:01:47,050 --> 00:01:57,950
+it will ask for typecasting hit control one add cast so that it will be typecasted to hospital sis out bean
+
+21
+00:01:58,650 --> 00:02:09,100
+lets rename this bean to hospital give it a meaningful name hospital dot get name
+
+22
+00:02:09,150 --> 00:02:10,790
+that's the first thing then
+
+23
+00:02:10,890 --> 00:02:20,680
+sis out you can simply print the list hospital dot get the department's  do a control shift f format it.
+
+24
+00:02:20,680 --> 00:02:24,430
+In the next lecture will run our test and explain the flow end to end.
+

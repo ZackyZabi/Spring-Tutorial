@@ -1,0 +1,164 @@
+1
+00:00:00,140 --> 00:00:06,510
+In this lecture, you will see the power of Spring Data. Without writing any queries, you will implement two
+
+2
+00:00:06,510 --> 00:00:09,810
+finder methods to find the product. To do that,
+
+3
+00:00:09,810 --> 00:00:17,900
+go to STS, go to the ProductRepository class or interface. To add a finder method, start typing in
+
+4
+00:00:17,900 --> 00:00:21,750
+findBy, hit control+space.
+
+5
+00:00:21,870 --> 00:00:27,300
+And STS will automatically show you all the finder methods you can create. By scanning through
+
+6
+00:00:27,300 --> 00:00:35,640
+the product, and for each of these fields here, it automatically shows you the content or the code assistance
+
+7
+00:00:35,940 --> 00:00:38,050
+to generate the finder methods.
+
+8
+00:00:38,130 --> 00:00:47,010
+We want to do a findByName. Select that and automatically the type is String name and the return type is
+
+9
+00:00:47,010 --> 00:00:52,890
+a list of products. Its not a single product, because there could be multiple products with the same name.
+
+10
+00:00:52,890 --> 00:00:57,630
+If it was an id, then it is unique but not the name. That's it.
+
+11
+00:00:57,660 --> 00:01:02,370
+That is all we need to do to get a list of products,
+
+12
+00:01:02,580 --> 00:01:05,420
+given a name. We need not write any SQL.
+
+13
+00:01:05,910 --> 00:01:09,300
+Now go back to the SpringdatajpaApplicationTests.
+
+14
+00:01:09,510 --> 00:01:16,600
+Let's comment out this entire code here so that we can just see the custom finder methods in
+
+15
+00:01:16,600 --> 00:01:26,370
+action. Start commenting out with save and comment out all the way till the end. You can use shortcuts if you're familiar
+
+16
+00:01:26,370 --> 00:01:43,510
+with them. Control+shift+f to format. Add a sysout, control+space, system.out.println(repository.findByName) now it
+
+17
+00:01:43,530 --> 00:01:47,650
+lists out, along with the inbuilt methods like findAll and findOne,
+
+18
+00:01:47,700 --> 00:01:52,420
+we also see findByName, because we have just added it to the repository.
+
+19
+00:01:52,710 --> 00:01:55,830
+Pass in the name. Name is Mac.
+
+20
+00:02:01,140 --> 00:02:01,820
+Saved.
+
+21
+00:02:01,860 --> 00:02:02,770
+Run the test.
+
+22
+00:02:02,940 --> 00:02:05,730
+And we should see one product coming back
+
+23
+00:02:08,450 --> 00:02:10,480
+in the results, and here you go.
+
+24
+00:02:10,900 --> 00:02:14,650
+So I got a product back successfully.
+
+25
+00:02:14,650 --> 00:02:19,960
+So it's that easy to implement custom finder methods. Now to implement a findByPrice, you know how to
+
+26
+00:02:19,960 --> 00:02:20,190
+do it.
+
+27
+00:02:20,200 --> 00:02:28,870
+Go back to the repository. Again, start typing in findBy, Control+Space, price. Automatically it picks up
+
+28
+00:02:28,930 --> 00:02:30,110
+what datatype it is,
+
+29
+00:02:30,130 --> 00:02:36,960
+and also it returns a list of products. Control+shift+f to format. Come back to the test, instead
+
+30
+00:02:36,970 --> 00:02:42,400
+of findByName or let it be. Copy it, go to the next line.
+
+31
+00:02:42,410 --> 00:02:50,610
+Paste, findByPrice. Instead of Mac you need to pass in a double.
+
+32
+00:02:50,620 --> 00:02:52,480
+Remember, we have updated the price.
+
+33
+00:02:52,660 --> 00:03:00,680
+Don't use 1200. Use 1500d.
+
+34
+00:03:01,240 --> 00:03:02,390
+Save it.
+
+35
+00:03:02,650 --> 00:03:08,580
+Run the program again. This time we should see the same output, twice, because we are doing two finders.
+
+36
+00:03:08,930 --> 00:03:10,540
+Let's see the results.
+
+37
+00:03:10,540 --> 00:03:15,430
+There we go. So we have two products coming back, or there is only one product but we are executing
+
+38
+00:03:15,460 --> 00:03:16,570
+two finder methods,
+
+39
+00:03:16,720 --> 00:03:18,940
+and we are displaying the results.
+
+40
+00:03:19,000 --> 00:03:25,540
+So in this lecture, you have successfully learnt how to implement a custom finder methods on our repositories
+
+41
+00:03:25,930 --> 00:03:28,150
+without writing any SQL.
+

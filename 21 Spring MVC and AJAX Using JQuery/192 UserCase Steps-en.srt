@@ -1,0 +1,60 @@
+1
+00:00:00,350 --> 00:00:06,900
+In the next few lectures you are going to use and make an object's call to the controller to do a validation
+
+2
+00:00:07,020 --> 00:00:08,750
+of this ID field.
+
+3
+00:00:08,960 --> 00:00:13,220
+Every time a user enters their ID and he moves to another next field.
+
+4
+00:00:13,220 --> 00:00:20,120
+Here we are going to validate to make sure that ID doesn't exist in the database already.
+
+5
+00:00:20,210 --> 00:00:24,360
+Are going to do that using two simple steps.
+
+6
+00:00:24,360 --> 00:00:28,120
+The first step is to create the backend cord.
+
+7
+00:00:28,190 --> 00:00:34,740
+There is the down layer which will check if there a card exists in the database with the given ID then
+
+8
+00:00:34,740 --> 00:00:37,130
+the Soviets layer then the controller.
+
+9
+00:00:37,260 --> 00:00:43,890
+This controller will be used or called Indu from the UI through an AJAX call.
+
+10
+00:00:44,110 --> 00:00:51,930
+We'll use the J.A.G. in our days page will include that library then we will handle the onchange event
+
+11
+00:00:52,080 --> 00:00:57,550
+in our days javascript core will make the AJAX call to the controller.
+
+12
+00:00:57,810 --> 00:01:03,420
+And finally will handle the response if the ID exists in the database then we will display the error
+
+13
+00:01:03,420 --> 00:01:04,040
+message.
+
+14
+00:01:04,110 --> 00:01:07,590
+If not we will not display any message to the end user.
+
+15
+00:01:07,650 --> 00:01:09,520
+That is the validation is successful.
+

@@ -1,0 +1,167 @@
+0
+00:00.160 --> 00:06.450
+In this lecture he will mandate the dependency injection and do a dependency check by using the at
+
+1
+00:06.600 --> 00:08.510
+required annotation from spring.
+
+2
+00:08.590 --> 00:15.330
+the usecase that wIll be working on is a patient prescription use case you will create a prescription
+
+3
+00:15.340 --> 00:22.950
+class a spring bean which will have an ID patient name and the list of medicines and will see how
+
+4
+00:22.950 --> 00:26.650
+to mandate some of these fields and you can mandate some of them.
+
+5
+00:26.900 --> 00:37.740
+So let's get started by going to our favorite eclipse IDE I click Create a new class start with prescription
+
+6
+00:38.550 --> 00:46.810
+patients prescription package com dot bharath dot springcore dot dependency
+
+7
+00:46.830 --> 00:52.470
+Check your going to request the spring container to do some dependency check finish
+
+8
+00:58.320 --> 01:07.410
+the first field is an ID that is our requirement then patient name then list off medicines int id 
+
+9
+01:07.590 --> 01:14.430
+the prescription ID private string patient name.
+
+10
+01:14.430 --> 01:21.480
+Finally private list of medicines list of strings.
+
+11
+01:21.990 --> 01:23.930
+call them medicines
+
+12
+01:27.160 --> 01:35.330
+control one import the list from Java util select them all right click go to source generate getters
+
+13
+01:35.330 --> 01:36.140
+and setters.
+
+14
+01:37.310 --> 01:44.650
+Select all ok do a ctrl shift F to format.
+
+15
+01:44.700 --> 01:45.990
+Let's take these two fields.
+
+16
+01:46.010 --> 01:53.850
+Put them right up top control shift F to format and we can copy over the first step is to create the spring
+
+17
+01:53.850 --> 01:56.490
+bean and you know the next two steps.
+
+18
+01:56.730 --> 02:02.640
+The next two steps are to grab the test and the config dot xml grab them from LC annotations.
+
+19
+02:02.640 --> 02:11.060
+Our last use case that we have worked on paste them will change them and will come back.
+
+20
+02:11.100 --> 02:14.440
+And in the next lecture you will mandate all the fields go to test
+
+21
+02:17.260 --> 02:24.070
+the spring bean configuration file will be spring core slash dependency check.
+
+22
+02:24.080 --> 02:29.690
+That is our package config dot xml is fine we don't need the abstract application context here
+
+23
+02:30.290 --> 02:35.720
+because it's not about the spring life cycle so get rid of the context dot register shutdown hook
+
+24
+02:36.380 --> 02:40.080
+and we can change this back to application context.
+
+25
+02:40.160 --> 02:48.540
+do a control shift O change this from patient will come back to that hit control one on application context
+
+26
+02:48.630 --> 02:50.620
+import that from Spring.
+
+27
+02:50.670 --> 02:52.100
+Save it.
+
+28
+02:52.140 --> 02:58.160
+This will be prescription on the left hand side as well.
+
+29
+03:00.050 --> 03:06.180
+Prescription and the bean name also will change to prescription.
+
+30
+03:06.380 --> 03:11.050
+Say it do a control shift O to organize the imports.
+
+31
+03:11.600 --> 03:14.780
+call this prescription instead of patient
+
+32
+03:18.380 --> 03:22.650
+so you remember the steps the first step is to create the application context.
+
+33
+03:22.760 --> 03:24.780
+pass it the configuration file.
+
+34
+03:24.780 --> 03:29.930
+The second step is to get the bean and then use it from the spring.
+
+35
+03:30.350 --> 03:36.140
+And here we are simply displaying the details of the bean go to config dot xml
+
+36
+03:36.480 --> 03:40.990
+Clean it up and you're going to configure it in the next lecture.
+
+37
+03:41.070 --> 03:46.030
+Go to prescription generate the tostring method for our prescription.
+
+38
+03:46.040 --> 03:53.050
+We'll do that by going to source and generator to string hit.
+
+39
+03:53.090 --> 04:00.280
+OK control shift F to format, so in this lecture you have successfully created the POJO And you also copied
+
+40
+04:00.280 --> 04:05.170
+over the test modified it made it uptodate to what we need.
+
+41
+04:05.260 --> 04:10.490
+Also we have the config  dot xml which you will configure and wrap it up in the next lecture.

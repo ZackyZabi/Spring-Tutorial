@@ -1,0 +1,28 @@
+1
+00:00:00,180 --> 00:00:07,110
+In the next few lectures, will be converting the springdatajpa project into a RESTful project. That is,
+
+2
+00:00:07,170 --> 00:00:14,050
+you will be allowing the end users to perform CRUD operations on the product using a RESTful API.
+
+3
+00:00:14,090 --> 00:00:16,080
+You will do that in four simple steps.
+
+4
+00:00:16,080 --> 00:00:22,380
+The first step is to add the spring-boot-starter-web maven dependency to our project.
+
+5
+00:00:22,380 --> 00:00:28,520
+Second, you will create a RESTful controller using the appropriate annotations from Spring and then you
+
+6
+00:00:28,530 --> 00:00:35,850
+will implement all the CREATE, READ, UPDATE and DELETE operations on the RESTful controller so that
+
+7
+00:00:35,910 --> 00:00:42,160
+our product can be created, read, updated and deleted using a RESTful API.
+

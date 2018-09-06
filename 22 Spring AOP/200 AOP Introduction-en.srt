@@ -1,0 +1,88 @@
+1
+00:00:00,640 --> 00:00:09,210
+In this lecture I will interviews you do what it will be is it will be stands for Aspect Oriented Programming.
+
+2
+00:00:09,390 --> 00:00:15,000
+It is the process of applying services or external services such as transaction management or logging
+
+3
+00:00:15,000 --> 00:00:23,190
+security etc. to our application process without modifying the cord or methods in those classes.
+
+4
+00:00:24,540 --> 00:00:30,630
+These external services are also called cross-cutting concerns because they can be applied across the
+
+5
+00:00:30,630 --> 00:00:32,870
+Java e web application.
+
+6
+00:00:32,970 --> 00:00:34,490
+They could be a padded down layer.
+
+7
+00:00:34,620 --> 00:00:41,250
+So it a clear and UI layer for example logging whatever is happening in our application logging it to
+
+8
+00:00:41,250 --> 00:00:44,340
+a log file can be applied across these layers.
+
+9
+00:00:44,550 --> 00:00:48,890
+Transaction management typically is applied at the Soviet Gisli.
+
+10
+00:00:49,110 --> 00:00:54,830
+So these external services can be just plug them without changing any cord.
+
+11
+00:00:54,840 --> 00:01:01,390
+That process is called the Aspect Oriented Programming for example.
+
+12
+00:01:01,510 --> 00:01:10,310
+Here I have a business class called arder Sobeys immobile with two methods in place order and ship ATA
+
+13
+00:01:10,900 --> 00:01:16,380
+and the services that could be used by this could be transaction management Doughtery shipped.
+
+14
+00:01:16,450 --> 00:01:18,360
+We might want to send out an e-mail.
+
+15
+00:01:18,700 --> 00:01:25,040
+And also we want to log what are what is happening in our services class in Deuel log file.
+
+16
+00:01:25,390 --> 00:01:31,720
+All of these services can be simply used true aspect oriented programming.
+
+17
+00:01:32,720 --> 00:01:38,570
+So without modifying these methods here and the code inside them all these services like transaction
+
+18
+00:01:38,570 --> 00:01:45,170
+management send email and logging could be used by this Services class.
+
+19
+00:01:45,310 --> 00:01:51,350
+They can be applied to the services class using Aspect Oriented Programming.
+
+20
+00:01:51,760 --> 00:01:58,570
+To summarize Aspect Oriented Programming is a process off a plane services typically external services
+
+21
+00:01:59,280 --> 00:02:00,130
+to the classes.
+
+22
+00:02:00,130 --> 00:02:04,240
+In our application without changing the core inside them.
+

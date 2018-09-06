@@ -1,0 +1,248 @@
+1
+00:00:00,480 --> 00:00:04,810
+Using point Kurt expressions we qualify as business method.
+
+2
+00:00:05,040 --> 00:00:09,710
+In this lecture we learn the syntax to create point to expression.
+
+3
+00:00:09,960 --> 00:00:17,130
+We start a point guard expression with Materne name followed by the class followed by our package name.
+
+4
+00:00:17,130 --> 00:00:22,940
+So this is a complete qualifier to their name with the class name as well as the package name.
+
+5
+00:00:23,040 --> 00:00:30,950
+We can then use a return type of that method file or our access specifier and even types of parameters
+
+6
+00:00:31,050 --> 00:00:32,900
+that matter accept.
+
+7
+00:00:33,090 --> 00:00:38,250
+So the syntax here will qualify a pretty clear business Mathare in our application.
+
+8
+00:00:39,020 --> 00:00:46,080
+Through that point that expression for example here I have a wind code expression which qualifies a
+
+9
+00:00:46,090 --> 00:00:50,730
+method called my reply which should be in say the class called my class.
+
+10
+00:00:50,790 --> 00:00:55,890
+It's in a package is called combat but it's the return type should be integer access.
+
+11
+00:00:55,960 --> 00:01:00,970
+This fire is public and it should take two parameters of pipe integer.
+
+12
+00:01:01,250 --> 00:01:03,940
+Only then that method will be qualified.
+
+13
+00:01:04,130 --> 00:01:07,860
+And we use this particular point for the expression.
+
+14
+00:01:07,980 --> 00:01:15,960
+We can also use wild cards or special symbols you know wind current expressions star and dot dot two
+
+15
+00:01:15,960 --> 00:01:21,550
+dots start then used we can use it for access specifier.
+
+16
+00:01:21,570 --> 00:01:23,590
+They don't type packages.
+
+17
+00:01:23,640 --> 00:01:28,020
+Class name and method name as valid and we use the statics of wild card.
+
+18
+00:01:28,020 --> 00:01:35,510
+It means anything any math or name any class name any access specifier and need it don't type DOT DOT
+
+19
+00:01:35,510 --> 00:01:37,260
+can be used at two levels.
+
+20
+00:01:37,490 --> 00:01:42,740
+We can use it at Bakkies level when we use a dot dot at Bakkies level.
+
+21
+00:01:42,740 --> 00:01:47,690
+It means the current package and the snapback just as well.
+
+22
+00:01:47,690 --> 00:01:55,590
+And if we use dot dot at Mathare parameters level then that means any type of parameters it's always
+
+23
+00:01:55,620 --> 00:02:01,380
+remember Stata means anything dot dot means current package and sub packages.
+
+24
+00:02:01,560 --> 00:02:03,560
+And then we use dot dot format.
+
+25
+00:02:03,620 --> 00:02:09,620
+Pedometers in the point for the expression that means any type of parameters on any number of parameters
+
+26
+00:02:10,870 --> 00:02:18,570
+for example here is the first point for the expression that we are using wild card or the star Aztec
+
+27
+00:02:18,580 --> 00:02:19,590
+symbol.
+
+28
+00:02:19,600 --> 00:02:29,350
+This means any method in any class any package but its name should end of it Id get stocked with anything
+
+29
+00:02:29,350 --> 00:02:31,130
+because we have used Aztec's here.
+
+30
+00:02:31,210 --> 00:02:39,630
+But it should end with ID it's straight downpipes should be wired access specifiers public and pedometers.
+
+31
+00:02:39,640 --> 00:02:45,810
+It does not pick any parameters only such method will be qualified by this particular point.
+
+32
+00:02:45,830 --> 00:02:53,200
+The expression the next the method name should have a Caddick that E in it.
+
+33
+00:02:53,230 --> 00:02:58,660
+It can't start with anything and with anything that type should be integer access specifiers public
+
+34
+00:02:59,230 --> 00:03:04,990
+dot dot means any number of parameters and any types of parameters.
+
+35
+00:03:04,990 --> 00:03:06,080
+One more example.
+
+36
+00:03:07,160 --> 00:03:08,170
+Method name is get.
+
+37
+00:03:08,180 --> 00:03:12,600
+It should be Sacchi get no wildcard characters there are no special symbols.
+
+38
+00:03:12,720 --> 00:03:19,130
+Return type is in Dejah access specified is public in any type or in any number of parameters.
+
+39
+00:03:20,170 --> 00:03:27,340
+Stop start meaning any type any method name access specifier is public but no parameters.
+
+40
+00:03:27,370 --> 00:03:32,900
+And we have empty brackets that means no parameters.
+
+41
+00:03:32,920 --> 00:03:40,120
+The next one public wide get the type is wide METAR name it should be exactly get but it can pick any
+
+42
+00:03:40,120 --> 00:03:43,450
+type of parameters any number of barometers.
+
+43
+00:03:44,420 --> 00:03:50,970
+Here the method name could be anything that type should be in Dejah access specifiers public any number
+
+44
+00:03:50,970 --> 00:03:52,980
+of parameters.
+
+45
+00:03:52,980 --> 00:03:55,590
+Let's take a look at two more examples.
+
+46
+00:03:55,700 --> 00:04:02,040
+Here is a little more tricky because the package is applied here and we use the dot dot.
+
+47
+00:04:02,340 --> 00:04:07,020
+So the Materne name should start with get it can end with anything.
+
+48
+00:04:07,350 --> 00:04:10,810
+It should fall into any class because we now use it to start here.
+
+49
+00:04:10,860 --> 00:04:14,780
+So this method can be a part of any class in our application.
+
+50
+00:04:14,910 --> 00:04:18,480
+The Bakkies nime com dot dot dot.
+
+51
+00:04:18,510 --> 00:04:27,930
+Meaning all the classes under doc app and some packages qualify for this particular point or the expression
+
+52
+00:04:28,350 --> 00:04:33,590
+that it doesn't type could be anything accessed fistfight is public and no parameters.
+
+53
+00:04:33,600 --> 00:04:38,780
+If a method has parameters but everything else is same it will not qualify.
+
+54
+00:04:38,800 --> 00:04:49,660
+Shouldn't have parameters last public star star or dot dot meaning any method name any return type access
+
+55
+00:04:49,870 --> 00:04:54,410
+very public any type of any number of parameters.
+
+56
+00:04:54,510 --> 00:04:59,810
+It's a little tricky but as you work on the next few lectures hand-sewn and peyot a few of these you
+
+57
+00:04:59,840 --> 00:05:01,200
+will understand it.
+
+58
+00:05:01,290 --> 00:05:07,380
+To summarize it point that expression qualify as a business matter and the syntax for it.
+
+59
+00:05:07,410 --> 00:05:10,580
+Always remember it starts with them and their names start from the right.
+
+60
+00:05:11,030 --> 00:05:17,310
+With a fully qualified class and package name the return type the access specifier as well as the type
+
+61
+00:05:17,320 --> 00:05:25,230
+of parameters we can use wildcard characters or symbols such as asterisks and dot dot dot dot.
+
+62
+00:05:25,260 --> 00:05:29,430
+And we applied both at that level as well as method parameter Lebel.
+

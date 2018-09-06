@@ -1,0 +1,160 @@
+1
+00:00:00,240 --> 00:00:06,620
+In this lecture, you will start working on the user registration usecase by creating the user model, that
+
+2
+00:00:06,620 --> 00:00:15,410
+is User.java and userReg.jsp page. Go to Eclipse, go to the source folder,
+
+3
+00:00:15,420 --> 00:00:21,890
+right click on it. New -> class and this should go into the dto package.
+
+4
+00:00:21,890 --> 00:00:33,600
+So com.bharath dot, select the dto package under springmvc. The name of the class is User. Finish. And this
+
+5
+00:00:33,640 --> 00:00:37,010
+class will have three fields,
+
+6
+00:00:37,220 --> 00:00:41,840
+id, name and email that are required for his registration, his Id,
+
+7
+00:00:41,860 --> 00:00:44,570
+usually we generated it in our application.
+
+8
+00:00:44,720 --> 00:00:56,590
+But for now let the user enter this. Private int id, private String name, private String email, three fields
+
+9
+00:00:56,920 --> 00:00:59,280
+id, name and email.
+
+10
+00:00:59,530 --> 00:01:07,330
+As always select them and generate the getters and setters. Source -> Generate getters and setters. Select all,
+
+11
+00:01:08,140 --> 00:01:10,610
+and I want them after the email.
+
+12
+00:01:11,120 --> 00:01:12,020
+OK.
+
+13
+00:01:12,490 --> 00:01:16,360
+Also generate the toString method.
+
+14
+00:01:16,410 --> 00:01:17,080
+OK.
+
+15
+00:01:17,170 --> 00:01:22,000
+Control+shift+f to format it. And we have the model with the three fields.
+
+16
+00:01:22,260 --> 00:01:30,870
+Next, we are going to create the useReg.jsp which will have the HTML form from which, using
+
+17
+00:01:30,870 --> 00:01:35,250
+which the user will submit the user data to the Controller.
+
+18
+00:01:35,580 --> 00:01:43,780
+Let's get started by creating, to create the userReg, go under views, right click, new -> JSP.
+
+19
+00:01:46,210 --> 00:01:59,250
+Call it userReg for registration, dot jsp. Maximize, within body we'll have three input types or four,
+
+20
+00:01:59,430 --> 00:02:03,600
+three text fields, text boxes and one submit button.
+
+21
+00:02:03,630 --> 00:02:07,420
+So get started by using the HTML form. Action will be,
+
+22
+00:02:10,160 --> 00:02:13,520
+addUser or call it registerUser.
+
+23
+00:02:14,850 --> 00:02:19,670
+This will be the mapping that we'll be using in the Controller later on, registerUser.
+
+24
+00:02:20,250 --> 00:02:23,250
+And method is equal to post.
+
+25
+00:02:27,060 --> 00:02:39,540
+Within the form first is Id, colon, input type is equal to, text is equal to, we'll come back
+
+26
+00:02:39,540 --> 00:02:41,210
+to the name in the second. Close it right
+
+27
+00:02:41,200 --> 00:02:50,540
+there. Copy the whole line and paste it three more times.
+
+28
+00:02:50,540 --> 00:02:52,530
+Second is name,
+
+29
+00:02:52,530 --> 00:02:55,860
+third is email.
+
+30
+00:02:55,900 --> 00:02:59,020
+And finally we don't need a label for it.
+
+31
+00:02:59,020 --> 00:03:07,870
+It's the submit button. Input type is equal to submit, name is equal to register and put all these
+
+32
+00:03:07,870 --> 00:03:15,010
+three or four fields inside a pre element that will keep them in an order.
+
+33
+00:03:15,210 --> 00:03:20,210
+Control+x, we'll end that pre right here. Control+shift+f to format.
+
+34
+00:03:20,480 --> 00:03:22,650
+So we have successfully created the form.
+
+35
+00:03:22,770 --> 00:03:23,800
+The names here,
+
+36
+00:03:23,980 --> 00:03:30,070
+if you remember should exactly match the fields in the model here.
+
+37
+00:03:30,520 --> 00:03:42,310
+So id, name and email. Id, name and the last field is email. Only then the container will be able to map
+
+38
+00:03:42,310 --> 00:03:44,410
+these fields into our model
+
+39
+00:03:44,410 --> 00:03:48,240
+once it creates the user object later on when the request comes in.
+
+40
+00:03:48,490 --> 00:03:52,910
+So you have successfully created the model and the corresponding JSP page.
+

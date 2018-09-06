@@ -1,0 +1,188 @@
+1
+00:00:00,220 --> 00:00:05,630
+In this lecture we will implement the front end for our use case by following these simple steps.
+
+2
+00:00:05,640 --> 00:00:11,460
+First we'll go to our Facebook page and include the J.A.G. library so that we can use the equity in
+
+3
+00:00:11,460 --> 00:00:13,500
+our application to do that.
+
+4
+00:00:14,340 --> 00:00:20,350
+Go to clips go to the user rage darte dispute is under webapp.
+
+5
+00:00:21,100 --> 00:00:33,200
+Was the rage not be open that open up your Chrome web browser and Google for J.A.G. example J.A.G. example.
+
+6
+00:00:33,310 --> 00:00:36,680
+Click on any of the links I'm going to click on this very first link.
+
+7
+00:00:38,800 --> 00:00:40,620
+I'm W3 schools.
+
+8
+00:00:40,930 --> 00:00:44,070
+Scroll down click on any of these examples here.
+
+9
+00:00:44,200 --> 00:00:46,390
+We are not going to use the example code.
+
+10
+00:00:46,420 --> 00:00:48,810
+All we need is this clip block here.
+
+11
+00:00:50,060 --> 00:00:51,570
+What you see here.
+
+12
+00:00:51,590 --> 00:00:53,310
+Copy that and typescript.
+
+13
+00:00:53,320 --> 00:00:59,960
+BLOCK This is to include the J.A.G. library which is available at this help in our page.
+
+14
+00:00:59,960 --> 00:01:07,090
+Go back to Eclipse and it should be included inside the header block added after this matter.
+
+15
+00:01:08,440 --> 00:01:13,300
+Or you can also added after that title that you want but it should be within the header block.
+
+16
+00:01:13,780 --> 00:01:16,490
+So we have successfully included the Equity Library.
+
+17
+00:01:16,500 --> 00:01:24,510
+Next if you see here we create one more script block and start writing all over the J record inside
+
+18
+00:01:24,510 --> 00:01:25,240
+it.
+
+19
+00:01:25,260 --> 00:01:34,220
+So go back to eclipse create script block and within that script block it just query function or record.
+
+20
+00:01:34,210 --> 00:01:38,070
+Always starts with dollar symbol within brackets.
+
+21
+00:01:38,080 --> 00:01:55,380
+Document Daut ready Dotty's outside the brackets dot ready within brackets function.
+
+22
+00:01:55,450 --> 00:02:00,790
+So this is an anonymous function that we are creating when the document is loaded completely into the
+
+23
+00:02:00,790 --> 00:02:01,800
+web browser.
+
+24
+00:02:01,960 --> 00:02:07,120
+We want to execute the following anonymous function and within that function
+
+25
+00:02:15,240 --> 00:02:24,690
+Let's close this right here with the semi-colon and within that function we are going to check on Change
+
+26
+00:02:24,690 --> 00:02:28,640
+event or handle the onchange event for this particular field.
+
+27
+00:02:28,640 --> 00:02:35,960
+Here so everything in J.A.G. and nowadays even in normal Dallas script we don't deal with names of these
+
+28
+00:02:35,960 --> 00:02:36,400
+fields.
+
+29
+00:02:36,400 --> 00:02:41,900
+We should be able to hit Steimle field will have an ID ID is equal to ID.
+
+30
+00:02:41,930 --> 00:02:48,770
+In this case you can call it user ID as well but I'm going to use it as ID and will use this ID inside
+
+31
+00:02:48,830 --> 00:02:53,540
+the J equerry function dollar.
+
+32
+00:02:53,660 --> 00:03:01,220
+Is the syntax within the brackets within double chords hash ID.
+
+33
+00:03:01,250 --> 00:03:08,140
+That is how we can access a hasty field by using dollar for a query and within double quotes hash or
+
+34
+00:03:08,150 --> 00:03:15,480
+the poncey month and then followed by the hits DML fields ID Daut change.
+
+35
+00:03:15,640 --> 00:03:20,720
+I want to handle the onchange you in d'arte change within brackets.
+
+36
+00:03:20,730 --> 00:03:24,080
+Again function.
+
+37
+00:03:24,250 --> 00:03:26,340
+So everything in Javascript is a function.
+
+38
+00:03:26,340 --> 00:03:30,340
+And here we are providing anonymous functions and the document is loaded.
+
+39
+00:03:30,340 --> 00:03:36,010
+This is the function that should be executed within that function when on Change happens on a field
+
+40
+00:03:36,010 --> 00:03:36,940
+called ID.
+
+41
+00:03:36,940 --> 00:03:46,550
+We are creating another anonymous function starts there and ends right there with the Florida race and
+
+42
+00:03:46,560 --> 00:03:48,970
+a semicolon at the end.
+
+43
+00:03:49,780 --> 00:03:53,900
+So in this letter we have successfully used the J.A.G. library.
+
+44
+00:03:53,900 --> 00:03:58,410
+You have also handle the ready event when the document is loaded in the browser.
+
+45
+00:03:58,540 --> 00:04:04,550
+You said this is the function that should be executed and within that function we also handle the onchange
+
+46
+00:04:04,570 --> 00:04:13,270
+event for this ID field in the next lecture will start making the AJAX call by using dollar got Ajax
+
+47
+00:04:13,410 --> 00:04:14,450
+from Chiqui.
+

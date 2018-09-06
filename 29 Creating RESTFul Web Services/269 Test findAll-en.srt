@@ -1,0 +1,104 @@
+1
+00:00:00,240 --> 00:00:02,860
+Before we launch our application and test it,
+
+2
+00:00:02,940 --> 00:00:11,040
+one small change is to move this SpringdatajpaApplication which is the starting point of our application,
+
+3
+00:00:11,350 --> 00:00:13,000
+to a package above it.
+
+4
+00:00:13,020 --> 00:00:19,470
+That is, I don't want it to be in com.bharath.spring.data, because when we run our application automatically
+
+5
+00:00:19,490 --> 00:00:20,310
+Spring will
+
+6
+00:00:20,370 --> 00:00:25,110
+scan this particular package and all its subpackages. So it will not
+
+7
+00:00:25,110 --> 00:00:34,030
+scan our controllers package because controllers is not a subpackage of com.bharath.spring.data, but it
+
+8
+00:00:34,170 --> 00:00:37,020
+is a subpackage of com.bharath.spring.
+
+9
+00:00:37,140 --> 00:00:39,780
+So let's move this to one level above.
+
+10
+00:00:39,840 --> 00:00:45,630
+Get rid of data because now our project deals with Spring data as well as Spring REST or
+
+11
+00:00:45,630 --> 00:00:52,960
+Spring web. Delete that, hit control+1, move it to com.bharath.spring.
+
+12
+00:00:52,980 --> 00:00:53,970
+Now we are good.
+
+13
+00:00:53,970 --> 00:01:01,200
+It should scan all the subpackages of com.bharath.spring. Launch our application. To do that, you can
+
+14
+00:01:01,200 --> 00:01:06,830
+right click, say Run As -> Spring Boot App.
+
+15
+00:01:07,200 --> 00:01:14,550
+Since we have included the web dependency, it will automatically launch our application on the embedded
+
+16
+00:01:14,670 --> 00:01:18,530
+Tomcat server and it starts on localhost8080.
+
+17
+00:01:18,780 --> 00:01:24,510
+And since we haven't mapped any web application route context, it will be localhost8080.
+
+18
+00:01:24,540 --> 00:01:31,380
+We can access our application at that URL. So launch Postman, our REST client. By default it will be
+
+19
+00:01:31,380 --> 00:01:32,520
+a GET method.
+
+20
+00:01:33,000 --> 00:01:40,080
+Start typing in the URL, localhost:8080/products.
+
+21
+00:01:40,150 --> 00:01:43,600
+That's the URL to access all the products.
+
+22
+00:01:43,800 --> 00:01:45,090
+Hit Send.
+
+23
+00:01:45,120 --> 00:01:51,000
+Click on that button and we get the one and only product we have in our database.
+
+24
+00:01:51,040 --> 00:01:55,610
+You have multiple products, as you can see it is JSON array.
+
+25
+00:01:56,010 --> 00:02:02,530
+So you have successfully implemented and tested a RESTful application, just the GET part so far.
+
+26
+00:02:02,580 --> 00:02:06,210
+We will be implementing and testing the rest of the methods in the next few lectures.
+

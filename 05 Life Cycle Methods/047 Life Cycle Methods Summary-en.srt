@@ -1,0 +1,99 @@
+0
+00:00.240 --> 00:05.450
+The spring  container provides two life cycle methods for every object that it creates.
+
+1
+00:05.580 --> 00:08.830
+And we can implement these lifecycle methods in our classes.
+
+2
+00:09.000 --> 00:14.390
+And then the spring container will invoke them the init  method just after the object creation
+
+3
+00:14.550 --> 00:20.890
+And the destroy method just before the object is cleaned up or destroyed. There are three different
+
+4
+00:20.890 --> 00:27.640
+ways in which we can configure and use these methods using xml configuration where in on the bean element
+
+5
+00:27.650 --> 00:29.880
+when we define a bean using the bean element.
+
+6
+00:30.100 --> 00:37.240
+We use the init method attribute and specify which method in our class needs to be the init method.
+
+7
+00:37.480 --> 00:44.550
+Similarly destroy-method attribute can be used on the bean element to specify a clean up method.
+
+8
+00:44.890 --> 00:50.320
+So usually we put all the initialization could be database connections could be connecting to a web
+
+9
+00:50.320 --> 00:50.670
+service.
+
+10
+00:50.680 --> 00:53.040
+All that will go into the init method.
+
+11
+00:53.370 --> 00:59.620
+And the destroy method will have the cleanup code will be closing the connections cleaning up the files
+
+12
+00:59.790 --> 01:05.940
+etc. so using xml configuration we can use init hyphen method and destroy hypen method
+
+13
+01:05.940 --> 01:14.080
+The method names can be anything they need not be init and destroy second method is to use annotations.
+
+14
+01:14.470 --> 01:17.540
+We can use the at postconstruct and predestroy
+
+15
+01:17.560 --> 01:21.180
+We use these annotations on our classes init and destroy methods
+
+16
+01:21.190 --> 01:24.940
+again the names need not be the same.
+
+17
+01:25.030 --> 01:32.810
+The last and final ways to use the spring interfaces namely initialising bean and disposable bean
+
+18
+01:32.840 --> 01:38.720
+our class will implement these interfaces and override the methods in those interfaces and those
+
+19
+01:38.720 --> 01:41.800
+methods will become our init and destroy.
+
+20
+01:42.230 --> 01:48.470
+We have also learned that when we use annotations by default in spring annotations support is disabled
+
+21
+01:48.740 --> 01:49.640
+to enable it.
+
+22
+01:49.730 --> 01:54.010
+We use context colon annotation config
+
+23
+01:54.200 --> 02:01.610
+First configure the context namespace  in your XML configuration and use this one single line which will enable
+
+24
+02:01.610 --> 02:02.720
+the annotations.

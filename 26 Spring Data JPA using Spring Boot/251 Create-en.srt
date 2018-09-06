@@ -1,0 +1,200 @@
+1
+00:00:00,170 --> 00:00:07,500
+In this lecture, you'll create a product record in the database by creating a test. To do that, go to
+
+2
+00:00:07,500 --> 00:00:09,240
+src/test/java.
+
+3
+00:00:09,270 --> 00:00:18,760
+Open up the test class that got generated. The very first step here is to inject the ApplicationContext.
+
+4
+00:00:18,970 --> 00:00:25,230
+ApplicationContext context; hit control+1,
+
+5
+00:00:25,240 --> 00:00:35,770
+import it from Spring. Add Auto wiring to it, Autowired. And within this test method, you can rename this test
+
+6
+00:00:35,770 --> 00:00:36,240
+method.
+
+7
+00:00:36,250 --> 00:00:41,860
+Right now it only is checking if the contexts are being loaded successfully and all the Spring beans
+
+8
+00:00:41,860 --> 00:00:42,490
+are wired.
+
+9
+00:00:42,500 --> 00:00:44,810
+That is why it is named contextLoads.
+
+10
+00:00:44,970 --> 00:00:47,710
+Change it to saveProduct.
+
+11
+00:00:51,150 --> 00:01:01,710
+context.getBean() and pass in the class name, which in this case is ProductRepository.
+
+12
+00:01:01,730 --> 00:01:10,210
+So we are getting an instance of the ProductRepository bean. Control+1, assign that to a new local variable.
+
+13
+00:01:10,250 --> 00:01:23,290
+Call it repository. And you can start using repository.save.
+
+14
+00:01:23,320 --> 00:01:25,000
+repository, let me get that spelling right,
+
+15
+00:01:25,010 --> 00:01:26,430
+dot, save.
+
+16
+00:01:26,640 --> 00:01:35,970
+And we can pass it a bunch of products or a single product. new Product. I will assign values to it in
+
+17
+00:01:35,970 --> 00:01:45,900
+a second. Take that or first import it. Hit control+1, import Product. Select that, control+1, extract to a
+
+18
+00:01:45,900 --> 00:01:51,720
+local variable. Call it Product. Set some properties on it, product.setId().
+
+19
+00:01:51,840 --> 00:01:57,180
+In this case we are not auto incrementing or we are not using any generating strategy for the Id field
+
+20
+00:01:57,180 --> 00:01:59,370
+in the database or in our application.
+
+21
+00:01:59,430 --> 00:02:04,520
+So we need to provide the Id, 1L.
+
+22
+00:02:05,290 --> 00:02:13,500
+It is a long field. product.setName("Mac");
+
+23
+00:02:13,510 --> 00:02:31,960
+product.setDescription("awesome") and product.setPrice(1200).
+
+24
+00:02:32,180 --> 00:02:34,520
+Save it.
+
+25
+00:02:34,940 --> 00:02:36,760
+Let's see what the problem is. It's a double,
+
+26
+00:02:36,830 --> 00:02:39,980
+so you need to have a d at the end.
+
+27
+00:02:40,400 --> 00:02:42,050
+Save it.
+
+28
+00:02:42,200 --> 00:02:43,310
+Let's run our test.
+
+29
+00:02:43,360 --> 00:02:47,970
+Right click, Run As -> JUnit Test.
+
+30
+00:02:51,830 --> 00:02:54,230
+Let's see if it passes without any issues.
+
+31
+00:02:54,280 --> 00:02:58,960
+That loads the Spring context or Spring Boot application is up and running and we see a green. If you go
+
+32
+00:02:58,960 --> 00:03:00,410
+to the progress bar,
+
+33
+00:03:00,490 --> 00:03:06,040
+or if you go to the JUnit Test, if you right click on this small thing here,
+
+34
+00:03:06,040 --> 00:03:08,100
+Test completed successfully.
+
+35
+00:03:08,110 --> 00:03:11,040
+Let's go to the database or go to the JUnit here.
+
+36
+00:03:11,050 --> 00:03:12,750
+If you click on this, it is green.
+
+37
+00:03:12,820 --> 00:03:20,200
+So this whole thing executed successfully. Go to the database, execute this select statement one more time
+
+38
+00:03:21,470 --> 00:03:23,590
+and you will see this record.
+
+39
+00:03:23,810 --> 00:03:31,930
+So to explain you the flow, the Spring Boot application starts up. It scans through all the repositories and entities.
+
+40
+00:03:32,010 --> 00:03:41,460
+First of all it scans through the classpath and it knows that we have Spring Data and MySQL jars. So it'll use them.
+
+41
+00:03:41,480 --> 00:03:47,210
+It will create all the database connections and all that on the fly, using the database properties that
+
+42
+00:03:47,210 --> 00:03:52,410
+we have provided or the data source that we have provided here.
+
+43
+00:03:52,640 --> 00:03:55,090
+So it figures out all that on the fly.
+
+44
+00:03:55,130 --> 00:03:59,300
+It creates an implementation of this ProductRepository on the fly for us.
+
+45
+00:03:59,390 --> 00:04:05,030
+When we invoke the methods on this ProductRepository, which inturn are coming from this CrudRepository
+
+46
+00:04:05,030 --> 00:04:12,830
+which is an interface, it automatically executes the appropriate SQL statements for us through hibernate.
+
+47
+00:04:12,890 --> 00:04:20,300
+So all that magic is happening behind the scenes making our job as a developer easier and we can focus on our business
+
+48
+00:04:20,300 --> 00:04:27,500
+logic instead of worrying about performing the CRUD operations which we pretty much do in every application.
+
+49
+00:04:28,180 --> 00:04:29,110
+In the next few lectures,
+
+50
+00:04:29,160 --> 00:04:33,080
+you will see the other operations on a repository in action.
+

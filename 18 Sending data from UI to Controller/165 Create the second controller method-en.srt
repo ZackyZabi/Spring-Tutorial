@@ -1,0 +1,120 @@
+1
+00:00:00,190 --> 00:00:06,720
+In this lecture, you'll work on the last and key step which is to handle the incoming form data. Within
+
+2
+00:00:06,720 --> 00:00:08,950
+the Controller we're going to create a new method,
+
+3
+00:00:09,030 --> 00:00:16,240
+use the @ModelAttribute inside that method and take the object that the container creates on the fly.
+
+4
+00:00:16,260 --> 00:00:23,090
+So let's get started by going to Eclipse. Create a new method, you can copy this method from here.
+
+5
+00:00:23,340 --> 00:00:29,690
+Paste it, call it registerUser
+
+6
+00:00:29,990 --> 00:00:36,270
+and the URL mapping here should be what we have used in the userReg.jsp. Call it registerUser.
+
+7
+00:00:36,280 --> 00:00:38,320
+Copy that, come back,
+
+8
+00:00:38,320 --> 00:00:39,850
+use that mapping here.
+
+9
+00:00:40,360 --> 00:00:43,400
+And this annotation has an other attribute.
+
+10
+00:00:43,450 --> 00:00:54,900
+So before we use it, assign this to value comma, there is a method attribute, is equal to, use a class
+
+11
+00:00:55,010 --> 00:01:02,900
+from Spring. RequestMethods is the class which has constants defined. It's a enum right here,
+
+12
+00:01:02,960 --> 00:01:08,300
+from spring framework, dot post. By default the method is get.
+
+13
+00:01:08,510 --> 00:01:15,590
+But in this case, this method should handle the HTTP post because in the JSP page that is what we
+
+14
+00:01:15,590 --> 00:01:20,820
+have used when the form gets submitted. Come back to the Controller.
+
+15
+00:01:21,110 --> 00:01:27,430
+We need a new ModelAndView. The ViewName, we are going to send it back to the same registration page.
+
+16
+00:01:27,470 --> 00:01:31,160
+Once the model, we display the model, we'll send it back to the same registration page.
+
+17
+00:01:31,160 --> 00:01:34,520
+That's fine. Within this registerUser,
+
+18
+00:01:34,540 --> 00:01:43,660
+we need a parameter which will be annotated with @ModelAttribute from Spring and that param in our
+
+19
+00:01:43,660 --> 00:01:47,990
+case, we know that it's the user. User user
+
+20
+00:01:48,010 --> 00:01:50,950
+is the model. Hit control+1,
+
+21
+00:01:51,080 --> 00:02:02,180
+import user from our own package, not from any other package. @Model, control+space, attribute and
+
+22
+00:02:02,180 --> 00:02:05,240
+we can give it a name, whatever name we want.
+
+23
+00:02:05,240 --> 00:02:15,250
+Call it user and the container will create this user object and when we mark a particular parameter
+
+24
+00:02:15,260 --> 00:02:22,740
+with this annotation, it will inject it into the, or it will assign it to that parameter.
+
+25
+00:02:24,020 --> 00:02:32,990
+And within the method we can do a sysout, control+space, user. You are simply displaying the user.
+
+26
+00:02:33,160 --> 00:02:38,000
+So in this lecture, you have successfully implemented a method that handles the user registration.
+
+27
+00:02:38,000 --> 00:02:44,460
+We are simply displaying the user information that comes in. We have retrieved the object that the container
+
+28
+00:02:44,490 --> 00:02:52,140
+creates on the fly using the @ModelAttribute. And we are displaying it and then we are returning the
+
+29
+00:02:52,140 --> 00:02:59,260
+same registrationPage so that it'll go back to the same registrationPage after the, displaying the user
+
+30
+00:02:59,260 --> 00:03:00,230
+details.
+

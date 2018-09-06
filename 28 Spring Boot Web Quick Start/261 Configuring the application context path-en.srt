@@ -1,0 +1,68 @@
+1
+00:00:00,390 --> 00:00:04,010
+In the previous lecture, we have seen a Spring Boot Web MVC application
+
+2
+00:00:04,020 --> 00:00:09,350
+in action. In this lecture, I will show you how to customize a few properties
+
+3
+00:00:09,650 --> 00:00:13,890
+by using the application.properties.
+
+4
+00:00:14,030 --> 00:00:20,220
+We had to access our application without the context last time, because by default the Spring Boot Web
+
+5
+00:00:20,220 --> 00:00:26,000
+applications are configured to run at localhost:8080 on a Tomcat instead of having a
+
+6
+00:00:26,010 --> 00:00:31,960
+root context. When you deploy a war file, it will automatically have
+
+7
+00:00:32,140 --> 00:00:37,150
+a root context, but in this case we are deploying our application as a jar file instead.
+
+8
+00:00:37,270 --> 00:00:44,830
+So to configure a root context, go back to application.properties and type server dot, and you will see
+
+9
+00:00:44,830 --> 00:00:51,490
+all the properties you can configure for a server. server.context-path,
+
+10
+00:00:52,670 --> 00:00:59,550
+context-path=/springbootweb. You can use whatever name you want.
+
+11
+00:00:59,550 --> 00:01:02,510
+You can simply call springweb as well if you want to.
+
+12
+00:01:02,520 --> 00:01:09,180
+There are several other properties, server.port, etc; So you can even configure port if you want to.
+
+13
+00:01:09,180 --> 00:01:17,240
+By default it runs on 8080. Save, stop the application, re-run it or relaunch it.
+
+14
+00:01:17,370 --> 00:01:23,220
+This time we should be able to access it using springbootweb as the context from the web browser.
+
+15
+00:01:23,650 --> 00:01:32,260
+So before hello, use springbootweb/hello and we still get the same result back.
+
+16
+00:01:32,340 --> 00:01:38,030
+So that is how we can customize, without writing any xml or even Java configuration,
+
+17
+00:01:38,300 --> 00:01:42,180
+you can configure your application or you can customize the application.
+

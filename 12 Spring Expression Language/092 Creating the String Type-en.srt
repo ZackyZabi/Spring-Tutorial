@@ -1,0 +1,96 @@
+1
+00:00:00,290 --> 00:00:04,290
+In this lecture, you will learn how to use string types within an expression.
+
+2
+00:00:04,380 --> 00:00:09,760
+So let's assign some value or inject some value into this name here using expressions. Start
+
+3
+00:00:09,790 --> 00:00:19,510
+with pound within flower brackets, inside the quotes everything should be inside the double quotes, pound followed
+
+4
+00:00:19,510 --> 00:00:26,580
+by flower brackets and the string should go into single quotes because we have already used the double
+
+5
+00:00:26,580 --> 00:00:29,630
+quotes outside here, to assign the value.
+
+6
+00:00:29,730 --> 00:00:35,810
+So we shouldn't be using double quotes again in the expression, we can use single quotes to do that.
+
+7
+00:00:35,820 --> 00:00:40,260
+Let's see if this Bharath Thippireddy still gets injected into this name.
+
+8
+00:00:40,590 --> 00:00:41,620
+Run the test.
+
+9
+00:00:43,290 --> 00:00:45,540
+And we still see Bharath Thippireddy.
+
+10
+00:00:45,810 --> 00:00:52,400
+So using expression language you have successfully injected a string. To invoke methods on the string,
+
+11
+00:00:52,410 --> 00:01:00,420
+you can simply use dot toUpperCase. You don't get any help from the IDE because you're doing it inside
+
+12
+00:01:00,740 --> 00:01:04,740
+double quotes. So you need to know the method names to invoke.
+
+13
+00:01:04,920 --> 00:01:14,700
+You can go to test. You can invoke a method on new String().toUpperCase, it's camel case.
+
+14
+00:01:14,700 --> 00:01:20,760
+So just to confirm that we are using the right method toUpperCase. Come back to Instructor and use
+
+15
+00:01:20,760 --> 00:01:27,260
+it. Save it, run the test again and everything
+
+16
+00:01:27,260 --> 00:01:34,080
+now in the name is uppercase. We can also create a string using the new operator.
+
+17
+00:01:34,080 --> 00:01:36,470
+Get rid of this within flower brackets.
+
+18
+00:01:36,630 --> 00:01:45,030
+We can use new, but we have to use the, give the complete class name, java.lang.String(), within
+
+19
+00:01:45,030 --> 00:01:55,580
+brackets double quotes, sorry, single quotes. We can't use double quotes in expression language. Bharath Thippireddy,
+
+20
+00:01:56,310 --> 00:02:00,530
+because we are using double quotes outside. So the compiler will be confused.
+
+21
+00:02:00,810 --> 00:02:07,850
+Save it. Run the test again and we are back to Bharath Thippireddy.
+
+22
+00:02:07,990 --> 00:02:14,170
+So in this lecture, you have learnt how to use expressions with string values, you have used the new operator.
+
+23
+00:02:14,380 --> 00:02:19,840
+You have used the string directly within single quotes, as well as you have seen that you can invoke methods
+
+24
+00:02:19,930 --> 00:02:21,340
+on the string type.
+

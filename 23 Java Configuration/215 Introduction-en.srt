@@ -1,0 +1,67 @@
+0
+00:00.510 --> 00:08.280
+Starting 3.0 version of spring we can configure and use spring without using any xml in our application
+
+1
+00:08.700 --> 00:16.260
+that these complete Java based configuration will be replacing xml with a java class that will be marked
+
+2
+00:16.260 --> 00:21.110
+with at configuration annotation from spring ones marked
+
+3
+00:21.120 --> 00:27.610
+this annotation tells spring that this particular class is a source of spring beans.
+
+4
+00:27.660 --> 00:31.020
+This class will be our configuration starting from that point.
+
+5
+00:31.020 --> 00:35.800
+This will be like the xml file when we used xml configuration within this class.
+
+6
+00:35.910 --> 00:42.590
+We will define multiple methods which will return the instances of our Beans here.
+
+7
+00:42.590 --> 00:48.110
+This particular method should return a new car instance and these methods should be marked with
+
+8
+00:48.440 --> 00:55.760
+at bean annotation that being annotation is similar to the bean element we used in the xml to
+
+9
+00:55.790 --> 01:02.180
+Define spring beans we can have multiple configuration files are multiple java classes in our
+
+10
+01:02.180 --> 01:06.440
+application and each of them will be marked with at configuration.
+
+11
+01:06.440 --> 01:11.810
+we learn all that and use all of that in the next few lectures then we build standalone applications
+
+12
+01:11.840 --> 01:17.860
+instead of using xml class path application context to use our configuration.
+
+13
+01:17.870 --> 01:21.530
+We will be reading annotation config application context.
+
+14
+01:21.530 --> 01:29.330
+This is the container using this we can get the string beans out of it and we will also learn how to
+
+15
+01:29.360 --> 01:35.360
+import one configuration inside another configuration so we can define multiple configuration classes
+
+16
+01:35.630 --> 01:41.150
+and we can use the at import annotation to import them into other classes as well.

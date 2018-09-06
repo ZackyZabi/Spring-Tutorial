@@ -1,0 +1,107 @@
+0
+00:00.310 --> 00:05.540
+In this lecture you will create the maven project so that we can start working on our case.
+
+1
+00:05.610 --> 00:18.180
+So go to eclipse File menu new go to other and type in Maven select Maven project click on next next.
+
+2
+00:18.180 --> 00:25.540
+Again select the default which is archetype QuickStart is a standalone project.
+
+3
+00:25.540 --> 00:28.020
+Next again give it a name call it
+
+4
+00:28.180 --> 00:38.220
+spring Java config spring Java config finish that will create the Maven project for us.
+
+5
+00:38.290 --> 00:39.490
+Go into it
+
+6
+00:39.520 --> 00:42.850
+Go to the source test Java right click on the package get rid of it.
+
+7
+00:42.850 --> 00:44.180
+We don't need that.
+
+8
+00:44.200 --> 00:46.840
+We're going to update the pom in a second.
+
+9
+00:46.840 --> 00:47.540
+Go to the source.
+
+10
+00:47.540 --> 00:48.510
+Main Java.
+
+11
+00:48.580 --> 00:50.800
+Delete the app as well.
+
+12
+00:53.200 --> 01:00.580
+Open the pom file which is the maven configuration file go to to pom dot xml tab go to the spring core
+
+13
+01:00.580 --> 01:01.010
+Project.
+
+14
+01:01.000 --> 01:03.450
+The very first project that you have created.
+
+15
+01:03.670 --> 01:11.100
+Open the pom dot xml once it opens up to the last tab double click to maximize.
+
+16
+01:11.230 --> 01:18.850
+Copy all the way from properties till the end up to the build end not to the project element from properties
+
+17
+01:18.910 --> 01:25.630
+all the way to build come back to the new project spring Java conflict pom start from properties
+
+18
+01:26.470 --> 01:32.460
+and copy all the way up to dependencies control shift F to format
+
+19
+01:32.470 --> 01:38.770
+So we have copied a property called Spring version and the dependencies we need are spring core and
+
+20
+01:38.800 --> 01:39.690
+spring context.
+
+21
+01:39.700 --> 01:46.420
+That's all we need to develop standalone projects using Java configuration and we have the maven
+
+22
+01:46.450 --> 01:52.840
+compiler plugin defined so that our Java version is one point eight starting the next lecture you will be
+
+23
+01:52.840 --> 01:55.900
+using spring Java configuration.
+
+24
+01:55.990 --> 02:02.040
+But before we do that right click on the project and always do a maven update.
+
+25
+02:02.270 --> 02:13.370
+right click go to Maven and do a update project every time we touch the pom file we should do this and no more
+
+26
+02:13.440 --> 02:13.950
+errors.

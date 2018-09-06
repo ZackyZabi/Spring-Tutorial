@@ -1,0 +1,100 @@
+1
+00:00:00,130 --> 00:00:06,870
+In this lecture We'll wrap up our courting by displaying the message whatever comes back from the AJAX
+
+2
+00:00:06,870 --> 00:00:07,550
+call.
+
+3
+00:00:07,630 --> 00:00:15,030
+So go to the Ajax function and we need to display an error message right next to this ID field so we
+
+4
+00:00:15,030 --> 00:00:23,030
+can add s pan here Hatcham else pan and give it a unique ID IDs equal to within double chords.
+
+5
+00:00:23,050 --> 00:00:26,740
+E r r MSEE for error message.
+
+6
+00:00:26,830 --> 00:00:35,440
+We'll use that here will accept using J.A.G. dollar that in brackets double courts palm symbol passing
+
+7
+00:00:35,450 --> 00:00:38,640
+the 80 which is error message.
+
+8
+00:00:38,680 --> 00:00:46,390
+E r r capital M S G dot next we the same text.
+
+9
+00:00:46,390 --> 00:00:52,340
+It is the text function and pass in whatever response text comes back from the validation.
+
+10
+00:00:52,700 --> 00:00:54,360
+Initially it would be blank.
+
+11
+00:00:54,380 --> 00:00:56,170
+The span doesn't have anything.
+
+12
+00:00:56,240 --> 00:01:00,840
+We are dynamically assigning Whatever comes back in the response to it.
+
+13
+00:01:04,430 --> 00:01:06,840
+And also not just sending the text.
+
+14
+00:01:06,860 --> 00:01:13,980
+We also want to do a little more work on the UI if response text is not equal to blank.
+
+15
+00:01:14,240 --> 00:01:18,470
+Then I want the focus to be back on this particular field here.
+
+16
+00:01:19,150 --> 00:01:20,420
+So the user enters something.
+
+17
+00:01:20,440 --> 00:01:23,770
+He tab's over to name and the validation happens.
+
+18
+00:01:23,830 --> 00:01:29,400
+And if the validation feels I want the focus back to this particular field so that he can change it
+
+19
+00:01:31,570 --> 00:01:42,470
+to do that we can use the equity again dollar within brackets within double course hash.
+
+20
+00:01:42,810 --> 00:01:44,490
+The name of the field is ID
+
+21
+00:01:47,020 --> 00:01:54,760
+dot focus is the function and that will put the focus back on the ID field.
+
+22
+00:01:54,840 --> 00:02:00,180
+So we have successfully completed our courting of the front end as well.
+
+23
+00:02:00,240 --> 00:02:07,310
+We have done three things you know handle the document don't really change and made the ADX call and
+
+24
+00:02:07,310 --> 00:02:12,890
+we have provided a callback function within which you are taking the error message and displaying it
+
+25
+00:02:12,960 --> 00:02:16,370
+on to the UI by creating a hasty XML span.
+

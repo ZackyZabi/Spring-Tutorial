@@ -1,0 +1,188 @@
+1
+00:00:00,120 --> 00:00:05,000
+Hello! And thanks for investing in the "Spring Framework in easy steps" course.
+
+2
+00:00:05,010 --> 00:00:08,900
+This is Bharath Thippireddy. I'm a Java architect and instructor.
+
+3
+00:00:08,920 --> 00:00:14,500
+I have been designing and developing enterprise Java applications for the last 13 years.
+
+4
+00:00:14,520 --> 00:00:22,700
+And I'll be doing my best to help you make the maximum out of this course, by learning what Spring is,
+
+5
+00:00:22,720 --> 00:00:27,000
+why it is so popular in the Java EE application development world,
+
+6
+00:00:27,020 --> 00:00:33,000
+when to use it and you will also master all the important concepts such as dependency injection,
+
+7
+00:00:33,020 --> 00:00:36,280
+inversion of control, what a Spring container is, etc;
+
+8
+00:00:36,300 --> 00:00:44,000
+You'll then move on to see Dependency injection in action by injecting primitive types,
+
+9
+00:00:44,020 --> 00:00:49,000
+collection types as well as object or reference types.
+
+10
+00:00:49,020 --> 00:00:53,500
+The Spring container maintains the complete lifecycle of an object.
+
+11
+00:00:53,520 --> 00:01:01,300
+You will learn what that lifecycle is and how to use the three different ways to configure these lifecycle methods,
+
+12
+00:01:01,320 --> 00:01:08,000
+that is using XML configuration, Spring interfaces, as well as using annotations.
+
+13
+00:01:08,010 --> 00:01:14,210
+You will then use the dependency check to ensure that all the dependencies that we want
+
+14
+00:01:14,220 --> 00:01:25,800
+are being injected by Spring or provided at runtime. You'll define objects inside objects, that is, inner beans.
+
+15
+00:01:25,810 --> 00:01:30,000
+Spring creates objects based on their scope that we provide.
+
+16
+00:01:30,020 --> 00:01:35,000
+You'll try out the different scopes that Spring offers and those we can configure.
+
+17
+00:01:35,020 --> 00:01:40,000
+Based on the scopes Spring will create the objects at runtime.
+
+18
+00:01:40,020 --> 00:01:45,600
+Once you learn Setter injection, using Constructor injection is very straight-forward.
+
+19
+00:01:45,610 --> 00:01:52,500
+You'll do that in simple steps. Instead of hardcoding values in real time applications,
+
+20
+00:01:52,510 --> 00:02:00,000
+we use property files. You will learn how to read and use those properties in Spring beans.
+
+21
+00:02:00,010 --> 00:02:07,940
+Auto-wiring is a very powerful feature where Spring does all the dependency injection automatically.
+
+22
+00:02:07,960 --> 00:02:13,100
+You will master auto-wiring and use it across the projects throughout the course.
+
+23
+00:02:13,110 --> 00:02:21,000
+You will then learn how to reuse the collection types by using Standalone collections.
+
+24
+00:02:21,020 --> 00:02:28,000
+A second way to create objects in Spring is by using annotations.
+
+25
+00:02:28,020 --> 00:02:33,000
+You will learn all the stereotype annotations and also how to enable them.
+
+26
+00:02:33,010 --> 00:02:37,100
+Spring expression language provides a very easy syntax.
+
+27
+00:02:37,120 --> 00:02:41,000
+You will learn what expression language is and how to use it.
+
+28
+00:02:41,010 --> 00:02:49,000
+You will wrap up the Spring course section by using interfaces and their implementations for dependency injection.
+
+29
+00:02:49,010 --> 00:02:59,000
+You will see runtime polymorphism and runtime injection in action. You will then move on to the Spring JDBC module
+
+30
+00:02:59,020 --> 00:03:09,000
+which abstracts the JDBC API and makes it very easy for a developer to perform the CURD or CRUD operations, that is,
+
+31
+00:03:09,020 --> 00:03:18,800
+Create, Update, Read and Delete operations against a database. ORM stands for object relational mapping.
+
+32
+00:03:18,820 --> 00:03:25,000
+It converts a Java object into a database row and vice-versa.
+
+33
+00:03:25,010 --> 00:03:31,000
+You will use Spring with hibernate and see how it makes the life of a developer very easy.
+
+34
+00:03:31,010 --> 00:03:39,000
+It integrates very well with hibernate and in very simple steps we can do ORM, Object Relational Mapping.
+
+35
+00:03:39,020 --> 00:03:48,500
+Spring MVC is a complete implementation of the MVC pattern and can be used to develop web applications end to end.
+
+36
+00:03:48,520 --> 00:03:55,000
+You'll learn the various components that make up a Spring MVC application and the connection between them.
+
+37
+00:03:55,020 --> 00:04:02,000
+You will send the data from the controller to the UI and also from the view back to the controller.
+
+38
+00:04:02,010 --> 00:04:12,920
+You will then use your Spring dependency injection skills, Spring MVC skills as well as the ORM skills
+
+39
+00:04:12,930 --> 00:04:20,000
+and build a complete dynamic web application end to end. And in the process you will also learn,
+
+40
+00:04:20,020 --> 00:04:28,000
+briefly learn AJAX and make AJAX calls using JQuery. AJAX is a part of all the modern web applications.
+
+41
+00:04:28,010 --> 00:04:31,000
+Look at any web application and you will see a AJAX call.
+
+42
+00:04:31,010 --> 00:04:35,100
+So you are going to learn how to do that using JQuery.
+
+43
+00:04:35,120 --> 00:04:44,000
+AOP which stands for Aspect Oriented Programming allows us to add external services
+
+44
+00:04:44,010 --> 00:04:50,000
+to our business methods without modifying the code. So you are going to learn what AOP is,
+
+45
+00:04:50,000 --> 00:04:56,000
+the key terminology in AOP and also create your own aspects and apply them.
+
+46
+00:04:56,020 --> 00:05:03,000
+Just like my other courses, this course is going to be Agile and an incremental course.
+
+47
+00:05:03,010 --> 00:05:08,770
+I'll be adding several other modules in Spring on a continuous basis.
+

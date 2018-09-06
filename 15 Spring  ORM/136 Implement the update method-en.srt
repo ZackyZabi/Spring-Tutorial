@@ -1,0 +1,88 @@
+1
+00:00:00,330 --> 00:00:06,060
+In the previous lecture, you have successfully created a database product record using the hibernateTemplate.
+
+2
+00:00:06,390 --> 00:00:11,690
+In this lecture you will learn how to update the product information, how to update the product price.
+
+3
+00:00:12,050 --> 00:00:16,070
+We'll update it from 700 bucks to $800.
+
+4
+00:00:16,080 --> 00:00:25,410
+Let's do that by going to Eclipse. Go to the productDao, the interface and add a new method, void update
+
+5
+00:00:26,550 --> 00:00:32,160
+product. It takes the product entity and it updates whatever information we provide in the product entity.
+
+6
+00:00:32,160 --> 00:00:43,660
+Go to ProductDaoImpl, click n wherever it says error, hit control+1, add unimplemented methods. Hit control+d to delete
+
+7
+00:00:43,690 --> 00:00:46,800
+the TODO block. And to implement the update,
+
+8
+00:00:46,900 --> 00:00:55,480
+it's one single line. hibernateTemplate.update is the method and we pass it the entity which
+
+9
+00:00:55,480 --> 00:01:01,690
+is the product that comes in as the parameter. And that's it. That will do the magic for us.
+
+10
+00:01:01,840 --> 00:01:09,390
+But we need to mark this method with @Transactional because it is also a update method. Mark it
+
+11
+00:01:09,400 --> 00:01:18,220
+with @Transactional. Go to the test.java to test our update method, comment out the create portion, wherever
+
+12
+00:01:18,270 --> 00:01:21,450
+we are invoking the create method. Change some data here.
+
+13
+00:01:21,480 --> 00:01:25,010
+Let's update the price to 800 dollars.
+
+14
+00:01:27,350 --> 00:01:37,310
+And invoke productDao.update and pass in the product. Since it has the unique id here, hibernate
+
+15
+00:01:37,310 --> 00:01:43,330
+knows how to update the record using this as the condition. Let's run the test.
+
+16
+00:01:47,120 --> 00:01:54,370
+Let me maximize that. And it generates the update product set description name and price where it uses the id in
+
+17
+00:01:54,370 --> 00:01:57,420
+the where clause because we have marked the id field,
+
+18
+00:01:57,590 --> 00:02:05,380
+if you remember, as the primary key. If you go to Product.java, the id field is marked with the
+
+19
+00:02:05,380 --> 00:02:09,250
+@Id. So it automatically uses it in the where clause.
+
+20
+00:02:09,340 --> 00:02:13,130
+Let's go to database and see if that record got updated.
+
+21
+00:02:13,480 --> 00:02:19,680
+Execute the select and the price has changed to 800 dollars.
+
+22
+00:02:19,690 --> 00:02:25,360
+So you have successfully used the hibernateTemplate.update and updated the record.
+

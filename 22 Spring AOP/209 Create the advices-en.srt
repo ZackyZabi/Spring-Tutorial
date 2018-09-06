@@ -1,0 +1,108 @@
+1
+00:00:00,200 --> 00:00:07,610
+In this lecture you will create two advisers that will be run before and after the matters execution.
+
+2
+00:00:07,800 --> 00:00:14,010
+So let's get started with the first one which will be executed before the matter that is logged before
+
+3
+00:00:14,100 --> 00:00:15,380
+is the method name.
+
+4
+00:00:15,520 --> 00:00:22,380
+It is a wide wide log before it's make it public.
+
+5
+00:00:22,580 --> 00:00:33,780
+Boyd log before and as a pedometer we need to pass it and join point unjoin point we will see what this
+
+6
+00:00:33,780 --> 00:00:34,340
+object is.
+
+7
+00:00:34,340 --> 00:00:42,000
+Later on formalwear are not going to use this object join point not joint point.
+
+8
+00:00:42,970 --> 00:00:44,090
+It's a wide method.
+
+9
+00:00:44,160 --> 00:00:50,880
+Import the join point from our Cadotte aspect Deardorff Lanc using this we can access them at their
+
+10
+00:00:50,880 --> 00:00:55,030
+pedometers sex drive and show you the use of it later on.
+
+11
+00:00:55,260 --> 00:01:06,880
+And the log before motard will simply display some text card inside the method or before calling the
+
+12
+00:01:07,180 --> 00:01:08,250
+method.
+
+13
+00:01:09,880 --> 00:01:15,140
+And you will market with it before annotation from aspect G.
+
+14
+00:01:16,190 --> 00:01:19,770
+And this annotation needs air point cut expression.
+
+15
+00:01:19,940 --> 00:01:25,560
+So provide double gourdes for now you will use the point that expression in the next lecture.
+
+16
+00:01:27,240 --> 00:01:39,240
+Second public white log after this is the second method join point again is the parameter join point
+
+17
+00:01:40,560 --> 00:01:41,930
+join point
+
+18
+00:01:44,690 --> 00:01:55,290
+and this method will log after that method execution.
+
+19
+00:01:55,310 --> 00:02:03,940
+So these statements will be displayed on the console and will market with it after annotation from aspect
+
+20
+00:02:03,940 --> 00:02:04,400
+G.
+
+21
+00:02:05,910 --> 00:02:09,960
+Again this annotation also needs a pointer expression as a string.
+
+22
+00:02:09,960 --> 00:02:16,730
+For now just use open and close double quotes you will provide the pointer expression in the next lecture.
+
+23
+00:02:17,010 --> 00:02:22,530
+So in this lecture you have successfully implemented to advise us that before I advise as Veloce that
+
+24
+00:02:22,620 --> 00:02:28,330
+after advice we have marked them with it before which tells that this before the.
+
+25
+00:02:28,390 --> 00:02:37,400
+Should be executed before method is called and after Martes this log after matter to be after advice
+
+26
+00:02:37,410 --> 00:02:41,660
+that is it should be executed after that mattered completes.
+
+27
+00:02:41,730 --> 00:02:45,350
+Delete any unnecessary spaces control shift if you format.
+

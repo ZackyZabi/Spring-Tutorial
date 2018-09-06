@@ -1,0 +1,100 @@
+1
+00:00:00,240 --> 00:00:05,490
+In the previous lecture, you have successfully implemented the find method which returns a single record
+
+2
+00:00:05,490 --> 00:00:07,510
+from the database as an object.
+
+3
+00:00:07,680 --> 00:00:11,570
+In this lecture, you will learn how to read multiple records. That is,
+
+4
+00:00:11,670 --> 00:00:20,550
+we should get a list of products. Let's implement that method, list of products is what it should
+
+5
+00:00:20,550 --> 00:00:22,470
+return in the ProductDao.
+
+6
+00:00:22,470 --> 00:00:29,370
+Call it findAll, everything in the database, no parameters to it. Control+1, import the list from
+
+7
+00:00:29,610 --> 00:00:37,130
+java.util. Go to the ProductDaoImpl all the way up, control+1 on the error,
+
+8
+00:00:37,160 --> 00:00:41,620
+add the implemented methods which is the findAll method.
+
+9
+00:00:42,060 --> 00:00:50,890
+Delete the TODO. hibernateTemplate.loadAll is the method.
+
+10
+00:00:51,180 --> 00:00:52,580
+It takes the entity type.
+
+11
+00:00:52,710 --> 00:00:55,560
+We need to tell it what type of records are going to come back.
+
+12
+00:00:55,590 --> 00:00:59,590
+It's Product.class generics
+
+13
+00:00:59,610 --> 00:01:08,870
+again. We are telling that it should return a list of product types. Control+1, assign statement to
+
+14
+00:01:08,870 --> 00:01:19,460
+a new local variable and it returns a list of products. And return that products back. Control+shift+f to format,
+
+15
+00:01:20,110 --> 00:01:20,900
+its products.
+
+16
+00:01:24,700 --> 00:01:25,600
+Go to the test.
+
+17
+00:01:31,410 --> 00:01:32,950
+Comment out this find method.
+
+18
+00:01:37,200 --> 00:01:46,270
+productDao.findAll is the method.
+
+19
+00:01:46,310 --> 00:01:50,270
+Hit control+1, assign statement to a new local variable.
+
+20
+00:01:50,570 --> 00:01:53,110
+It returns a list of products back.
+
+21
+00:01:53,150 --> 00:01:54,620
+Display those products.
+
+22
+00:01:57,870 --> 00:01:58,620
+Run the test.
+
+23
+00:02:02,390 --> 00:02:08,670
+And we have two products. Here is product 1, the first record and here is the second record.
+
+24
+00:02:09,050 --> 00:02:13,850
+So you should use the get method when you are loading a single record and you should use the
+
+25
+00:02:13,850 --> 00:02:19,060
+hibernateTemplate.loadAll to load all the records in database table.
+

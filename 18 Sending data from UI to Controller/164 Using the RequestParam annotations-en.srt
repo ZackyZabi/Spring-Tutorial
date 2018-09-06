@@ -1,0 +1,188 @@
+1
+00:00:00,400 --> 00:00:04,240
+In this lecture, you will send the query parameters using the URL
+
+2
+00:00:04,500 --> 00:00:10,350
+and you will retrieve them on the server side in the Controller using the @RequestParam annotation.
+
+3
+00:00:10,620 --> 00:00:20,820
+So let's get started by going to Eclipse, create a new Controller. Right click, new -> class, call it
+
+4
+00:00:21,120 --> 00:00:32,970
+RequestParamsController, finish. Mark it with @Controller annotation from Spring stereotype package.
+
+5
+00:00:33,390 --> 00:00:35,550
+Create a new method, public,
+
+6
+00:00:35,640 --> 00:00:42,580
+this method will simply take the URL parameters and it will display them on the Tomcat console. Public
+
+7
+00:00:42,600 --> 00:00:58,960
+ModelAndView from Spring, showData is the method name. Mark it with @RequestMapping and provide a mapping,
+
+8
+00:01:00,080 --> 00:01:09,470
+showData, forward slash, showData is the URL that I want to use. And this should return a new
+
+9
+00:01:09,680 --> 00:01:15,030
+ModelAndView. We'll set the view in a second
+
+10
+00:01:15,100 --> 00:01:22,030
+although it's not required. To retrieve the URL parameters, we need to use the @RequestParameter or
+
+11
+00:01:22,030 --> 00:01:28,220
+@RequestParam annotation on the method parameters on the controller. Let's define the method parameters.
+
+12
+00:01:28,230 --> 00:01:33,270
+Int id is the first one, string name
+
+13
+00:01:33,340 --> 00:01:35,730
+comma double salary.
+
+14
+00:01:35,900 --> 00:01:38,180
+We can define whatever data types we want.
+
+15
+00:01:38,180 --> 00:01:48,850
+Once we have the parameters defined, we used the @RequestParam annotation on each of those parameters.
+
+16
+00:01:50,550 --> 00:01:53,040
+And within brackets, give it a name.
+
+17
+00:01:53,040 --> 00:01:59,280
+This name should match the key that we use in the URL, when the query parameters come in from the browser.
+
+18
+00:01:59,520 --> 00:02:05,240
+Copy that, RequestParam, paste it next to String name as well as double salary.
+
+19
+00:02:05,280 --> 00:02:10,170
+Change the names to name and sal, instead of using salary,
+
+20
+00:02:10,170 --> 00:02:18,690
+I'm going to use sal, sal in the query parameters. So this key here should match the key used in the URL.
+
+21
+00:02:19,410 --> 00:02:30,900
+Once you have mapped it, use a sysout, display the details. Id colon, +id. Copy that line, paste it
+
+22
+00:02:30,990 --> 00:02:43,440
+a couple of times. Name is the second one, name and finally salary, sal or salary.
+
+23
+00:02:43,660 --> 00:02:46,160
+That's the variable name, control+shift+f to format.
+
+24
+00:02:46,340 --> 00:02:48,190
+And let's forward it to some view.
+
+25
+00:02:48,310 --> 00:02:50,920
+Forward it to userReg.
+
+26
+00:02:51,280 --> 00:02:51,850
+Doesn't matter.
+
+27
+00:02:51,850 --> 00:02:53,640
+You can create a new view and forward it.
+
+28
+00:02:53,650 --> 00:02:59,730
+But our goal is to just retrieve the user query parameters and to display them on the console.
+
+29
+00:02:59,800 --> 00:03:08,320
+So I am forwarding it to the userReg.jsp To see this in action, right click, restart the server.
+
+30
+00:03:08,350 --> 00:03:12,000
+While it restarts,
+
+31
+00:03:12,000 --> 00:03:19,890
+go back to the browser, grab the earlier URL, one of the earlier URLs from the browser.
+
+32
+00:03:20,110 --> 00:03:27,740
+Open any textpad or any text editor of your choice. Paste that URL, change it from springmvc/registerUser
+
+33
+00:03:27,750 --> 00:03:31,450
+to showData, d capital, slash
+
+34
+00:03:31,630 --> 00:03:38,290
+we need to pass three parameters, not slash. It will be a question mark. Id is equal to 123.
+
+35
+00:03:38,470 --> 00:03:45,510
+And name is equal to John and ampersand symbol,
+
+36
+00:03:45,880 --> 00:03:48,210
+sal is what I think we have used,
+
+37
+00:03:48,220 --> 00:03:55,530
+if you go back to the RequestParamsController, sal is what we should use here as well, is equal to
+
+38
+00:03:55,660 --> 00:04:00,460
+let's say 72.5 per hour maybe.
+
+39
+00:04:00,580 --> 00:04:03,160
+Copy that URL, come back to Eclipse.
+
+40
+00:04:03,280 --> 00:04:05,290
+Or you can open it in Chrome as well,
+
+41
+00:04:05,350 --> 00:04:09,120
+or any other web browser. Paste that here.
+
+42
+00:04:09,730 --> 00:04:14,170
+Enter and you will see that it goes back to the registrationPage.
+
+43
+00:04:14,170 --> 00:04:16,810
+That is not what we care. Go go to the Tomcat console
+
+44
+00:04:16,840 --> 00:04:25,410
+here. Maximize it and you'll see all the three values. Id is 123, name is John and salary is 72.5.
+
+45
+00:04:25,510 --> 00:04:33,370
+So you have successfully sent data using query parameters and you how retrieved it in the Controller
+
+46
+00:04:33,490 --> 00:04:40,210
+using @RequestParam annotation. The Spring container has automatically taken the values, used the
+
+47
+00:04:40,210 --> 00:04:44,860
+appropriate parse methods and it has set those values into the method parameters.
+

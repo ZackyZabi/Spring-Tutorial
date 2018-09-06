@@ -1,0 +1,76 @@
+1
+00:00:00,300 --> 00:00:04,390
+The second step is to create a Spring configuration file.
+
+2
+00:00:04,950 --> 00:00:07,250
+And there is a convention that we need to follow
+
+3
+00:00:07,290 --> 00:00:13,170
+when we do that, because we are developing a Spring MVC web application and not a standalone application.
+
+4
+00:00:13,230 --> 00:00:14,910
+We'll put it under the WEB-INF.
+
+5
+00:00:15,060 --> 00:00:25,080
+So go grab any of the configuration files from the springjdbc or even springorm. Go to src/main/java,
+
+6
+00:00:25,250 --> 00:00:36,580
+test, copy the config.xml, come back, paste it directly under WEB-INF. Right click and rename
+
+7
+00:00:36,580 --> 00:00:41,460
+this. There is a convention we need to follow. The name of this file should be, the name of the servlet, our
+
+8
+00:00:41,470 --> 00:00:43,390
+servlet name if you see it
+
+9
+00:00:43,400 --> 00:00:45,530
+above, in the web.xml is
+
+10
+00:00:45,530 --> 00:00:46,510
+dispatcher.
+
+11
+00:00:46,580 --> 00:00:57,440
+So dispatcher-servlet.xml. By default the dispatcher-servlet will search for a configuration
+
+12
+00:00:57,440 --> 00:00:59,450
+file with the following name.
+
+13
+00:00:59,450 --> 00:01:05,940
+That is, the servlet name hyphen servlet.xml. There is a way to override it which I'll show
+
+14
+00:01:05,940 --> 00:01:10,700
+you in lectures later on. But for now always remember that the name of the configuration file should
+
+15
+00:01:10,700 --> 00:01:13,030
+have the servlet name hyphen
+
+16
+00:01:13,340 --> 00:01:16,740
+servlet.xml. Click OK.
+
+17
+00:01:17,650 --> 00:01:21,490
+Open the dispatcher-servlet.xml. Maximize.
+
+18
+00:01:21,660 --> 00:01:29,170
+Get rid of everything inside the beans element. And in the next lecture we'll configure the view resolver
+
+19
+00:01:29,230 --> 00:01:32,470
+inside the dispatcher-servlet.xml.
+

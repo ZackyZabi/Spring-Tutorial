@@ -1,0 +1,200 @@
+1
+00:00:00,300 --> 00:00:05,490
+The previous lecture you have learned how to read a single record from that database and this lecture
+
+2
+00:00:05,640 --> 00:00:12,230
+will create a method that will read all the employer cards before we do that let's insert record manually
+
+3
+00:00:12,240 --> 00:00:16,990
+because we all have to come in discord if you want to exclude the insert You are welcome to do that
+
+4
+00:00:17,040 --> 00:00:28,980
+but I'm going to set the record manually from my skill work bench insert into employee values within
+
+5
+00:00:28,980 --> 00:00:36,290
+brackets 1 within single quotes that you can use your first name and last name.
+
+6
+00:00:36,310 --> 00:00:37,340
+You need not use.
+
+7
+00:00:37,380 --> 00:00:39,650
+Witnessing And of course the period the
+
+8
+00:00:43,060 --> 00:00:49,890
+execute and that the traditions are dead a card in the database do a select and we have to record snow
+
+9
+00:00:50,440 --> 00:01:00,430
+parrot and Bob go back to eclipse or to imply Dao create a new method that will return a list of employees
+
+10
+00:01:01,580 --> 00:01:02,520
+read.
+
+11
+00:01:02,830 --> 00:01:03,410
+That's it.
+
+12
+00:01:03,430 --> 00:01:04,300
+That's the name of the matter.
+
+13
+00:01:04,300 --> 00:01:06,990
+You can also call it find if you want to.
+
+14
+00:01:07,570 --> 00:01:12,480
+Until one imported from Java I doubt it or be employed.
+
+15
+00:01:12,580 --> 00:01:19,160
+Simple go all the way up until one the unimplemented matters that really are the read method.
+
+16
+00:01:19,180 --> 00:01:27,580
+At the end that wrap that matter come back up Bastet here do a control shift F. mix it up so that you
+
+17
+00:01:27,580 --> 00:01:28,330
+can see it.
+
+18
+00:01:29,810 --> 00:01:30,750
+Delete the.
+
+19
+00:01:33,770 --> 00:01:44,340
+String skill is equal to select star from employee you have to write a query that will get as multiple
+
+20
+00:01:44,340 --> 00:01:46,890
+records from the database you can have a WHERE clause.
+
+21
+00:01:46,980 --> 00:01:50,130
+But typically that Burtless should return multiple records
+
+22
+00:01:53,090 --> 00:01:57,420
+JT B.C template Daut query.
+
+23
+00:01:57,630 --> 00:02:04,440
+That said we are going to use the query which will take the school and the road map or school comma
+
+24
+00:02:05,160 --> 00:02:07,500
+row mapper which we need to create.
+
+25
+00:02:07,500 --> 00:02:09,790
+So grab this roadmap or from up here.
+
+26
+00:02:10,650 --> 00:02:16,010
+Pastrycook pass that road map are to this method.
+
+27
+00:02:16,370 --> 00:02:22,170
+Can control one at the start of the line sign statement to a new local variable.
+
+28
+00:02:22,280 --> 00:02:26,500
+Select that and that will return a list of employees.
+
+29
+00:02:26,580 --> 00:02:32,370
+Since we are passing aero mapper which returns employee requirement that automatically returns a list
+
+30
+00:02:32,370 --> 00:02:33,560
+of employees.
+
+31
+00:02:33,750 --> 00:02:45,670
+We can return that list call it result and return that list go to test instead of invoking the read
+
+32
+00:02:45,670 --> 00:02:52,550
+method comment that line out and invoke the word dot.
+
+33
+00:02:52,570 --> 00:02:59,050
+Read an old one and sign statement to a new local variable.
+
+34
+00:02:59,180 --> 00:03:00,220
+Call it result
+
+35
+00:03:02,800 --> 00:03:04,660
+display the result.
+
+36
+00:03:04,670 --> 00:03:06,470
+We can also use a foreach loop.
+
+37
+00:03:06,470 --> 00:03:17,420
+Let's run this first reichlich run as Java application and that will display all the employees like
+
+38
+00:03:17,420 --> 00:03:17,660
+this.
+
+39
+00:03:17,660 --> 00:03:19,340
+You can also use it for each.
+
+40
+00:03:19,440 --> 00:03:24,640
+I read through the list and display each record as you want.
+
+41
+00:03:24,650 --> 00:03:30,050
+Let me maximize this or that you can see it clearly we have Beauregard's Bob Ferguson.
+
+42
+00:03:30,170 --> 00:03:37,950
+And at the period the rate works when we run this test you know what happens it goes to the Dow in the
+
+43
+00:03:37,950 --> 00:03:38,360
+Dow.
+
+44
+00:03:38,390 --> 00:03:44,230
+Daily Beast the template directory will fetch at resultset with multiple cards and Springville call
+
+45
+00:03:44,350 --> 00:03:45,970
+this employee roadmap.
+
+46
+00:03:46,080 --> 00:03:50,350
+This map room a third for each card in the reserve set.
+
+47
+00:03:51,350 --> 00:03:57,590
+And this matter Rattansi and play object for every red card in that database or every card in that is
+
+48
+00:03:57,590 --> 00:03:58,390
+an asset.
+
+49
+00:03:58,430 --> 00:04:06,920
+And finally we get results liftoff results back Springville the list of employees and we are returning
+
+50
+00:04:06,920 --> 00:04:09,320
+it which we are displaying in the desk plus.
+

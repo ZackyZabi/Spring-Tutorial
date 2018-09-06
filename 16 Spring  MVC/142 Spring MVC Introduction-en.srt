@@ -1,0 +1,196 @@
+1
+00:00:00,570 --> 00:00:08,390
+Spring MVC is used to design dynamic web applications. It internally uses three different design patterns,
+
+2
+00:00:08,540 --> 00:00:14,690
+the front controller, the handler mapper and view Resolver to implement the MVC design pattern.
+
+3
+00:00:15,110 --> 00:00:20,540
+Let's take a look at how the flow of Spring MVC looks like and the various components that are involved.
+
+4
+00:00:21,180 --> 00:00:27,110
+When a request, a HTTP request comes from a client the very first component that will handle
+
+5
+00:00:27,110 --> 00:00:34,220
+it is the Dispatcher Servlet which is an implementation of the front controller design pattern.
+
+6
+00:00:34,280 --> 00:00:38,050
+It stands at the front and it handles all the incoming requests.
+
+7
+00:00:38,210 --> 00:00:44,860
+We simply configure this dispatcher servlet in the web.xml of our web application, which is the
+
+8
+00:00:44,860 --> 00:00:51,400
+deployment descriptor. The dispatcher servlet is from Spring framework. We'll not be writing any servlets.
+
+9
+00:00:51,460 --> 00:00:59,540
+We'll simply use it and configure it in our web.xml. Once configured, the Dispatcher servlet will
+
+10
+00:00:59,870 --> 00:01:01,550
+take the incoming request,
+
+11
+00:01:01,660 --> 00:01:03,170
+uses a HandlerMapper,
+
+12
+00:01:03,160 --> 00:01:05,780
+again this is from Spring.
+
+13
+00:01:05,890 --> 00:01:12,650
+It internally calls the HandlerMapper which knows which controller class should be invoked.
+
+14
+00:01:12,640 --> 00:01:19,240
+Depending on the url pattern the HandlerMapper will map the incoming request to a controller. Controller
+
+15
+00:01:19,260 --> 00:01:25,850
+is a POJO class which we create and we mark it with a stereotype annotation from Spring called
+
+16
+00:01:26,130 --> 00:01:31,600
+Controller, Controller is the annotation. The Controller class inside a Controller class,
+
+17
+00:01:31,730 --> 00:01:39,930
+we will implement a method which will create a ModelAandView. Model represents the data in our application
+
+18
+00:01:40,440 --> 00:01:47,220
+and view is the next page that should be displayed to the end user, it's just the name.
+
+19
+00:01:47,460 --> 00:01:51,170
+And at the end we return this ModelAandView to the dispatcher
+
+20
+00:01:51,190 --> 00:02:00,690
+servlet. That is step number four. Dispatcher servlet will take the view name and it will invoke a View Resolver
+
+21
+00:02:01,500 --> 00:02:02,910
+which is a very important component
+
+22
+00:02:02,910 --> 00:02:08,950
+again. The View Resolver takes the view name and it will append a prefix and suffix to it.
+
+23
+00:02:08,970 --> 00:02:16,570
+The prefix is the location of that view on the server and the suffix is the extension for the View.
+
+24
+00:02:16,590 --> 00:02:22,140
+This way, the controller is not coupled with a particular view.
+
+25
+00:02:22,170 --> 00:02:28,780
+For example we can have a view location on the server which could be WEB-INF pages.
+
+26
+00:02:28,860 --> 00:02:33,330
+And tomorrow if we want to move it to a different location we can simply change it in the configuration
+
+27
+00:02:33,330 --> 00:02:35,690
+file instead of touching the Controller.
+
+28
+00:02:35,850 --> 00:02:42,780
+Similarly, if we want to switch from a JSP to JSF tomorrow we can do that by simply changing the
+
+29
+00:02:42,780 --> 00:02:47,280
+suffix in the configuration without touching our controller.
+
+30
+00:02:47,280 --> 00:02:54,430
+Finally this View Resolver will return a view back to the, complete view back to the Dispatcher servlet.
+
+31
+00:02:54,700 --> 00:03:01,580
+The Dispatcher Servlet will take the view and it will, that particular page can use the model or the data
+
+32
+00:03:01,590 --> 00:03:07,590
+if there is data and it will render that page back to the client.
+
+33
+00:03:07,800 --> 00:03:13,400
+To summarize once again, the client request comes in to the Dispatcher servlet. The Dispatcher servlet
+
+34
+00:03:13,440 --> 00:03:20,260
+will use the HandlerMapper, invoke a controller. Controller will create a ModelAandView. Model is optional.
+
+35
+00:03:20,260 --> 00:03:25,380
+The data might be there or might not be there for a particular request but at the end the Controller should
+
+36
+00:03:25,380 --> 00:03:31,410
+always return the name of the view. That view name will be given to the View Resolver. The View Resolver
+
+37
+00:03:31,410 --> 00:03:37,290
+will append a location which is the prefix and an extension which is the suffix. The Dispatcher
+
+38
+00:03:37,290 --> 00:03:43,730
+Servlet will then take that page, give it the model if there is model. That page will use the model
+
+39
+00:03:43,890 --> 00:03:48,630
+and it will display the end result to the client.
+
+40
+00:03:48,990 --> 00:03:55,830
+Before we wrap it up, this is how the View Resolver will look like. The prefix, the view name and the suffix.
+
+41
+00:03:55,910 --> 00:04:00,610
+The prefix could be views under your WEB-INF or somewhere in your web application.
+
+42
+00:04:00,630 --> 00:04:02,360
+The view name would be hello.
+
+43
+00:04:02,370 --> 00:04:11,160
+This is what a Controller will return, just hello. And the extension is .jsp. We configure this location
+
+44
+00:04:11,410 --> 00:04:14,230
+and the .jsp in the Spring configuration file.
+
+45
+00:04:14,440 --> 00:04:16,980
+And this hello will be returned by the Controller.
+
+46
+00:04:16,990 --> 00:04:23,050
+That way everything is loosely coupled, we can simply change this folder in the configuration if required
+
+47
+00:04:23,050 --> 00:04:23,800
+in the future,
+
+48
+00:04:23,840 --> 00:04:29,980
+if the folder changes. And also the dot extension can also be changed in the configuration, if we switch
+
+49
+00:04:29,980 --> 00:04:34,790
+to JSF or some other technology we can switch the extension as well.
+

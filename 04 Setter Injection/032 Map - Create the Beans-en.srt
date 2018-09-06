@@ -1,0 +1,75 @@
+0
+00:00.270 --> 00:06.570
+This and the next lecture you will learn how to create and inject a map using spring you are going to
+
+1
+00:06.570 --> 00:07.970
+work on a very simple use case.
+
+2
+00:07.980 --> 00:14.280
+you will create a customer class which will have the customer ID and a map that holds all the products
+
+3
+00:14.700 --> 00:15.540
+the customer has bought.
+
+4
+00:15.540 --> 00:22.060
+the key is the product ID and the value which is of type string is the product name.
+
+5
+00:22.080 --> 00:26.350
+Let's get started go do eclipse,
+
+6
+00:26.470 --> 00:29.400
+right click  new class 
+
+7
+00:29.960 --> 00:34.480
+Customer is the class name com dot bharath dot
+
+8
+00:34.550 --> 00:45.980
+spring core dot map finish should have two fields private int ID is the first field.
+
+9
+00:46.120 --> 00:58.980
+private map of integer key which is the product ID and the product name is string and call it products
+
+10
+01:01.120 --> 01:07.460
+control one import the map from Java util control one for generating getters and setters
+
+11
+01:07.530 --> 01:14.160
+hit ok you are welcome to use other shortcuts as well to generate the getters setters exectra click shortcuts
+
+12
+01:14.270 --> 01:20.110
+Do a control shift F to format and also let's generate a two string method to do that
+
+13
+01:20.110 --> 01:24.970
+Go to source generate tostring
+
+14
+01:25.700 --> 01:31.850
+Will use id and products for two strings so that when we print this object later on instead of calling
+
+15
+01:31.850 --> 01:36.990
+the getter methods we can simply directly print the instance of this and the two string will display the
+
+16
+01:37.030 --> 01:41.620
+ID and the map control shift  F to format.
+
+17
+01:41.630 --> 01:46.880
+So in this we have successfully completed the first step of creating the POJO class and the next lecture
+
+18
+01:47.210 --> 01:52.200
+will create the configuration file which is the key piece and also create the test class.

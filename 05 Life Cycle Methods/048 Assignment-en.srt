@@ -1,0 +1,31 @@
+0
+00:00.180 --> 00:06.900
+As an assignment for the lifecycle methods section create a class called ticket reservation and create two
+
+1
+00:06.910 --> 00:10.640
+methods inside it initialize and clean up.
+
+2
+00:10.890 --> 00:16.710
+These two methods should be marked with the lifecycle annotation method from our lifecycle annotations
+
+3
+00:16.950 --> 00:19.220
+from spring and inside the method
+
+4
+00:19.350 --> 00:23.780
+simply use system dot out dot println and print that you are inside
+
+5
+00:23.790 --> 00:31.640
+the initialize method inside the clean up method and write a test class and see everything in action.
+
+6
+00:31.660 --> 00:38.350
+So you have to create this mark it with the annotations enable the annotations in xml configuration
+
+7
+00:38.740 --> 00:41.700
+and then write a test class and test it.

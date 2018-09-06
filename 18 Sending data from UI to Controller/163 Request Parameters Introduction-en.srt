@@ -1,0 +1,144 @@
+1
+00:00:00,150 --> 00:00:06,150
+In this and the next lecture, you'll learn the second way of sending data from the UI to the Controller
+
+2
+00:00:06,240 --> 00:00:13,710
+and accessing it. It is by using the request parameters or the query parameters. We send the data by
+
+3
+00:00:13,710 --> 00:00:19,350
+appending it at the end of the url using the query string, that is the question mark syntax followed
+
+4
+00:00:19,350 --> 00:00:26,950
+by data as key and value pairs. Each of these key value pairs is separated by an ampersand symbol.
+
+5
+00:00:27,360 --> 00:00:33,660
+Once we send that data, we can retrieve it in our Controller by using the @RequestParam annotation
+
+6
+00:00:33,660 --> 00:00:34,710
+from Spring.
+
+7
+00:00:34,840 --> 00:00:41,680
+Give it the key and Spring will automatically retrieve the value and it will set it into the Controller's
+
+8
+00:00:41,860 --> 00:00:43,510
+method parameter.
+
+9
+00:00:43,860 --> 00:00:49,030
+So we mark our method parameters using this annotation and Spring will do the rest of the work.
+
+10
+00:00:49,050 --> 00:00:53,890
+DT here stands for data type. It could be integer, double, string, etc.
+
+11
+00:00:54,150 --> 00:01:01,560
+For example, here I have a id field as a Controller method parameter and I mark it with
+
+12
+00:01:01,560 --> 00:01:03,580
+@RequestParam("id"), Spring will
+
+13
+00:01:03,600 --> 00:01:13,090
+do these two for us automatically. It will invoke the HTTP servlet request.getParameter internally, use the
+
+14
+00:01:13,090 --> 00:01:19,860
+key which we provide here, retrieve the value which by default is String. It will then parse it into the appropriate
+
+15
+00:01:19,890 --> 00:01:21,730
+type. Here I'm using integer.
+
+16
+00:01:21,730 --> 00:01:27,610
+So it will use the integer.parseInt and parse it into the appropriate type and set the value into
+
+17
+00:01:27,610 --> 00:01:34,170
+this parameter. We can then use that parameter inside our Controller method.
+
+18
+00:01:34,400 --> 00:01:37,850
+If invalid data comes in, for example here I am using integer
+
+19
+00:01:38,030 --> 00:01:42,930
+but in the URL, if string comes in xyz, abc value comes in,
+
+20
+00:01:42,960 --> 00:01:48,990
+then Spring will throw a 400 HTTP error code back in the response.
+
+21
+00:01:48,990 --> 00:01:56,790
+Similarly, if a key is not provided by default when we use the @RequestParam, Spring assumes that that particular
+
+22
+00:01:56,790 --> 00:01:59,050
+key should be there in the URL.
+
+23
+00:01:59,280 --> 00:02:03,760
+In this case if id doesn't come in as a query parameter in the URL, Spring will
+
+24
+00:02:03,840 --> 00:02:14,720
+once again send a 400 response back. So to avoid that we can mark the request parameters for required
+
+25
+00:02:14,720 --> 00:02:19,780
+is equal to false. Use an additional attribute called required. By default it is true.
+
+26
+00:02:19,910 --> 00:02:24,070
+So you need to turn it off by using false as value.
+
+27
+00:02:24,620 --> 00:02:28,550
+And we can also provide default values.
+
+28
+00:02:28,550 --> 00:02:34,190
+Sometimes we can provide the key in the URL but if the value is not provided then we have a problem
+
+29
+00:02:34,200 --> 00:02:35,840
+again on primitive types.
+
+30
+00:02:35,840 --> 00:02:42,980
+That is where we use default values. If no value comes in the URL, Spring will automatically use whatever
+
+31
+00:02:42,980 --> 00:02:44,980
+value we provide here.
+
+32
+00:02:45,470 --> 00:02:47,770
+Last but not least, the order doesn't matter.
+
+33
+00:02:47,780 --> 00:02:51,500
+That is, the order of the URL parameters here,
+
+34
+00:02:51,530 --> 00:02:57,620
+key values and the order in which we define these parameters on the Controller methods doesn't matter.
+
+35
+00:02:57,630 --> 00:03:01,020
+What matters is the key that we use here,
+
+36
+00:03:01,220 --> 00:03:03,740
+and the keys that come in the URL.
+

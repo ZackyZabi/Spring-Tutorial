@@ -1,0 +1,104 @@
+1
+00:00:00,090 --> 00:00:06,190
+You have already learnt and used the various scopes that Spring offers. That is singleton, prototype
+
+2
+00:00:06,240 --> 00:00:08,900
+request, session and globalsession.
+
+3
+00:00:09,170 --> 00:00:13,210
+You have used the first two types through XML configuration.
+
+4
+00:00:13,260 --> 00:00:18,290
+You will learn request and session when you work on Spring MVC web applications. And globalsession
+
+5
+00:00:18,330 --> 00:00:25,020
+applies for portlet applications. In this lecture, you will learn how to configure the scopes using
+
+6
+00:00:25,200 --> 00:00:28,830
+annotation instead of XML configuration.
+
+7
+00:00:28,900 --> 00:00:32,130
+Go to Eclipse. By default,
+
+8
+00:00:32,130 --> 00:00:33,950
+if we do not use any scope
+
+9
+00:00:34,110 --> 00:00:38,290
+can you tell me what the Spring container uses as scope? Yes,
+
+10
+00:00:38,310 --> 00:00:38,970
+you are right.
+
+11
+00:00:39,000 --> 00:00:45,360
+It uses singleton scope. That is, it creates only one object no matter how many times we retrieve it
+
+12
+00:00:45,360 --> 00:00:46,420
+in our application.
+
+13
+00:00:46,560 --> 00:00:50,450
+So go to the test class, copy these two lines here.
+
+14
+00:00:50,700 --> 00:00:53,390
+Let's create one more object. Let's ask
+
+15
+00:00:53,440 --> 00:01:01,060
+Spring container to give us one more object. Name it instructor2. Let's display the hashCode values. instructor
+
+16
+00:01:01,080 --> 00:01:13,640
+dot hashCode within sysout, instructor2.hashCode(). Save it, run the test. And the output
+
+17
+00:01:13,640 --> 00:01:21,260
+is, we have the same hashCode for both the objects. That is, Spring is creating only one object no matter
+
+18
+00:01:21,260 --> 00:01:23,350
+how many times we are reading it.
+
+19
+00:01:23,390 --> 00:01:29,660
+Now let's configure the scope by going to the Instructor.java. Right next to the @Component annotation
+
+20
+00:01:30,130 --> 00:01:35,100
+if we use the scope always with @Component annotation, we can't use it on its own.
+
+21
+00:01:35,120 --> 00:01:45,520
+We use it with other stereotype annotations. @Scope, within brackets, double quotes, prototype. Control+1,
+
+22
+00:01:45,530 --> 00:01:52,350
+import it from org.springframework.context.annotation. Control+shift+f to format.
+
+23
+00:01:52,430 --> 00:01:53,450
+Go back to the test.
+
+24
+00:01:53,490 --> 00:02:01,810
+Right click, ran as Java application. And this time you will see that both the hashCodes are different.
+
+25
+00:02:01,820 --> 00:02:02,710
+That is the spring container
+
+26
+00:02:02,780 --> 00:02:10,190
+is creating different objects every time we ask it for an object of that type.
+

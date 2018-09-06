@@ -1,0 +1,216 @@
+1
+00:00:00,300 --> 00:00:03,650
+This is a very important lecture that you are going to learn.
+
+2
+00:00:03,660 --> 00:00:10,650
+The key terms in Aspect Oriented Programming I'm going to repeat a few of them so that you are going
+
+3
+00:00:10,650 --> 00:00:12,710
+to get them for sure.
+
+4
+00:00:14,660 --> 00:00:15,560
+Let's take a look at it.
+
+5
+00:00:15,560 --> 00:00:18,640
+By going through an example of order so simple.
+
+6
+00:00:18,680 --> 00:00:26,080
+Here we have the business class which has two methods placing and order of a customer and then shipping
+
+7
+00:00:26,080 --> 00:00:33,400
+the order to him this class and these matters here needs external services such as transactions sending
+
+8
+00:00:33,430 --> 00:00:41,000
+email once the order is shipped and also logging if an error occurs to a log file the number of them
+
+9
+00:00:41,370 --> 00:00:49,830
+that is used in Aspect Oriented Programming is an aspect and aspect is the class that presents external.
+
+10
+00:00:49,830 --> 00:00:54,010
+So we see this all these services need not be a part of one aspect.
+
+11
+00:00:54,010 --> 00:00:56,120
+They could be spread across aspects.
+
+12
+00:00:56,200 --> 00:01:02,380
+But it's important that you understand that an aspect is it plus that are.
+
+13
+00:01:02,470 --> 00:01:04,370
+External services.
+
+14
+00:01:04,480 --> 00:01:10,910
+Next is advice advice is a method defined inside the aspect class.
+
+15
+00:01:11,020 --> 00:01:16,680
+We can also call it as an implementation of an aspect that is one way of looking at it.
+
+16
+00:01:17,480 --> 00:01:25,910
+Next point cut point cut provides an expression language or it is an expression that we use to tell
+
+17
+00:01:25,910 --> 00:01:32,030
+which all methods in our application need advisers.
+
+18
+00:01:32,050 --> 00:01:37,500
+So a point cut determines which all matters in our application need advisers.
+
+19
+00:01:37,520 --> 00:01:43,820
+But a point that does not tell which Ed always is required by the political rhetoric simply says that
+
+20
+00:01:43,880 --> 00:01:50,770
+yes this method requires an advice because not all of them are not obligacion need advisers.
+
+21
+00:01:50,890 --> 00:01:52,750
+That is that joint point.
+
+22
+00:01:52,740 --> 00:02:00,680
+The fourth term comes in and the joint point is a combination of an advice and a point cut.
+
+23
+00:02:00,760 --> 00:02:09,400
+It will tell which business met their needs which advice next is Target.
+
+24
+00:02:09,450 --> 00:02:15,070
+The target is an object of the business class which needs advisors.
+
+25
+00:02:15,080 --> 00:02:18,740
+So this is the object to which all the Edwy this will be applied to
+
+26
+00:02:22,270 --> 00:02:24,340
+next an important term called weaving.
+
+27
+00:02:24,340 --> 00:02:25,930
+We have two more to go.
+
+28
+00:02:25,930 --> 00:02:27,790
+Sixth is weaving.
+
+29
+00:02:28,180 --> 00:02:33,690
+So here we have the target object in our application it could be any classes object which the class
+
+30
+00:02:33,730 --> 00:02:35,260
+aspect aspect.
+
+31
+00:02:35,260 --> 00:02:43,490
+So leaving is a process of mixing the advisors to the target object based on the joint points.
+
+32
+00:02:46,150 --> 00:02:52,370
+So weaving is a process of applying the advisors to the target objects methods using the join points
+
+33
+00:02:52,510 --> 00:02:58,910
+we co-joined point us which advise should be applied to which matter on this object.
+
+34
+00:02:58,950 --> 00:03:02,560
+Last but not the least proxy.
+
+35
+00:03:02,740 --> 00:03:07,300
+It is a class that is generated as a result of the grieving process.
+
+36
+00:03:08,540 --> 00:03:14,030
+It contains the business logic method as well as the advisor logic.
+
+37
+00:03:14,030 --> 00:03:20,000
+So it is a combination off their advice and the business logic within the class to which that is need
+
+38
+00:03:20,000 --> 00:03:27,370
+to be applied and weaving is done by special component Carlat we were.
+
+39
+00:03:27,700 --> 00:03:33,200
+So in this lecture we have learned someone important terms in aspect oriented programming that you need
+
+40
+00:03:33,200 --> 00:03:34,810
+to understand.
+
+41
+00:03:34,820 --> 00:03:40,440
+Number one is aspect it is a class that represents the external services.
+
+42
+00:03:40,460 --> 00:03:42,070
+Number two is advise.
+
+43
+00:03:42,140 --> 00:03:48,650
+It is a method defined inside the aspect class that needs to be applied to the business method later
+
+44
+00:03:48,650 --> 00:03:49,610
+on.
+
+45
+00:03:49,610 --> 00:03:56,960
+Next comes point a point cut is an expression that tells which business methods in our application needs
+
+46
+00:03:57,080 --> 00:03:58,230
+advices.
+
+47
+00:03:58,540 --> 00:04:07,390
+They join point as the name itself says Joines and advice and point cuts so that that advice can be
+
+48
+00:04:07,390 --> 00:04:09,520
+applied to that particular method.
+
+49
+00:04:09,520 --> 00:04:10,420
+Next is Target.
+
+50
+00:04:10,450 --> 00:04:16,560
+Target is the object of a particular class to which we want them to be applied.
+
+51
+00:04:16,780 --> 00:04:23,790
+Once a plain object goes through the viewing process the result will be a proxy object.
+
+52
+00:04:23,800 --> 00:04:30,370
+So this process is done using a joined point which deals which advise should be applied to which business
+
+53
+00:04:30,380 --> 00:04:37,390
+method the proxy is a combination of our business logic as well as the advise which could beat transaction
+
+54
+00:04:37,390 --> 00:04:40,450
+management logging security etc..
+

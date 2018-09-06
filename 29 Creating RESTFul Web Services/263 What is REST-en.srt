@@ -1,0 +1,272 @@
+1
+00:00:00,360 --> 00:00:06,810
+As you watch this video lecture, you through your web browser are acting as a RESTful client. And this
+
+2
+00:00:06,810 --> 00:00:11,240
+website is acting as a RESTful provider by streaming the video back to you.
+
+3
+00:00:11,310 --> 00:00:19,890
+All that on the HTTP protocol. REST which stands for Representational State Transfer, is a bunch of principles
+
+4
+00:00:20,040 --> 00:00:27,600
+or architectural guidelines and HTTP allows us to easily implement REST. In this lecture, you will
+
+5
+00:00:27,600 --> 00:00:35,670
+learn the key principles that make up REST and also how HTTP implements REST. No matter which web
+
+6
+00:00:35,670 --> 00:00:42,220
+application you take, it will allow the end users to perform the following four operations or any other
+
+7
+00:00:42,220 --> 00:00:44,710
+application to perform these four operations.
+
+8
+00:00:44,800 --> 00:00:52,540
+CREATE, READ, UPDATE and DELETE on its resources. From Facebook to Twitter, Gmail to Youtube, you will be
+
+9
+00:00:52,540 --> 00:00:55,000
+able to perform all these four operations.
+
+10
+00:00:55,030 --> 00:01:04,450
+That brings us to the very first RESTful principle which is Uniform Interface and Easy access.
+
+11
+00:01:04,450 --> 00:01:10,030
+HTTP provides a uniform interface to perform the CRUD operations using its HTTP methods.
+
+12
+00:01:10,330 --> 00:01:16,690
+Starting from POST, to create a resource, GET, to retrieve a resource or read a resource, PUT, to update
+
+13
+00:01:16,690 --> 00:01:21,030
+the resource and DELETE to delete a resource.
+
+14
+00:01:21,150 --> 00:01:27,810
+So once we learn these four methods, we can pretty much work with any application, any RESTful application
+
+15
+00:01:28,110 --> 00:01:32,850
+and create, read, update and delete the resources in it.
+
+16
+00:01:32,850 --> 00:01:35,280
+These are also known as VERBS,
+
+17
+00:01:35,280 --> 00:01:36,970
+HTTP VERBS.
+
+18
+00:01:37,380 --> 00:01:42,960
+Easy access, HTTP provides an easy access, easy and unique way to identify resources through it's
+
+19
+00:01:43,020 --> 00:01:45,200
+URIs and URLs.
+
+20
+00:01:45,320 --> 00:01:50,670
+For example, if we are working on an Employee management software, we can identify the employee resource
+
+21
+00:01:50,680 --> 00:01:57,980
+using /employees. To uniquely identify departments, you'll use /departments.
+
+22
+00:01:57,980 --> 00:02:04,460
+Now let's see how we can use the combination of the HTTP VERBS and NOUNS. These URIs or
+
+23
+00:02:04,460 --> 00:02:08,980
+URLs are known as NOUNS because they uniquely identify a resource.
+
+24
+00:02:08,990 --> 00:02:16,760
+Let's see how the combination of VERBS and NOUNS can be used to perform CRUD operations. To create an
+
+25
+00:02:16,760 --> 00:02:17,770
+employee,
+
+26
+00:02:18,110 --> 00:02:25,550
+we'll use the POST method with /employees and we will send in the employee data.
+
+27
+00:02:25,580 --> 00:02:28,620
+Here the employee name is bharath and his department is IT.
+
+28
+00:02:28,730 --> 00:02:35,080
+The method is POST and the URI is /employees. The REST provider will receive the request,
+
+29
+00:02:35,150 --> 00:02:42,770
+create that in the database and send a 201 Created HTTP status code along with the
+
+30
+00:02:42,770 --> 00:02:48,110
+entity that got created in the database. This resource here,
+
+31
+00:02:48,110 --> 00:02:53,940
+this URI is called a collection resource, because it is /employees.
+
+32
+00:02:54,100 --> 00:02:57,530
+It represents all the employees, a collection of employees.
+
+33
+00:02:57,640 --> 00:03:01,000
+We are adding a new employee to that collection.
+
+34
+00:03:01,000 --> 00:03:06,790
+If we have an id at the end of a particular employee, then that will become an item resource. For
+
+35
+00:03:06,790 --> 00:03:09,010
+example, to get the employee back
+
+36
+00:03:09,010 --> 00:03:16,420
+we'll use a GET method with the employees slash, the unique ID of that particular employee.
+
+37
+00:03:16,420 --> 00:03:19,610
+So this is known as a item resource.
+
+38
+00:03:19,660 --> 00:03:26,110
+Here is how the GET method will look like. GET/employees/1 that will get us the employee that
+
+39
+00:03:26,110 --> 00:03:29,590
+was just created in the database, with a 200 OK
+
+40
+00:03:29,590 --> 00:03:36,160
+HTTP response. You can also perform a GET on the collection resource, without this ID and that will
+
+41
+00:03:36,160 --> 00:03:41,140
+get us all the employees in the database back. Next is UPDATE.
+
+42
+00:03:41,360 --> 00:03:48,000
+We use a PUT method on the collection resource, on the item resource with the unique ID to perform a
+
+43
+00:03:48,150 --> 00:03:52,890
+HTTP PUT which will update the employee information. Here,
+
+44
+00:03:53,090 --> 00:04:00,670
+my department is getting updated from IT to psychology, a field of my interest and the response will be a 200 OK,
+
+45
+00:04:01,040 --> 00:04:07,700
+along with the updated information. Update does a complete update. That is, we need to pass in the
+
+46
+00:04:07,700 --> 00:04:09,840
+entire resource in the request.
+
+47
+00:04:09,860 --> 00:04:15,260
+We can do a partial, we can't send in partial fields. If we try to just send in the department in this
+
+48
+00:04:15,260 --> 00:04:19,390
+case, the name will be set to null.
+
+49
+00:04:19,570 --> 00:04:26,920
+That is where we use PATCH. The HTTP PATCH method supports partial updates on the item resource, we can
+
+50
+00:04:26,920 --> 00:04:33,850
+pass in partial information. In this case, I am not passing in the name, just the department and I will
+
+51
+00:04:33,850 --> 00:04:40,610
+get a response back with the complete updated entity or the patched entity back with a 200 status code.
+
+52
+00:04:40,810 --> 00:04:41,910
+Finally DELETE,
+
+53
+00:04:41,950 --> 00:04:47,820
+we use the HTTP DELETE. And that will delete the employee in the database.
+
+54
+00:04:49,120 --> 00:04:55,150
+The next important principle of REST is that our applications or RESTful providers should support multiple
+
+55
+00:04:55,180 --> 00:04:59,290
+formats. And HTTP allows us to do it very easily,
+
+56
+00:04:59,290 --> 00:05:00,560
+we can support XML,
+
+57
+00:05:00,790 --> 00:05:07,280
+JSON, plain text or any other format and the clients can tell what format they want using the HTTP
+
+58
+00:05:07,420 --> 00:05:15,160
+MIME types like text/xml, application/json, text/plain, hal/json as you would see
+
+59
+00:05:15,220 --> 00:05:21,640
+later on when you build the applications. So the key principle, the same application or the RESTful provider should
+
+60
+00:05:21,640 --> 00:05:31,240
+be able to provide the responses or it should be able to support multiple data formats.
+
+61
+00:05:31,250 --> 00:05:37,120
+To summarize, you have learnt three key principles of REST and how HTTP implements REST in this lectures,
+
+62
+00:05:37,130 --> 00:05:42,690
+starting with Single HTTP Interface or a unique interface.
+
+63
+00:05:42,770 --> 00:05:51,850
+HTTP supports a unique interface to perform CRUD operations using POST, PUT, GET, PATCH, DELETE and other
+
+64
+00:05:51,850 --> 00:05:58,630
+methods in the HTTP protocol also known as VERBS. We can easily identify and access resources
+
+65
+00:05:58,630 --> 00:06:01,710
+using the HTTP URLs and URIs.
+
+66
+00:06:01,720 --> 00:06:03,770
+That is the second principle of REST.
+
+67
+00:06:04,000 --> 00:06:12,880
+And finally, Multiple representations. REST, says that we should support, or whoever implements REST
+
+68
+00:06:12,880 --> 00:06:19,010
+should support multiple data formats and that can be easily supported using HTTP MIME types.
+

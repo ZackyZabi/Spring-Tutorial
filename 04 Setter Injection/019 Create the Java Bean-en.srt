@@ -1,0 +1,56 @@
+1
+00:00:00,330 --> 00:00:05,430
+Now that we have the maven project in Eclipse we are going to do dependency injection in three simple
+
+2
+00:00:05,430 --> 00:00:06,130
+steps.
+
+3
+00:00:06,210 --> 00:00:11,360
+The very first step is to create the POJO class that is the java bean to do that,
+
+4
+00:00:11,360 --> 00:00:20,350
+go to eclipse right click on this package here create a new class call it employee this employee
+
+5
+00:00:20,350 --> 00:00:30,620
+will how to fields in it maximize by double clicking private int ID and id for the employee and a private
+
+6
+00:00:30,770 --> 00:00:33,620
+int name of the employee.
+
+7
+00:00:33,740 --> 00:00:36,140
+We are going to, it will be a string name.
+
+8
+00:00:36,200 --> 00:00:46,320
+They're going to inject these two using spring control one create getter and setter methods for this.
+
+9
+00:00:46,450 --> 00:00:52,390
+Again control one on the name create get and setter for that name as well.
+
+10
+00:00:52,540 --> 00:00:54,950
+do a control shift F to format it.
+
+11
+00:00:55,690 --> 00:00:58,000
+And we have the bean ready.
+
+12
+00:00:58,060 --> 00:01:03,610
+That is the employee bean. In the next lecture, will come up with this spring configuration where will
+
+13
+00:01:03,700 --> 00:01:07,230
+define our Bean and inject these dependencies.
+
+14
+00:01:07,360 --> 00:01:12,340
+We can get rid off this app dot java or we are not going to use it right click delete.
+

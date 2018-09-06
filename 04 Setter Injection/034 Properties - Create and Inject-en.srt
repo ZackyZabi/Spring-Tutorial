@@ -1,0 +1,187 @@
+0
+00:00.240 --> 00:06.440
+Now that you know how to inject list set and a map it's going to be very easy to inject properties into a java
+
+1
+00:06.760 --> 00:13.770
+class using spring. Will create a class called languages which will have one single field of type
+
+2
+00:13.780 --> 00:20.550
+java dot util dot properties which will hold a country and its corresponding national language.
+
+3
+00:20.850 --> 00:28.990
+Let's get started by creating a languages class go to eclipse new class
+
+4
+00:32.000 --> 00:33.020
+languages.
+
+5
+00:34.840 --> 00:39.140
+Or let's call it countries and languages.
+
+6
+00:39.520 --> 00:53.810
+com dot bharath dot springcore dot Properties finish create the one field here private properties
+
+7
+00:54.290 --> 01:06.100
+from java util country and Langs control one import java dot util dot properties control one again
+
+8
+01:07.270 --> 01:09.080
+create getters and setters.
+
+9
+01:09.200 --> 01:10.990
+hit OK save it.
+
+10
+01:10.990 --> 01:12.330
+Go to source.
+
+11
+01:12.560 --> 01:20.050
+generate a two string method generate to string by using countries and Langs that's simply going 
+
+12
+01:20.050 --> 01:23.520
+to display the properties here.
+
+13
+01:23.530 --> 01:26.150
+The second step is to create the configuration file
+
+14
+01:26.290 --> 01:33.640
+you can go to the earlier one the map grab the test class as well as the config file paste it on the properties
+
+15
+01:33.680 --> 01:40.160
+package open up the config will come back to test and fix it.
+
+16
+01:40.330 --> 01:44.540
+Delete everything inside the bean the name of the bean.
+
+17
+01:45.070 --> 01:45.730
+Let's call it
+
+18
+01:49.800 --> 01:55.430
+countries and Langs a long name and the name of the class.
+
+19
+01:55.680 --> 02:04.610
+We need the package name so go back to the class grab the package name up copy it and come back
+
+20
+02:04.610 --> 02:16.160
+paste it DOT countries and languages get rid of this P:ID we don't have ID field in this case
+
+21
+02:17.030 --> 02:23.930
+and to inject the properties first we need to define the property property name is equal to the name
+
+22
+02:23.930 --> 02:32.780
+of the field or the properties country and langs paste  that and within the property since the value
+
+23
+02:32.780 --> 02:39.630
+we are injecting or the type of data we are injecting is properties we need to use the spring element
+
+24
+02:39.650 --> 02:49.370
+called props and within props we can define multiple Prop values which will take a key which is the key
+
+25
+02:49.370 --> 02:51.390
+of the property.
+
+26
+02:51.550 --> 02:52.490
+USA
+
+27
+02:52.790 --> 02:56.080
+And the value can directly go as a text note here.
+
+28
+02:56.870 --> 02:59.430
+English is the language.
+
+29
+02:59.530 --> 03:00.890
+Let's add one more entry
+
+30
+03:04.960 --> 03:13.510
+India and the national language is Hindi, do a control shift F to format and you have successfully injected
+
+31
+03:14.410 --> 03:20.880
+properties by using props into a java class by using spring.
+
+32
+03:21.040 --> 03:28.830
+Or at least you have configured now change the test class, class path application context 
+
+33
+03:28.950 --> 03:37.870
+map will change to properties and we are not going to get a customer will get a countries control space
+
+34
+03:37.890 --> 03:45.570
+countries and languages copy that paste it on the left hand side change this to countries and langs
+
+35
+03:48.090 --> 03:49.370
+and paste it here.
+
+36
+03:49.570 --> 03:51.490
+do a control shift F to format
+
+37
+03:51.630 --> 03:59.490
+Right click run as Java application that will load the test container we have an exception.
+
+38
+03:59.490 --> 04:02.180
+Let's see what it is it says no such bean
+
+39
+04:02.190 --> 04:02.970
+Customer.
+
+40
+04:03.090 --> 04:05.670
+So we still have customers somewhere right here.
+
+41
+04:06.030 --> 04:13.700
+So if we try to use customer which is not there in the config Dot xml we get that exception.
+
+42
+04:14.070 --> 04:17.580
+Let's take a look at the exception one more time.
+
+43
+04:17.580 --> 04:21.000
+It says No bean name customer available.
+
+44
+04:21.150 --> 04:32.480
+So let's go back to the test and change the bean name to countries and langs rerun the test again and
+
+45
+04:32.650 --> 04:36.800
+this time the output is countries and Langs USA English.
+
+46
+04:36.930 --> 04:37.920
+India Hindi.

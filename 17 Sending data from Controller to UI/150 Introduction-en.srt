@@ -1,0 +1,68 @@
+1
+00:00:00,330 --> 00:00:07,230
+Take any web application whether it is Gmail or Facebook or Instagram or any other web application, its
+
+2
+00:00:07,260 --> 00:00:15,720
+all about exchanging data or information between the end user and the application or the UI and the
+
+3
+00:00:15,720 --> 00:00:17,400
+backend application.
+
+4
+00:00:17,400 --> 00:00:23,740
+Even in Spring MVC world there are two ways to exchange data, from the controller to the UI,
+
+5
+00:00:24,620 --> 00:00:30,280
+from the UI to the controller. You are going to explore these two ways in the next few lectures.
+
+6
+00:00:30,290 --> 00:00:41,660
+Let's get started with controller to UI. We send data from the controller to UI using the ModelAndView object.
+
+7
+00:00:41,660 --> 00:00:48,650
+We set the data into the ModelAndView object by using a method called an addObject, which takes a key
+
+8
+00:00:48,830 --> 00:00:50,270
+and value.
+
+9
+00:00:50,570 --> 00:00:58,110
+The key is of type Java string and the value is of type object, you can set anything as the value.
+
+10
+00:00:58,630 --> 00:01:06,950
+Once you set it and once the request or the response goes back to the UI, we can access it in our JSP pages
+
+11
+00:01:06,980 --> 00:01:15,380
+or any other UI technology pages using request.getAttribute. Pass the key and you'll get the
+
+12
+00:01:15,710 --> 00:01:16,810
+value back.
+
+13
+00:01:16,880 --> 00:01:27,440
+So whatever we add to the ModelAndView is available on the HTTP servlet request object. We can set different
+
+14
+00:01:27,440 --> 00:01:28,750
+types of data into it.
+
+15
+00:01:28,760 --> 00:01:33,830
+This object could be primitive type, object type, collection or whatever you want to set,
+
+16
+00:01:33,860 --> 00:01:38,930
+you can set into this and retrieve it in the UI and display it to the end user.
+
+17
+00:01:39,080 --> 00:01:42,200
+You will explore all these types in the next few lectures.
+

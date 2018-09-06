@@ -1,0 +1,56 @@
+1
+00:00:00,150 --> 00:00:07,520
+The second of the CRUD operations is to read a record. We can easily do that using a repository. repository dot,
+
+2
+00:00:10,300 --> 00:00:12,220
+I can't get the repository spelling right.
+
+3
+00:00:12,210 --> 00:00:19,620
+repository.findOne() there are multiple find methods. You can findAll if there are multiple
+
+4
+00:00:19,620 --> 00:00:20,640
+products in the database.
+
+5
+00:00:20,640 --> 00:00:24,920
+For now, I'm going to try findOne and pass it a
+
+6
+00:00:25,080 --> 00:00:35,330
+unique Id, which is 1L. You can extract that out as a constant and reuse it in both these places. And assign
+
+7
+00:00:35,330 --> 00:00:38,910
+this, hit control+1, assign this to a new local variable.
+
+8
+00:00:43,090 --> 00:00:51,310
+Control+1, assign this statement to a new local variable, result. And you can do a sysout.
+
+9
+00:00:51,610 --> 00:00:56,410
+But we don't have a toString method on it.
+
+10
+00:00:56,410 --> 00:01:03,000
+So I'm going to add a toString method on the Product. Go to Product, go to Source and say
+
+11
+00:01:03,010 --> 00:01:08,920
+Generate toString() and select all the fields, OK.
+
+12
+00:01:09,370 --> 00:01:17,600
+Save it. Go back to the test class and run it again.
+
+13
+00:01:20,610 --> 00:01:24,670
+And let's see the result if it can fetch the product and display the results for us on
+
+14
+00:01:24,700 --> 00:01:29,850
+the console. It does it, right here if you see, product Id, name, description and price.
+

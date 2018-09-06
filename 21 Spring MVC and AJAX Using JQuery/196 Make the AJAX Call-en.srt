@@ -1,0 +1,120 @@
+1
+00:00:00,230 --> 00:00:02,310
+In this lecture you will make the AJAX call.
+
+2
+00:00:02,310 --> 00:00:12,270
+So we didn't function on change and the user moves from the here from when he changes to another field.
+
+3
+00:00:12,930 --> 00:00:19,540
+We want to handle that event that is exactly what we did here and within the Bartie use dollar d'arte
+
+4
+00:00:19,750 --> 00:00:26,950
+Ajax is the function name within J.A.G. that we can use to make it Zak's called open bracket.
+
+5
+00:00:31,830 --> 00:00:38,550
+And for Ajax as I said earlier we need to pass in three parameters within flower racquets this AJAX
+
+6
+00:00:38,700 --> 00:00:47,350
+call ends right here and a semi-colon and the ex-colonies you waddle
+
+7
+00:00:51,170 --> 00:01:00,110
+in you or at least if you remember from the controller validate email is that you will go back to use
+
+8
+00:01:00,110 --> 00:01:06,230
+a controller and the new method that you ought to have used that you or I use validate email that is
+
+9
+00:01:06,230 --> 00:01:09,800
+exactly what we should use in the user rage.
+
+10
+00:01:09,810 --> 00:01:20,510
+Daughter JCP That's number one second is data data and we need to provide the data that Windflower brackets.
+
+11
+00:01:20,880 --> 00:01:27,630
+Eat ID or you can call it id that is what we have mapped it to on the server side in the controller
+
+12
+00:01:27,750 --> 00:01:37,350
+using a request from the colon to get the value of this particular field here dynamically within javascript.
+
+13
+00:01:37,410 --> 00:01:44,040
+We need not to document target element and all that we can use the J.A.G. syntax dollar but then flower
+
+14
+00:01:44,040 --> 00:01:49,480
+brackets hash ID within double courts.
+
+15
+00:01:54,110 --> 00:02:04,160
+And outside of the of racket outside the dollar within brackets it's not allowed rackets dollar within
+
+16
+00:02:04,160 --> 00:02:08,410
+brackets use hash ID dot value.
+
+17
+00:02:08,450 --> 00:02:15,410
+So anytime you want X or Y to get Steimle field using the use daughter and it id using the pollen symbol
+
+18
+00:02:15,410 --> 00:02:20,230
+within double court and then you can either handle the events or get the value of it.
+
+19
+00:02:20,240 --> 00:02:26,870
+In this case we are getting the value and passing it to the server side using the AJAX call and this
+
+20
+00:02:26,870 --> 00:02:32,270
+value here is a function blows it right there karma.
+
+21
+00:02:32,350 --> 00:02:37,500
+Each of these should we be limited with a comma you all call our data comma.
+
+22
+00:02:37,540 --> 00:02:41,070
+The last one is success.
+
+23
+00:02:41,300 --> 00:02:49,170
+If it is successful call then we need to write a callback function for Jacques's this callback function
+
+24
+00:02:49,170 --> 00:02:52,020
+will be called when the response comes back from the server.
+
+25
+00:02:52,290 --> 00:02:55,740
+So a function always there will be a response.
+
+26
+00:02:55,780 --> 00:03:02,850
+We know that this function will return a response text so that should be included here and within the
+
+27
+00:03:02,850 --> 00:03:09,020
+body of that function we are going to court our logic will do that in the next lecture.
+
+28
+00:03:09,080 --> 00:03:15,380
+So so far you have handled the index events are how to handle the Dallas trip events for the ID field
+
+29
+00:03:15,470 --> 00:03:22,190
+and how made the AJAX call the next lecture will call this function which will display the error response
+
+30
+00:03:22,280 --> 00:03:23,950
+arm nothing to the end user.
+

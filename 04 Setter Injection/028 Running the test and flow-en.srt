@@ -1,0 +1,68 @@
+1
+00:00:00,250 --> 00:00:04,950
+This lecture we'll run our test and I will explain what exactly is going on in the background.
+
+2
+00:00:04,950 --> 00:00:10,640
+So right click on our test class do a run as Java application as soon as we run it
+
+3
+00:00:10,660 --> 00:00:15,780
+a spring container is created this pink container loads the configuration file from the classpath
+
+4
+00:00:15,780 --> 00:00:22,140
+under this folder structure it will create the hospital bean because that is what we have declared here.
+
+5
+00:00:24,120 --> 00:00:25,460
+It will create an instance of it.
+
+6
+00:00:25,470 --> 00:00:32,190
+It will then inject the name property with a value called Global hospital and it will then create
+
+7
+00:00:32,190 --> 00:00:39,900
+a list and it will inject that list into the departments. Departments property on the hospital,
+
+8
+00:00:39,900 --> 00:00:45,580
+that is exactly what we are seeing in the output if I drag this up.
+
+9
+00:00:45,580 --> 00:00:51,190
+The name of the hospital is global hospital and the list has three elements or three objects inside it
+
+10
+00:00:51,190 --> 00:00:54,430
+front office inpatient and outpatient.
+
+11
+00:00:54,700 --> 00:00:58,220
+If you want to check out what type off list, list is an interface.
+
+12
+00:00:58,360 --> 00:01:02,050
+So we haven't specified whether it should be an array analyst or a linked list.
+
+13
+00:01:02,050 --> 00:01:05,570
+So let's check out what type of list is being created.
+
+14
+00:01:06,780 --> 00:01:14,670
+You can know that hospital dot get Department dot get class if you do that you will get to know what
+
+15
+00:01:14,670 --> 00:01:16,650
+type of list is being created by spring.
+
+16
+00:01:16,670 --> 00:01:24,110
+So run the program and you will see that its a array list by default,in lecture us later on I will show you
+
+17
+00:01:24,200 --> 00:01:27,360
+how to customize it if you want to use a linked list.
+

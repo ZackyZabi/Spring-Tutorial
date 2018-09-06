@@ -1,0 +1,148 @@
+1
+00:00:00,150 --> 00:00:05,700
+In this lecture, you will learn how to read a database record using hibernateTemplate. To do that,
+
+2
+00:00:05,700 --> 00:00:08,380
+let's put a couple of records in the database.
+
+3
+00:00:10,360 --> 00:00:18,120
+Execute a couple of insert statements. Insert into product values, within brackets provide the values
+
+4
+00:00:18,130 --> 00:00:22,300
+1 comma the name is Iphone comma,
+
+5
+00:00:22,480 --> 00:00:25,950
+description is Good, comma,
+
+6
+00:00:26,230 --> 00:00:28,130
+the price is 800 dollars.
+
+7
+00:00:32,240 --> 00:00:38,360
+Execute that. We have one record, copy that. Or simply change it.
+
+8
+00:00:38,420 --> 00:00:42,900
+It's up to you. Id 2, MacBook.
+
+9
+00:00:42,990 --> 00:00:43,710
+It's also good.
+
+10
+00:00:43,710 --> 00:00:54,110
+The price is 1400 dollars. Select that, execute it and we have one more record. Go back to Eclipse, start implementing
+
+11
+00:00:54,110 --> 00:01:05,950
+the read method. Go to ProductDao. This method should return a product back and call it find. Given
+
+12
+00:01:06,590 --> 00:01:10,940
+a int product, int id of the product,
+
+13
+00:01:10,970 --> 00:01:13,760
+it should return the product entity back.
+
+14
+00:01:13,760 --> 00:01:22,520
+That is the method. Go to ProductDaoImpl, control+1, add unimplemented methods. All the way down
+
+15
+00:01:23,450 --> 00:01:33,110
+to implement the find method, delete the TODO. hibernateTemplate.get is the method.
+
+16
+00:01:33,260 --> 00:01:39,150
+It takes two things, the class type, we need to tell it what type of entity should be returned.
+
+17
+00:01:39,160 --> 00:01:47,220
+In our case it is product.class and also the Id field which is the id here.
+
+18
+00:01:49,740 --> 00:01:56,170
+Hit control+1, assign statement to a new local variable and it will return a product because we are
+
+19
+00:01:56,170 --> 00:02:02,230
+telling that the entity that comes back is of product type. We are using generics here.
+
+20
+00:02:02,230 --> 00:02:07,210
+Copy the product, instead of returning null return that product back.
+
+21
+00:02:07,320 --> 00:02:08,690
+It's that easy.
+
+22
+00:02:08,800 --> 00:02:15,370
+Use the get method, tell it what type of entity is going to come back and pass the unique id and hibernate will
+
+23
+00:02:15,370 --> 00:02:21,880
+automatically create a select statement, get the data back, put it into a product entity and return that
+
+24
+00:02:21,970 --> 00:02:31,220
+product entity to us. Go to test, comment out everything, use a block comment.
+
+25
+00:02:31,250 --> 00:02:33,360
+Get rid of these comments here.
+
+26
+00:02:35,000 --> 00:02:38,860
+Comment everything upto this portion here.
+
+27
+00:02:39,380 --> 00:02:46,760
+ProductDao, take out this single line comment as well,
+
+28
+00:02:49,570 --> 00:03:03,470
+dot, we need this ProductDao. Only comment out from product all the way down.
+
+29
+00:03:03,520 --> 00:03:11,710
+productDao.find is the method. Pass in the id which is 1 and that should return, hit control+1,
+
+30
+00:03:11,800 --> 00:03:21,760
+assign statement to a new local variable, a product. Sysout, display the product. Control+shift+f to format.
+
+31
+00:03:22,570 --> 00:03:26,850
+Right click, run as Java application.
+
+32
+00:03:30,380 --> 00:03:36,470
+And we get a product object back. Our entity class does not implement the toString  method. Go to Product,
+
+33
+00:03:37,720 --> 00:03:41,820
+go to source, generate toString. Hit
+
+34
+00:03:41,860 --> 00:03:48,200
+OK. Do a Control+shift+f to format. Rerun the test and this time we should see the details as well.
+
+35
+00:03:51,010 --> 00:03:53,740
+Hibernate executes the select query,
+
+36
+00:03:53,740 --> 00:03:59,370
+we get the data back, it converts it into an object and gives us back. The id is 1, name is Iphone,
+
+37
+00:03:59,380 --> 00:04:02,650
+description is good and price is 800 dollars.
+

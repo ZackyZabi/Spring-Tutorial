@@ -1,0 +1,108 @@
+1
+00:00:00,240 --> 00:00:06,540
+So far you have learned how to execute the non-selling statements using the GBC template that is they
+
+2
+00:00:06,540 --> 00:00:12,780
+insert a update and delete in this and the next few lectures you use the Daily Beast template and execute
+
+3
+00:00:12,780 --> 00:00:21,390
+the Select queries using two methods it provides one query for object which returns a single record
+
+4
+00:00:22,020 --> 00:00:26,340
+and query method which returns multiple records from the database table.
+
+5
+00:00:27,350 --> 00:00:30,590
+The query for object X the sequel as string.
+
+6
+00:00:30,810 --> 00:00:35,970
+The second parameter is a new type called Roll mapper which you will learn in a second and then the
+
+7
+00:00:36,060 --> 00:00:38,820
+variable arguments.
+
+8
+00:00:38,840 --> 00:00:44,920
+The second method is the method which takes only two arguments string sequel.
+
+9
+00:00:44,970 --> 00:00:51,830
+Their school statement the select statement and then the road map and it returns a list of objects not
+
+10
+00:00:51,830 --> 00:00:55,100
+just a single object like for object.
+
+11
+00:00:55,160 --> 00:00:58,680
+That brings us to a new type called Rule mapper.
+
+12
+00:00:59,820 --> 00:01:08,730
+Romancer is an interface in the Spring Framework which we need to implement it maps a daily B.C resultset
+
+13
+00:01:08,750 --> 00:01:16,450
+that comes back in do an object of a class that we create in our application.
+
+14
+00:01:16,510 --> 00:01:21,850
+Here is the room Appert architecture from our application we execute a select query using the very basic
+
+15
+00:01:21,850 --> 00:01:23,650
+template against a database.
+
+16
+00:01:23,650 --> 00:01:28,250
+We get all our rows back as a result set.
+
+17
+00:01:28,630 --> 00:01:34,180
+Then we use the road map or we create a roadmap or by implementing this rule mapper interface and our
+
+18
+00:01:34,180 --> 00:01:40,940
+class will or write a method within which will map the result set in object.
+
+19
+00:01:41,320 --> 00:01:46,570
+So all that will do in the map roll method that we implement the map room at is from the roadmap an
+
+20
+00:01:46,570 --> 00:01:53,500
+interface we or I that we implement it and all that matter does is it gets the result out of the resultset
+
+21
+00:01:54,190 --> 00:02:00,530
+and we set it into our object in here I am reading the result from the results and setting it into the
+
+22
+00:02:00,700 --> 00:02:03,460
+object Karg employ.
+
+23
+00:02:03,640 --> 00:02:08,190
+To summarize the exiguous select statements we use the query for object.
+
+24
+00:02:08,200 --> 00:02:14,500
+If it is a single record that we want our query if we want multiple records both these matters take
+
+25
+00:02:14,500 --> 00:02:19,780
+a roadmap for the job of the roadmap or it's an interface in the Spring Framework will create a class
+
+26
+00:02:19,780 --> 00:02:25,840
+that implements this interface within which we all read the map room or for that matter we simply map
+
+27
+00:02:26,410 --> 00:02:30,570
+from resultset to the object of our own in our application.
+

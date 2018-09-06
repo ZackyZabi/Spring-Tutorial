@@ -1,0 +1,204 @@
+1
+00:00:00,290 --> 00:00:01,930
+You have injected primitive types.
+
+2
+00:00:01,950 --> 00:00:06,820
+You have also injected the collection type using annotations. In this lecture,
+
+3
+00:00:06,930 --> 00:00:13,050
+you are going to use the @Autowired annotation which you already know, to inject the object types or
+
+4
+00:00:13,170 --> 00:00:15,820
+reference types. Go to Eclipse.
+
+5
+00:00:16,170 --> 00:00:20,520
+Let's add another object dependency or a class dependency for Instructor.
+
+6
+00:00:20,520 --> 00:00:32,670
+Instructor has a profile. private Profile profile; import profile from Spring framework. Hit control+1,
+
+7
+00:00:32,670 --> 00:00:37,720
+there is a profile in spring framework, don't import it. Create a class. Select that option.
+
+8
+00:00:40,070 --> 00:00:43,760
+Hit Finish. Profile will have two string fields,
+
+9
+00:00:43,770 --> 00:00:48,660
+we are going to capture private String.
+
+10
+00:00:54,420 --> 00:01:00,050
+The first field will be the instructor's title and string company,
+
+11
+00:01:00,090 --> 00:01:01,210
+the company he works for.
+
+12
+00:01:01,230 --> 00:01:02,450
+Let's keep it simple.
+
+13
+00:01:02,580 --> 00:01:04,540
+Very simple profile, control+1,
+
+14
+00:01:04,610 --> 00:01:06,190
+create setters and getters.
+
+15
+00:01:06,400 --> 00:01:07,250
+OK.
+
+16
+00:01:07,550 --> 00:01:11,490
+You can also generate getters and setters for both of them at once.
+
+17
+00:01:11,660 --> 00:01:12,310
+Do control+shift+f
+
+18
+00:01:12,360 --> 00:01:17,170
+to format. Generate the toString method as well.
+
+19
+00:01:21,160 --> 00:01:22,490
+Save it. Do a control+shift+f
+
+20
+00:01:22,540 --> 00:01:34,310
+Add the @Component annotation on this so that we are telling Spring that we want to create an object
+
+21
+00:01:34,370 --> 00:01:43,900
+of this type. @Component, and assign some values @Value, within double quotes,
+
+22
+00:01:44,140 --> 00:01:50,050
+title Java Architect and instructor.
+
+23
+00:01:50,170 --> 00:02:01,680
+That's my title. Company, @Value, within double quotes Vivekananda Consulting. You are welcome to use
+
+24
+00:02:01,680 --> 00:02:02,790
+different values.
+
+25
+00:02:02,790 --> 00:02:06,810
+You can use your own profile information here instead of mine.
+
+26
+00:02:07,140 --> 00:02:08,340
+Save it.
+
+27
+00:02:08,340 --> 00:02:13,010
+Go back to the instructor. To inject profile,
+
+28
+00:02:13,050 --> 00:02:18,050
+you simply mark it using @Autowired annotation from Spring Framework.
+
+29
+00:02:18,250 --> 00:02:23,950
+So we have done it in two steps. The first step was to create a profile and to mark it using the @Component
+
+30
+00:02:24,040 --> 00:02:24,870
+annotation,
+
+31
+00:02:24,950 --> 00:02:29,150
+that tells Spring that an object of this class can be created.
+
+32
+00:02:29,290 --> 00:02:34,660
+We have also assigned values to the fields using the @Value annotation. And in the config.xml,
+
+33
+00:02:35,780 --> 00:02:37,580
+when we use the @Autowired annotation,
+
+34
+00:02:37,580 --> 00:02:45,590
+the second thing we do is, we configure this annotation called component-scan and we provide a base package.
+
+35
+00:02:45,590 --> 00:02:49,560
+Spring is going to scan this package and all it's subpackages.
+
+36
+00:02:49,850 --> 00:02:53,950
+We are good because the profile also is in the same package.
+
+37
+00:02:53,960 --> 00:02:59,750
+So it's going to scan this as well. It will instantiate it, inject these values and then it will use this
+
+38
+00:02:59,750 --> 00:03:04,760
+bean to inject it into our instructor object.
+
+39
+00:03:04,760 --> 00:03:07,830
+Let's see if all that works. Go to test,
+
+40
+00:03:07,850 --> 00:03:16,160
+right click, run as Java Application and you will see two instructor instances.
+
+41
+00:03:16,340 --> 00:03:19,690
+The toString method needs to be changed on the instructor.
+
+42
+00:03:19,700 --> 00:03:22,000
+That is the reason we are not seeing that object.
+
+43
+00:03:22,240 --> 00:03:27,840
+So delete the toString, save it. Source,
+
+44
+00:03:28,180 --> 00:03:33,320
+Generate toString() one more time so that our profile will also be included.
+
+45
+00:03:33,370 --> 00:03:40,690
+Hit OK and the profile information will be included this time. We already have a toString method on the profile.
+
+46
+00:03:40,930 --> 00:03:42,280
+Run the test again.
+
+47
+00:03:44,730 --> 00:03:46,930
+Maximize and there we go.
+
+48
+00:03:46,950 --> 00:03:53,350
+Now the instructor, along with Id topics, also has a profile object injected.
+
+49
+00:03:53,370 --> 00:03:59,610
+That is the power of annotations without writing much XML, very little XML. In the configuration
+
+50
+00:03:59,610 --> 00:03:59,850
+file,
+
+51
+00:03:59,850 --> 00:04:05,370
+all we have is this context:component-scan and if we are not using collections then we don't even have this.
+

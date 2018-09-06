@@ -1,0 +1,124 @@
+1
+00:00:00,170 --> 00:00:04,050
+In this lecture, you will learn what standalone collections are.
+
+2
+00:00:04,410 --> 00:00:11,550
+If you go to the springcore project and to the list package when you injected the list, open the
+
+3
+00:00:11,550 --> 00:00:13,120
+listconfig.xml.
+
+4
+00:00:13,170 --> 00:00:20,580
+Maximize it. The list itself was a part of the bean into which we were injecting it.
+
+5
+00:00:20,660 --> 00:00:26,740
+This makes the list local to the bean and we cannot reuse this list across beans. If we have more beans
+
+6
+00:00:26,750 --> 00:00:27,170
+we cannot
+
+7
+00:00:27,170 --> 00:00:29,050
+reuse this list.
+
+8
+00:00:29,060 --> 00:00:32,770
+Secondly, we were only using the default types.
+
+9
+00:00:32,870 --> 00:00:39,880
+That is by default Spring uses arraylist for list, linked hash set, for a set and so on.
+
+10
+00:00:39,950 --> 00:00:44,880
+This syntax does not allow you to change those types. You can't use a linked list etc.
+
+11
+00:00:45,170 --> 00:00:51,590
+That is where standalone collections come in. To implement standalone collections,
+
+12
+00:00:51,590 --> 00:00:56,550
+we use util schema. So  far you have used the c schema and p schema.
+
+13
+00:00:56,550 --> 00:00:58,980
+You have also used context namespace.
+
+14
+00:00:59,060 --> 00:01:05,490
+You are going to use elements from an other namespace called util in Spring.
+
+15
+00:01:05,510 --> 00:01:09,280
+The first step is to add the namespaces to the bean element.
+
+16
+00:01:09,410 --> 00:01:18,080
+Once we add the new namespaces we can use the util prefix and util colon, the collection name. If
+
+17
+00:01:18,080 --> 00:01:23,960
+it is a list it'll be a list, if it is a map it will be a map, set it'll be a set and then followed by
+
+18
+00:01:25,030 --> 00:01:25,450
+list.
+
+19
+00:01:25,450 --> 00:01:29,380
+For example if it is a list, it'll be the collection name, list hyphen,
+
+20
+00:01:29,560 --> 00:01:34,750
+the class, is equal to whatever class you want to use. If you want to use linked list,
+
+21
+00:01:34,750 --> 00:01:42,170
+it will be java.util.linkedlist. The complete qualified list name should go into the double quotes.
+
+22
+00:01:42,310 --> 00:01:49,170
+You give it a unique name or an id and within the body we can use value if it is a list.
+
+23
+00:01:49,180 --> 00:01:53,720
+If it is a map we'll use an entry and close the util.
+
+24
+00:01:53,890 --> 00:02:00,370
+Once you define it like this, this is outside a bean, allowing re-usability.
+
+25
+00:02:00,490 --> 00:02:08,560
+This Id can then be used within the ref tag of any bean and we can inject it into any bean or multiple
+
+26
+00:02:08,560 --> 00:02:10,920
+beans in our application.
+
+27
+00:02:10,930 --> 00:02:16,850
+Secondly, we can specify the type as you have seen here using the collection hyphen class,
+
+28
+00:02:16,990 --> 00:02:23,470
+we can specify the exact type of list or set or map that we want to inject.
+
+29
+00:02:23,470 --> 00:02:25,480
+You will see that in action in the next lecture.
+
+30
+00:02:25,490 --> 00:02:27,600
+So remember two steps.
+
+31
+00:02:27,610 --> 00:02:34,000
+Import the namespaces or include the namespaces to use the util schema, then use the following syntax.
+

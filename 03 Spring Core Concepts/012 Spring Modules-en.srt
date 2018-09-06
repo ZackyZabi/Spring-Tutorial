@@ -1,0 +1,136 @@
+1
+00:00:00,300 --> 00:00:08,310
+The spring frame work is made up of 20 plus modules they are categorized into the core container model the
+
+2
+00:00:08,310 --> 00:00:15,270
+data access module, web module, AOP, instrumentation, testing and many more.
+
+3
+00:00:15,690 --> 00:00:22,530
+And we use some of these modules as required by our application as per the requirements of our application
+
+4
+00:00:22,590 --> 00:00:23,780
+when we build them.
+
+5
+00:00:24,180 --> 00:00:26,510
+I walk you through some of the important ones here.
+
+6
+00:00:26,790 --> 00:00:30,690
+The core container module is the heart of the Spring Framework.
+
+7
+00:00:30,750 --> 00:00:37,050
+It has the implementation for inversion off control and support for dependency injection.
+
+8
+00:00:37,320 --> 00:00:44,100
+It is responsible for maintaining the object's lifecycle in our application that is creating the object dependent
+
+9
+00:00:44,130 --> 00:00:51,760
+doing the dependency injection calling the init and destroy methods etc.. The data access module
+
+10
+00:00:51,760 --> 00:00:58,880
+is a combination of multiple modules that is that JDBC ORM JMS transaction.
+
+11
+00:00:59,010 --> 00:01:06,620
+The JDBC module provides an abstraction layer over JDBC and makes it very easy for us the developers
+
+12
+00:01:06,620 --> 00:01:10,790
+to use the JDBC API with very few lines of code,
+
+13
+00:01:10,800 --> 00:01:16,080
+you can perform JDBC operations or the database operations.
+
+14
+00:01:16,200 --> 00:01:22,770
+The ORM module integrates with ORM frameworks such as hibernate and we can use Hibernate and several
+
+15
+00:01:22,770 --> 00:01:28,210
+other ORM tools in very simple steps, using spring JMS support,
+
+16
+00:01:28,220 --> 00:01:37,400
+We can send or produce and consume messages a transaction is a atomic unit of work.
+
+17
+00:01:37,500 --> 00:01:45,520
+The transaction module supports both programmatic as well as declarative transaction management.
+
+18
+00:01:45,580 --> 00:01:49,020
+AOP stands for Aspected Oriented Programming.
+
+19
+00:01:49,030 --> 00:01:57,220
+AOP allows us to inject code or services into our objects without modifying their classes using
+
+20
+00:01:57,220 --> 00:02:05,110
+it we can configure cross-cutting concerns such as transaction management logging security etc. throughout
+
+21
+00:02:05,150 --> 00:02:14,690
+our application the web module is one of the very important modules and very much used in the JavaEE application
+
+22
+00:02:14,690 --> 00:02:15,490
+development.
+
+23
+00:02:15,560 --> 00:02:22,580
+It comprises of the core web the MVC module web socket servlet and portlet modules.
+
+24
+00:02:23,210 --> 00:02:29,810
+The core vett model provides the basic web oriented features such as file uploads initialization of
+
+25
+00:02:29,810 --> 00:02:32,960
+the spring container on a application server through
+
+26
+00:02:32,990 --> 00:02:38,750
+servlet listeners and web oriented spring container our application contest,
+
+27
+00:02:38,750 --> 00:02:46,670
+all that is a part of the web module or the web core module. The spring MVC is a complete implementation of the
+
+28
+00:02:46,880 --> 00:02:52,020
+model view controller pattern and this is used to develop dynamic web applications.
+
+29
+00:02:52,970 --> 00:02:56,380
+The select model contains or
+
+30
+00:02:56,390 --> 00:03:00,570
+it has the support for implementing basic web applications.
+
+31
+00:03:00,620 --> 00:03:08,200
+The portlet model provides the MVC implementation to be used in Portlet environment.
+
+32
+00:03:08,260 --> 00:03:16,550
+Last but not the least the testing module supports testing spring applications using JUnit and testNG.
+
+33
+00:03:16,580 --> 00:03:24,680
+It also provides MOC objects that allow us to test our application layers in a javaEE application
+
+34
+00:03:24,830 --> 00:03:26,380
+in isolation.
+

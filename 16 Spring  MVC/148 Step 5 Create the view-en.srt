@@ -1,0 +1,48 @@
+1
+00:00:00,120 --> 00:00:06,030
+The last and final step is to create the location or the required folder structure and the view under
+
+2
+00:00:06,030 --> 00:00:08,460
+it, which is the hello.jsp
+
+3
+00:00:08,490 --> 00:00:13,260
+in our case. Go to Eclipse. Under the WEB-INF,
+
+4
+00:00:13,370 --> 00:00:21,820
+if you open the dispatcher-servlet.xml, we have configured the folder to be WEB-INF/views.
+
+5
+00:00:21,820 --> 00:00:31,230
+So right click on WEB-INF, create a new folder called views, finish.
+
+6
+00:00:31,230 --> 00:00:38,640
+Right click on the views, say new, JSP file. And the name of this should be
+
+7
+00:00:38,910 --> 00:00:42,100
+hello, hello.jsp, Finish.
+
+8
+00:00:43,170 --> 00:00:48,220
+Maximize, title is Hello.
+
+9
+00:00:48,360 --> 00:00:56,630
+And within the body, we'll add a bold tag or h1 so that we can see bigger text, h1 for heading.
+
+10
+00:00:58,970 --> 00:01:12,160
+Welcome to spring MVC or you can say Hello from Spring MVC, save it. And that's it.
+
+11
+00:01:12,160 --> 00:01:18,140
+So you have successfully finished the final step which is to create the views folder under WEB-INF and
+
+12
+00:01:18,210 --> 00:01:22,830
+a page called hello.jsp which is our view page.
+

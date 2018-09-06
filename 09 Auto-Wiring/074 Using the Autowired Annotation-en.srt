@@ -1,0 +1,128 @@
+1
+00:00:02,340 --> 00:00:08,730
+In this lecture, let's learn Autowiring using annotations. Get started by right clicking on this autowiring package. We are going
+
+2
+00:00:08,730 --> 00:00:21,030
+to use the same beans. Right click, new -> package. At the end of it, autowiring.annotations. Finish, copy over
+
+3
+00:00:21,030 --> 00:00:28,680
+the configuration file, the beans and the test to the new package dot annotations. This is the new package.
+
+4
+00:00:28,680 --> 00:00:30,880
+Paste them on it.
+
+5
+00:00:31,230 --> 00:00:35,060
+Close everything in the editor, so that we don't have any confusion.
+
+6
+00:00:35,360 --> 00:00:43,820
+Address, Employee, test and config.xml. In the config.xml, we don't need this autowire attribute
+
+7
+00:00:43,850 --> 00:00:51,600
+anymore, because we are going to use annotations. Go to Employee and to inject this dependency on the
+
+8
+00:00:51,600 --> 00:01:00,080
+setter method of setAddress, use @Auto, hit control+space, Autowired
+
+9
+00:01:00,120 --> 00:01:03,310
+is the annotation from org.springframework.
+
+10
+00:01:03,450 --> 00:01:09,780
+We don't need the constructor here, get rid of the constructor, because we are using setter injection.
+
+11
+00:01:10,230 --> 00:01:14,690
+Or leave the constructor there so that we can use it later. Do a control+z.
+
+12
+00:01:14,910 --> 00:01:21,570
+Right now we are using setter injection, go to test. Update the test to use the right package, autowiring
+
+13
+00:01:21,810 --> 00:01:25,800
+slash annotations slash config.
+
+14
+00:01:25,830 --> 00:01:33,720
+Everything else remains the same. By default, if you remember annotations in spring are disabled. To enable
+
+15
+00:01:33,720 --> 00:01:40,050
+them, you know how to do that. Go to config.xml, right here, context colon, hit control+
+
+16
+00:01:40,050 --> 00:01:45,130
+space, annotation-config. You can close that right there.
+
+17
+00:01:45,360 --> 00:01:47,790
+And that is all we need. context
+
+18
+00:01:47,790 --> 00:01:55,240
+colon annotation-config. That tells Spring that all the annotations should be enabled and used. Run
+
+19
+00:01:55,280 --> 00:01:56,060
+the test.
+
+20
+00:01:56,120 --> 00:02:02,570
+Right click, run as Java application.
+
+21
+00:02:02,710 --> 00:02:06,760
+There is a classcast exception ofcourse. Go to config.xml,
+
+22
+00:02:06,850 --> 00:02:09,970
+we need to change the package here as well.
+
+23
+00:02:09,970 --> 00:02:17,690
+autowiring.annotations.Address, autowiring.annotations.Employee.
+
+24
+00:02:17,730 --> 00:02:24,030
+We see a class cast exception because Spring was creating the wrong classes because we asked it
+
+25
+00:02:24,040 --> 00:02:24,810
+to do so.
+
+26
+00:02:24,940 --> 00:02:29,290
+But in our test, we were using classes from different package.
+
+27
+00:02:29,330 --> 00:02:37,120
+This employee here is from the current package which is annotations. But here in config.xml, we
+
+28
+00:02:37,120 --> 00:02:39,700
+didn't have annotations in the package.
+
+29
+00:02:39,760 --> 00:02:41,340
+That's rerun the test.
+
+30
+00:02:41,360 --> 00:02:50,670
+Right click, Run as Java application and we see the proper output. This time you have configured autowiring at a
+
+31
+00:02:50,670 --> 00:02:59,080
+setter level using @Autowired annotation from Spring and in the XML, we need not do anything except
+
+32
+00:02:59,080 --> 00:03:01,450
+for enabling the annotations.
+

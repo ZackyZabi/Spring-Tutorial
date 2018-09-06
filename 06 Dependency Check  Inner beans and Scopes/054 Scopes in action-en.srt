@@ -1,0 +1,151 @@
+0
+00:00.120 --> 00:03.540
+In this lecture you will see the springs scope in action.
+
+1
+00:03.670 --> 00:10.050
+You're going to reuse the beans from the inner beans usecase we use address employee etc. and the test
+
+2
+00:10.050 --> 00:10.960
+and config
+
+3
+00:11.370 --> 00:18.960
+So go to the config dot xml and right now we haven't configured any scope for our beans by default
+
+4
+00:19.000 --> 00:19.570
+spring.
+
+5
+00:19.620 --> 00:27.270
+Beans are singleton scoped that is the spring container will create only one instance of any bean no matter
+
+6
+00:27.270 --> 00:29.650
+how many times we use it in our application.
+
+7
+00:29.910 --> 00:33.420
+If you go to test dot Java we use the employee only once.
+
+8
+00:33.420 --> 00:34.390
+As of now.
+
+9
+00:34.440 --> 00:35.890
+Copy these two lines.
+
+10
+00:36.000 --> 00:37.560
+Let's use the employee.
+
+11
+00:37.590 --> 00:38.370
+One more time.
+
+12
+00:38.370 --> 00:40.750
+Change it to employee two
+
+13
+00:40.980 --> 00:47.560
+And also in the sysout change it to employee two now we are using it twice run the program again run the
+
+14
+00:47.560 --> 00:50.200
+test as java application.
+
+15
+00:50.410 --> 00:56.500
+It prints the same values but that doesn't prove that they are the same objects in memory.
+
+16
+00:56.500 --> 01:05.140
+To prove that they are use employee dot hash code, hash code is a method that every object in Java gets from
+
+17
+01:05.140 --> 01:13.000
+the parent class which is java dot lan dot object and it points to the if the both the hash codes are
+
+18
+01:13.000 --> 01:17.080
+same that means both the objects are pointing to the same memory location.
+
+19
+01:17.400 --> 01:21.220
+So run the test one more time and compare the hash
+
+20
+01:21.220 --> 01:24.700
+codes they are exactly the same.
+
+21
+01:24.700 --> 01:31.570
+So the spring container has created only one object although we have used employee twice here and we
+
+22
+01:31.570 --> 01:34.270
+have retrieved it twice.
+
+23
+01:34.270 --> 01:43.210
+Now lets change the scope go to config dot xml to set the scope to prototype on the bean tag for the employee.
+
+24
+01:43.740 --> 01:50.900
+Scope is an attribute is equal to within double quotes use prototype.
+
+25
+01:50.900 --> 01:59.830
+Now that will change the scope from singleton to prototype rerun the test and observe the output.
+
+26
+02:00.140 --> 02:02.560
+The hash codes are no longer the same spring.
+
+27
+02:02.560 --> 02:09.460
+Now creates two different objects every time we use the object in our best.
+
+28
+02:09.460 --> 02:10.570
+If you go back to the test
+
+29
+02:15.170 --> 02:20.330
+for the first time here when it prints it , its a different hash code in the result and the second time
+
+30
+02:20.330 --> 02:26.790
+and we retrieve the object it once again instantiates the object and uses a different object.
+
+31
+02:26.840 --> 02:31.590
+We can also use Singleton here instead of prototype but that's default anyway.
+
+32
+02:31.610 --> 02:35.750
+But you are welcome to use this as well singleton.
+
+33
+02:35.810 --> 02:38.140
+Spring won't complain run the test.
+
+34
+02:40.130 --> 02:42.520
+And both the hash codes are same.
+
+35
+02:42.540 --> 02:48.460
+Change it back to prototype and we get different hash codes.
+
+36
+02:48.470 --> 02:49.760
+I didn't mean to run them.
+
+37
+02:49.810 --> 02:58.610
+I keep doing it once in a while go back run the test and know the hash codes and object to different.

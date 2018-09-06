@@ -1,0 +1,164 @@
+1
+00:00:00,260 --> 00:00:07,710
+You have injected the collection type into the instructor using the util schema and the value annotation.
+
+2
+00:00:07,970 --> 00:00:14,950
+You have used the spring expression language. This pound here is from spring expression language. In
+
+3
+00:00:14,950 --> 00:00:22,310
+this and the next few lectures, we'll learn more about Spring Expression Language or SpEL. The Spring
+
+4
+00:00:22,310 --> 00:00:28,940
+Expression Language supports parsing and executing expressions with the help of @Value annotation.
+
+5
+00:00:29,500 --> 00:00:34,410
+When we use an expression within the @Value annotation, the Spring container will evaluate it,
+
+6
+00:00:34,520 --> 00:00:41,240
+and at the end that expression will return a value. It supports both primitive types as well as collections
+
+7
+00:00:41,390 --> 00:00:43,030
+inside the expression.
+
+8
+00:00:43,890 --> 00:00:50,100
+An expression is a combination of classes, variables in the classes, methods, constructors and objects
+
+9
+00:00:50,940 --> 00:00:52,650
+and also symbols.
+
+10
+00:00:52,650 --> 00:00:59,220
+These symbols could be characters, numerics, operators, keywords and special symbols which at the end will
+
+11
+00:00:59,490 --> 00:01:02,720
+evaluate and return a value.
+
+12
+00:01:02,760 --> 00:01:09,960
+For example, here I have an expression. An expression will always go into the @Value annotation.
+
+13
+00:01:10,760 --> 00:01:13,490
+It starts with the pound symbol or a hash symbol.
+
+14
+00:01:13,490 --> 00:01:19,820
+This tells the container that it should evaluate this expression. Within flower brackets, we write our expression.
+
+15
+00:01:19,820 --> 00:01:22,490
+In this case we are adding two integers.
+
+16
+00:01:22,490 --> 00:01:28,880
+The container will add these two integers and it will inject that value wherever we are using this annotation
+
+17
+00:01:29,090 --> 00:01:32,020
+on whichever field we are using this annotation.
+
+18
+00:01:32,180 --> 00:01:41,340
+In this case the result will be 110. Another example, for integer type expression is 5 is greater
+
+19
+00:01:41,340 --> 00:01:44,200
+than 6. We are using a ternary operator here.
+
+20
+00:01:44,520 --> 00:01:45,880
+Starts with pound again.
+
+21
+00:01:46,050 --> 00:01:52,320
+Inside it we have the ternary operator. If it evaluates to true, then the value on the left hand side will
+
+22
+00:01:52,320 --> 00:01:56,870
+be assigned or injected into the field. If not the value on the right hand side.
+
+23
+00:01:57,000 --> 00:02:00,210
+So here in this case, this will evaluate to false.
+
+24
+00:02:00,270 --> 00:02:05,220
+So 33 should be injected into the field wherever we are using this value annotation.
+
+25
+00:02:05,220 --> 00:02:13,270
+The spring container will automatically evaluate it and inject the value. These expressions can be used
+
+26
+00:02:13,290 --> 00:02:16,350
+or we can use static methods inside these expressions.
+
+27
+00:02:16,350 --> 00:02:22,750
+Object methods, variables and many more. You are going to see all that syntax in the next few lectures.
+
+28
+00:02:22,950 --> 00:02:27,090
+Let's start with the primitive type.
+
+29
+00:02:27,090 --> 00:02:31,550
+Go to Eclipse. Here instead of hardcoding this value to 10,
+
+30
+00:02:31,560 --> 00:02:33,340
+let's inject a value.
+
+31
+00:02:33,390 --> 00:02:42,720
+Let's use this value from here. Within brackets, within double quotes, pound symbol, followed by flower brackets.
+
+32
+00:02:42,720 --> 00:02:44,840
+Within the braces or flower brackets,
+
+33
+00:02:44,850 --> 00:02:46,650
+you can use whatever expression you want.
+
+34
+00:02:46,650 --> 00:02:50,230
+I'm going to use 66+44.
+
+35
+00:02:50,320 --> 00:02:53,620
+Save it, run the test.
+
+36
+00:02:57,420 --> 00:03:00,450
+And the value if you see is 110.
+
+37
+00:03:00,460 --> 00:03:02,260
+Let me maximize it.
+
+38
+00:03:02,260 --> 00:03:10,400
+It is not 10 anymore. It is 110. Spring container is evaluating our expression and it is injecting that
+
+39
+00:03:10,400 --> 00:03:12,500
+value into the integer field
+
+40
+00:03:12,740 --> 00:03:18,560
+here. In the next few lectures, you will also learn how to use static methods, object methods etc; inside the
+
+41
+00:03:18,950 --> 00:03:19,490
+expression.
+

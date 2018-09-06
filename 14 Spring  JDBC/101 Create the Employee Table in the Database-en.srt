@@ -1,0 +1,76 @@
+1
+00:00:00,320 --> 00:00:05,550
+In this lecture, you are going to set up the employee table in the database that is required to work
+
+2
+00:00:05,550 --> 00:00:09,600
+on the spring JDBC usecase. To do that,
+
+3
+00:00:09,630 --> 00:00:15,540
+download the springjdbc.txt by going to the resources section of this lecture.
+
+4
+00:00:15,630 --> 00:00:17,610
+Open it up in your favorite text editor,
+
+5
+00:00:17,610 --> 00:00:21,280
+Notepad, Notepad++, Sublime text. Copy
+
+6
+00:00:21,330 --> 00:00:30,890
+these three lines and launch the MySQLWorkbench. Open a new query window or query tab by going to file menu,
+
+7
+00:00:30,970 --> 00:00:38,490
+new query tab. Paste the three commands. The first command in my case, my database name is mydb.
+
+8
+00:00:38,720 --> 00:00:41,340
+So change that to your database name,
+
+9
+00:00:41,370 --> 00:00:46,780
+your mySQL database name or if you are using Oracle then you would use a different client altogether or
+
+10
+00:00:46,810 --> 00:00:47,910
+command prompt.
+
+11
+00:00:49,670 --> 00:00:50,520
+Select that.
+
+12
+00:00:50,580 --> 00:00:57,600
+Execute it and it will go to my database mydb. Select the second command.
+
+13
+00:00:57,620 --> 00:01:04,570
+Here I am creating an employee table with three fields, id which is an integer, firstname which is
+
+14
+00:01:04,610 --> 00:01:11,360
+varchar and lastname which is varchar again. Select that whole thing execute it and that creates an
+
+15
+00:01:11,390 --> 00:01:13,610
+Employee table. Execute
+
+16
+00:01:13,610 --> 00:01:18,110
+the select query, select * from this table which I have just created.
+
+17
+00:01:18,500 --> 00:01:26,540
+Right now, it does not have any records. So you have successfully set up the employee table and in the next
+
+18
+00:01:26,540 --> 00:01:32,480
+few sections when you work on Spring ORM, Spring MVC ORM, you'll be doing something similar but
+
+19
+00:01:32,660 --> 00:01:37,140
+you'll be creating different tables like product, user, etc.
+

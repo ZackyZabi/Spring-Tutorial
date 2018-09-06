@@ -1,0 +1,120 @@
+1
+00:00:00,170 --> 00:00:05,400
+In this lecture area will work on the PERDER an important step which is to create the spring configuration
+
+2
+00:00:05,400 --> 00:00:11,870
+file and Wajir the hibernate template beans as well as the way you resolve our beans in it.
+
+3
+00:00:12,780 --> 00:00:17,610
+You have already done these two separately when we were on spring putting autumn and spring.
+
+4
+00:00:17,610 --> 00:00:19,620
+And we see.
+
+5
+00:00:19,810 --> 00:00:25,080
+So let's get started by going to eclipse the naming convention we need to follow is the name of ourselves
+
+6
+00:00:25,090 --> 00:00:26,940
+left in the dark which is.
+
+7
+00:00:26,950 --> 00:00:36,520
+Dispatcher fun so that dot Exxon-Mobile the dispatcher so will search for a file with that name on the
+
+8
+00:00:36,640 --> 00:00:38,540
+classpath.
+
+9
+00:00:38,670 --> 00:00:41,140
+So let's reuse some of our earlier configuration.
+
+10
+00:00:41,150 --> 00:00:41,870
+Go to the spring.
+
+11
+00:00:41,870 --> 00:00:46,670
+Autumn all the way to product or best package.
+
+12
+00:00:46,670 --> 00:00:54,950
+Copy this conflict got Exxon-Mobile come back to our spring NBC autumn go to the web that actually been.
+
+13
+00:00:55,200 --> 00:01:07,300
+Bastet reichlich rename it to dispatcher hyphen Soldat example this Patcha hyphen.
+
+14
+00:01:07,380 --> 00:01:09,630
+So let dot Exxon-Mobile hit.
+
+15
+00:01:09,640 --> 00:01:18,440
+OK open that dispatcher Let need this context confidence can we'll come back to it and give it the right
+
+16
+00:01:18,440 --> 00:01:19,530
+packages.
+
+17
+00:01:19,670 --> 00:01:25,670
+Were already aware of all these beans you know configure them and you worked on spitting autumn hibernate
+
+18
+00:01:25,670 --> 00:01:30,490
+template is what we are going to use inside our doll class when we create it.
+
+19
+00:01:30,570 --> 00:01:38,160
+We had to of this high but the template and that template depends on session factory and the session
+
+20
+00:01:38,180 --> 00:01:41,600
+factories the local Sishen factory being from spring.
+
+21
+00:01:41,600 --> 00:01:48,560
+It needs a data source which is configured up here which takes a class name of the driver that you want
+
+22
+00:01:48,560 --> 00:01:52,100
+to connect to the database the user name and password.
+
+23
+00:01:52,100 --> 00:01:59,130
+And also there are couple more properties the hibernate properties where we give with the ballot form
+
+24
+00:01:59,280 --> 00:02:05,960
+as well in my case this class is responsible for generating the sequel queries and this flag through
+
+25
+00:02:05,970 --> 00:02:13,670
+here through hibernate choice Google tells hibernate that it will display all the queries that it creates.
+
+26
+00:02:13,670 --> 00:02:19,820
+Finally we have annotated classes property configured for decision factory is where we configure or
+
+27
+00:02:19,850 --> 00:02:24,690
+tell hibernate about all over entities are Mardell classes.
+
+28
+00:02:24,860 --> 00:02:28,890
+We'll come back to this configuration later on and we'll change these back names.
+
+29
+00:02:28,900 --> 00:02:33,170
+We'll fix them once we create those classes in the next lecture.
+
+30
+00:02:33,170 --> 00:02:35,240
+We will configure the view resolver.
+

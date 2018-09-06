@@ -1,0 +1,168 @@
+1
+00:00:00,280 --> 00:00:06,290
+In this lecture, we are going to test our application end to end. We are not going to create a Java class
+
+2
+00:00:06,290 --> 00:00:11,760
+with a main method or use the SpringbootApplication class with the main method, but we will be much
+
+3
+00:00:11,760 --> 00:00:16,560
+more professional and close to real time and use this src/test/java
+
+4
+00:00:16,600 --> 00:00:24,930
+SpringbootApplicationTests.java class. So this class got generated when you created your spring boot
+
+5
+00:00:24,930 --> 00:00:26,300
+project.
+
+6
+00:00:26,340 --> 00:00:30,590
+This is a test class to test our Spring application.
+
+7
+00:00:30,620 --> 00:00:31,890
+It is like a JUnit class.
+
+8
+00:00:31,890 --> 00:00:38,410
+It is a JUnit class except for it uses the SpringRunner instead of the default JUnit runner.
+
+9
+00:00:38,730 --> 00:00:43,290
+And also it is marked with @SpringBootTest annotation.
+
+10
+00:00:43,500 --> 00:00:53,130
+This annotation tells the spring test or spring boot to go look for the main configuration class which
+
+11
+00:00:53,130 --> 00:01:01,370
+is marked with @SpringbootApplication and use that class to start up the spring application or
+
+12
+00:01:01,370 --> 00:01:03,640
+the spring application context.
+
+13
+00:01:03,690 --> 00:01:10,800
+So whenever you create test, at least one class your parent class for all the tests should be marked
+
+14
+00:01:10,800 --> 00:01:17,030
+with this annotation and that tells Spring that it should use any class which is marked with
+
+15
+00:01:17,040 --> 00:01:23,430
+@SpringbootApplication to start up the spring application context. Before we run this,
+
+16
+00:01:23,640 --> 00:01:29,100
+let's put something in the service class constructor. Let's add a sysout so that we can see what is
+
+17
+00:01:29,100 --> 00:01:29,930
+happening.
+
+18
+00:01:30,330 --> 00:01:36,440
+"Service Bean created", you can also check the log but this will be easy for us to search.
+
+19
+00:01:36,450 --> 00:01:37,770
+Go back to the test.
+
+20
+00:01:37,860 --> 00:01:40,420
+By default the test method does not do anything.
+
+21
+00:01:40,650 --> 00:01:43,320
+But it says context loaded.
+
+22
+00:01:43,470 --> 00:01:49,200
+So if the test successfully finishes, that means that our spring context has successfully loaded and
+
+23
+00:01:49,200 --> 00:01:50,830
+it has created all the beans.
+
+24
+00:01:50,880 --> 00:01:58,780
+So right click, do a Run As -> JUnit test and that test passes.
+
+25
+00:01:58,810 --> 00:02:02,380
+Everything is green, if you go to the JUnit window it is green.
+
+26
+00:02:02,380 --> 00:02:04,370
+That means all our tests have passed.
+
+27
+00:02:04,670 --> 00:02:10,120
+Double click to minimize. Maximize the console and you see a lot happening here.
+
+28
+00:02:10,120 --> 00:02:20,200
+The Spring container is loaded. Search for service or just search for created and you will see
+
+29
+00:02:20,290 --> 00:02:22,750
+Service Bean Created.
+
+30
+00:02:22,750 --> 00:02:25,950
+This is coming from the constructor of our bean.
+
+31
+00:02:26,530 --> 00:02:33,940
+So spring starts up. This test when it runs, it goes looks for SpringbootApplication or any class
+
+32
+00:02:33,940 --> 00:02:39,850
+that is marked with @SpringbootApplication, it invokes the main method which is starting the spring
+
+33
+00:02:39,850 --> 00:02:44,300
+context which in turn scans through the packages,
+
+34
+00:02:44,470 --> 00:02:51,580
+all the packages within which this class is, the Spring boot were application is and all the sub packages.
+
+35
+00:02:51,810 --> 00:02:54,170
+You could have put this service in a service package.
+
+36
+00:02:54,190 --> 00:02:57,440
+But that's okay. Let's move it later.
+
+37
+00:02:57,880 --> 00:03:00,820
+So it scans through all the packages and subpackages for beans.
+
+38
+00:03:00,820 --> 00:03:03,900
+Then it figures out that the service needs a Dao.
+
+39
+00:03:03,940 --> 00:03:06,980
+It creates the Dao bean, injects it into service.
+
+40
+00:03:07,000 --> 00:03:09,210
+That's exactly what has happened so far.
+
+41
+00:03:09,340 --> 00:03:16,170
+In the next lecture, we will wire the application context into our test class and we'll use it inside
+
+42
+00:03:16,180 --> 00:03:20,470
+the test method and use the beans that we have created.
+

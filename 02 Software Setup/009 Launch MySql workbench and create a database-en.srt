@@ -1,0 +1,92 @@
+1
+00:00:00,240 --> 00:00:05,880
+Hoping that your mysql installation has completed successfully you should have mysql up and running
+
+2
+00:00:06,000 --> 00:00:11,480
+and the mysql workbench installed on your machine to connect to connect to the my sql server
+
+3
+00:00:11,530 --> 00:00:19,250
+from mysql workbench launch the mysql workbench by clicking on a shortcut like this here
+
+4
+00:00:20,040 --> 00:00:22,790
+and that will launch the mysql workbench.
+
+5
+00:00:22,930 --> 00:00:28,660
+You start by creating a new connection to the database click on this plus button will open up a pop up
+
+6
+00:00:29,380 --> 00:00:32,350
+By default the host name is my local machine.
+
+7
+00:00:32,530 --> 00:00:39,560
+The default port for mysql server is 3306 and the user name is root.
+
+8
+00:00:39,820 --> 00:00:40,560
+Give it a name.
+
+9
+00:00:40,600 --> 00:00:42,620
+I'm going to call it local.
+
+10
+00:00:42,910 --> 00:00:44,660
+That's my connection name.
+
+11
+00:00:44,680 --> 00:00:48,670
+Click on test connection and it will prompt you for password.
+
+12
+00:00:49,000 --> 00:00:55,700
+This is the password which you would have entered when you configure the mysql server So in my case it is test.
+
+13
+00:00:56,020 --> 00:01:01,190
+Click OK and it says successfully made the mysql connection.
+
+14
+00:01:01,270 --> 00:01:02,080
+OK.
+
+15
+00:01:02,530 --> 00:01:02,940
+OK.
+
+16
+00:01:02,950 --> 00:01:05,860
+Again and it will be created.
+
+17
+00:01:05,860 --> 00:01:11,970
+You can now connect to the database by simply double clicking on this, it will open up the query window.
+
+18
+00:01:11,980 --> 00:01:18,190
+Since I have been using it I see all this but you can always create a new query window by going here.
+
+19
+00:01:18,340 --> 00:01:21,010
+New query tap.
+
+20
+00:01:21,050 --> 00:01:29,140
+And let's start by creating a database called my db to create a database create database.
+
+21
+00:01:29,330 --> 00:01:30,380
+My db
+
+22
+00:01:30,620 --> 00:01:38,180
+So is the name of the database select click on the lightning button here and that will create a database
+
+23
+00:01:38,180 --> 00:01:42,880
+called my db which will be using on in like just later on.
+

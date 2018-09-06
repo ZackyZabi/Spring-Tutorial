@@ -1,0 +1,116 @@
+1
+00:00:00,290 --> 00:00:06,810
+This lecture with action and I will explain the flow and doing before we do that once more people here
+
+2
+00:00:07,310 --> 00:00:13,940
+here should be viral or not value the equity function to get the value of a particular field.
+
+3
+00:00:15,310 --> 00:00:20,580
+The following syntax Daut a valid function not value so get rid of the extra characters.
+
+4
+00:00:20,590 --> 00:00:21,750
+That and it should be fine.
+
+5
+00:00:21,760 --> 00:00:28,650
+Once you do that go to servers right click or restart because we have been making quite a few changes.
+
+6
+00:00:28,660 --> 00:00:33,770
+That's really what everything we're back to the browser.
+
+7
+00:00:33,820 --> 00:00:36,110
+That is how the registration page open.
+
+8
+00:00:36,200 --> 00:00:45,100
+If not launch a local host AUP spring NBC autumn registration page camel case is that the aren't that
+
+9
+00:00:45,110 --> 00:00:52,060
+friendship so that the new GSB gets lauded Let's take a look at the database to see what ideas we have
+
+10
+00:00:52,060 --> 00:00:53,000
+here or how.
+
+11
+00:00:53,010 --> 00:00:55,620
+1 2 and 7 8 9.
+
+12
+00:00:55,630 --> 00:00:57,390
+Let's create a new one.
+
+13
+00:00:57,450 --> 00:01:00,150
+Get it for our street name.
+
+14
+00:01:00,170 --> 00:01:03,400
+That's a Sherratt which is my brother's name.
+
+15
+00:01:03,520 --> 00:01:06,810
+Sharratt at gmail dot com.
+
+16
+00:01:06,940 --> 00:01:09,680
+Please go ahead and use your own sibling names here.
+
+17
+00:01:09,820 --> 00:01:13,350
+Submit and that creates a new record.
+
+18
+00:01:13,360 --> 00:01:14,950
+But that's not what we want.
+
+19
+00:01:15,070 --> 00:01:17,260
+Let's try using whatever is already there.
+
+20
+00:01:17,260 --> 00:01:25,380
+Let me use two or and immediately look at how fast it is that goes to the server it makes an AJAX call
+
+21
+00:01:25,660 --> 00:01:30,750
+goes to the controller controller calls the services layer services layer caused the Tao.
+
+22
+00:01:30,760 --> 00:01:38,320
+Tao uses hibernate makes a database called checks that there at a card already with ID too and it comes
+
+23
+00:01:38,320 --> 00:01:42,490
+back with the error message 2 already exists.
+
+24
+00:01:42,490 --> 00:01:48,910
+Let's change that and the focus if you saw the focus goes back to this field so we can edit it change
+
+25
+00:01:48,910 --> 00:01:53,530
+it to 5 Babbo work and that error message goes out.
+
+26
+00:01:53,560 --> 00:01:56,920
+Because the validation happens again.
+
+27
+00:01:57,070 --> 00:02:02,320
+This time it comes back with a blank message and we are displaying that blank here but you don't see
+
+28
+00:02:02,320 --> 00:02:11,300
+it on the UI because there is nothing to be displayed so we have successfully used Ajax with J.A.G.
+
+29
+00:02:11,510 --> 00:02:15,890
+and spring NBC which is used quite a bit in realtime applications.
+

@@ -1,0 +1,52 @@
+1
+00:00:00,180 --> 00:00:06,390
+The next step is to configure our beans and aspects in the building configuration file that is as simple
+
+2
+00:00:06,390 --> 00:00:08,820
+as defining the beans in here.
+
+3
+00:00:08,820 --> 00:00:19,020
+Start with the bean name or ID whatever name is equal to product service is the name.
+
+4
+00:00:19,020 --> 00:00:24,420
+Class is what you do with the natural course because the Taghreed that go to product service impulse
+
+5
+00:00:25,600 --> 00:00:36,550
+grab the package name come back based it within that double course year dot product service in camel
+
+6
+00:00:36,550 --> 00:00:37,540
+case.
+
+7
+00:00:37,810 --> 00:00:39,720
+We have defined our POJO.
+
+8
+00:00:39,850 --> 00:00:52,430
+The next step is to define our aspects as well as a bean bean name is equal to logging aspect.
+
+9
+00:00:52,490 --> 00:01:03,790
+Class is equal to go to the logging aspect grab the package name come back to conflict Bastet dot logging
+
+10
+00:01:04,090 --> 00:01:05,540
+aspect.
+
+11
+00:01:06,130 --> 00:01:07,640
+Close it.
+
+12
+00:01:08,620 --> 00:01:14,020
+So we're defining all the beans here Springle create the objects of these bins and at runtime it will
+
+13
+00:01:14,020 --> 00:01:22,150
+use these aspects and apply that advises as we have already configured the wind cuts in here.
+

@@ -1,0 +1,76 @@
+1
+00:00:00,280 --> 00:00:07,870
+In this lecture, you will learn how Spring Boot simplifies the creation and launch or deployment of Spring Web
+
+2
+00:00:08,190 --> 00:00:12,820
+or Spring MVC projects. To create a spring MVC project,
+
+3
+00:00:12,870 --> 00:00:20,220
+all we need to do is to add a dependency called spring-boot-starter-web to our pom.xml.
+
+4
+00:00:20,490 --> 00:00:25,170
+Once we do that, we can create controller classes and you can use all your knowledge that you have
+
+5
+00:00:25,260 --> 00:00:33,030
+gained from the Spring MVC section. And our application can be run within, from within our IDE without
+
+6
+00:00:33,300 --> 00:00:40,590
+creating a war file or without deploying it to a server because, Spring Boot comes with a embedded Tomcat
+
+7
+00:00:40,590 --> 00:00:47,040
+server that goes into our application. You'll be seeing all that in action and I'll explain it, at the end
+
+8
+00:00:47,040 --> 00:00:52,640
+of the hands-on lectures I will show you how the jar file will look like and what internally happens.
+
+9
+00:00:53,720 --> 00:00:54,640
+And even better,
+
+10
+00:00:54,680 --> 00:00:57,000
+we need not configure the Dispatcher Servlet,
+
+11
+00:00:57,010 --> 00:01:02,110
+nor the Internal View Resolver, all that will come for free.
+
+12
+00:01:02,300 --> 00:01:07,740
+Once we start using the Spring starter dependency, Spring will automatically configure all these
+
+13
+00:01:07,760 --> 00:01:13,810
+for us. And if we want to customize the Internal View Resolver configuration, we need not create any XML
+
+14
+00:01:13,930 --> 00:01:15,330
+or Java configuration.
+
+15
+00:01:15,500 --> 00:01:24,960
+We can simply use the application.properties file and add properties like spring.mvc.view.prefix, etc;
+
+16
+00:01:25,100 --> 00:01:30,780
+I will show you where these properties exist on the Internet and how you can refer to them.
+
+17
+00:01:31,090 --> 00:01:38,090
+So the key to remember is that Spring Boot simplifies the creation of Spring MVC projects. It takes
+
+18
+00:01:38,090 --> 00:01:45,470
+out a lot of configuration as well as it comes with an embedded Tomcat server that allows us to run our
+
+19
+00:01:45,470 --> 00:01:52,350
+applications as jar files from within our IDEs, or we can even deploy the jar files to a server.
+

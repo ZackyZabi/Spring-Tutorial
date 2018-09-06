@@ -1,0 +1,92 @@
+1
+00:00:00,560 --> 00:00:07,540
+In this lecture, you will learn how to implement a findBy method that takes multiple fields and returns
+
+2
+00:00:07,540 --> 00:00:09,220
+a list of products.
+
+3
+00:00:09,230 --> 00:00:12,190
+It's very simple again. findBy,
+
+4
+00:00:13,460 --> 00:00:22,340
+I want to search for a product based of its name and price. And this time it takes two parameters,
+
+5
+00:00:22,370 --> 00:00:35,260
+(String name, Double price) and it should return a list of products. Save it. At the end add
+
+6
+00:00:35,270 --> 00:00:39,070
+a semi-colon. Do the control+shift+f to format.	That's it.
+
+7
+00:00:39,090 --> 00:00:42,370
+So you have successfully used a keyword called And.
+
+8
+00:00:42,780 --> 00:00:48,600
+And you have come up with a finder method that takes two parameters. You can always refer to the Spring
+
+9
+00:00:48,600 --> 00:00:55,650
+documentation, Spring data JPA documentation and it has different keywords that you can use for different
+
+10
+00:00:55,740 --> 00:00:58,890
+sql syntax that you want to generate.
+
+11
+00:00:59,370 --> 00:01:03,690
+The key words are similar, named similar as the SQL.
+
+12
+00:01:03,780 --> 00:01:11,370
+When we come up with our SQL statements, we typically use the same keywords. Go back. To test it, go back
+
+13
+00:01:11,370 --> 00:01:14,970
+to your test, add one more.
+
+14
+00:01:15,100 --> 00:01:15,840
+sysout,
+
+15
+00:01:18,680 --> 00:01:28,570
+repository.findByNameAndPrice. So I need to pass in Mac, which is the name and the price
+
+16
+00:01:28,660 --> 00:01:34,170
+is, its a double 1500d.
+
+17
+00:01:35,830 --> 00:01:42,720
+Save it, run the program. We should get a total of three products as a result from these three finder
+
+18
+00:01:42,740 --> 00:01:48,430
+methods and we see three products coming back.
+
+19
+00:01:48,490 --> 00:01:54,610
+Now if I change this to 1501 instead of 1500, re-run the test, I should
+
+20
+00:01:54,610 --> 00:01:59,490
+not be getting any results for the third finder. I should only be getting two results.
+
+21
+00:01:59,500 --> 00:02:01,230
+The third list should be empty.
+
+22
+00:02:01,240 --> 00:02:10,730
+So we see two products and the third one is empty because the prize didn't match although the name matched.
+
+23
+00:02:10,730 --> 00:02:15,580
+Now go ahead and play around with the different keywords that are available in this table.
+

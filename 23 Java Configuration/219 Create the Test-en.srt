@@ -1,0 +1,111 @@
+0
+00:00.330 --> 00:07.330
+The next step is to create a test class that will use an annotation config application context which
+
+1
+00:07.410 --> 00:16.950
+is a standalone spring container that can read off a Java configuration to do that go to eclipse right click
+
+2
+00:17.190 --> 00:23.890
+create a class call it test with the main method finish.
+
+3
+00:26.330 --> 00:32.470
+Control the application context.
+
+4
+00:32.880 --> 00:39.130
+Context is equal to a new annotation
+
+5
+00:42.320 --> 00:44.940
+config application context.
+
+6
+00:48.140 --> 00:53.780
+You can either pass it as a constructor argument or you can use a Method called register to register
+
+7
+00:53.780 --> 00:55.070
+that configuration.
+
+8
+00:55.070 --> 01:00.300
+So here we have the spring config which is the configuration you can pass that right here.
+
+9
+01:00.320 --> 01:10.560
+spring config dot class if you have additional configurations you can use the context dot register is
+
+10
+01:10.570 --> 01:16.190
+the method and you can register as many configurations as you want but the register method is not available
+
+11
+01:16.250 --> 01:17.600
+on the application context.
+
+12
+01:17.630 --> 01:24.020
+It is a method specific to the annotation config application context so on the left hand side you should
+
+13
+01:24.020 --> 01:30.170
+have the annotation configure application context then you will be able to context dot register if you
+
+14
+01:30.170 --> 01:38.240
+want to and you can register as many Java configurations as you want which can return beans for us.
+
+15
+01:38.240 --> 01:42.580
+Next step will get the bean out of the context context.
+
+16
+01:42.590 --> 01:49.710
+DOT get bean passin the class name which is dao dot class.
+
+17
+01:50.530 --> 01:57.880
+hit control one assign statement to a new local variable and that will return the DAO bean for us 
+
+18
+01:58.800 --> 02:04.750
+Do a sysout dao dot create the method and we want to see what the output of that will be
+
+19
+02:04.820 --> 02:11.640
+So create will be a void method so we don't how to use the sysout simply invoke dao dot create do
+
+20
+02:11.640 --> 02:16.660
+a control shift O to get there up get rid of the unused imports.
+
+21
+02:16.760 --> 02:24.660
+Right click run as Java application and you have successfully void a spring
+
+22
+02:24.660 --> 02:27.480
+Bean using Java configuration.
+
+23
+02:27.480 --> 02:29.720
+So the container is loaded.
+
+24
+02:29.730 --> 02:37.740
+you see here and it reads the Java configuration creates a spring Bean because this method is invoked
+
+25
+02:38.130 --> 02:40.020
+which is marked by at bean.
+
+26
+02:40.020 --> 02:46.050
+It has the bean created and in our test class we are retrieving it from the container using the Get
+
+27
+02:46.060 --> 02:48.390
+bean method and invoking the method on it.

@@ -1,0 +1,56 @@
+1
+00:00:00,230 --> 00:00:05,540
+In this lecture, I will quickly recap and summarize what you have learnt from the Autowiring section.
+
+2
+00:00:06,180 --> 00:00:07,070
+Autowiring
+
+3
+00:00:07,080 --> 00:00:14,430
+is the process of the spring container automatically injecting the object types. Autowiring can
+
+4
+00:00:14,430 --> 00:00:20,240
+be done in two ways, using XML configuration and annotations. In XML configuration,
+
+5
+00:00:20,280 --> 00:00:26,400
+we can do it byType, by the object type or the class type, byName,
+
+6
+00:00:26,490 --> 00:00:31,030
+that is the name of the object or bean in the XML configuration.
+
+7
+00:00:31,470 --> 00:00:40,090
+And byConstructor. As the name itself says, byConstructor uses constructor dependency injection methodology
+
+8
+00:00:40,350 --> 00:00:48,020
+whereas byType and byName, when we use these two the spring container will use the setter injection.
+
+9
+00:00:48,200 --> 00:00:51,840
+And the second and the most used way is using annotations.
+
+10
+00:00:51,920 --> 00:00:58,700
+We can autowire by simply marking a particular dependency or a field on a class using @Autowired
+
+11
+00:00:58,760 --> 00:01:00,290
+annotation.
+
+12
+00:01:00,420 --> 00:01:06,240
+And if there are multiple beans of the same type and if there is a confusion for the spring container,
+
+13
+00:01:06,480 --> 00:01:13,740
+we can use the @Qualifier annotation and tell the spring container which bean we exactly want to inject.
+
+14
+00:01:14,610 --> 00:01:18,820
+@Qualifier is always used along with @Autowired annotation.
+

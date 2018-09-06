@@ -1,0 +1,212 @@
+1
+00:00:00,200 --> 00:00:05,350
+In this lecture, you will learn what constructor injection is and start using it.
+
+2
+00:00:05,510 --> 00:00:12,340
+Spring supports creating objects using parameterized constructs. To specify one argument to a constructor,
+
+3
+00:00:12,390 --> 00:00:15,440
+to create an object using a constructor with parameters,
+
+4
+00:00:15,630 --> 00:00:23,730
+we use the constructor-arg XML element. Within that, we can either pass primitive types as value, we can pass collections
+
+5
+00:00:23,760 --> 00:00:29,040
+using list, set, etc; which you have already used when you worked with setter injection.
+
+6
+00:00:29,430 --> 00:00:36,180
+And also you can pass reference types using the ref element. Both these elements value and ref can
+
+7
+00:00:36,180 --> 00:00:45,180
+be used as elements, as attributes and also you can use something called C schema or C namespace. This is very
+
+8
+00:00:45,180 --> 00:00:50,910
+similar to P schema or namespace which you have used in property injection.
+
+9
+00:00:50,910 --> 00:01:02,150
+So let's get started and use constructor injection. By going to eclipse, right click, create a new package.
+
+10
+00:01:02,150 --> 00:01:09,650
+com.bharath.spring.springcore.constructorinjection. Instead of dependency check,
+
+11
+00:01:09,650 --> 00:01:16,220
+this will be a new package called constructorinjection, finish.
+
+12
+00:01:17,360 --> 00:01:19,080
+And grab a couple of beans.
+
+13
+00:01:19,130 --> 00:01:20,780
+Go to the inner beans package,
+
+14
+00:01:20,870 --> 00:01:22,430
+grab this employee and address.
+
+15
+00:01:22,430 --> 00:01:27,740
+We are going to reuse these two. We'll write the configuration and test from scratch. Come back to the
+
+16
+00:01:27,740 --> 00:01:28,430
+new package,
+
+17
+00:01:28,430 --> 00:01:30,340
+paste them.
+
+18
+00:01:30,470 --> 00:01:41,580
+We are going to inject employee or create the employee bean using constructor injection. And the address,
+
+19
+00:01:41,680 --> 00:01:48,420
+we can inject it using property injection. So we can mix and match as well. You can use both property injection
+
+20
+00:01:48,540 --> 00:01:55,800
+as well as constructor injection within the same XML. Copy over the config.xml, paste it.
+
+21
+00:02:00,590 --> 00:02:02,950
+Delete the bean.
+
+22
+00:02:03,140 --> 00:02:05,040
+Start off with the bean.
+
+23
+00:02:05,330 --> 00:02:09,240
+The first bean is the dependency, which is the address.
+
+24
+00:02:09,260 --> 00:02:10,630
+So let's get started with the address.
+
+25
+00:02:10,660 --> 00:02:20,590
+Employee uses address or it depends on address. Start with address, class is equal to, go
+
+26
+00:02:20,630 --> 00:02:21,940
+grab the package name,
+
+27
+00:02:24,910 --> 00:02:32,420
+up to constructorinjection, come back to confif, paste it, dot, close the bean element right there. And
+
+28
+00:02:32,420 --> 00:02:40,160
+use P schema to inject elements required for our address, which in this case is house number, street
+
+29
+00:02:40,490 --> 00:02:48,610
+and city. Let's use P schema. We are still doing property injection here.
+
+30
+00:02:48,610 --> 00:02:57,160
+p:hno="123", space, p: the second field is city, or street and then
+
+31
+00:02:57,160 --> 00:03:10,150
+city. p:street="mira mesa" p:city="san diego".
+
+32
+00:03:13,730 --> 00:03:18,410
+The second bean is the employee bean.
+
+33
+00:03:18,470 --> 00:03:23,290
+class="employee", paste
+
+34
+00:03:23,290 --> 00:03:29,620
+the package, dot, give it a name. We haven't given a name to the address
+
+35
+00:03:29,620 --> 00:03:38,020
+bean. Give it a name, name="employee",
+
+36
+00:03:38,530 --> 00:03:40,650
+we'll use this name later in our test.
+
+37
+00:03:40,690 --> 00:03:46,820
+Close the bean bag right there. And within the body of the bean, we are going to use constructor.
+
+38
+00:03:47,020 --> 00:03:52,790
+So before we do that, go to the employee, get rid of all the setter methods or you can leave them there.
+
+39
+00:03:53,080 --> 00:03:55,180
+But we are not going to do setter injection.
+
+40
+00:03:55,420 --> 00:04:00,160
+Define a constructor, Employee()
+
+41
+00:04:00,360 --> 00:04:01,670
+the default constructor.
+
+42
+00:04:01,810 --> 00:04:04,270
+But now we are going to add parameters to it.
+
+43
+00:04:04,510 --> 00:04:11,230
+Employee(int id,Address address) two parameters.
+
+44
+00:04:11,230 --> 00:04:19,690
+this.id = id; this.address = address;
+
+45
+00:04:22,520 --> 00:04:27,920
+Go back to the config.xml. Start using the constructor injection.
+
+46
+00:04:27,950 --> 00:04:32,200
+constructor-arg is the element. Within that,
+
+47
+00:04:32,600 --> 00:04:37,290
+the first parameter that we want to pass in to the constructor is id field.
+
+48
+00:04:37,430 --> 00:04:43,010
+So use, <value> pass in 123 for id.
+
+49
+00:04:43,080 --> 00:04:47,870
+The second argument, another constructor-arg, use an other constructor-arg.
+
+50
+00:04:48,530 --> 00:04:53,710
+This will be ref, because we want to pass in an object or inject an object.
+
+51
+00:04:53,890 --> 00:05:01,160
+<ref bean=""/> close it there. The name of the bean will be address. We've already created the dependency
+
+52
+00:05:01,900 --> 00:05:09,260
+Control+shift+f to format. And you have successfully configured constructor injection. In the next lecture, we'll write
+
+53
+00:05:09,260 --> 00:05:11,670
+the test case and I'll explain it end to end.
+

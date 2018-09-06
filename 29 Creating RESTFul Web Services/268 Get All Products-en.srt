@@ -1,0 +1,84 @@
+1
+00:00:00,180 --> 00:00:05,970
+In this lecture, you will implement the getProduct method that will return all the products in the database. We'll expose it
+
+2
+00:00:05,970 --> 00:00:09,690
+out as a RESTful API. To do that,
+
+3
+00:00:09,690 --> 00:00:17,450
+start with the public Iterable<Products>. So this method should return a iterable products.
+
+4
+00:00:17,460 --> 00:00:18,530
+I will tell you why
+
+5
+00:00:18,650 --> 00:00:24,000
+an iterable. public Iterable<Product> getProducts()
+
+6
+00:00:27,180 --> 00:00:34,530
+and we have to use the repository interface in here. First import the product, control+1, Import 'Product',
+
+7
+00:00:35,040 --> 00:00:43,950
+Next, start using productRepository. control+space, take the ProductRepository. Call it repository.
+
+8
+00:00:45,840 --> 00:00:46,830
+And mark it with
+
+9
+00:00:46,880 --> 00:00:54,150
+@Autowired annotation so that Spring will automatically inject this dependency for us. Then we can start
+
+10
+00:00:54,150 --> 00:00:55,370
+using it.
+
+11
+00:00:55,380 --> 00:01:03,340
+Copy the repository, go into your method, dot, findAll(). The repository has a findAll method that returns
+
+12
+00:01:03,360 --> 00:01:06,690
+all the products as a Iterable product.
+
+13
+00:01:06,960 --> 00:01:10,130
+You can convert it into a list, etc if you want to.
+
+14
+00:01:10,160 --> 00:01:16,570
+But I am returning an Iterable<Product>. Spring will automatically convert this into JSON.
+
+15
+00:01:16,770 --> 00:01:22,780
+That magic happens for us automatically. So return repository.findAll();
+
+16
+00:01:22,870 --> 00:01:30,060
+So the default data format for spring RESTful web services is JSON, it configures the Jackson adapters and
+
+17
+00:01:30,060 --> 00:01:32,490
+all that automatically.
+
+18
+00:01:32,490 --> 00:01:38,260
+The next important piece, mark this method with @GetMapping. Control+space,
+
+19
+00:01:38,280 --> 00:01:45,920
+@GetMapping, because we want to use the clients, to use the GET method to get all the products.
+
+20
+00:01:45,990 --> 00:01:52,470
+So you should tell that by using the @GetMapping annotation. So you have successfully implemented it. In the
+
+21
+00:01:52,470 --> 00:01:58,770
+next lecture, we'll test if this particular endpoint works by using Postman.
+

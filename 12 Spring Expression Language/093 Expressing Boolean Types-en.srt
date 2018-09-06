@@ -1,0 +1,120 @@
+1
+00:00:00,180 --> 00:00:05,100
+Last primitive type that we'll cover using expressions is the Boolean type.
+
+2
+00:00:05,100 --> 00:00:07,560
+Let's add another field on this
+
+3
+00:00:07,560 --> 00:00:13,370
+Instructor which says whether he's active or not. private boolean active;
+
+4
+00:00:13,470 --> 00:00:14,360
+This flag tells
+
+5
+00:00:14,370 --> 00:00:24,190
+if the instructor is active or not. Use the @Value annotation, within brackets, to assign a boolean value
+
+6
+00:00:24,630 --> 00:00:36,110
+let's use an expression. Start with pound, within flower brackets, 2+4>5.
+
+7
+00:00:36,230 --> 00:00:37,660
+A simple boolean expression.
+
+8
+00:00:37,660 --> 00:00:42,520
+This could be any expression, you could use objects or whatever but the value at the end should
+
+9
+00:00:42,610 --> 00:00:44,730
+evaluate to boolean in this case.
+
+10
+00:00:44,830 --> 00:00:52,010
+In earlier cases, the value should evaluate to string, int and so on. So we have come up with a boolean expression.
+
+11
+00:00:52,020 --> 00:00:54,200
+Let's see the value of active.
+
+12
+00:00:54,200 --> 00:01:01,490
+We need to change or regenerate our toString method. Delete the toString. Go to source, generate
+
+13
+00:01:01,490 --> 00:01:07,140
+toString one more time so that the active will be included.
+
+14
+00:01:07,380 --> 00:01:18,330
+OK. Save it, run the test. Scroll right or maximize this console and then scroll right to see the boolean
+
+15
+00:01:18,330 --> 00:01:19,080
+value.
+
+16
+00:01:20,330 --> 00:01:31,980
+Or maybe scroll left, id, name and active right here, and it says true. You can use whatever boolean
+
+17
+00:01:31,980 --> 00:01:33,690
+expression you want.
+
+18
+00:01:33,810 --> 00:01:39,700
+You can also use ternary operator here. 2+4 is greater than,
+
+19
+00:01:39,810 --> 00:01:44,010
+let's get a false this time, 8 question mark,
+
+20
+00:01:44,070 --> 00:01:47,920
+false:true.
+
+21
+00:01:48,330 --> 00:01:55,380
+This expression here will evaluate to false. Ofcourse 2+4 is not greater than 8. So it will
+
+22
+00:01:55,380 --> 00:01:59,480
+return a true, it won't return a false.
+
+23
+00:01:59,610 --> 00:02:01,170
+So let's change this order.
+
+24
+00:02:03,000 --> 00:02:05,510
+True and on the right hand side,
+
+25
+00:02:05,550 --> 00:02:08,000
+let's have false.
+
+26
+00:02:08,070 --> 00:02:11,060
+Save it, rerun the test.
+
+27
+00:02:11,240 --> 00:02:18,820
+This time we have a false for active.
+
+28
+00:02:19,060 --> 00:02:23,170
+So in this lecture, you have successfully learnt how to use boolean expressions as well.
+
+29
+00:02:23,170 --> 00:02:25,660
+This could be any expression, it need not be numbers.
+
+30
+00:02:25,740 --> 00:02:31,790
+You can invoke methods or objects or whatever you want to do. But at the end it should return a boolean value.
+

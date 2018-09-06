@@ -1,0 +1,128 @@
+1
+00:00:00,540 --> 00:00:06,630
+Before we see our application end to end in this lecture one small change of a dark example opened up
+
+2
+00:00:06,630 --> 00:00:17,790
+our product someone and up top here you see a dot by DTD which inconsistently causes problems with days.
+
+3
+00:00:18,110 --> 00:00:24,120
+If we have it here the wrong then the DSP expression of language won't work either we need to upgrade
+
+4
+00:00:24,120 --> 00:00:27,950
+it to the latest So let version or completely get rid of it.
+
+5
+00:00:27,980 --> 00:00:33,790
+So I'm going to delete it for now and have the app element that's it.
+
+6
+00:00:34,960 --> 00:00:41,300
+Ready to run that allegation right click on the index start GSB or on the project as add on.
+
+7
+00:00:41,460 --> 00:00:44,720
+So it finished to start the.
+
+8
+00:00:46,140 --> 00:00:53,640
+That will apply the application and launch it in the browser of Eclipse copy that link.
+
+9
+00:00:53,640 --> 00:00:57,090
+Let's use Chrome or any of your favorite browsers.
+
+10
+00:00:57,130 --> 00:01:00,790
+Paste the link and we'll go to the index dot GSP.
+
+11
+00:01:00,810 --> 00:01:07,790
+Go back to eclipse go to use our controller grab the registration page you are-I come back.
+
+12
+00:01:07,800 --> 00:01:14,690
+Delete this in Nexstar DSP paste registration page that is the right answer.
+
+13
+00:01:18,250 --> 00:01:26,090
+Registration page that will take us through the registration page with three fields and the form entered
+
+14
+00:01:26,090 --> 00:01:29,340
+an ID lets say 7 8 9.
+
+15
+00:01:29,440 --> 00:01:38,710
+Name is parrot and email is best at best dot com hit the submit button when we hit the submit button.
+
+16
+00:01:38,710 --> 00:01:47,640
+That request goes to the controller and we see an ID coming back with 7 8 9 with a database to ensure
+
+17
+00:01:47,640 --> 00:01:50,640
+that the data is really saved.
+
+18
+00:01:50,660 --> 00:02:01,470
+Execute select start from user execute and we do have an ID 7 8 9 user is part and his email is test
+
+19
+00:02:01,470 --> 00:02:08,160
+that test dot com so the control went to the controller to start with the user controller
+
+20
+00:02:12,230 --> 00:02:14,430
+and it displayed the user registration page.
+
+21
+00:02:14,480 --> 00:02:16,090
+Then we have entered the details.
+
+22
+00:02:16,090 --> 00:02:17,440
+Hit the submit button.
+
+23
+00:02:17,690 --> 00:02:21,710
+Then the request came with the second method because this is the action in the form.
+
+24
+00:02:22,140 --> 00:02:27,980
+Spring automatically converts the incoming form data into a model object because we have McBeth using
+
+25
+00:02:27,980 --> 00:02:30,190
+Mardell attribute.
+
+26
+00:02:30,650 --> 00:02:36,090
+We have taken that model object past it to the service the service done.
+
+27
+00:02:36,100 --> 00:02:43,210
+In walks the matter and the document uses hibernate template to save it to the database and it returns
+
+28
+00:02:43,210 --> 00:02:49,030
+the result back which is the ID which we have passed in that ID comes back as the result goes back to
+
+29
+00:02:49,030 --> 00:02:51,660
+the controller in the controller.
+
+30
+00:02:51,670 --> 00:02:58,240
+We are taking the ID setting it into the model map which we are creating and sending the result back
+
+31
+00:02:58,240 --> 00:03:05,710
+saying user created it id and we are pushing the portal back to the same registration page which is
+
+32
+00:03:05,710 --> 00:03:07,940
+being displayed here along with the reason.
+

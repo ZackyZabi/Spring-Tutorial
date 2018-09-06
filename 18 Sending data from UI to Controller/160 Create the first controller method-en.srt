@@ -1,0 +1,72 @@
+1
+00:00:00,220 --> 00:00:06,180
+In this lecture, you'll work on the next step which is to create a UserController that will return this
+
+2
+00:00:06,180 --> 00:00:09,270
+user registration dot jsp to the end user
+
+3
+00:00:09,270 --> 00:00:10,740
+when you hit a URL.
+
+4
+00:00:10,980 --> 00:00:14,990
+So first he needs to access the form and then he can submit the form.
+
+5
+00:00:15,000 --> 00:00:23,070
+So we are going to do and handle that portion in the Controller. Go to Eclipse, minimize, right click on the
+
+6
+00:00:23,070 --> 00:00:37,470
+Controller or a Controller package. Say new -> class, UserController, finish. Mark it with the @Controller annotation
+
+7
+00:00:37,480 --> 00:00:44,090
+right away before we forget that. @Controller from Spring stereotype.
+
+8
+00:00:44,110 --> 00:00:52,240
+Next we'll start with one method that returns a ModelAndView. Public ModelAndView from Spring.
+
+9
+00:00:54,320 --> 00:01:02,870
+showRegistrationPage, a long method name. Within this method we'll create a new
+
+10
+00:01:05,430 --> 00:01:14,020
+ModelAndView. Hit control+1, assign statement to a new local variable. ModelAndView is fine.
+
+11
+00:01:14,080 --> 00:01:19,110
+ModelAndView.setViewName.
+
+12
+00:01:19,150 --> 00:01:22,120
+All we are doing in this method is returning a view.
+
+13
+00:01:22,120 --> 00:01:26,340
+The very first view the user should see, which is userReg.jsp.
+
+14
+00:01:26,380 --> 00:01:36,700
+So user, r is capital, reg. And return that ModelAndView object back. Control+d, do the
+
+15
+00:01:36,700 --> 00:01:43,740
+RequestMapping. @RequestMapping, within brackets, double quotes,
+
+16
+00:01:43,930 --> 00:01:55,760
+you can use whatever URL you want, say register or registrationPage. So users will access this using
+
+17
+00:01:55,760 --> 00:01:57,120
+this particular URI.
+
+18
+00:01:57,140 --> 00:02:01,610
+This method will be run and we'll return a userReg.jsp.
+

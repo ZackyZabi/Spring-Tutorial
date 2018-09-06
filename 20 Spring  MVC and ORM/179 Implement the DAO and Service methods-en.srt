@@ -1,0 +1,136 @@
+1
+00:00:00,330 --> 00:00:06,120
+From this lecture we will start creating them methods across these layers starting with the Dow.
+
+2
+00:00:06,170 --> 00:00:11,350
+Leah the services are the matters in the Data Access Layer are used by the services.
+
+3
+00:00:11,380 --> 00:00:12,730
+Let's do that.
+
+4
+00:00:12,830 --> 00:00:20,020
+In this lecture and we'll start working on the controller layer in the next one or two clips what would
+
+5
+00:00:20,020 --> 00:00:21,340
+they use or Tao.
+
+6
+00:00:21,760 --> 00:00:26,600
+And had a method called inte introduced in Dejah create.
+
+7
+00:00:26,590 --> 00:00:29,880
+Text that use the model object user
+
+8
+00:00:32,610 --> 00:00:36,780
+and they use the registration happens when we want to save the record database.
+
+9
+00:00:36,780 --> 00:00:38,780
+This is the method that should be invoked.
+
+10
+00:00:38,940 --> 00:00:46,860
+Now where we use our Dalrymple it control one wherever we see read and implemented amateur's or to create
+
+11
+00:00:46,860 --> 00:00:48,660
+matter control.
+
+12
+00:00:48,960 --> 00:00:57,480
+We have already implemented this method in project early and out hibernate template d'arte save and
+
+13
+00:00:57,540 --> 00:00:59,740
+pass the entity to it.
+
+14
+00:01:00,510 --> 00:01:07,980
+And it returns a signed statement to a new local variable returns a serializable object which is in
+
+15
+00:01:07,980 --> 00:01:20,280
+picture type cast to be Carlat result and return that result back all in one single line.
+
+16
+00:01:20,520 --> 00:01:23,000
+So we have successfully implemented the Create Mathare.
+
+17
+00:01:23,160 --> 00:01:31,250
+Now go to the services class which is user we sit in or he has a service implement or create them at
+
+18
+00:01:31,270 --> 00:01:38,540
+their altimeter which unsane Dejah you can call it create or you can call it save or anything you want.
+
+19
+00:01:38,540 --> 00:01:49,550
+It need not be the same name as the method in their the user user on one import user or on package or
+
+20
+00:01:49,830 --> 00:01:56,280
+their service impulse control one and an unimplemented methods.
+
+21
+00:01:56,590 --> 00:01:58,810
+Here we are going to use the Dow.
+
+22
+00:01:59,220 --> 00:02:07,890
+So insert them at 38 or Daut create pass the user and you can add the write down statement here.
+
+23
+00:02:07,930 --> 00:02:10,270
+Get rid of this written control.
+
+24
+00:02:10,510 --> 00:02:11,580
+Delete the record.
+
+25
+00:02:11,590 --> 00:02:15,940
+So what are the always running these classes are these methods that are running back.
+
+26
+00:02:15,940 --> 00:02:19,610
+In addition we can house some business logic here.
+
+27
+00:02:19,660 --> 00:02:22,300
+I will show you some examples later on.
+
+28
+00:02:22,840 --> 00:02:29,950
+And this meant there can be market with it transactional annotation from spring we haven't been able
+
+29
+00:02:29,950 --> 00:02:36,640
+annotations in our configuration will do that but we can mark this method with transactional instead
+
+30
+00:02:36,640 --> 00:02:39,360
+of mocking the method.
+
+31
+00:02:39,380 --> 00:02:44,060
+We can also have a transactional here but it's always a good practice to have it.
+
+32
+00:02:44,120 --> 00:02:50,780
+So we just layer because we can how multiple database statements that might be executed from within
+
+33
+00:02:50,780 --> 00:02:51,320
+here.
+
+34
+00:02:51,470 --> 00:02:55,100
+And we want all that to be in one single transaction.
+

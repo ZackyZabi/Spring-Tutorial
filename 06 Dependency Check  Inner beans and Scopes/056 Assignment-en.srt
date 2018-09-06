@@ -1,0 +1,35 @@
+0
+00:00.200 --> 00:06.130
+As an assignment I want you to create a POJO called University with three fields in it.
+
+1
+00:06.210 --> 00:12.480
+It's going to represent a university which has an ID and name and the location of the university.
+
+2
+00:12.700 --> 00:19.780
+First will ensure that the ID field is mandatory using the  at required annotation.
+
+3
+00:19.830 --> 00:25.320
+And always remember that you need to enable annotation support in the example and you know how to do
+
+4
+00:25.320 --> 00:26.610
+that by now.
+
+5
+00:26.610 --> 00:33.410
+And also I want you to use a scope called prototype on this university.
+
+6
+00:33.840 --> 00:38.570
+So in your test class when you create the test class every time you ask for this university
+
+7
+00:38.580 --> 00:43.500
+bean spring should create an instance of it it's not a single turn which is the default.
+
+8
+00:43.740 --> 00:46.410
+But you should be using the prototype scope.

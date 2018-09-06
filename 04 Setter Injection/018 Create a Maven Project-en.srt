@@ -1,0 +1,236 @@
+1
+00:00:00,360 --> 00:00:05,640
+In this lecture, you will create a project in eclipse that you are going to use in the next few lectures,
+
+2
+00:00:05,740 --> 00:00:08,930
+to implement dependency injection. To do that
+
+3
+00:00:08,930 --> 00:00:10,590
+go to the eclipse IDE
+
+4
+00:00:10,670 --> 00:00:19,810
+Once you have eclipse up and running go to the file menu say new maven project leave the defaults as is
+
+5
+00:00:19,810 --> 00:00:21,000
+on the first screen,
+
+6
+00:00:21,000 --> 00:00:22,250
+Click next.
+
+7
+00:00:23,010 --> 00:00:29,190
+here you select the default which is maven archetype QuickStart this archetype that we use
+
+8
+00:00:29,190 --> 00:00:31,940
+to create standalone Java projects.
+
+9
+00:00:32,820 --> 00:00:40,110
+Next group Id give a unique ID this is like a package name for the maven repository this is where all of our
+
+10
+00:00:40,230 --> 00:00:44,410
+products are kept com dot bharath dot
+
+11
+00:00:44,430 --> 00:00:51,270
+spring is my group ID maven will create folders with the following names and it will put our
+
+12
+00:00:51,270 --> 00:01:01,250
+project under it. The artifact ID which is the project id is going to be spring core finish and automatically,
+
+13
+00:01:01,250 --> 00:01:07,430
+eclipse will create a maven project with all the folder structure SRC main java is where all the source
+
+14
+00:01:07,430 --> 00:01:08,330
+code will go
+
+15
+00:01:08,420 --> 00:01:12,110
+SRC test Java is where all the test code will go.
+
+16
+00:01:12,140 --> 00:01:19,220
+In our case, we'll be putting a lot of things under SRC main Java the pom dot XML is the heart of
+
+17
+00:01:19,340 --> 00:01:21,220
+any maven project.
+
+18
+00:01:21,320 --> 00:01:26,570
+It has all the configuration if you open it and click on the last tab here which says pom dot xml
+
+19
+00:01:26,570 --> 00:01:34,260
+maximize it.It has the project coordinates which we gave the group ID artifact ID version
+
+20
+00:01:34,270 --> 00:01:38,220
+exectra the packaging is Jar because it is a standalone Java project.
+
+21
+00:01:40,260 --> 00:01:47,250
+And by default it includes the JUnit dependency so maven will pull all the dependencies that are required
+
+22
+00:01:47,400 --> 00:01:52,950
+by our project instead of us going and downloading the jar files including them in our Eclipse project
+
+23
+00:01:53,250 --> 00:02:00,340
+adding them to our classpath maven does all that for us to change all these dependencies and to include
+
+24
+00:02:00,550 --> 00:02:01,790
+dependencies.
+
+25
+00:02:01,920 --> 00:02:08,970
+You should download the following file instead of searching on the Internet and downloading these dependencies
+
+26
+00:02:09,030 --> 00:02:10,750
+or copying these dependencies.
+
+27
+00:02:10,770 --> 00:02:17,100
+You can simply download this pom dot txt file from the resource section of this lecture.
+
+28
+00:02:17,100 --> 00:02:21,770
+Once you download it copy the whole thing control A control-C
+
+29
+00:02:22,290 --> 00:02:27,670
+go back to eclipse select from Properties all the way
+
+30
+00:02:27,750 --> 00:02:35,480
+till dependencies and paste it so we have included two dependencies here
+
+31
+00:02:35,610 --> 00:02:42,120
+the spring core and spring context that is require these two are required to do dependency injection
+
+32
+00:02:42,240 --> 00:02:43,680
+as we will see in the next few lectures.
+
+33
+00:02:43,680 --> 00:02:49,350
+We are going to use classes and interfaces from these two jar files and the version is the latest version
+
+34
+00:02:50,050 --> 00:02:55,920
+four point three point six, the five dot O is out there but four point three point six is being used in
+
+35
+00:02:55,920 --> 00:02:57,950
+most of the projects still.
+
+36
+00:02:58,350 --> 00:03:05,250
+So here I am defining a property for the version and I am using that property here so that if you want
+
+37
+00:03:05,250 --> 00:03:06,750
+to switch the version in the future.
+
+38
+00:03:06,900 --> 00:03:10,440
+The spring version would not change it everywhere in the pom dot xml
+
+39
+00:03:10,520 --> 00:03:14,790
+We can change it in one single place save it.
+
+40
+00:03:14,820 --> 00:03:20,400
+We also need to put the JUnit dependency back because we have a test here.
+
+41
+00:03:20,400 --> 00:03:25,560
+We can either delete this test right click related because we are not going to write any JUnit tests
+
+42
+00:03:27,410 --> 00:03:34,630
+will be coding everything under the SRC package or SRC main Java any time we change the pom
+
+43
+00:03:34,640 --> 00:03:35,320
+dot xml
+
+44
+00:03:35,330 --> 00:03:43,370
+You see this error here it is because you'll have to right click on the project and go to Maven do a update
+
+45
+00:03:43,370 --> 00:03:47,080
+project click OK and now.
+
+46
+00:03:47,120 --> 00:03:51,690
+Our project will be rebuilt and maven will automatically pull all the dependencies.
+
+47
+00:03:51,860 --> 00:04:00,830
+Go to maven dependencies expand it and you see spring core spring context and also all the transitive dependencies
+
+48
+00:04:00,860 --> 00:04:03,240
+that these two depend on are pulled
+
+49
+00:04:03,300 --> 00:04:08,590
+by maven.We have only defined spring core and spring context here.
+
+50
+00:04:08,690 --> 00:04:13,090
+But maven has automatically figured out what these two need in order to work.
+
+51
+00:04:13,130 --> 00:04:16,090
+And it has pulled those dependencies as well.
+
+52
+00:04:16,520 --> 00:04:20,120
+If we do not use maven then we'll have to download all these jars
+
+53
+00:04:20,910 --> 00:04:22,900
+And then copy them add them to the classpath
+
+54
+00:04:22,920 --> 00:04:25,570
+we don't have all that as till now.
+
+55
+00:04:25,860 --> 00:04:31,270
+So in this lecture you have created the spring core maven project and updated the pom dot xml
+
+56
+00:04:31,770 --> 00:04:35,100
+for a couple of things one is the dependencies, two
+
+57
+00:04:35,130 --> 00:04:36,590
+There is also a plugin here.
+
+58
+00:04:36,600 --> 00:04:43,940
+The compiler plugin we want to use one point eight version of java by default it would pick up 1.5 or
+
+59
+00:04:43,950 --> 00:04:48,600
+1.6 instead of that we are pointing it to one point eight.
+

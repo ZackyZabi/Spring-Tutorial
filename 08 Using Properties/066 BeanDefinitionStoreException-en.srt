@@ -1,0 +1,44 @@
+1
+00:00:00,150 --> 00:00:04,790
+In the previous lectures, you have learnt how to read and inject properties into our beans.
+
+2
+00:00:05,070 --> 00:00:10,440
+In this lecture, you will see what happens if we use a property that does not exist in the properties
+
+3
+00:00:10,440 --> 00:00:10,980
+file.
+
+4
+00:00:11,100 --> 00:00:15,630
+Or we can also demonstrate it by using case insensitiveness.
+
+5
+00:00:15,630 --> 00:00:17,630
+That is, go to your test,
+
+6
+00:00:17,830 --> 00:00:25,000
+or go to the configuration and let's try to read dbserver. This property does not exist.
+
+7
+00:00:25,000 --> 00:00:27,460
+Let's see what happens by running the test.
+
+8
+00:00:30,640 --> 00:00:35,240
+And the exception is, if you scroll up it says invalid
+
+9
+00:00:35,250 --> 00:00:43,210
+bean definition, could not resolve a placeholder 'dbserver' in string value dbserver.
+
+10
+00:00:43,400 --> 00:00:49,910
+So that's what Spring throws, a bean definition store exception. It could not find that particular property
+
+11
+00:00:50,310 --> 00:00:54,290
+or particular bean in the configuration or in the store.
+

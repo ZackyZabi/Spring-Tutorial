@@ -1,0 +1,92 @@
+1
+00:00:00,270 --> 00:00:06,900
+In the previous lecture, you have learnt how to use the expression language of Spring to inject an integer
+
+2
+00:00:06,900 --> 00:00:09,180
+value by evaluating a expression.
+
+3
+00:00:09,300 --> 00:00:17,160
+In this lecture, you will learn how to inject or how to invoke static methods inside the expression. To do that,
+
+4
+00:00:17,370 --> 00:00:22,530
+we can use an integer negative value here. For example -99.
+
+5
+00:00:22,620 --> 00:00:25,300
+Save it, run the test.
+
+6
+00:00:25,480 --> 00:00:28,010
+And ofcourse 99, -99 and will be injected.
+
+7
+00:00:28,020 --> 00:00:34,360
+To convert this -99 into a positive value. I always want the Id to be positive. To do that,
+
+8
+00:00:34,360 --> 00:00:43,090
+we can use the static method from Math class. java.lang.math.abs is the method.
+
+9
+00:00:43,240 --> 00:00:51,730
+But to invoke a static method inside expression, here is the syntax. We should use T. Within the brackets,
+
+10
+00:00:51,760 --> 00:00:58,240
+the name of the class dot the static method name and any parameters we want to pass.
+
+11
+00:00:58,240 --> 00:01:00,870
+So it should always start with a T.
+
+12
+00:01:01,270 --> 00:01:04,940
+Let's use it. Inside the flower brackets,
+
+13
+00:01:05,060 --> 00:01:08,750
+start with a capital T, within brackets,
+
+14
+00:01:08,750 --> 00:01:12,410
+we specify the type, the java.lang.math.
+
+15
+00:01:12,440 --> 00:01:17,500
+We need to give the complete class name dot abs.
+
+16
+00:01:17,700 --> 00:01:21,310
+Absolute is the method and close the brackets.
+
+17
+00:01:21,330 --> 00:01:27,600
+-99 is the parameter that we are passing to the static abs method for absolute
+
+18
+00:01:27,720 --> 00:01:34,910
+inside the class java.lang.math. We use the class name to invoke a static method.
+
+19
+00:01:35,040 --> 00:01:39,750
+But in case of expression language, we use an additional T. Within the brackets,
+
+20
+00:01:39,750 --> 00:01:46,220
+the name of the class will go, dot the method name and then the parameters if any.
+
+21
+00:01:46,470 --> 00:01:53,410
+Let's rerun the test and this time you will see a 99 and not -99.
+
+22
+00:01:53,540 --> 00:02:00,380
+So in this lecture, you have successfully learnt the syntax for invoking a static method inside an expression
+
+23
+00:02:00,380 --> 00:02:06,140
+starting with T, the class name within brackets, dot the method name and then the parameters.
+

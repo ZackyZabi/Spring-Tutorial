@@ -1,0 +1,124 @@
+1
+00:00:00,200 --> 00:00:06,180
+In this lecture, I will briefly introduce you to transaction management in general and how to do it using
+
+2
+00:00:06,330 --> 00:00:07,300
+Spring.
+
+3
+00:00:07,650 --> 00:00:11,910
+When we develop Java EE applications or any application for that matter,
+
+4
+00:00:12,090 --> 00:00:18,000
+they will execute multiple update statements, that is insert, update, delete against a database and there
+
+5
+00:00:18,000 --> 00:00:24,150
+could be a business scenario where we want either all of them to succeed or none of them should succeed.
+
+6
+00:00:24,150 --> 00:00:28,690
+That is where transaction management comes in to do autonomous work.
+
+7
+00:00:28,710 --> 00:00:35,910
+All the work should be done or none of it should be done. And we do it using commit and rollback.
+
+8
+00:00:35,940 --> 00:00:42,660
+A simple example is a money transfer. When we transfer money from one bank account to another, we debit it
+
+9
+00:00:42,660 --> 00:00:45,860
+from the sender and credit it to the receiver.
+
+10
+00:00:46,140 --> 00:00:49,590
+These two should happen within a single transaction.
+
+11
+00:00:49,800 --> 00:00:55,150
+If the debit happens and if something goes wrong with the credit everything should be rolled back.
+
+12
+00:00:55,200 --> 00:00:57,960
+Otherwise the sender will not be happy.
+
+13
+00:00:57,960 --> 00:01:00,140
+That is where we use transactions.
+
+14
+00:01:00,510 --> 00:01:07,470
+Spring makes it very easy to do transaction management by providing a TransactionManager for every
+
+15
+00:01:07,890 --> 00:01:12,810
+template or for JDBC it provides a TransactionManager, for hibernate
+
+16
+00:01:12,810 --> 00:01:15,740
+it provides a TransactionManager, etc;
+
+17
+00:01:16,140 --> 00:01:21,330
+So when we are using Hibernate, we'll use the HibernateTransactionManager, we'll configure this bean
+
+18
+00:01:21,420 --> 00:01:28,180
+in the XML and then we'll use the annotation support that is provided by Spring.
+
+19
+00:01:28,190 --> 00:01:34,530
+We add this single line once we get the transaction namespace to the XML configuration and Spring will
+
+20
+00:01:34,530 --> 00:01:38,940
+know that we are going to use annotations to configure transactions.
+
+21
+00:01:38,940 --> 00:01:47,760
+Once we do these two, the last step is to mark our methods, our Java methods which need transaction with the @Transactional
+
+22
+00:01:47,940 --> 00:01:48,860
+annotation.
+
+23
+00:01:48,870 --> 00:01:50,060
+Its that simple.
+
+24
+00:01:50,520 --> 00:01:57,850
+So create a bean called HibernateTransactionManager and add this annotation, for annotations support,
+
+25
+00:01:58,180 --> 00:01:59,540
+for transactions.
+
+26
+00:01:59,650 --> 00:02:07,030
+Once we have these two in our Java classes, you use the @Transactional annotation on any method that you want
+
+27
+00:02:07,090 --> 00:02:11,860
+a transaction. Spring will then wrap that method around a transaction.
+
+28
+00:02:11,860 --> 00:02:16,480
+Everything that happens in that method will happen within a single transaction.
+
+29
+00:02:16,750 --> 00:02:18,220
+And in an exception arises,
+
+30
+00:02:18,410 --> 00:02:22,250
+Spring will automatically roll back the whole thing. If no exception,
+
+31
+00:02:22,360 --> 00:02:24,310
+then everything will be committed.
+

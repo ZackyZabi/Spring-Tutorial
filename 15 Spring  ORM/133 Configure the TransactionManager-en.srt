@@ -1,0 +1,152 @@
+1
+00:00:00,150 --> 00:00:06,300
+In this lecture, you'll configure one of the last beans which is the TransactionManager. This is an interface
+
+2
+00:00:06,300 --> 00:00:10,600
+and the implementation of it is HibernateTransactionManager.
+
+3
+00:00:10,770 --> 00:00:13,940
+So go to Eclipse, to the configuration. At the end,
+
+4
+00:00:13,950 --> 00:00:22,020
+we are going to add a new bean. Start the bean tag, class is equal to HibernateTransactionManager but
+
+5
+00:00:22,020 --> 00:00:24,300
+we need the package name. Do a control+shift+t,
+
+6
+00:00:24,340 --> 00:00:32,610
+search for HibernateTransactionManager and grab the one from hibernate5 package, everything should
+
+7
+00:00:32,610 --> 00:00:33,910
+be from hibernate5.
+
+8
+00:00:33,960 --> 00:00:42,670
+Select that, copy the package name and the class name. Come back to config.xml, paste it in between
+
+9
+00:00:42,670 --> 00:00:50,380
+the double quotes, get rid of any spaces at the beginning or at the end. It should be HibernateTransactionManager
+
+10
+00:00:50,380 --> 00:01:02,630
+from hibernate5. Name is equal to transactionManager, the only dependency the transactionManager
+
+11
+00:01:02,630 --> 00:01:05,190
+has is the SessionFactory.
+
+12
+00:01:05,330 --> 00:01:14,080
+So it works around the SessionFactory, it creates a transaction around a hibernate session. So inject it, p colon
+
+13
+00:01:14,080 --> 00:01:17,380
+sessionFactory, f capital, is a property name, hyphen ref.
+
+14
+00:01:17,410 --> 00:01:18,560
+It is of object type.
+
+15
+00:01:18,560 --> 00:01:24,610
+Within double quotes, grab the name from here, paste it, close the bean tag.
+
+16
+00:01:24,640 --> 00:01:30,840
+Do a control+shift+f to format. We have successfully configured the transactionManager. Spring will create this.
+
+17
+00:01:31,120 --> 00:01:35,460
+But to use the transactionManager to create a transaction,
+
+18
+00:01:35,710 --> 00:01:37,990
+we need to add a few more elements here.
+
+19
+00:01:38,140 --> 00:01:40,180
+You need to introduce a new namespace.
+
+20
+00:01:40,180 --> 00:01:44,140
+So copy this c-schema namespace.
+
+21
+00:01:44,370 --> 00:01:49,270
+Enter, paste it. Change this c to tx for transaction.
+
+22
+00:01:49,270 --> 00:01:56,700
+We are adding a new namespace for transaction, tx. And at the end,
+
+23
+00:01:56,790 --> 00:01:59,400
+we also need to add the schema for that namespace.
+
+24
+00:01:59,490 --> 00:02:09,280
+So copy the last two entries, the context, enter, paste them. Change context to tx. For this namespace
+
+25
+00:02:09,520 --> 00:02:11,470
+which we have defined here,
+
+26
+00:02:11,980 --> 00:02:17,320
+the schema file can be found at the following locations. So change, wherever you see context change it to
+
+27
+00:02:17,360 --> 00:02:23,570
+tx. Schema slash, not context, tx.
+
+28
+00:02:23,580 --> 00:02:24,700
+That's it.
+
+29
+00:02:24,730 --> 00:02:28,730
+So you have successfully configured the transactionManager and also got the namespaces .
+
+30
+00:02:29,810 --> 00:02:33,560
+We can use transactions in our application,
+
+31
+00:02:33,570 --> 00:02:40,910
+Spring transactions either through XML or annotations. To use the XML or annotated way
+
+32
+00:02:40,910 --> 00:02:41,800
+of doing it,
+
+33
+00:02:41,810 --> 00:02:50,450
+you should use tx:annotation-driven. That's it. That tells Spring that we are going to use annotations to
+
+34
+00:02:50,450 --> 00:02:52,130
+do transactions.
+
+35
+00:02:52,400 --> 00:02:54,400
+You will use the transactions later on.
+
+36
+00:02:54,440 --> 00:02:57,090
+You'll use the annotations in the next few lectures.
+
+37
+00:02:57,170 --> 00:03:02,870
+To summarize, you've configured the transactionManager, added the namespaces so that we can enable
+
+38
+00:03:02,870 --> 00:03:08,400
+transaction management and also youve given a schema file for it.
+

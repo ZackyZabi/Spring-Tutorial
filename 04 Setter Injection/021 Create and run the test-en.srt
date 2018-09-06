@@ -1,0 +1,136 @@
+1
+00:00:00,300 --> 00:00:06,480
+The last step is to create a test class and see the spring container as well as dependency injection
+
+2
+00:00:06,540 --> 00:00:07,530
+in action.
+
+3
+00:00:07,710 --> 00:00:16,520
+Go to eclipse right click on the package new class call it test with a main method finish.
+
+4
+00:00:19,640 --> 00:00:24,610
+delete that to do. The very first statement is to create a spring container.
+
+5
+00:00:24,710 --> 00:00:27,740
+We are going to use the classpath,
+
+6
+00:00:28,250 --> 00:00:32,280
+hit controlspace xml application context.
+
+7
+00:00:32,340 --> 00:00:40,850
+This is going to search for xml configuration file on the classpath call it ctx is equal to GNU
+
+8
+00:00:42,590 --> 00:00:45,750
+classpath application context there are overloaded constructor.
+
+9
+00:00:45,770 --> 00:00:53,870
+There is one that takes a configuration file name or configuration file name is config dot xml
+
+10
+00:00:54,350 --> 00:00:57,080
+So give that file name config dot xml
+
+11
+00:00:58,310 --> 00:01:03,780
+And that file is on the classpath because it is under the SRC main Java.
+
+12
+00:01:04,220 --> 00:01:10,040
+If you put it inside a package then you need to give the complete qualified package name with forward
+
+13
+00:01:10,050 --> 00:01:12,030
+slashes instead of dots.
+
+14
+00:01:12,050 --> 00:01:18,770
+you need to give forward slashes because that is how the folders will be created for these packages.
+
+15
+00:01:19,100 --> 00:01:23,470
+But since it is directly under project or directly under source folder,
+
+16
+00:01:23,570 --> 00:01:30,080
+I'm using the config dot xml directly, once we have the spring container to get the bean
+
+17
+00:01:30,080 --> 00:01:33,270
+we do CTX dot get bean.
+
+18
+00:01:33,310 --> 00:01:38,570
+That's the method which takes a bean name.
+
+19
+00:01:38,760 --> 00:01:42,680
+or bean name in the config dot xml use EMP.
+
+20
+00:01:42,700 --> 00:01:50,560
+So we need to use the exact name it is case sensitive and assign it hit control one at the start of the
+
+21
+00:01:50,560 --> 00:01:53,030
+line assign statement to a new local variable.
+
+22
+00:01:53,110 --> 00:01:56,670
+Call it EMP by default it returns an object.
+
+23
+00:01:56,830 --> 00:02:04,510
+We need to change it to employee hit control one add cast to employee.
+
+24
+00:02:04,520 --> 00:02:06,410
+We do know that it is Employee object.
+
+25
+00:02:06,410 --> 00:02:09,810
+So we are typecasting it do a sisout
+
+26
+00:02:10,020 --> 00:02:13,380
+EMP dot get the id
+
+27
+00:02:14,700 --> 00:02:24,270
+within double coats plus employee id colon space do another sisout
+
+28
+00:02:24,730 --> 00:02:37,730
+within another sisout double coats employee name colon space plus EMP dot get name so we are getting the bean using
+
+29
+00:02:37,960 --> 00:02:39,560
+the spring.
+
+30
+00:02:39,770 --> 00:02:47,810
+And then we are checking if the properties are being injected by spring into that bean lets run this
+
+31
+00:02:47,810 --> 00:02:54,170
+test right click run as java application and that will kick off the spring container.
+
+32
+00:02:54,170 --> 00:02:59,970
+It creates an instance of the bean that is specified in the configuration file.
+
+33
+00:03:00,020 --> 00:03:07,340
+It injects these two properties as values into that bean and we are able to access them and display the
+
+34
+00:03:07,340 --> 00:03:11,100
+values which are 20 and bharath.
+

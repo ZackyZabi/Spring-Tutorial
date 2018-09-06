@@ -1,0 +1,56 @@
+1
+00:00:00,280 --> 00:00:03,420
+In this lecture I will summarize what you have learned from the spring.
+
+2
+00:00:03,420 --> 00:00:10,560
+Julie B.C section the spring JEDEC takes care of all the repetitive chord that we typically write when
+
+3
+00:00:10,560 --> 00:00:15,000
+we directly use the jelly B.C API in our applications.
+
+4
+00:00:15,000 --> 00:00:20,830
+It also takes care of the checked exceptions that we need to handle when we use the daily API.
+
+5
+00:00:22,490 --> 00:00:27,970
+We simply use their daily B.S. template by defining it in the spring configuration.
+
+6
+00:00:28,220 --> 00:00:34,610
+And it depends on the data source which takes care of the connection creation the data source requires
+
+7
+00:00:34,700 --> 00:00:41,650
+a driver class name in order to connect to the data source a user name for the data source or the database.
+
+8
+00:00:41,690 --> 00:00:47,710
+And finally the password to connect to the database so the data source object is created by the spring
+
+9
+00:00:47,750 --> 00:00:51,430
+and then it inject it into the database template.
+
+10
+00:00:51,650 --> 00:00:58,460
+Once we have a template in our application process we can perform the DML operations that is insert
+
+11
+00:00:58,490 --> 00:01:05,250
+update delete using the update method on the very busy template and pass it as well.
+
+12
+00:01:05,570 --> 00:01:11,630
+And we can perform the Select queries if we are cutting for one single row one single object we can
+
+13
+00:01:11,630 --> 00:01:13,270
+use the query for object.
+
+14
+00:01:13,430 --> 00:01:18,920
+And if we are retrieving multiple rows from the database we use the query method.
+

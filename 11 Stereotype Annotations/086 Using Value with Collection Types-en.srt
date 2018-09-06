@@ -1,0 +1,124 @@
+1
+00:00:00,240 --> 00:00:05,790
+In this lecture, you will learn how to inject a collection type using the @Value annotation.
+
+2
+00:00:05,970 --> 00:00:10,340
+You will do it in two simple steps. We are going to add a list to this instructor pojo.
+
+3
+00:00:10,680 --> 00:00:17,460
+And two steps are, first you will create an object or create the collection in the XML configuration
+
+4
+00:00:17,490 --> 00:00:19,360
+using the util schema.
+
+5
+00:00:19,800 --> 00:00:24,130
+And then you'll use the @Value annotation on the list in the pojo
+
+6
+00:00:24,160 --> 00:00:32,130
+with the spring expression language to inject it. Let's get  started. Go to instructor, and this
+
+7
+00:00:32,130 --> 00:00:40,680
+instructor will have a private list of strings which will tell what all topics he is going to teach or
+
+8
+00:00:40,680 --> 00:00:50,290
+he teaches. Control+1, import list from Java util. The first step is going to the configuration file.
+
+9
+00:00:50,310 --> 00:00:54,910
+Use the util:list. For using this,
+
+10
+00:00:54,910 --> 00:00:57,170
+you need to have the util schema here
+
+11
+00:00:57,210 --> 00:01:03,870
+and the namespace defined. You know how to do that from previous lectures on util schema or standalone collections.
+
+12
+00:01:05,070 --> 00:01:14,810
+On the util:list the very first attribute is list-class, the class that we want to use.
+
+13
+00:01:15,120 --> 00:01:20,810
+Let's say java.util.LinkedList.
+
+14
+00:01:21,000 --> 00:01:30,960
+Second is the id, the important piece. Call it topics. And within the list we can use the value element
+
+15
+00:01:32,040 --> 00:01:35,080
+and provide the values.
+
+16
+00:01:35,110 --> 00:01:38,890
+These are the topics that I teach on Udemy. There are several others,
+
+17
+00:01:38,950 --> 00:01:46,460
+but these are some of them. Java web services, Core Java.
+
+18
+00:01:46,470 --> 00:01:49,730
+Let's add one more value,
+
+19
+00:01:50,840 --> 00:02:01,170
+XSLT. Save it. Go back to the instructor. The second step is to use the @Value annotation. Within brackets
+
+20
+00:02:01,180 --> 00:02:08,170
+this time we're going to use the spring expression language and the syntax. Within brackets, within double
+
+21
+00:02:08,290 --> 00:02:15,970
+quotes, use the pound symbol or the hash. Start flower brackets or braces within which you'll provide
+
+22
+00:02:15,970 --> 00:02:26,050
+the name of that collection bean in the config, which is topics, the id, the reference, the object reference. Save it.
+
+23
+00:02:27,130 --> 00:02:34,550
+Delete the toString method, regenerate it so that it will also use the collection in the toString. Go to source, generate
+
+24
+00:02:35,360 --> 00:02:36,510
+toString.
+
+25
+00:02:36,560 --> 00:02:37,350
+Hit OK.
+
+26
+00:02:37,580 --> 00:02:40,580
+It will also display the list this time.
+
+27
+00:02:40,580 --> 00:02:41,550
+Go to the test.
+
+28
+00:02:41,690 --> 00:02:46,890
+Right click, run as java application and in the output,
+
+29
+00:02:46,890 --> 00:02:51,090
+this time you are going to see the injected list as well.
+
+30
+00:02:52,690 --> 00:02:58,750
+So you have successfully injected a collection type as well as primitive types. In the next lecture,
+
+31
+00:02:58,770 --> 00:03:03,960
+you will learn how to inject the object type using the autowired annotation.
+

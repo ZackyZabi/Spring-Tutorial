@@ -1,0 +1,212 @@
+1
+00:00:00,510 --> 00:00:06,540
+You have successfully created the user and also displayed the list of users on the UI in this lecture
+
+2
+00:00:06,540 --> 00:00:12,400
+you are going to sort the users that we are displaying on the UI the list we are returning from the
+
+3
+00:00:12,400 --> 00:00:15,300
+user so is Imbolc can be sought.
+
+4
+00:00:16,260 --> 00:00:22,550
+But how do implement the compatible interface on our model so that it can be used for sorting.
+
+5
+00:00:22,560 --> 00:00:31,350
+So go to the user dot Java and implements compatible if you remember from core Java compatible is an
+
+6
+00:00:31,350 --> 00:00:36,240
+interface that should be implemented and the gender type in this case is use that we want to compare
+
+7
+00:00:36,270 --> 00:00:43,560
+to use that objects and sort them had control one had and implemented amateur's change this idea to
+
+8
+00:00:43,650 --> 00:00:51,020
+in Bija so that our life will be a lot more easier in Bija you can change it here.
+
+9
+00:00:51,020 --> 00:00:53,070
+Its ok to really do the art of boxing Pharez.
+
+10
+00:00:53,180 --> 00:00:57,000
+But when we implement the Compared to matter it would be a lot easier.
+
+11
+00:00:58,640 --> 00:01:02,290
+Change this parameter name to user return.
+
+12
+00:01:02,530 --> 00:01:06,810
+We can say this Daut I want this sorted by ID.
+
+13
+00:01:06,850 --> 00:01:14,740
+So this dot dot com I can use the compare to method which is available on the wrapper type 2 user dot
+
+14
+00:01:14,830 --> 00:01:15,440
+ID.
+
+15
+00:01:15,610 --> 00:01:19,390
+So I am combating and retaining the IDs.
+
+16
+00:01:19,390 --> 00:01:28,000
+You can also sorted by name and email but for now sort it by the ID start the server have stopped myself.
+
+17
+00:01:28,000 --> 00:01:32,210
+So lets start it if its up and running for you can restart it.
+
+18
+00:01:34,890 --> 00:01:41,820
+And if you go to the controller I want to add a few more cards in the database right now I only have
+
+19
+00:01:42,150 --> 00:01:43,680
+one card in my database.
+
+20
+00:01:43,680 --> 00:01:46,930
+Lets add a few more so that we can see sorting and action.
+
+21
+00:01:47,250 --> 00:01:57,470
+So registration page is that you are and we should be using right click on eyes on server finish that
+
+22
+00:01:57,470 --> 00:01:58,520
+we launched here.
+
+23
+00:01:58,520 --> 00:02:05,840
+So paste that you are our copy this you or I'll go to Chrome which is much better than the eclipse default
+
+24
+00:02:05,840 --> 00:02:06,530
+browser.
+
+25
+00:02:08,080 --> 00:02:09,680
+Paste that link.
+
+26
+00:02:12,460 --> 00:02:14,380
+Grab that link from Eclipse come back.
+
+27
+00:02:14,380 --> 00:02:20,530
+Paste it right at the beginning and it should be a registration page at the end and that will take us
+
+28
+00:02:20,530 --> 00:02:23,500
+to the form which we can submit and create.
+
+29
+00:02:23,500 --> 00:02:30,430
+Couple more users IDs one name is John John at gmail dot com.
+
+30
+00:02:30,430 --> 00:02:34,870
+His email addy Jaun at gmail dot com.
+
+31
+00:02:34,880 --> 00:02:45,920
+Submit and it creates a user with ID one cleared one more to Bob is the name Bob at gmail dot com submit.
+
+32
+00:02:46,120 --> 00:02:48,790
+Now we have three the cards in the database.
+
+33
+00:02:48,910 --> 00:02:52,060
+Select and we have three cards.
+
+34
+00:02:52,210 --> 00:02:57,400
+Let's see how they would come back with a UI and sort of register page.
+
+35
+00:02:57,410 --> 00:02:58,000
+It should be.
+
+36
+00:02:58,000 --> 00:03:04,070
+Get users you Capital get users will feature the users and displayed in a table if you see they are
+
+37
+00:03:04,070 --> 00:03:11,780
+not sorted by AB 789 comes first then one and then to go back to the Soviet mentor or the Soviets this
+
+38
+00:03:11,780 --> 00:03:13,850
+class which is US-Soviet simple.
+
+39
+00:03:14,000 --> 00:03:23,120
+And then the get users do their collections Daut sort Corrections is a little class that can start a
+
+40
+00:03:23,120 --> 00:03:24,420
+lot of collections.
+
+41
+00:03:27,900 --> 00:03:32,580
+And this collection starts sort of wide type.
+
+42
+00:03:32,750 --> 00:03:39,160
+So saying this variable hit condoled one beyond our find users should be assigned to a variable then
+
+43
+00:03:39,160 --> 00:03:40,310
+we should start them.
+
+44
+00:03:40,370 --> 00:03:45,960
+I'm going to stop my server squad it up so that you can see it clearly.
+
+45
+00:03:47,390 --> 00:03:58,210
+The word art find users assign it by hitting control one local variable call it users get rid of this
+
+46
+00:03:58,210 --> 00:04:05,040
+sort of dump collection starts sort users and then return users.
+
+47
+00:04:07,720 --> 00:04:08,940
+Now stop the server
+
+48
+00:04:13,960 --> 00:04:15,240
+and 1:06 back up or.
+
+49
+00:04:15,280 --> 00:04:19,080
+Go back to the web browser refresh this page which is get users
+
+50
+00:04:21,940 --> 00:04:23,760
+and this time and it fit just that a card.
+
+51
+00:04:23,820 --> 00:04:25,380
+It should sort them by.
+
+52
+00:04:25,490 --> 00:04:32,520
+I'd say how successfully implemented that compatible interface on our model of class and you how Sautter
+
+53
+00:04:32,520 --> 00:04:34,530
+that ecards based on their IDE.
+

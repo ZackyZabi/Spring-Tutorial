@@ -1,0 +1,80 @@
+1
+00:00:00,860 --> 00:00:06,530
+In this lecture, you will install Java 8 on your machine, to do that
+
+2
+00:00:06,540 --> 00:00:12,480
+You can download this development tool setup dot txt file from the content of this lecture on udemy
+
+3
+00:00:13,110 --> 00:00:17,300
+or you can simply google for the appropriate software.
+
+4
+00:00:17,340 --> 00:00:21,120
+So the first link here is for Java 8.
+
+5
+00:00:21,180 --> 00:00:22,980
+You can also get there using Google.
+
+6
+00:00:22,980 --> 00:00:24,750
+Copy that link.
+
+7
+00:00:24,750 --> 00:00:31,660
+Launch the web browser paste the link that will take us to the java 8 downloads page
+
+8
+00:00:31,760 --> 00:00:33,070
+scroll it down.
+
+9
+00:00:33,420 --> 00:00:36,330
+And here we have the Java SE development kit,
+
+10
+00:00:36,330 --> 00:00:42,930
+that is what we want we don't need their demos and sample downloads accept the license agreement and
+
+11
+00:00:42,930 --> 00:00:44,670
+for different operating systems.
+
+12
+00:00:44,730 --> 00:00:46,740
+We have the appropiate JDK.
+
+13
+00:00:47,040 --> 00:00:51,300
+So depending on the operating system you are working on if you are in Windows you will click on this
+
+14
+00:00:51,300 --> 00:00:57,250
+here for 64 bit and 32 bit and then for Mac you will click on the DMG and for Linux you will download
+
+15
+00:00:57,260 --> 00:01:03,510
+the tar.gz. Once you have the exe downloaded on windows double click on it and just follow
+
+16
+00:01:03,510 --> 00:01:07,910
+the prompts choose an appropriate folder on you c-drive or D-drive,
+
+17
+00:01:08,190 --> 00:01:15,900
+but do remember which folder you were installing Java as we needed later to configure the JDK in Eclipse
+
+18
+00:01:16,390 --> 00:01:17,220
+for Mac.
+
+19
+00:01:17,220 --> 00:01:22,210
+It's pretty simple you double click on the DMG once you downloaded it and you will push it into
+
+20
+00:01:22,210 --> 00:01:23,780
+your applications.
+

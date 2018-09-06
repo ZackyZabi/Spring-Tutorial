@@ -1,0 +1,200 @@
+1
+00:00:00,190 --> 00:00:06,420
+In this lecture you are going to learn how to create set instance and inject it into a class using
+
+2
+00:00:06,420 --> 00:00:12,720
+spring. you will create a car dealer class which will have a string name the name of the dealer and the
+
+3
+00:00:12,720 --> 00:00:16,480
+list of models that car dealer sells.
+
+4
+00:00:16,550 --> 00:00:21,310
+Again you are going to do it in three simple steps create the car dealer POJO or the Spring bean in
+
+5
+00:00:21,350 --> 00:00:24,300
+the configuration file and then the test class.
+
+6
+00:00:24,350 --> 00:00:29,000
+Now that you have done a couple of times it's going to be pretty easy and I'm sure you can wrap it up
+
+7
+00:00:29,030 --> 00:00:30,330
+in a single shot.
+
+8
+00:00:30,350 --> 00:00:32,580
+So let's go to eclipse.
+
+9
+00:00:32,840 --> 00:00:36,370
+Start by creating a new class the POJO class.
+
+10
+00:00:36,380 --> 00:00:38,240
+That's the first step.
+
+11
+00:00:38,540 --> 00:00:46,410
+Car dealer is the class name com dot bharath dot.
+
+12
+00:00:46,670 --> 00:00:50,980
+Dot instead of list change to set finish.
+
+13
+00:00:52,340 --> 00:01:03,630
+This class will have two properties private string name private set of strings the models of the card
+
+14
+00:01:03,650 --> 00:01:08,010
+or the makes of the vehicle control one import it.
+
+15
+00:01:08,170 --> 00:01:12,250
+Once you have it imported control one again create getters and setters
+
+16
+00:01:12,300 --> 00:01:16,170
+hit OK control one create getters and setters.
+
+17
+00:01:16,270 --> 00:01:18,560
+OK again do a control shift  F
+
+18
+00:01:18,950 --> 00:01:21,400
+to format.
+
+19
+00:01:21,490 --> 00:01:26,230
+So we are done with the first step which is the creation of the POJO the next step is to create the
+
+20
+00:01:26,230 --> 00:01:34,490
+configuration file copy over the configuration file from list paste it inside the set.
+
+21
+00:01:34,490 --> 00:01:47,740
+Open it right click rename it to set config everything that applies to a list applies to list to set.
+
+22
+00:01:47,740 --> 00:01:56,470
+So it's very easy to use instead of list change it to a set thats it the list allows duplicates whereas
+
+23
+00:01:56,570 --> 00:01:59,790
+a set does not allow duplicate.
+
+24
+00:01:59,800 --> 00:02:04,130
+So here instead of hospital it's going to be car dealer.
+
+25
+00:02:04,180 --> 00:02:15,010
+That's the object change the package name from list to set and the class name is car dealer the name
+
+26
+00:02:15,010 --> 00:02:16,340
+of it.
+
+27
+00:02:16,370 --> 00:02:18,390
+You're welcome to use whatever you want.
+
+28
+00:02:18,400 --> 00:02:23,610
+I'm going to use Hyderabad that's my hometown Hyderabad dealer.
+
+29
+00:02:23,980 --> 00:02:26,770
+You are welcome to use your home town or your favorite dealer.
+
+30
+00:02:27,710 --> 00:02:32,570
+And the different types of vehicles if you go back to the class the second property is the models of
+
+31
+00:02:32,570 --> 00:02:32,990
+the cars.
+
+32
+00:02:32,990 --> 00:02:44,600
+You can also have it as makers or companies or branch models Honda BMW
+
+33
+00:02:44,740 --> 00:02:50,370
+your welcome to add your favorite cars here Hyundai three models.
+
+34
+00:02:50,850 --> 00:02:51,370
+And that's it.
+
+35
+00:02:51,370 --> 00:02:54,770
+We have also come up with the configuration file for our car dealer.
+
+36
+00:02:54,770 --> 00:03:05,140
+the last step is the test copy the test paste it open it instead of hospital the bean that will
+
+37
+00:03:05,140 --> 00:03:16,460
+come out is the car dealer and also the structure here will change from list to set car dealer.
+
+38
+00:03:16,920 --> 00:03:20,490
+And the name of the bean is car dealer as well.
+
+39
+00:03:20,490 --> 00:03:29,630
+Change all that and from hospital Let's rename this get rid of this sys outs change this to car dealer
+
+40
+00:03:29,790 --> 00:03:30,630
+as well.
+
+41
+00:03:32,300 --> 00:03:42,030
+Sys out car dealer dot get name and sys out
+
+42
+00:03:44,960 --> 00:03:54,320
+the space car dealer dot get models a control shift f to format.
+
+43
+00:03:54,660 --> 00:04:01,540
+Right like run as Java application and we have an error here.
+
+44
+00:04:01,580 --> 00:04:03,010
+Let's see what's wrong.
+
+45
+00:04:05,750 --> 00:04:11,070
+Cannot be opened because it does not exist list config is not the file we should change the file name
+
+46
+00:04:11,090 --> 00:04:20,010
+to set config so the exception was it could not find the file that we have specified on that classpath
+
+47
+00:04:20,140 --> 00:04:22,260
+So it happens if you give it the wrong name.
+
+48
+00:04:22,430 --> 00:04:27,870
+So instead of set config have given it as list config, it doesn't exist under the package called
+
+49
+00:04:27,900 --> 00:04:31,380
+Set a folder called set rerun the test again
+
+50
+00:04:32,350 --> 00:04:38,590
+and the output is Hyderabad dealer and it lists out the three values that we have added to the set.
+

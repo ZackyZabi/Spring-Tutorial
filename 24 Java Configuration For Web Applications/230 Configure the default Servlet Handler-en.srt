@@ -1,0 +1,96 @@
+1
+00:00:00,370 --> 00:00:05,800
+In this lecture, you'll configure one last thing in the Spring configuration which is the default
+
+2
+00:00:05,820 --> 00:00:11,560
+Servlet handler. Although it's not required in this particular usecase you should know about it.
+
+3
+00:00:11,610 --> 00:00:16,000
+I'm going to explain each of these again at the end of all the lectures.
+
+4
+00:00:16,320 --> 00:00:19,770
+First, Configure it and I'll explain what it is.
+
+5
+00:00:19,880 --> 00:00:26,850
+Type in configure, hit control+space and we have several methods which you can override from the
+
+6
+00:00:26,940 --> 00:00:29,200
+WebMvcConfigurerAdapter.
+
+7
+00:00:30,470 --> 00:00:38,530
+Select ConfigureDefaultServletHandling. That's the method we want to override.
+
+8
+00:00:38,530 --> 00:00:47,940
+It gets a DefaultServletHandlerConfigurer as a parameter. Delete these two lines here and simply use
+
+9
+00:00:47,940 --> 00:00:57,390
+the configurer.enable. You are overriding this method to tell spring that the default handler
+
+10
+00:00:57,600 --> 00:01:03,660
+in the web container whereever our application is being deployed, in this case Tomcat, should handle all the other
+
+11
+00:01:03,660 --> 00:01:05,070
+requests.
+
+12
+00:01:05,070 --> 00:01:11,190
+That is, once we configure the dispatcher-servlet, the dispatcher-servlet is going to handle certain kind
+
+13
+00:01:11,190 --> 00:01:16,710
+of requests. Do a forward slash because we are going to map. If we open the web.xml right now
+
+14
+00:01:18,220 --> 00:01:21,730
+a dispatcher servlet is configured for forward slash.
+
+15
+00:01:22,020 --> 00:01:25,400
+It can serve everything that is there in our application.
+
+16
+00:01:25,710 --> 00:01:31,710
+But if there are any HTMLs that we want the web container to handle, the dispatcher need not
+
+17
+00:01:31,710 --> 00:01:34,500
+handle the HTMLs or any static content.
+
+18
+00:01:34,500 --> 00:01:37,320
+So that is where this comes very handy.
+
+19
+00:01:37,310 --> 00:01:44,400
+We are telling spring that it should delegate the responsibility to the default servlet handler that
+
+20
+00:01:44,400 --> 00:01:48,450
+comes with our container, which in this case is Apache Tomcat.
+
+21
+00:01:48,540 --> 00:01:55,070
+So we are done configuring the Spring configuration and we can delete the dispatcher-servlet
+
+22
+00:01:55,170 --> 00:01:59,820
+at this point. Right click, do a Delete.
+
+23
+00:02:00,600 --> 00:02:03,920
+And we got rid of one xml, we have one more left.
+
+24
+00:02:03,930 --> 00:02:06,530
+We'll get rid of that one in the next few lectures.
+

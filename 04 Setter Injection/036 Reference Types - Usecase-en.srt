@@ -1,0 +1,91 @@
+0
+00:00.210 --> 00:06.770
+The use case that you'll be working on to inject reference types is student and his test scores will
+
+1
+00:06.780 --> 00:14.100
+create a student class which in turn depends or uses a class called scores which will have all the students
+
+2
+00:14.100 --> 00:18.050
+scores in math physics and chemistry.
+
+3
+00:18.150 --> 00:26.090
+So let's do the first step go to eclipse you know what the first step is new class
+
+4
+00:26.730 --> 00:33.770
+in this case we are going to create two pojos or two spring beans the student and the scores start with
+
+5
+00:33.780 --> 00:45.000
+student package com dot bharath dot spring  core dot ref types REF types finish and this student
+
+6
+00:45.780 --> 00:49.260
+needs a class called scores private scores
+
+7
+00:49.260 --> 00:53.580
+this class doesn't even exist scores
+
+8
+00:56.190 --> 01:01.090
+hit control one create class called scores finish
+
+9
+01:04.010 --> 01:05.630
+scores will have three fields.
+
+10
+01:05.630 --> 01:19.360
+private double maths private double physics and finally  private Double chemistry the scores in chemistry
+
+11
+01:22.650 --> 01:23.810
+select
+
+12
+01:23.960 --> 01:26.400
+right click go to source
+
+13
+01:26.480 --> 01:30.230
+It is also a shortcut for it generate getters and setters.
+
+14
+01:30.380 --> 01:32.940
+Select all hit OK.
+
+15
+01:33.110 --> 01:37.400
+do a control shift F to format if you want to move these up.
+
+16
+01:37.460 --> 01:43.700
+You can hold the alt key select them hold the alt key press the up arrow so that the fields will be
+
+17
+01:43.700 --> 01:50.490
+moved to the top control shift F to format go back to student.
+
+18
+01:50.540 --> 01:51.110
+Save it.
+
+19
+01:51.110 --> 01:55.140
+Hit control 1 we need to generate the getters and setters for the scores as well.
+
+20
+01:55.170 --> 01:58.350
+So create get a sense that is it OK.
+
+21
+01:58.800 --> 02:06.280
+And we have successfully created both the beans and in  the next lecture will do the spring configuration
+
+22
+02:06.390 --> 02:08.070
+and also write the test class.

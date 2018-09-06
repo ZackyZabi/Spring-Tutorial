@@ -1,0 +1,60 @@
+1
+00:00:00,220 --> 00:00:07,560
+In this lecture, you'll create a database table which you will be using throughout the Spring ORM usecase. To
+
+2
+00:00:07,560 --> 00:00:13,950
+do that, download the springorm.txt file from the resources section of this lecture.
+
+3
+00:00:13,950 --> 00:00:21,360
+Open it in your favourite text editor once downloaded. Do a Control+a, copy it, Control+c, go to MySQL workbench.
+
+4
+00:00:21,420 --> 00:00:28,170
+Open a File -> New Query Tab, paste the contents there.
+
+5
+00:00:28,470 --> 00:00:32,710
+The very first line is to switch the database or go to a particular database.
+
+6
+00:00:32,850 --> 00:00:38,940
+Use mydb, mydb is my database. In your case if you have a different name please switch it to that and
+
+7
+00:00:38,940 --> 00:00:44,240
+then use this command. Execute it. That will change the database to mydb.
+
+8
+00:00:44,280 --> 00:00:47,370
+The second command creates the product table.
+
+9
+00:00:47,790 --> 00:00:52,400
+There are four fields, id is an integer, name is varchar(20),
+
+10
+00:00:52,480 --> 00:01:00,540
+description of the product varchar(100), price is a decimal. Here 8 is the total number of digits that
+
+11
+00:01:00,540 --> 00:01:08,300
+can be stored in price and 3 is the number of digits that can go after the decimal point. Select
+
+12
+00:01:08,310 --> 00:01:10,250
+that, execute.
+
+13
+00:01:10,320 --> 00:01:12,230
+That creates the product table.
+
+14
+00:01:12,350 --> 00:01:15,340
+Execute the select statement or query.
+
+15
+00:01:15,360 --> 00:01:20,860
+Right now there are no columns or there is no data in the product table.
+

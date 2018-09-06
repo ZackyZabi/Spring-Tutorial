@@ -1,0 +1,95 @@
+0
+00:00.300 --> 00:05.640
+Everything that we do with xml based configuration can also be done with java configuration.
+
+1
+00:05.700 --> 00:11.190
+In this lecture you will learn how to configure the lifecycle callback methods for a spring bean using
+
+2
+00:11.430 --> 00:13.610
+Java configuration. To do that,
+
+3
+00:13.610 --> 00:22.150
+Go to the service dot Java and the life cycle methods which are in it and destroy public void init
+
+4
+00:22.390 --> 00:27.430
+Sys out within double coats init brackets.
+
+5
+00:27.450 --> 00:33.480
+Open and Close save it copy it paste it call it destroy.
+
+6
+00:33.660 --> 00:36.540
+You can call it Clean-Up if you want to or whatever.
+
+7
+00:36.670 --> 00:42.990
+We have the init and destroy methods now go to the spring conference which is the configuration where
+
+8
+00:42.990 --> 00:48.030
+we define the service instance on the bean annotation.
+
+9
+00:48.030 --> 00:50.480
+We have several attributes that can be used.
+
+10
+00:50.730 --> 00:51.820
+Open and close the bracket.
+
+11
+00:51.810 --> 00:54.210
+Hit control space.
+
+12
+00:54.210 --> 01:02.070
+There are init method destroy method and more select init method is equal to within double chords
+
+13
+01:02.120 --> 01:06.320
+specified the name of the init method which is init  comma.
+
+14
+01:06.870 --> 01:10.290
+destroy method is equal to destroy.
+
+15
+01:10.420 --> 01:12.890
+So the method names themselves could be anything.
+
+16
+01:12.940 --> 01:19.640
+Here we are using init and destroy because that is what we have on the service method.
+
+17
+01:20.020 --> 01:31.220
+He change this test to destroy the test rerun it right click run as java application and you
+
+18
+01:31.230 --> 01:38.280
+will see only init being called and then of course the created message that comes from Dao or save.
+
+19
+01:38.370 --> 01:44.520
+But the Destroy is not getting called that is because our program is being terminated and we haven't
+
+20
+01:44.520 --> 01:52.500
+closed the context properly so context dot close that will cause the spring container to shut down
+
+21
+01:52.500 --> 01:57.350
+properly and that should invoke the destroy method rerun the test one more time.
+
+22
+01:58.870 --> 02:05.740
+And this time you see in it Created and then when the spring container is shutting down it calls
+
+23
+02:05.780 --> 02:08.770
+the destroy method on our object as well.

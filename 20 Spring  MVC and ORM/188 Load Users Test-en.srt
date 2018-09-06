@@ -1,0 +1,100 @@
+1
+00:00:00,270 --> 00:00:02,870
+This lecture will test the display users call.
+
+2
+00:00:02,880 --> 00:00:09,380
+We have just written by accessing the controller from the web browser to do that right click or otherwise
+
+3
+00:00:09,570 --> 00:00:13,110
+run on server finish.
+
+4
+00:00:13,180 --> 00:00:21,760
+Once that allocation starts then grabbed the or to crawl onto our favorite browser.
+
+5
+00:00:23,600 --> 00:00:33,930
+Paste the warm spring autumn slash display get users get users is what we are used you capital in the
+
+6
+00:00:33,930 --> 00:00:43,760
+controller that that will go to the controller all the way to services down there and it loads our user
+
+7
+00:00:43,760 --> 00:00:48,880
+data to see the ID the name and that email id.
+
+8
+00:00:49,220 --> 00:00:50,720
+Let's do a better formatting.
+
+9
+00:00:50,720 --> 00:00:53,150
+Go back to the days page.
+
+10
+00:00:53,220 --> 00:01:02,770
+We'll put it inside of his DML table outside the for loop create the table rabbit.
+
+11
+00:01:02,890 --> 00:01:11,890
+We landed after the each each right here for each object in the list are for each row in the database
+
+12
+00:01:11,900 --> 00:01:14,360
+we need to create the table row.
+
+13
+00:01:14,630 --> 00:01:24,150
+Let's create the table row and heading outside here outside the for loop ph for table Hading knows the
+
+14
+00:01:24,380 --> 00:01:27,210
+hitch IB is the first field.
+
+15
+00:01:27,260 --> 00:01:27,830
+Copy that.
+
+16
+00:01:27,830 --> 00:01:33,250
+And our people are hurting bestit couple of times.
+
+17
+00:01:33,350 --> 00:01:35,400
+Second is name.
+
+18
+00:01:35,560 --> 00:01:47,370
+Third is e-mail Similarly for each of these here we'll have it Tia closed that table row at that and
+
+19
+00:01:47,980 --> 00:02:00,700
+B are last year and for each of these fields are they the BE table data and close table data right there.
+
+20
+00:02:01,490 --> 00:02:05,710
+Similarly for the other two table data open table data.
+
+21
+00:02:05,780 --> 00:02:06,350
+Close it
+
+22
+00:02:09,720 --> 00:02:13,220
+close the table data control shift to format.
+
+23
+00:02:13,380 --> 00:02:22,470
+So we have successfully included a hasty table to add a border if we want to border is equal to 1 save
+
+24
+00:02:22,470 --> 00:02:29,600
+it go back to the web browser load it again refresh the browser and you see it in a hasty multi-table
+
+25
+00:02:29,700 --> 00:02:34,450
+if you want to you can insert more cards and you can see that in action as well.
+

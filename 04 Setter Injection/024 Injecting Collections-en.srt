@@ -1,0 +1,108 @@
+1
+00:00:00,270 --> 00:00:07,610
+So far you have learned and work on injecting primitive types as dependencies.In the next few lectures,
+
+2
+00:00:07,610 --> 00:00:11,960
+you will learn how to inject collection types which are the second type supported by spring.
+
+3
+00:00:12,040 --> 00:00:19,930
+There are four types of collections list, set, map and properties. The list type is represented using
+
+4
+00:00:20,530 --> 00:00:22,860
+XML element called list.
+
+5
+00:00:23,050 --> 00:00:28,120
+Once we use the list spring we'll create a list for us and then it will put whatever values
+
+6
+00:00:28,140 --> 00:00:35,590
+we provide using the value element into that list, if we want to add a null value then we use the element
+
+7
+00:00:35,590 --> 00:00:37,700
+called Null.
+
+8
+00:00:37,740 --> 00:00:44,490
+Once you learn how to use list and inject it into a bean through  setter injection it will be very easy
+
+9
+00:00:44,490 --> 00:00:52,200
+to use set because a set is represented using a set element and everything else is similar to how you use a
+
+10
+00:00:52,290 --> 00:01:00,330
+list you assign values to the set using the value elements. Set does not allow duplicates whereas list
+
+11
+00:01:00,440 --> 00:01:01,430
+allows duplicate
+
+12
+00:01:01,470 --> 00:01:04,690
+that's the only difference, next is map.
+
+13
+00:01:04,850 --> 00:01:11,490
+A map is represented using a map element in the xml configuration and it takes a key value pair
+
+14
+00:01:11,700 --> 00:01:12,420
+entries.
+
+15
+00:01:12,420 --> 00:01:20,040
+Many entries can be added to a map this key and value can be attributes on the entry element or there
+
+16
+00:01:20,040 --> 00:01:23,650
+can be child elements of the entry element as well.
+
+17
+00:01:23,870 --> 00:01:29,970
+We will work on all those combinations in the next few like just the final collection is the property.
+
+18
+00:01:31,080 --> 00:01:38,150
+A property element is represented by props it can have multiple properties inside it to represent
+
+19
+00:01:38,150 --> 00:01:39,310
+a single property.
+
+20
+00:01:39,320 --> 00:01:47,800
+We use the prop element with a key attribute and the value will go inside the body of that element.
+
+21
+00:01:47,830 --> 00:01:56,300
+In this case, I have the languages just as properties key is USA and the language spoken in US is English.
+
+22
+00:01:56,350 --> 00:01:57,210
+To summarize.
+
+23
+00:01:57,340 --> 00:01:59,990
+Spring supports four types of collections.
+
+24
+00:02:00,800 --> 00:02:05,210
+And we can inject them using the list element in the XML
+
+25
+00:02:05,270 --> 00:02:09,720
+The set element the map which has a child element called entry.
+
+26
+00:02:09,800 --> 00:02:17,570
+And finally for properties we use props the child element of it is prop will add multiple properties using
+
+27
+00:02:17,690 --> 00:02:19,280
+multiple Prop elements.
+

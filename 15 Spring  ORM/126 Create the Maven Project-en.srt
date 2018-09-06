@@ -1,0 +1,192 @@
+1
+00:00:00,240 --> 00:00:05,820
+In this lecture, you will work on the very first step which is to create the Maven Spring ORM project
+
+2
+00:00:05,820 --> 00:00:07,100
+in Eclipse.
+
+3
+00:00:07,260 --> 00:00:13,840
+To do that, go to the File menu, say New -> Maven project. Click on the next button.
+
+4
+00:00:13,860 --> 00:00:15,940
+Leave the default option as it is,
+
+5
+00:00:16,020 --> 00:00:22,200
+which is maven-archetype-quickstart for standalone projects, click Next.
+
+6
+00:00:22,200 --> 00:00:25,170
+The Group id is fine, com.bharath.spring.
+
+7
+00:00:25,260 --> 00:00:31,120
+That is what we have been using. The Artifact Id or the project name should be
+
+8
+00:00:31,290 --> 00:00:40,140
+springorm, all lowercase, springorm for object relational mapping. Finish. And we have our maven project.
+
+9
+00:00:41,190 --> 00:00:46,090
+Click on the, double click on the pom.xml, open it. This is the Maven configuration file.
+
+10
+00:00:46,090 --> 00:00:54,760
+Click on the last tab, go to the previous project which is springjdbc. Open its pom.xml.
+
+11
+00:00:54,760 --> 00:01:03,010
+Go to the last tab, double click to maximize. Grab everything from properties all the way till end
+
+12
+00:01:03,010 --> 00:01:06,170
+of build section, just before the project ends.
+
+13
+00:01:06,190 --> 00:01:07,330
+Copy it.
+
+14
+00:01:07,330 --> 00:01:08,680
+Come back to the new pom.
+
+15
+00:01:08,770 --> 00:01:15,550
+Delete everything from properties all the way till dependencies and paste whatever you've copied. Do control+shift+f.
+
+16
+00:01:15,670 --> 00:01:18,980
+And you know what's next.
+
+17
+00:01:18,990 --> 00:01:24,570
+We have to update the dependencies, you're going to delete some dependencies or one dependency which is
+
+18
+00:01:24,570 --> 00:01:32,760
+the spring-jdbc because we are going to use spring-orm, we don't need spring-jdbc. We need the
+
+19
+00:01:32,760 --> 00:01:40,520
+spring-core dependencies to do dependency injection and we need the mysql JDBC driver in my case.
+
+20
+00:01:40,520 --> 00:01:42,870
+If you are using Oracle that would be a different driver.
+
+21
+00:01:43,890 --> 00:01:47,590
+And we need two additional maven dependencies, Spring ORM
+
+22
+00:01:47,610 --> 00:01:51,680
+is the first one and Hibernate Core is the next one.
+
+23
+00:01:51,680 --> 00:01:57,340
+This is the ORM implementation, hibernate that we are going to use. Go go back to Eclipse.
+
+24
+00:01:57,360 --> 00:02:04,410
+Copy one of the spring dependencies, paste it right next to the spring-context dependency. Do a
+
+25
+00:02:04,410 --> 00:02:11,280
+control+shift+f to format. And change this context to spring-orm.
+
+26
+00:02:11,280 --> 00:02:13,360
+That is all that is required.
+
+27
+00:02:13,430 --> 00:02:21,610
+This is the Maven dependency to grab spring-orm. The next one is Hibernate Core. To get that dependency,
+
+28
+00:02:21,610 --> 00:02:23,980
+go to your web browser,
+
+29
+00:02:24,010 --> 00:02:34,830
+open up Google and search for hibernate core maven dependency. Click on the first link.
+
+30
+00:02:34,990 --> 00:02:37,810
+I am currently using 5.2.5.
+
+31
+00:02:37,810 --> 00:02:43,700
+You are welcome to try out the latest that is out there, but I'm going to grab 5.2.5
+
+32
+00:02:44,230 --> 00:02:47,150
+because I have been using it and there were no issues with it.
+
+33
+00:02:47,170 --> 00:02:52,270
+Scroll down, click on this text area and it will be copied to the clipboard.
+
+34
+00:02:52,420 --> 00:02:58,610
+Go back to Eclipse, right after all the spring dependencies and before the sql-connector paste
+
+35
+00:02:58,610 --> 00:03:00,790
+our new dependency. It could go anywhere.
+
+36
+00:03:00,930 --> 00:03:08,580
+Just having a logical order in here. Delete this link. Control+shift+f to format. If you want to add a property
+
+37
+00:03:08,580 --> 00:03:11,240
+for this version you can do that here.
+
+38
+00:03:11,490 --> 00:03:15,910
+But since we have only one dependency we are not using this version multiple times.
+
+39
+00:03:15,910 --> 00:03:17,930
+I'm going to leave it as it is.
+
+40
+00:03:20,380 --> 00:03:21,340
+Now we'll see some errors.
+
+41
+00:03:21,340 --> 00:03:25,310
+You know what to do. Get rid of the tests. Go to the src/test/java,
+
+42
+00:03:25,330 --> 00:03:26,950
+right click on the package.
+
+43
+00:03:26,980 --> 00:03:30,820
+Delete it. You have done it quite a few times by now.
+
+44
+00:03:30,820 --> 00:03:37,850
+And once we update the pom.xml, right click on the project, go to maven and update project. That
+
+45
+00:03:37,850 --> 00:03:40,000
+will fix everything for Maven.
+
+46
+00:03:40,060 --> 00:03:43,170
+It will pull the dependencies and all the errors are gone.
+
+47
+00:03:43,180 --> 00:03:50,890
+So you have successfully created the Spring ORM project and updated the dependencies and also you have
+
+48
+00:03:50,890 --> 00:03:56,020
+the compiler plugin in place which tells maven that it should use Java 1.8.
+

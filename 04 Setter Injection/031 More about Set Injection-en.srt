@@ -1,0 +1,92 @@
+1
+00:00:00,450 --> 00:00:05,690
+As I have already said everything that applies to a list applies to the set in spring.
+
+2
+00:00:05,850 --> 00:00:11,020
+So we can get rid off set element if there is only one object.
+
+3
+00:00:11,190 --> 00:00:12,860
+There are multiple values we can do it.
+
+4
+00:00:12,870 --> 00:00:17,910
+But if there is only one value we can get rid off the set element and
+
+5
+00:00:17,910 --> 00:00:18,900
+rerun the program
+
+6
+00:00:22,830 --> 00:00:25,940
+click on the play button, run the test not the config
+
+7
+00:00:26,730 --> 00:00:33,840
+And you see the Honda coming in so we can always inject the single value without using the set element.
+
+8
+00:00:33,840 --> 00:00:40,980
+The second important piece is that the set does not allow duplicates although I list two hondas here
+
+9
+00:00:40,980 --> 00:00:42,210
+it will still work.
+
+10
+00:00:42,210 --> 00:00:44,470
+It will still inject and everything will be fine.
+
+11
+00:00:44,530 --> 00:00:50,150
+But rerun the test in the result will only see one single Honda up.
+
+12
+00:00:50,210 --> 00:00:55,570
+You know this behavior if you have learnt core java set only allows single elements it will not allow
+
+13
+00:00:55,630 --> 00:00:59,620
+any duplicates or it will ignore duplicates
+
+14
+00:00:59,620 --> 00:01:00,590
+the last piece.
+
+15
+00:01:00,610 --> 00:01:04,360
+Let's see what is the default implementation of the set that is being used
+
+16
+00:01:04,360 --> 00:01:06,660
+Go to the test class in case of list.
+
+17
+00:01:06,670 --> 00:01:11,800
+It was the array list that spring was using by default to list what it is.
+
+18
+00:01:12,010 --> 00:01:13,360
+Use the dot
+
+19
+00:01:13,360 --> 00:01:14,220
+Get class.
+
+20
+00:01:14,230 --> 00:01:21,070
+You can also use get a class name or get name of the class so that you will not see the class keyword
+
+21
+00:01:21,070 --> 00:01:21,950
+in the output.
+
+22
+00:01:23,550 --> 00:01:31,580
+Run the test again and the default set implementation that spring uses is a linked hash set.
+
+23
+00:01:31,670 --> 00:01:34,510
+I will show you how to change that default later on.
+

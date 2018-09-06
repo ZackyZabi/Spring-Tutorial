@@ -1,0 +1,23 @@
+0
+00:00.300 --> 00:06.000
+To ensure that you have got everything in setter injection you have to work on an assignment and the
+
+1
+00:06.000 --> 00:13.440
+assignment is to create a shopping cart class and a item class. An item is a product or several products
+
+2
+00:13.530 --> 00:14.820
+in a shopping cart.
+
+3
+00:14.850 --> 00:23.850
+Each item will have an ID name price and quantity and the shopping cart depends on the item.
+
+4
+00:23.850 --> 00:31.560
+So create these two classes and inject item into shopping cart and inject all these primitive types using pschema
+
+5
+00:31.800 --> 00:34.140
+if you want to into item.

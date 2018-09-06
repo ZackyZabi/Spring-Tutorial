@@ -1,0 +1,84 @@
+1
+00:00:00,120 --> 00:00:05,040
+In this lecture you will learn three important things that you should always remember when you do
+
+2
+00:00:05,050 --> 00:00:12,180
+autowiring by type. The number one thing which you already know is that the Spring container will try to find
+
+3
+00:00:12,180 --> 00:00:16,690
+a match by type and if the bean is there, it will inject it.
+
+4
+00:00:16,740 --> 00:00:21,800
+You have seen it in the output in the last lecture. If it's there, it will inject it.
+
+5
+00:00:22,020 --> 00:00:24,010
+If it can't find the match,
+
+6
+00:00:24,030 --> 00:00:26,630
+for example let's delete this bean from here.
+
+7
+00:00:27,180 --> 00:00:36,150
+Save it, run the test. No exceptions but simply the container will inject a null value for the address
+
+8
+00:00:36,210 --> 00:00:38,840
+dependency of Employee.
+
+9
+00:00:39,000 --> 00:00:44,910
+So if no bean is found, no bean match is found for autowiring the dependency, it will inject a
+
+10
+00:00:45,360 --> 00:00:50,100
+null value. Do a control+z, bring the address bean back.
+
+11
+00:00:50,100 --> 00:00:53,590
+Copy the entire address bean, paste it,
+
+12
+00:00:57,410 --> 00:01:00,150
+and changed the name to address1.
+
+13
+00:01:00,170 --> 00:01:06,080
+So we are duplicating the same type. The name itself is different, but the type is same.
+
+14
+00:01:06,110 --> 00:01:12,770
+Let's see what happens, run the test and you will see an exception. Maximize the console by double clicking.
+
+15
+00:01:13,190 --> 00:01:23,670
+No qualifying bean of type autowiring address is available: expected single matching bean but found 2.
+
+16
+00:01:23,870 --> 00:01:30,260
+So the spring container is confused because it was expecting only one bean of type address, but we have
+
+17
+00:01:30,260 --> 00:01:32,020
+accidentally configured two.
+
+18
+00:01:32,020 --> 00:01:35,750
+So get rid of the second one.
+
+19
+00:01:35,960 --> 00:01:44,230
+Run the test and everything is back to normal. So always remember that if a Spring container finds a
+
+20
+00:01:44,230 --> 00:01:49,980
+matching type, it will inject it. If there is no matching at all then it will inject a null value.
+
+21
+00:01:50,050 --> 00:01:53,220
+And if there are duplicates, then it will throw an exception.
+

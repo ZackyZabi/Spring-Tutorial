@@ -1,0 +1,212 @@
+1
+00:00:00,360 --> 00:00:07,260
+Just like how Spring made it easy for us to use JDBC by providing a Spring JDBC template.
+
+2
+00:00:07,530 --> 00:00:14,220
+It also makes it easy to use ORM tools like Hibernate by providing HibernateTemplate.
+
+3
+00:00:14,220 --> 00:00:20,490
+It hides all the boiler plate coding like creating a hibernate session etc; and we can simply use
+
+4
+00:00:20,490 --> 00:00:27,330
+the HibernateTemplate and execute operations against a database such as save, update, delete, get which
+
+5
+00:00:27,330 --> 00:00:34,060
+returns one record, loadAll which returns multiple records as a list of objects.
+
+6
+00:00:34,320 --> 00:00:39,810
+Everything, all these methods here deal with objects. They take objects, save them into the database
+
+7
+00:00:39,810 --> 00:00:41,090
+table as a row,
+
+8
+00:00:41,180 --> 00:00:49,870
+they retrieve data, return a single row as an object or multiple rows as list of objects. All that is done behind
+
+9
+00:00:49,870 --> 00:00:50,320
+the scenes.
+
+10
+00:00:50,320 --> 00:00:56,080
+We simply use the HibernateTemplate and start invoking the methods on them and hibernate internally
+
+11
+00:00:56,080 --> 00:01:04,070
+will generate the necessary SQL statements and execute them. Any application that uses HibernateTemplatehibernate template
+
+12
+00:01:04,080 --> 00:01:05,400
+will have the following design.
+
+13
+00:01:05,430 --> 00:01:12,670
+Usually, for example if we are dealing with a entity or table called product, we'll create a Java bean called
+
+14
+00:01:12,680 --> 00:01:19,710
+product, we'll mark it with all the annotations or the mapping information against the database table will
+
+15
+00:01:19,710 --> 00:01:20,560
+be provided.
+
+16
+00:01:21,680 --> 00:01:26,990
+And then we create the product Dao which will have all our database code. This is the interface. We implement
+
+17
+00:01:26,990 --> 00:01:27,340
+it.
+
+18
+00:01:27,440 --> 00:01:35,110
+And this DaoImpl will depend on HibernateTemplate. The HibernateTemplate in turn uses the SessionFactory
+
+19
+00:01:35,120 --> 00:01:41,360
+bean which is an interface. This SessionFactory takes care of establishing the connection and all
+
+20
+00:01:41,360 --> 00:01:45,330
+that. It is a, it provides the hibernates session at the end.
+
+21
+00:01:45,770 --> 00:01:47,830
+We need not worry about it. We simply give the
+
+22
+00:01:47,850 --> 00:01:53,420
+SessionFactory bean to the HibernateTemplate and the rest of it will be taken care by the HibernateTemplate.
+
+23
+00:01:53,420 --> 00:02:00,860
+An implementation of SessionFactory is LocalSessionFactoryBean from Spring. We'll be implementing
+
+24
+00:02:00,890 --> 00:02:09,560
+or we'll be using this particular bean in our application. And also the SessionFactory needs a DataSource and
+
+25
+00:02:09,560 --> 00:02:12,300
+a few more things which I will explain in the next slide.
+
+26
+00:02:12,590 --> 00:02:15,040
+We also will configure a TransactionManager.
+
+27
+00:02:15,110 --> 00:02:21,290
+We need transactions when we do write operations against a database to ensure that either all of them fall
+
+28
+00:02:21,290 --> 00:02:26,440
+in one transaction, either all of them execute or they dont.
+
+29
+00:02:26,530 --> 00:02:31,760
+The LocalSessionFactoryBean takes three arguments or it depends on three other beans,
+
+30
+00:02:31,900 --> 00:02:36,120
+the DataSource which you already know, you have used it while working on Spring JDBC.
+
+31
+00:02:36,370 --> 00:02:42,660
+hibernateProperties, we need to provide a couple of properties which I will show you in the next slide.
+
+32
+00:02:42,700 --> 00:02:50,110
+And finally a list of annotatedClasses. We need to tell the local SessionFactory bean which all classes
+
+33
+00:02:50,110 --> 00:02:53,800
+in our application map to the database tables.
+
+34
+00:02:54,710 --> 00:02:59,650
+You will see all that in action in the next few lectures. A couple of hibernate properties that we provide
+
+35
+00:03:00,420 --> 00:03:08,530
+in the key value format or hibernate.dialect. The hibernate.dialect is a class that generates the
+
+36
+00:03:08,620 --> 00:03:15,610
+SQL from the objects we provide for a particular operation. If it is save, it'll generate insert, if
+
+37
+00:03:15,610 --> 00:03:18,280
+it is update, it'll generate a update etc;
+
+38
+00:03:18,280 --> 00:03:24,700
+So this class is responsible for generating SQL for a particular database.
+
+39
+00:03:24,730 --> 00:03:29,360
+Hibernate provides dialect classes for all the popular databases.
+
+40
+00:03:29,590 --> 00:03:31,330
+Here is one for MySQL.
+
+41
+00:03:31,450 --> 00:03:40,060
+Similarly for Oracle there will be a different dialect. The second property is hibernate.show_sql.
+
+42
+00:03:40,100 --> 00:03:46,630
+By default hibernate will not display all the SQL statements it generates on the fly.
+
+43
+00:03:46,660 --> 00:03:52,900
+This property will tell the dialect that it should display all the SQL statements that it is generating
+
+44
+00:03:52,900 --> 00:03:55,810
+on the console.
+
+45
+00:03:55,850 --> 00:04:01,470
+So in this lecture, you have learnt how spring provides ORM support. It makes our job to use ORM
+
+46
+00:04:01,530 --> 00:04:05,040
+tools like Hibernate easy by providing templates.
+
+47
+00:04:05,100 --> 00:04:12,050
+We use the HibernateTemplate which inturn depends on SessionFactory bean. SessionFactory bean needs a
+
+48
+00:04:12,060 --> 00:04:13,060
+datasource,
+
+49
+00:04:13,200 --> 00:04:19,150
+a couple of hibernate properties and a list of annotatedClasses which are entities. In our case it
+
+50
+00:04:19,150 --> 00:04:21,350
+will be the product entity,
+
+51
+00:04:21,480 --> 00:04:28,700
+just one. And here are a couple of properties, the dialect which generates the SQL for a particular
+
+52
+00:04:28,700 --> 00:04:35,900
+database and property called show_sql which tells hibernate that it should display the SQL statements
+
+53
+00:04:35,990 --> 00:04:37,120
+on the console.
+

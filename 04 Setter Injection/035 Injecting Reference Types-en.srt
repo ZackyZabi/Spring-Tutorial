@@ -1,0 +1,75 @@
+0
+00:00.330 --> 00:05.880
+That third and one of the most used Dependency Injection types in real time applications is the reference
+
+1
+00:05.880 --> 00:08.210
+types or the object types.
+
+2
+00:08.460 --> 00:15.570
+We use it when a class has a HAS-A relationship with another class that is when a class uses an
+
+3
+00:15.570 --> 00:18.130
+instance of another class to do its work.
+
+4
+00:18.390 --> 00:23.670
+Here I have Class A which depends on Class B to get its  work done.
+
+5
+00:24.600 --> 00:28.220
+We start by creating an instance of Class B.
+
+6
+00:29.150 --> 00:35.180
+We are asking spring here to create an instance of Class B which is the dependency then we create
+
+7
+00:35.240 --> 00:38.530
+the dependent class A when we create it
+
+8
+00:38.540 --> 00:43.340
+We use the setter injection or constructor injection for setter injection we use the property element
+
+9
+00:43.790 --> 00:46.400
+name is B.
+
+10
+00:47.000 --> 00:53.570
+And to inject the bean which we have already created we use the ref element to inject reference types  we
+
+11
+00:53.570 --> 00:55.280
+use the ref element
+
+12
+00:55.310 --> 00:57.650
+from spring in the spring configuration.
+
+13
+00:57.650 --> 01:04.880
+This ref element can be used as an element or it can be used as an attribute on the property element.
+
+14
+01:04.880 --> 01:11.480
+And the third way is to use the P schema where we can get rid of this property itself and use the P
+
+15
+01:11.480 --> 01:14.680
+schema right on the bean element.
+
+16
+01:14.900 --> 01:20.170
+Very similar to how you have done it while injecting primitive types will explore all the three ways
+
+17
+01:20.210 --> 01:28.010
+using reference as a element as an attribute and using P schema to inject object types in the next few
+
+18
+01:28.010 --> 01:28.550
+lectures.

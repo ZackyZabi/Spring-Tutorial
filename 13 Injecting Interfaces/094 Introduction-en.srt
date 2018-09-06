@@ -1,0 +1,180 @@
+1
+00:00:00,180 --> 00:00:07,910
+So far you have been creating places and that objects and injecting them back in real time job obligations.
+
+2
+00:00:07,920 --> 00:00:14,070
+We often create interfaces that is we always quarter to interfaces for abstraction.
+
+3
+00:00:14,460 --> 00:00:22,230
+For example here we have an order bill which is a class that holds all the business logic for the order
+
+4
+00:00:22,560 --> 00:00:24,350
+to place an order.
+
+5
+00:00:24,390 --> 00:00:30,170
+These are the be will is an interface and it will be implemented by a class card arder be Will.
+
+6
+00:00:30,200 --> 00:00:35,200
+I am it has it easy relationship with our beagle.
+
+7
+00:00:35,590 --> 00:00:41,740
+Similarly we have an order to be able which contains not the business logic but all that data access
+
+8
+00:00:41,740 --> 00:00:47,410
+called it could be JTB see hibernate etc. all that gold will go into the order.
+
+9
+00:00:47,530 --> 00:00:50,200
+It connects to the database and does that work.
+
+10
+00:00:50,410 --> 00:00:58,510
+Again this order is an interface and it will be implemented by arder will impact this order be will
+
+11
+00:00:58,630 --> 00:01:08,380
+depends on r r d r r r b will impel the relationship as a relationship with order to be able not to
+
+12
+00:01:08,470 --> 00:01:13,280
+inject arder Diego into our hobby will impel.
+
+13
+00:01:13,390 --> 00:01:17,300
+We do not or we cannot create an instance of this interface.
+
+14
+00:01:17,620 --> 00:01:23,490
+So we provide the implementation in our spring configuration will be providing this class of details
+
+15
+00:01:23,530 --> 00:01:28,240
+in the bin so that spudding can inject it into the RB will impact.
+
+16
+00:01:28,510 --> 00:01:30,220
+So the steps will remain the same.
+
+17
+00:01:30,240 --> 00:01:37,270
+We will be creating for porgies plane or the Jawa interfaces and play all the java objects create the
+
+18
+00:01:37,270 --> 00:01:40,990
+configuration and finally create the test class.
+
+19
+00:01:41,110 --> 00:01:50,100
+Do the first step in this lecture that is creating the interfaces and classes go to eclipse minimize
+
+20
+00:01:50,100 --> 00:01:50,610
+everything.
+
+21
+00:01:50,610 --> 00:01:58,900
+How one of them expanded so that we can copy the configuration and test reichlich new interface.
+
+22
+00:01:58,910 --> 00:02:07,990
+We should always code to interfaces back his name com dot dot dot Supreme Court advance a dot injecting
+
+23
+00:02:10,470 --> 00:02:20,490
+dot in Dunner face this and the interface name should be are to be will which will have the business
+
+24
+00:02:20,490 --> 00:02:30,370
+logic method the one and only matter this will have its place on the net returns nothing.
+
+25
+00:02:30,490 --> 00:02:34,520
+Wired plays are the mighty fall.
+
+26
+00:02:34,680 --> 00:02:41,740
+Its public abstract create a class for it right click new class.
+
+27
+00:02:41,800 --> 00:02:48,030
+So if you are right click on that interface will create the class you the name.
+
+28
+00:02:48,230 --> 00:02:56,370
+We will I am will be gone and search for arder we will select that hit.
+
+29
+00:02:56,380 --> 00:02:57,120
+OK.
+
+30
+00:02:57,200 --> 00:02:59,530
+Finish automatically.
+
+31
+00:02:59,620 --> 00:03:01,430
+Eclipse will override the place.
+
+32
+00:03:01,450 --> 00:03:12,240
+Our method for us simply sits out in the matter it sits out inside Arta be your
+
+33
+00:03:17,770 --> 00:03:25,050
+let's create the next interface which is the order to be able to write like create new interface or
+
+34
+00:03:25,060 --> 00:03:30,160
+to be able finish this already.
+
+35
+00:03:30,180 --> 00:03:34,010
+Well we all have one single method called create Varda.
+
+36
+00:03:34,020 --> 00:03:36,190
+This would create the Arta in the database.
+
+37
+00:03:37,450 --> 00:03:43,060
+Typically these methods will have parameters here I am not adding all the complexity because we just
+
+38
+00:03:43,060 --> 00:03:46,360
+want to see how interface injection works.
+
+39
+00:03:46,570 --> 00:03:52,590
+Right click new CLOS arder you.
+
+40
+00:03:52,620 --> 00:03:54,250
+I am the implementation.
+
+41
+00:03:54,260 --> 00:04:00,980
+Click on Add search for Arta be able select that it OK.
+
+42
+00:04:01,320 --> 00:04:09,440
+Finish and ready to delete that to do this out in side
+
+43
+00:04:12,190 --> 00:04:17,490
+order you will create order.
+
+44
+00:04:17,740 --> 00:04:24,130
+That the next lecture will copy or the test and the configuration and will make the necessary changes.
+
+45
+00:04:24,130 --> 00:04:26,310
+This should be in side order do you.
+

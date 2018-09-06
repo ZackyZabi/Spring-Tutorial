@@ -1,0 +1,172 @@
+1
+00:00:00,210 --> 00:00:07,290
+In the previous two lectures, we've seen what the constructor injection ambiguity problem is and fixed it. In this lecture, you
+
+2
+00:00:07,330 --> 00:00:14,480
+will see an other variation of this problem and learn how to address it. Go to the Addition.java,
+
+3
+00:00:14,740 --> 00:00:21,580
+get rid of these two methods here and change the constructor to accept one integer type as parameter
+
+4
+00:00:21,580 --> 00:00:23,500
+and one double type.
+
+5
+00:00:23,500 --> 00:00:27,790
+And here we can simply say, Inside the Constructor.
+
+6
+00:00:27,790 --> 00:00:33,910
+There is only one constructor. Go to config.xml and invoke that constructor. The first type is
+
+7
+00:00:33,910 --> 00:00:35,680
+integer, 10 is fine.
+
+8
+00:00:35,680 --> 00:00:39,030
+The second type here is 20.
+
+9
+00:00:39,310 --> 00:00:41,850
+But let's reverse that and see what happens.
+
+10
+00:00:41,860 --> 00:00:43,960
+10.23 or first
+
+11
+00:00:43,960 --> 00:00:49,790
+let's see the valid case, 10 and 20.3.
+
+12
+00:00:49,840 --> 00:00:54,990
+Save it, change this type to double.
+
+13
+00:00:55,180 --> 00:00:56,120
+Run the test.
+
+14
+00:00:58,480 --> 00:01:00,000
+And it works as expected,
+
+15
+00:01:00,000 --> 00:01:01,210
+no issues there.
+
+16
+00:01:01,210 --> 00:01:05,790
+Now go back to the config.xml and switch these two. Move it up.
+
+17
+00:01:08,750 --> 00:01:11,600
+Control+x, move it to the top.
+
+18
+00:01:12,060 --> 00:01:13,880
+So we have reversed the order.
+
+19
+00:01:13,890 --> 00:01:15,740
+Double comes first and then the integer.
+
+20
+00:01:15,750 --> 00:01:17,190
+But in Addition.java, its
+
+21
+00:01:17,210 --> 00:01:25,120
+integer first and then double. Rerun the test, and it still works without any issues.
+
+22
+00:01:25,120 --> 00:01:31,280
+This is an other variation of the issue because we might not want, although it would have injected if
+
+23
+00:01:31,280 --> 00:01:34,520
+you do sysouts in here.
+
+24
+00:01:34,530 --> 00:01:47,420
+sysout, let's print the values of a and b. Run the test again to see the values.
+
+25
+00:01:47,960 --> 00:01:55,430
+So it has injected 10 into a, which is correct, and 20.3 into b, which is also correct.
+
+26
+00:01:55,510 --> 00:02:02,570
+But we do not want this behavior in our application, because we want the order to be correct.
+
+27
+00:02:02,590 --> 00:02:06,250
+We don't want to accidentally change the order. If we don't want to do it,
+
+28
+00:02:06,250 --> 00:02:16,750
+then you can use an other attribute called index. The index starts from zero and it goes all the way
+
+29
+00:02:16,840 --> 00:02:20,430
+up to how many number of parameters we have minus one.
+
+30
+00:02:21,150 --> 00:02:29,310
+The index of integer is zero, and the index of double is one.
+
+31
+00:02:29,530 --> 00:02:35,690
+Now run the program, and it runs and it injects 10 into
+
+32
+00:02:38,700 --> 00:02:40,220
+a and
+
+33
+00:02:43,390 --> 00:02:51,680
+20.3 into b. If I try to switch this index, lets try switching it, 1 and 0.
+
+34
+00:02:53,540 --> 00:02:54,550
+Run the test,
+
+35
+00:02:55,900 --> 00:02:57,620
+and we'll see an exception.
+
+36
+00:02:57,730 --> 00:03:08,000
+Let's maximize it and it says error creating addition bean, Ambiguous argument, constructor
+
+37
+00:03:08,030 --> 00:03:12,130
+argument 0, values for parameter of type int.
+
+38
+00:03:12,190 --> 00:03:15,230
+So for type int, we are trying to pass in type double.
+
+39
+00:03:15,250 --> 00:03:17,420
+That is the reason it has failed.
+
+40
+00:03:17,530 --> 00:03:21,220
+So using the index, we can avoid such problems.
+
+41
+00:03:21,220 --> 00:03:30,540
+Change it back to 1 and 0 to ensure that the order is correct, re-run the test. So in this lecture, you have learnt
+
+42
+00:03:30,540 --> 00:03:35,760
+how to use the index on the constructor argument to make sure that we are passing the arguments in the
+
+43
+00:03:35,760 --> 00:03:37,070
+right order.
+

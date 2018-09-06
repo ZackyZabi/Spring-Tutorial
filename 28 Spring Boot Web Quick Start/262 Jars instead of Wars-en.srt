@@ -1,0 +1,124 @@
+1
+00:00:00,740 --> 00:00:06,260
+The difference between the earlier Spring projects and the Spring Boot web application is that, we were
+
+2
+00:00:06,320 --> 00:00:11,600
+able to run this application without deploying it to a server or without creating a
+
+3
+00:00:11,730 --> 00:00:19,400
+war file. So Spring Boot allows us to do that. When we run our application, Spring Boot will look for a
+
+4
+00:00:19,400 --> 00:00:26,240
+class that is marked with Spring Boot main and it will run its main method. And when that happens,
+
+5
+00:00:26,880 --> 00:00:33,680
+Spring Boot since we have Spring MVC and all that on our path, or as dependencies, it will pull a Tomcat
+
+6
+00:00:33,680 --> 00:00:35,210
+dependency as well.
+
+7
+00:00:35,410 --> 00:00:42,680
+If you go to the maven dependencies, it adds spring-boot-starter-tomcat which has the entire Tomcat
+
+8
+00:00:42,680 --> 00:00:43,200
+in it.
+
+9
+00:00:43,370 --> 00:00:48,510
+So it will launch that Tomcat and it will run our classes on that server.
+
+10
+00:00:48,770 --> 00:00:53,000
+And that is the reason we were able to access our application on localhost:8080.
+
+11
+00:00:53,010 --> 00:00:59,180
+We can even apply it like this onto production. Instead of deploying it as a war file,
+
+12
+00:00:59,210 --> 00:01:07,700
+we can simply deploy the jar file of this application onto a production server. So to see that in action,
+
+13
+00:01:07,700 --> 00:01:09,700
+right click on this, do a
+
+14
+00:01:09,780 --> 00:01:20,140
+Maven install or Run As -> Maven install. That will create the jar file of our application and I will show you
+
+15
+00:01:20,140 --> 00:01:23,960
+how that jar file will look like.
+
+16
+00:01:24,230 --> 00:01:30,370
+Once that is created, go to your workspace. Build is success, go to wherever your workspace is. For me its under
+
+17
+00:01:30,370 --> 00:01:36,450
+documents. Go to your particular project, called springbootweb.
+
+18
+00:01:36,680 --> 00:01:42,700
+Go to the target directory and you will find a jar file that it creates by default.
+
+19
+00:01:42,760 --> 00:01:49,720
+Right click on it, open it with any zip utility. For me I will use the Archive Utility. That will unzip
+
+20
+00:01:49,720 --> 00:01:50,590
+the contents.
+
+21
+00:01:50,590 --> 00:01:55,610
+If you look at it, it has a BOOT-INF. Inside it, it has a lib.
+
+22
+00:01:55,870 --> 00:02:02,400
+So our jar file inturn has a bunch of jars which our project depends on.
+
+23
+00:02:02,500 --> 00:02:07,240
+These are all that Maven dependencies which you see here, which got pulled because we
+
+24
+00:02:07,250 --> 00:02:15,080
+have spring-boot-starter-web in our pom.xml. Just because of one single dependency,
+
+25
+00:02:15,090 --> 00:02:23,380
+all these jars came in and it has embedded Tomcat in it. So we can deploy our jar file. And if we depend
+
+26
+00:02:23,380 --> 00:02:27,370
+on any other libraries, it could be within our company or outside our organization,
+
+27
+00:02:27,370 --> 00:02:34,510
+all those will go into this particular lib inside the jar and we can simply run this jar on production.
+
+28
+00:02:34,510 --> 00:02:38,830
+We can use a Java command or we can simply launch it by double clicking on it
+
+29
+00:02:38,920 --> 00:02:41,790
+if you have Java on your environment variables.
+
+30
+00:02:42,010 --> 00:02:44,810
+So it's that powerful. When we use Spring Boot,
+
+31
+00:02:44,830 --> 00:02:50,170
+we can run our projects as jars instead of wars.
+

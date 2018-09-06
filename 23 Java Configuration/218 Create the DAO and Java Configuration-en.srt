@@ -1,0 +1,123 @@
+0
+00:00.300 --> 00:06.720
+In this lecture he will create the deal class and also Configurate using the spring configuration
+
+1
+00:06.720 --> 00:12.960
+or spring Java based configuration and in the next lecture will create the test and retrieve our dao
+
+2
+00:12.960 --> 00:15.440
+from the spring container.
+
+3
+00:16.190 --> 00:24.110
+Go back eclipse go to our newly created Project right click on the package name say new class call it DAO
+
+4
+00:24.120 --> 00:27.140
+Now let's keep it simple.
+
+5
+00:27.420 --> 00:36.300
+This dao will have one single method called create public void create it will not have any database calls
+
+6
+00:36.540 --> 00:38.520
+simply add a sysout.
+
+7
+00:38.610 --> 00:41.840
+Then double coats create it.
+
+8
+00:41.850 --> 00:42.570
+It's lying.
+
+9
+00:42.570 --> 00:49.780
+It's not really creating it add it component annotation.
+
+10
+00:49.830 --> 00:52.190
+This will be a spring component.
+
+11
+00:52.200 --> 00:56.960
+The second step is to create the java configuration.
+
+12
+00:57.420 --> 00:58.680
+It's very easy.
+
+13
+00:58.890 --> 01:06.960
+Again right on the package say new class call it spring conflict
+
+14
+01:09.590 --> 01:10.860
+finish.
+
+15
+01:11.000 --> 01:17.720
+We need to mark this class with a annotation called at configuration that tells the spring container
+
+16
+01:18.050 --> 01:25.300
+that this is this class is spring configuration and to configure our bean inside this configuration
+
+17
+01:25.680 --> 01:32.270
+will create them at their public it should return a dao  instance and you can call it Dao since it
+
+18
+01:32.270 --> 01:41.430
+returns a dao inside that method you simply return and new dao.
+
+19
+01:41.580 --> 01:47.250
+This is similar to how you configure a bean inside the application context dot xml or the config
+
+20
+01:47.270 --> 01:50.520
+dot xml which is the configuration file for spring
+
+21
+01:50.690 --> 01:56.630
+But you should mark this method with at bean annotation from Spring.
+
+22
+01:56.660 --> 01:57.550
+Hit control 1.
+
+23
+01:57.560 --> 02:04.550
+Imported from org spring framework context annotation configuration org spring framework  context
+
+24
+02:04.730 --> 02:11.450
+annotation bean when you Mark a method with these spring container we know that that particular method will
+
+25
+02:11.450 --> 02:14.940
+return spring bean instance.
+
+26
+02:15.260 --> 02:21.860
+So you have successfully created a class called dao and we have also created your first Java configuration
+
+27
+02:21.860 --> 02:28.100
+for spring and marking a class with at configuration and a method that returns the instance of the
+
+28
+02:28.100 --> 02:28.620
+dao.
+
+29
+02:28.620 --> 02:30.080
+and you have marked that method with
+
+30
+02:30.100 --> 02:32.140
+at bean annotation.

@@ -1,0 +1,60 @@
+1
+00:00:00,630 --> 00:00:06,810
+Before we see if the Java configuration works for our Spring web application, there is one minor step
+
+2
+00:00:06,900 --> 00:00:14,490
+which I missed, which is to pass this webContext to the DispatcherServlet. That is how the DispatcherServlet will
+
+3
+00:00:14,490 --> 00:00:16,810
+know about our Spring configuration.
+
+4
+00:00:17,040 --> 00:00:22,080
+So right when you create the DispatcherServlet, to the constructor of the DispatcherServlet, you can pass in
+
+5
+00:00:22,740 --> 00:00:25,220
+the WebContext which you have created here.
+
+6
+00:00:25,740 --> 00:00:33,420
+And we have registered the Spring configuration with it which is our configuration file. And we are all set.
+
+7
+00:00:33,430 --> 00:00:45,380
+Right click, do a Run As -> Maven Clean, which will clean our project. Right click, Run As -> Maven install.
+
+8
+00:00:45,570 --> 00:00:53,230
+And once that finishes we can run our application on the server. Success. Right click, Run As ->
+
+9
+00:00:53,620 --> 00:01:03,290
+Run on Server. Finish. If your Tomcat is running it will restart it and it will launch our application in
+
+10
+00:01:03,290 --> 00:01:07,650
+the browser. And at the end of it,
+
+11
+00:01:07,710 --> 00:01:08,320
+append hello.
+
+12
+00:01:08,360 --> 00:01:14,010
+That's the URI for the controller. Enter and we still get the very same output which you have
+
+13
+00:01:14,010 --> 00:01:16,480
+seen at the very beginning of this usecase.
+
+14
+00:01:16,770 --> 00:01:24,730
+So we have got our spring MVC web application to work without web.xml without dispatcher-servlet.xml,
+
+15
+00:01:25,050 --> 00:01:28,390
+all with simple java configuration.
+

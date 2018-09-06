@@ -1,0 +1,32 @@
+1
+00:00:00,390 --> 00:00:06,570
+You will migrate the spring MVC project to use Java based configuration instead of xml in three
+
+2
+00:00:06,570 --> 00:00:07,950
+simple steps.
+
+3
+00:00:07,980 --> 00:00:15,210
+The first step is to update the pom.xml. We'll update the pom.xml by adding the servlet dependency
+
+4
+00:00:15,660 --> 00:00:22,530
+as well as we will add a war plugin. And I'll explain why we need to add a war plugin when you do it.
+
+5
+00:00:23,520 --> 00:00:29,900
+The second step is to replace the dispatcher-servlet.xml with Java configuration.
+
+6
+00:00:29,970 --> 00:00:37,890
+You'll be creating a Java configuration class for it, annotating it overriding the methods that are required.
+
+7
+00:00:37,890 --> 00:00:43,830
+Last and final, we'll get rid of the web.xml, and you'll be replacing it with a class that implements
+
+8
+00:00:44,220 --> 00:00:47,720
+WebApplicationInitializer from Spring.
+

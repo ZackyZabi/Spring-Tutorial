@@ -1,0 +1,64 @@
+1
+00:00:00,190 --> 00:00:06,390
+In this lecture we'll grab the viewer resolver from our spring NBC project and we'll wire up inside
+
+2
+00:00:06,390 --> 00:00:08,330
+our new dispatch of solar dart.
+
+3
+00:00:08,430 --> 00:00:16,740
+I'm all for spring NBC Wadham project expand the spring MBC project go to the dispatcher so Legarda
+
+4
+00:00:16,770 --> 00:00:24,620
+ex-model and grab this bean which is the view resolver been copied come back to the new dispatcher.
+
+5
+00:00:24,670 --> 00:00:27,620
+So let go all the way to the end.
+
+6
+00:00:27,930 --> 00:00:30,640
+Bastet control shift the format.
+
+7
+00:00:30,960 --> 00:00:34,650
+And you know how the internal resource the resolver works.
+
+8
+00:00:34,650 --> 00:00:41,330
+This is the class from spring which is also the complete view name given due just have you name it.
+
+9
+00:00:41,330 --> 00:00:44,780
+It is all the complete pop and extension.
+
+10
+00:00:44,940 --> 00:00:48,630
+So here we can figure out the prefix which is the location.
+
+11
+00:00:48,760 --> 00:00:50,350
+Insert off using views.
+
+12
+00:00:50,520 --> 00:00:55,710
+Let's change it to just piece this time just for a difference.
+
+13
+00:00:55,900 --> 00:01:02,450
+This piece and the extension is still going to be d'arte just be we we're going to leave that alone.
+
+14
+00:01:02,550 --> 00:01:09,030
+So this if you resolver will append or prefix whatever view we get from the controller with this and
+
+15
+00:01:09,030 --> 00:01:11,340
+it'll suffix it with Dot.
+
+16
+00:01:11,380 --> 00:01:11,750
+Just.
+

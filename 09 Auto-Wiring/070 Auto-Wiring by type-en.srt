@@ -1,0 +1,256 @@
+1
+00:00:00,180 --> 00:00:04,840
+In this lecture, you will learn how to implement Spring autowiring. To do that,
+
+2
+00:00:04,860 --> 00:00:11,460
+all we need is two object types because autowiring works on reference types. Go to the previous project, go
+
+3
+00:00:11,460 --> 00:00:18,210
+to the constructorinjection package, we are going to grab these four files from here. Before we do that,
+
+4
+00:00:18,330 --> 00:00:27,750
+right click on this package on the new project, create a new sub-package called autowiring, finish.
+
+5
+00:00:28,200 --> 00:00:29,070
+And you can delete
+
+6
+00:00:31,820 --> 00:00:33,840
+this folder here.
+
+7
+00:00:33,950 --> 00:00:35,570
+We don't need that package.
+
+8
+00:00:35,750 --> 00:00:36,650
+Get rid of it.
+
+9
+00:00:37,490 --> 00:00:43,950
+All we need is the auto wiring package. Copy address all the way to config from constructorinjection.
+
+10
+00:00:44,180 --> 00:00:46,340
+Paste them here.
+
+11
+00:00:46,540 --> 00:00:53,380
+Expand, open all of them, address, employee, test.java and config.xml.
+
+12
+00:00:56,530 --> 00:00:57,600
+On the address,
+
+13
+00:00:57,670 --> 00:01:04,660
+we have house number and we have street and city. And the Employee object is the one which depends on
+
+14
+00:01:04,780 --> 00:01:05,550
+address.
+
+15
+00:01:05,600 --> 00:01:08,280
+Get rid of this constructor and let's keep it simple.
+
+16
+00:01:08,290 --> 00:01:10,240
+We don't even need the Id field.
+
+17
+00:01:10,480 --> 00:01:12,570
+So delete the getters and setters for Id.
+
+18
+00:01:15,530 --> 00:01:18,950
+getId and setId, delete both of them.
+
+19
+00:01:19,280 --> 00:01:29,460
+All we need is two objects to demonstrate autowiring. Source, generate the toString method one more time.
+
+20
+00:01:29,550 --> 00:01:32,640
+Enter, control + shift + f to format.
+
+21
+00:01:32,640 --> 00:01:38,610
+So we have an employee that uses address and we are going to autowire this address into Employee.
+
+22
+00:01:39,000 --> 00:01:41,610
+To do that, go to the config.xml.
+
+23
+00:01:41,640 --> 00:01:45,600
+First create the address bean using the setter injection.
+
+24
+00:01:45,600 --> 00:01:47,220
+We are going to leave it as it is.
+
+25
+00:01:47,340 --> 00:01:53,610
+We are using p-schema here. But when we create the Employee object we are not going to use the c schema.
+
+26
+00:01:54,120 --> 00:01:56,680
+Delete the usage of c schema.
+
+27
+00:01:57,030 --> 00:02:03,990
+Instead we use autowiring. We tell the container, you go ahead and inject the dependencies. To do that,
+
+28
+00:02:03,990 --> 00:02:06,240
+we use the auto, control + space,
+
+29
+00:02:06,270 --> 00:02:10,350
+autowire is the attribute, is equal to the values,
+
+30
+00:02:10,350 --> 00:02:19,440
+as I said there can be different values. Let's use byType. I'll explain the flow end to end once
+
+31
+00:02:19,440 --> 00:02:20,980
+we finish everything.
+
+32
+00:02:21,230 --> 00:02:27,570
+So using Autowire attribute on the bean, we are telling Spring container to inject the dependencies for
+
+33
+00:02:27,600 --> 00:02:33,070
+this bean automatically, automatically wire the beans. Go to test,
+
+34
+00:02:33,090 --> 00:02:39,330
+we need to make some package changes in the config as well because this package is not correct.
+
+35
+00:02:39,750 --> 00:02:47,190
+So go to test, grab the package, the new package with spring advanced in it. Come back, change the package
+
+36
+00:02:47,190 --> 00:02:58,670
+for address and also change the package for employee as well. Save it, go to test. And this here, should
+
+37
+00:02:58,670 --> 00:03:00,060
+also change.
+
+38
+00:03:00,170 --> 00:03:05,720
+So paste the package, change the dots to forward slashes,
+
+39
+00:03:12,400 --> 00:03:13,140
+and that's it.
+
+40
+00:03:13,150 --> 00:03:14,650
+Let's run the test, right click,
+
+41
+00:03:15,970 --> 00:03:19,010
+Run as Java Application.
+
+42
+00:03:19,250 --> 00:03:24,860
+And if you see everything still works as expected, although we haven't used constructor injection
+
+43
+00:03:24,920 --> 00:03:30,690
+or Setter injection on the employee, Spring automatically injects
+
+44
+00:03:30,710 --> 00:03:32,190
+by type. byType,
+
+45
+00:03:32,450 --> 00:03:41,420
+if you go back to the slides from earlier, it uses setter injection, by Type and by Name, the container
+
+46
+00:03:41,420 --> 00:03:47,530
+is going to use Setter injection. By constructor is constructor injection and Auto detect is outdated.
+
+47
+00:03:47,540 --> 00:03:49,010
+We are not going to use it.
+
+48
+00:03:49,010 --> 00:03:56,150
+So what exactly happened here is that Spring, when we run our test, the spring container loads this configuration
+
+49
+00:03:57,050 --> 00:03:59,160
+and it will create this bean, the address bean.
+
+50
+00:03:59,160 --> 00:04:01,800
+And when it comes to the employee bean,
+
+51
+00:04:02,210 --> 00:04:06,870
+since we have configured it by type it will go to the employee class,
+
+52
+00:04:06,980 --> 00:04:13,340
+it will search what all reference dependencies or what all object dependencies does employ have. It will
+
+53
+00:04:13,340 --> 00:04:20,620
+find address and it will look at what it's type is or what class type it is. It is address.
+
+54
+00:04:20,770 --> 00:04:31,780
+It will then take this address, goes to the config file and searches which bean tag has a class as address.
+
+55
+00:04:32,060 --> 00:04:33,210
+It keeps on searching,
+
+56
+00:04:33,290 --> 00:04:38,600
+and as soon as it finds it, it's going to use that particular bean. It will instantiate that bean if
+
+57
+00:04:38,600 --> 00:04:47,060
+it is not already instantiated and then it will inject that bean into the employee using setter injection.
+
+58
+00:04:47,060 --> 00:04:48,270
+That is how it has worked.
+
+59
+00:04:48,290 --> 00:04:52,560
+So always remember that the Spring container
+
+60
+00:04:52,650 --> 00:04:56,350
+will look at all the object references that are dependencies.
+
+61
+00:04:56,510 --> 00:05:02,420
+It will then take the type because we are, we have configured autowiring by type. So it will use the object
+
+62
+00:05:02,420 --> 00:05:03,050
+type.
+
+63
+00:05:03,380 --> 00:05:09,190
+It searches the configuration file for that type, a bean tag which has a class with that type.
+
+64
+00:05:09,230 --> 00:05:13,390
+It will instantiate it and it will inject it into the bean.
+

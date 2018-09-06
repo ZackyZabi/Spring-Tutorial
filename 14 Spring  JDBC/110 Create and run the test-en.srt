@@ -1,0 +1,132 @@
+1
+00:00:00,300 --> 00:00:06,080
+This lecture We'll update our test class Open the best darned Java under-employed test package.
+
+2
+00:00:06,750 --> 00:00:09,330
+Let's fix the package names etc..
+
+3
+00:00:09,760 --> 00:00:20,370
+Befre spinning JEDEC dot employee or forward slash employees less desk to copy that forward slash or
+
+4
+00:00:20,390 --> 00:00:25,830
+dot add a forward slash that will do and this time we are not going to read J.D. B.S. template.
+
+5
+00:00:25,940 --> 00:00:29,200
+We are reading the employee be able.
+
+6
+00:00:29,210 --> 00:00:35,000
+That is the name of the bean which we have configured in the conflict for example will read that Dow
+
+7
+00:00:36,440 --> 00:00:45,580
+type cast it into employee be able we can use the interface because that interface is implemented by
+
+8
+00:00:45,580 --> 00:00:47,260
+them Pleydell impelled.
+
+9
+00:00:47,340 --> 00:00:49,200
+Get rid of these two lines here.
+
+10
+00:00:51,300 --> 00:01:00,770
+End result is equal to call this the Will not that there really is a template.
+
+11
+00:01:00,810 --> 00:01:03,120
+Be able darte create.
+
+12
+00:01:03,150 --> 00:01:05,490
+We need to pass in a new employee.
+
+13
+00:01:05,510 --> 00:01:11,120
+So create that here New Employee object semi-colon control.
+
+14
+00:01:11,130 --> 00:01:21,230
+One important employee set up this new employee control one extract to local variable.
+
+15
+00:01:21,230 --> 00:01:22,570
+Eclipse will do it for us.
+
+16
+00:01:22,590 --> 00:01:27,510
+We know we need to add some data into this object employed dart set.
+
+17
+00:01:27,530 --> 00:01:35,930
+ID is the first one ID is to send in Digest or get it off double quotes you have value of do we already
+
+18
+00:01:35,930 --> 00:01:39,460
+have a field in the database with ID of one.
+
+19
+00:01:39,470 --> 00:01:43,700
+So lets start with two and Dot set.
+
+20
+00:01:43,730 --> 00:02:02,240
+First name is equal to John employee got lost or said last name is equal to for gusano.
+
+21
+00:02:02,290 --> 00:02:10,510
+One of my colleagues John Ferguson capital save it use whatever names you want.
+
+22
+00:02:10,510 --> 00:02:16,570
+You need not use sophisticated names if you feel that this sets up a stick and the control shift or
+
+23
+00:02:16,570 --> 00:02:17,660
+to organize or import.
+
+24
+00:02:17,660 --> 00:02:23,830
+So in this lecture you have successfully created the test class with the right package names for the
+
+25
+00:02:23,830 --> 00:02:25,120
+configured example.
+
+26
+00:02:25,140 --> 00:02:31,270
+Then when you read the bean which is employed from the spring container and how in walked the create
+
+27
+00:02:31,270 --> 00:02:36,160
+method by passing it the Employee object instead of simply passing values.
+
+28
+00:02:36,350 --> 00:02:40,690
+We are getting the result and we are displaying the result.
+
+29
+00:02:40,730 --> 00:02:50,510
+Let's run it right click run as Java application and everything is wired and access number of records
+
+30
+00:02:50,540 --> 00:02:52,360
+inserted are one.
+
+31
+00:02:52,370 --> 00:02:56,370
+Go to the database on my siecle workbench on the set.
+
+32
+00:02:56,540 --> 00:02:59,730
+One more time and we see two records.
+
+33
+00:02:59,800 --> 00:03:03,410
+Now the next lecture will explain the flow and trend.
+

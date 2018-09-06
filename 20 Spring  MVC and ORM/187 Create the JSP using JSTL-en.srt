@@ -1,0 +1,200 @@
+1
+00:00:00,350 --> 00:00:07,980
+This lecture you will create the display users start a GSB and use JFT or tags Jervoise and the tag
+
+2
+00:00:07,980 --> 00:00:13,600
+label inside it to display the list of users to do that.
+
+3
+00:00:14,590 --> 00:00:20,710
+Before you create the speed there are a couple of steps we need to do to protect someone or three steps
+
+4
+00:00:20,770 --> 00:00:25,930
+in the product simle we have removed the DTD on the root element earlier.
+
+5
+00:00:26,230 --> 00:00:31,030
+Let's add the proper root element from the resources section of this lecture.
+
+6
+00:00:31,090 --> 00:00:32,150
+You can download this.
+
+7
+00:00:32,190 --> 00:00:32,560
+D.
+
+8
+00:00:32,620 --> 00:00:33,520
+D a lot.
+
+9
+00:00:33,540 --> 00:00:34,950
+B XTi.
+
+10
+00:00:35,180 --> 00:00:40,520
+Once you download it from the resource section the very first step is to grab this root element which
+
+11
+00:00:40,520 --> 00:00:41,200
+is webapp.
+
+12
+00:00:41,200 --> 00:00:47,000
+Copy it will back to Bartik someone select this webapp that have an app.
+
+13
+00:00:47,000 --> 00:00:53,210
+Paste the new element so that we have the root element with the three dot or name off.
+
+14
+00:00:53,240 --> 00:00:56,180
+So let it be.
+
+15
+00:00:56,190 --> 00:00:58,840
+Second step is to add the Mabon dependencies.
+
+16
+00:00:58,950 --> 00:01:03,800
+So grab these two dependencies SPL and standard tag libraries.
+
+17
+00:01:03,800 --> 00:01:06,120
+I cover a lot more details on tag libraries.
+
+18
+00:01:06,120 --> 00:01:12,360
+In my case be sublets and database of course but it's this much knowledge is enough to work on it.
+
+19
+00:01:12,360 --> 00:01:19,380
+You need these dependencies in the palm up open it with the dependency section all the way to the end
+
+20
+00:01:19,790 --> 00:01:21,360
+based on new dependencies.
+
+21
+00:01:21,360 --> 00:01:27,720
+Control shift to format and Mebane will pull those dependencies for us.
+
+22
+00:01:27,720 --> 00:01:34,390
+The very first time now we are ready to create the DSP goto source webapp.
+
+23
+00:01:34,450 --> 00:01:45,400
+This piece right click new DSP and the name of the file should be display.
+
+24
+00:01:45,470 --> 00:01:47,360
+Users Dorte GSB
+
+25
+00:01:50,280 --> 00:01:54,200
+to use the Taggett we need to include the tag Libert data too.
+
+26
+00:01:54,540 --> 00:01:59,960
+You can copy this last piece from here pasted right next to the very first line which is the page Darick
+
+27
+00:01:59,990 --> 00:02:01,690
+to.
+
+28
+00:02:01,800 --> 00:02:05,690
+This is the tag lib namespace and this is the prefix for it.
+
+29
+00:02:05,710 --> 00:02:12,670
+Now we can start using the bag liberally inside our DML page to display all the users are the result
+
+30
+00:02:12,670 --> 00:02:15,270
+that comes back to do that.
+
+31
+00:02:15,430 --> 00:02:18,190
+Use C colon for each.
+
+32
+00:02:18,190 --> 00:02:20,230
+These are the core tags.
+
+33
+00:02:20,230 --> 00:02:27,190
+C stands for core and these are the core tags in the SDL which we can use to display the object data
+
+34
+00:02:27,220 --> 00:02:32,770
+inside the display page without writing job or code Seacole and for each
+
+35
+00:02:35,630 --> 00:02:39,200
+items is that rebute is equal to within double quotes.
+
+36
+00:02:39,200 --> 00:02:45,010
+Use the expression language of DSP Dala within our brackets.
+
+37
+00:02:45,020 --> 00:02:49,750
+The name of the variable inside the user control or whatever we have set into the model.
+
+38
+00:02:49,760 --> 00:02:59,140
+Go back to the controller we have set it as users so retrieve that list go back to the display use or
+
+39
+00:02:59,140 --> 00:03:03,050
+start DSP users automatically.
+
+40
+00:03:03,220 --> 00:03:10,090
+This tag will pull users from the request using request or get a reboot and it will loop through it.
+
+41
+00:03:10,300 --> 00:03:20,890
+We can assign each user in this list where variable is equal to within double court user.
+
+42
+00:03:21,080 --> 00:03:25,010
+So this object will carry each user in this list inside the loop.
+
+43
+00:03:25,220 --> 00:03:39,020
+We can get that data using the expression language I can simply see Colon.
+
+44
+00:03:39,610 --> 00:03:45,160
+We don't have to do that simply use the expression language dollar symbol within flower brackets.
+
+45
+00:03:45,190 --> 00:03:47,770
+Use that is the bean thought I'd be.
+
+46
+00:03:47,840 --> 00:03:55,690
+Similarly we can get name and salary well formatted better Letran name and the last one is e-mail.
+
+47
+00:03:55,690 --> 00:04:04,350
+Let's check the B names by going to use a dot Java ID name an email in the display.
+
+48
+00:04:04,360 --> 00:04:11,620
+That's not GSB we are moving through the list of users that comes back in the model and taking the each
+
+49
+00:04:11,620 --> 00:04:15,830
+user object in the list and displaying their details.
+
+50
+00:04:16,000 --> 00:04:19,850
+We'll run this program in the next lecture and we'll format it better.
+

@@ -1,0 +1,67 @@
+0
+00:00.270 --> 00:06.900
+In this lecture, I will quickly recap what you have learned from the setter injection section. Setter injection
+
+1
+00:06.930 --> 00:14.510
+is the process of the spring container using the setter methods on our object to do the dependency injection.
+
+2
+00:14.530 --> 00:21.070
+We also learnt the three important steps to do dependency injection using spring they are creating the spring
+
+3
+00:21.070 --> 00:26.790
+beans for our application classes which are pojos plain old Java objects.
+
+4
+00:26.800 --> 00:32.970
+Second step is to create the spring xml configuration file and provide the spring container the
+
+5
+00:33.070 --> 00:35.370
+dependency injection information.
+
+6
+00:35.440 --> 00:41.280
+That is how the beans should be created and what dependency should be injected goes into this particular file.
+
+7
+00:42.510 --> 00:47.060
+Last but not least get the beans from the spring container and use them
+
+8
+00:47.090 --> 00:53.980
+either in our test classes or other application classes .There are three different types of data you
+
+9
+00:53.980 --> 01:02.800
+have injected have injected the primitive types using value as element value as attribute and also using P schema
+
+10
+01:02.890 --> 01:08.000
+which is a very convenient and easy way to inject dependencies.
+
+11
+01:08.050 --> 01:14.440
+The second data type is collections and to inject the various collection types we use the collection
+
+12
+01:14.440 --> 01:21.990
+elements in spring list set map and properties are the xml elements that we have used.
+
+13
+01:22.040 --> 01:28.910
+Last but not the least objects or reference types can be injected using the ref element inside the bean
+
+14
+01:28.910 --> 01:30.120
+element property.
+
+15
+01:32.170 --> 01:37.570
+Ref can be used as an element and also as an attribute on the bean.
+
+16
+01:37.610 --> 01:37.970
+back.

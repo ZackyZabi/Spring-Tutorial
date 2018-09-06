@@ -1,0 +1,207 @@
+0
+00:00.180 --> 00:05.810
+In this lecture, will wrap up the last two steps which is creation of the spring configuration file to inject
+
+1
+00:05.810 --> 00:08.240
+the reference type and the test class.
+
+2
+00:08.250 --> 00:17.400
+So grab the configuration from earlier packages config and the test copy it and paste it on ref types
+
+3
+00:18.430 --> 00:25.660
+open the conflict let's config the reference types always start with the dependent or dependency bean.
+
+4
+00:25.760 --> 00:29.900
+That is in this case student depends on scores.
+
+5
+00:29.960 --> 00:34.420
+So will start with creating scores first in the config dot xml
+
+6
+00:34.550 --> 00:37.070
+Let's get rid of everything and start from scratch.
+
+7
+00:37.100 --> 00:45.170
+Except for the beans element nothing is there in the config dot xml start with bean name is equal
+
+8
+00:45.170 --> 00:47.350
+to scores
+
+9
+00:47.990 --> 00:49.670
+Class is equal to
+
+10
+00:52.430 --> 00:53.600
+scores.
+
+11
+00:53.690 --> 00:55.240
+We need to grab the package name.
+
+12
+00:55.240 --> 01:05.050
+Go to the class copy it come back paste it dot close it right there and we can use the P schema
+
+13
+01:05.260 --> 01:09.100
+to inject the values P colon
+
+14
+01:09.340 --> 01:11.000
+First one is maths
+
+15
+01:11.200 --> 01:12.370
+That's the field name
+
+16
+01:15.280 --> 01:20.980
+let's inject that value is equal to 80 in maths
+
+17
+01:21.190 --> 01:23.060
+That's a decent score.
+
+18
+01:23.080 --> 01:27.790
+Physics is equal to 90.
+
+19
+01:28.180 --> 01:37.210
+And finally P colon chemistry lets say 78.
+
+20
+01:37.650 --> 01:44.640
+So we have successfully created the first bean or the first object which is required by student.
+
+21
+01:44.740 --> 01:51.350
+Now let's create the student bean bean name is equal to student.
+
+22
+01:51.430 --> 01:56.140
+Class is equal to student.
+
+23
+01:56.510 --> 01:58.370
+Copy the package name from up here.
+
+24
+02:00.820 --> 02:02.020
+And paste it
+
+25
+02:06.260 --> 02:11.250
+and inside the bean will use the property.
+
+26
+02:13.730 --> 02:20.180
+by doing property injection and the name of the property is
+
+27
+02:20.280 --> 02:30.060
+scores if you go to the student the name of the property is scores copy paste and to inject the ref types
+
+28
+02:30.060 --> 02:33.170
+we need to use an element called ref
+
+29
+02:33.490 --> 02:40.450
+ref Bean is equal to specify what is the bean name.
+
+30
+02:40.460 --> 02:47.300
+So here the bean name is scores so we are going to refer to that paste it and that will inject scores
+
+31
+02:47.360 --> 03:00.700
+into the scores property of a student.
+
+32
+03:00.760 --> 03:04.500
+There is a space here the double quotes are not properly ending
+
+33
+03:04.840 --> 03:09.190
+so ref bean is equal to scores.
+
+34
+03:12.250 --> 03:16.220
+Go to the test class and make the updates instead of properties.
+
+35
+03:16.220 --> 03:18.060
+This will be a ref types.
+
+36
+03:18.140 --> 03:27.440
+That's the package name countries and languages should change to student typecast it to student and the bean
+
+37
+03:27.440 --> 03:32.930
+we are interested is student although we have two beans in the config dot xml at the end of
+
+38
+03:32.930 --> 03:37.740
+it we want to get the student and when we display it should also display the scores.
+
+39
+03:37.760 --> 03:45.770
+So let's implement the tostring method in student as well as inside scores go to source point your
+
+40
+03:45.770 --> 03:50.740
+cursor to the end of the file go to source generate tostring.
+
+41
+03:51.460 --> 03:52.660
+Ok.
+
+42
+03:53.720 --> 03:55.030
+Go to scores
+
+43
+03:55.160 --> 04:00.030
+Source generate tostring.
+
+44
+04:00.540 --> 04:01.690
+OK.
+
+45
+04:01.780 --> 04:02.570
+Save it.
+
+46
+04:02.590 --> 04:04.320
+Come back to the test class.
+
+47
+04:04.330 --> 04:07.620
+Student is the name of the bean its typecasted sysout
+
+48
+04:07.700 --> 04:18.710
+Change this name here to student student CONTROL shift F to format right click its time to run and
+
+49
+04:18.710 --> 04:27.790
+see reference type injection and it displays the student's course in math physics and chemistry.
+
+50
+04:27.820 --> 04:36.610
+So we have successfully configured object types and injected one object or reference into another java
+
+51
+04:36.610 --> 04:37.120
+object.

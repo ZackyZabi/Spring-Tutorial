@@ -1,0 +1,72 @@
+1
+00:00:00,170 --> 00:00:05,940
+In this lecture you will implement the delete method in the ProductDao and delete a particular record from
+
+2
+00:00:05,940 --> 00:00:11,310
+the database. Go to the ProductDao, void delete is the method.
+
+3
+00:00:11,460 --> 00:00:15,010
+And all we need to give it is a product entity.
+
+4
+00:00:15,810 --> 00:00:16,770
+And it should have a
+
+5
+00:00:16,850 --> 00:00:19,910
+Id inside it. It need not have the other information.
+
+6
+00:00:19,910 --> 00:00:27,470
+All that is required is the id field. Go to the ProductDaoImpl, control+1, add unimplemented methods.
+
+7
+00:00:29,280 --> 00:00:40,880
+Go all the way to the end, control+d to delete that. Use the hibernateTemplate.delete and pass it the entity
+
+8
+00:00:40,940 --> 00:00:50,330
+which is product. Do a control+shift+f to format. Mark it with @Transactional, don't forget to do that. Go to
+
+9
+00:00:50,350 --> 00:00:50,920
+the test
+
+10
+00:00:53,590 --> 00:01:03,430
+and comment out the update. Do a ProductDao.delete and pass in the product.
+
+11
+00:01:03,540 --> 00:01:06,080
+We have only one product record in the database.
+
+12
+00:01:06,360 --> 00:01:11,070
+Let's go to the database, do a select operation to make sure that we have a record.
+
+13
+00:01:11,340 --> 00:01:16,290
+We do. So come back, run the test.
+
+14
+00:01:19,510 --> 00:01:22,900
+See what statement is being generated.
+
+15
+00:01:22,910 --> 00:01:27,590
+So it does a select first internally and then it does a delete.
+
+16
+00:01:27,590 --> 00:01:30,520
+So it's fetches the record and then it deletes it internally.
+
+17
+00:01:30,800 --> 00:01:37,520
+So let's go to the database, do a select operation and there are no records.
+
+18
+00:01:37,530 --> 00:01:40,610
+So you have also successfully deleted the record.
+

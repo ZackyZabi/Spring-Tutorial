@@ -1,0 +1,72 @@
+1
+00:00:00,390 --> 00:00:06,450
+The autowired annotation can be used at the property level as well or the field level.
+
+2
+00:00:06,510 --> 00:00:12,600
+Instead of doing it at a setter level, you can grab this autowired from here, cut it and paste it on
+
+3
+00:00:12,600 --> 00:00:18,760
+the field level and Spring will automatically inject the dependency into this field.
+
+4
+00:00:18,770 --> 00:00:28,060
+You can get rid of the setter method if you want to and still it works. Go to test, rerun the test.
+
+5
+00:00:28,180 --> 00:00:30,250
+And we still see the same output.
+
+6
+00:00:30,250 --> 00:00:34,890
+So the second way of using autowiring is to use it on the field level.
+
+7
+00:00:34,900 --> 00:00:38,150
+You can also use it at the setter level which you have already seen.
+
+8
+00:00:38,380 --> 00:00:42,350
+The third combination is to use it at the constructor level.
+
+9
+00:00:42,610 --> 00:00:43,950
+So get rid of it.
+
+10
+00:00:44,000 --> 00:00:46,190
+Cut it from here.
+
+11
+00:00:46,190 --> 00:00:49,580
+Go to the constructor, paste it right above the constructor.
+
+12
+00:00:49,590 --> 00:00:56,420
+Now the autowire is going to do or the Spring container is going to use the constructor based injection.
+
+13
+00:00:57,240 --> 00:00:58,610
+Nothing else changes.
+
+14
+00:00:58,640 --> 00:01:04,620
+Rerun the test and everything still works as expected.
+
+15
+00:01:04,620 --> 00:01:07,800
+So autowiring using annotations is quite easy.
+
+16
+00:01:07,920 --> 00:01:13,890
+You configure the annotation support in the Spring configuration, then you come to the beans and use
+
+17
+00:01:13,890 --> 00:01:16,390
+the Autowire annotation at the constructor level,
+
+18
+00:01:16,530 --> 00:01:25,110
+if you want to mandate the contract or at the field level, if you want the dependencies to be optional.
+

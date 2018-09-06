@@ -1,0 +1,20 @@
+1
+00:00:00,170 --> 00:00:05,280
+Then we have created this putting configuration and configure the hibernate template in earlier lectures.
+
+2
+00:00:05,370 --> 00:00:12,690
+One thing we have left is the annotated classes we have left this product here that is not what we want.
+
+3
+00:00:12,870 --> 00:00:22,730
+We want the user model so go to use the scroll up grab that back Neame come back to that dispatcher
+
+4
+00:00:22,730 --> 00:00:31,380
+so let Nortec someone pasted in the value remove any spaces at the end dot user is our entity so that
+
+5
+00:00:32,330 --> 00:00:38,400
+in fact we can scan it and use that entity in the next lecture will run our application and do it.
+

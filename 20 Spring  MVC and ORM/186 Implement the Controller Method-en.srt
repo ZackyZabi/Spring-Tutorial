@@ -1,0 +1,52 @@
+1
+00:00:00,170 --> 00:00:02,180
+In this lecture you will implement the controller.
+
+2
+00:00:02,180 --> 00:00:09,110
+After that we'll use to use a service load the users from the database and send it back to the view.
+
+3
+00:00:09,180 --> 00:00:13,780
+It will send that list back with The View will create the view in the next lecture.
+
+4
+00:00:14,620 --> 00:00:21,300
+Go to use a controller copy the very first method which users get by default.
+
+5
+00:00:21,330 --> 00:00:30,060
+Bastet Lord you can call it the users are get users is the matter also change that you are pattern to
+
+6
+00:00:30,330 --> 00:00:31,650
+get users
+
+7
+00:00:35,390 --> 00:00:49,470
+get to use this method we'll call the service Daut get users which returns a list assignable local variable.
+
+8
+00:00:50,300 --> 00:00:54,580
+And we need a model map so that we can send this list back to the UI.
+
+9
+00:00:54,800 --> 00:01:04,970
+So in the matter parameter we need to define a border map order so that will go back to the UI into
+
+10
+00:01:04,970 --> 00:01:13,750
+the model map model dot and attribute the last one the string.
+
+11
+00:01:13,750 --> 00:01:20,600
+The key will be users and the value will be the users which is the list here.
+
+12
+00:01:20,600 --> 00:01:27,530
+So we are going to send that list back to the UI and return it to a page call display users which will
+
+13
+00:01:27,770 --> 00:01:31,640
+create in the next lecture display users.
+

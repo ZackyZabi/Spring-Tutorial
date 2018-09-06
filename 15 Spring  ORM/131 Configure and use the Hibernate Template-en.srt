@@ -1,0 +1,132 @@
+1
+00:00:00,150 --> 00:00:04,300
+In this lecture, you'll configure the key classes which is the HibernateTemplate.
+
+2
+00:00:04,440 --> 00:00:07,290
+And then we'll inject it into the ProductDao.
+
+3
+00:00:07,770 --> 00:00:15,290
+Let's get started by going to Eclipse, create a new bean. Let me scroll it up.
+
+4
+00:00:18,340 --> 00:00:20,940
+Start with the bean element.
+
+5
+00:00:21,470 --> 00:00:23,830
+Class is equal to HibernateTemplate,
+
+6
+00:00:23,840 --> 00:00:25,120
+we'll get to that in a second.
+
+7
+00:00:25,120 --> 00:00:33,590
+Give it a name is equal, hibernateTemplate. Close that bean tag right there. In the class,
+
+8
+00:00:33,590 --> 00:00:39,200
+we don't, we know the class name. Do a control+shift+t, search for HibernateTemplate.
+
+9
+00:00:39,220 --> 00:00:43,630
+Again, select the one from hibernate5 package.
+
+10
+00:00:43,970 --> 00:00:50,460
+Open it up, grab the class name and the package. Come back to config.xml.
+
+11
+00:00:50,520 --> 00:00:55,410
+Paste the class name. hibernateTemplate takes a SessionFactory,
+
+12
+00:00:55,410 --> 00:00:57,420
+it depends on the SessionFactory.
+
+13
+00:00:57,420 --> 00:01:02,380
+We can use the p-schema to inject that. In the bean tag
+
+14
+00:01:02,380 --> 00:01:08,940
+use p:sessionFactory-ref, it's an object type or reference type.
+
+15
+00:01:08,940 --> 00:01:09,980
+Use ref.
+
+16
+00:01:10,020 --> 00:01:11,830
+Copy this name from here.
+
+17
+00:01:12,180 --> 00:01:16,170
+Paste it right there and close the bean tag right there.
+
+18
+00:01:18,200 --> 00:01:20,930
+Remove any extra double quotes
+
+19
+00:01:21,320 --> 00:01:29,300
+if you have them and close that tag right there. Get rid of this bean tag. Do a control+shift+f to format and
+
+20
+00:01:29,300 --> 00:01:36,290
+we have configured the sessionFactory successfully. Let's autowire this hibernateTemplate, that should
+
+21
+00:01:36,290 --> 00:01:40,290
+be hibernateTemplate, into our dao class.
+
+22
+00:01:40,310 --> 00:01:45,590
+Go do ProductDaoImpl and you know how to autowire.
+
+23
+00:01:45,660 --> 00:01:47,550
+First let's use the @Component
+
+24
+00:01:50,250 --> 00:01:52,270
+annotation from Spring.
+
+25
+00:01:52,290 --> 00:02:00,700
+Next use the @Autowired annotation from Spring. Go to config.xml.
+
+26
+00:02:00,710 --> 00:02:03,970
+Scroll up all the way up right here.
+
+27
+00:02:05,180 --> 00:02:11,900
+Context colon component-scan, provide the base package to do that.
+
+28
+00:02:11,900 --> 00:02:20,030
+Go to ProductDaoImpl, grab the package name up to Impl, come back to config.xml, paste
+
+29
+00:02:20,030 --> 00:02:23,030
+that package name and you can close that element right there.
+
+30
+00:02:23,090 --> 00:02:31,850
+If you remember, this context:component-scan also enables annotations and it also scans for the classes
+
+31
+00:02:31,880 --> 00:02:35,920
+which are components, which objects can be created.
+
+32
+00:02:35,940 --> 00:02:41,330
+So in this lecture, you have successfully configured the hibernateTemplate and you have also injected
+
+33
+00:02:41,330 --> 00:02:44,600
+it into the ProductDaoImpl.
+

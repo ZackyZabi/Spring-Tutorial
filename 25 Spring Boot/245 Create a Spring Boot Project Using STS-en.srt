@@ -1,0 +1,120 @@
+1
+00:00:00,260 --> 00:00:07,950
+In this lecture, I will show you how to create a Spring Boot project by using the STS which is
+
+2
+00:00:07,950 --> 00:00:15,700
+Spring Tool Suite. Doubleclick on the Spring Tool Suite icon. That will launch the Spring Tool Suite for you.
+
+3
+00:00:17,240 --> 00:00:18,250
+Choose a workspace.
+
+4
+00:00:18,260 --> 00:00:21,380
+It is very similar to Eclipse because it uses Eclipse.
+
+5
+00:00:21,500 --> 00:00:29,240
+You can select a folder on your machine, click on Launch. And that will take you to the STS homepage
+
+6
+00:00:29,440 --> 00:00:37,510
+or the workspace once it launches up. And as you can see it is very similar to Eclipse.
+
+7
+00:00:37,540 --> 00:00:45,940
+Go to the file menu, say New -> Spring Starter Project. You see that option only in STS, not the regular
+
+8
+00:00:45,940 --> 00:00:46,720
+Eclipse.
+
+9
+00:00:46,940 --> 00:00:53,560
+So click on Spring Starter Project. And you can change these Maven coordinates if you want to. I'm going
+
+10
+00:00:53,560 --> 00:00:59,170
+to leave them as it is. But as you can see it uses the Spring initialiser website to create
+
+11
+00:00:59,170 --> 00:00:59,950
+a project.
+
+12
+00:01:00,010 --> 00:01:02,320
+The name is demo, that's fine.
+
+13
+00:01:04,120 --> 00:01:06,510
+The package is com.example.demo.
+
+14
+00:01:06,580 --> 00:01:13,750
+Click on next, and here what you have earlier seen as an option for search on the spring initialiser
+
+15
+00:01:13,750 --> 00:01:16,130
+website is available for you right here.
+
+16
+00:01:16,360 --> 00:01:21,070
+If you are creating different types of projects, you can select one of these options like the web and
+
+17
+00:01:21,160 --> 00:01:25,130
+those starter dependencies will be included in the pom.xml.
+
+18
+00:01:25,270 --> 00:01:26,230
+We'll do that later
+
+19
+00:01:26,290 --> 00:01:34,450
+when we create web projects. For now, simply hit the Finish button. That will create a standalone Spring Boot project
+
+20
+00:01:34,450 --> 00:01:36,710
+for you called demo.
+
+21
+00:01:36,880 --> 00:01:42,700
+Expand it and you will see the very similar structure which you have seen when you created this project
+
+22
+00:01:42,730 --> 00:01:46,470
+using the Spring initialiser earlier. Open up the pom,
+
+23
+00:01:46,780 --> 00:01:53,730
+and it should be similar to the pom which you have already seen. Go to the last tab, pom.xml, maximize it
+
+24
+00:01:54,220 --> 00:02:00,830
+and you will see the starter projects for spring-boot-starter and spring-boot-starter-test.
+
+25
+00:02:01,000 --> 00:02:03,010
+And at this point you know what to do with this.
+
+26
+00:02:03,010 --> 00:02:07,870
+You are welcome to create the dao and service again, but that's not required.
+
+27
+00:02:07,870 --> 00:02:13,660
+It has the DemoApplication which is marked with SpringbootApplication with a main method that is
+
+28
+00:02:13,660 --> 00:02:14,920
+the starting point.
+
+29
+00:02:15,080 --> 00:02:17,580
+Then it also has a DemoApplicationTests,
+
+30
+00:02:17,660 --> 00:02:22,300
+marked with the SpringRunner and the SpringBootTest annotations.
+

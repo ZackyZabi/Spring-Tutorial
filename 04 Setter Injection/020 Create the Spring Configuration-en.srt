@@ -1,0 +1,144 @@
+1
+00:00:00,240 --> 00:00:06,710
+The second step is to tell our spring container about our POJO class and their dependencies it needs.
+
+2
+00:00:06,840 --> 00:00:10,460
+We do that using a XML configuration file.
+
+3
+00:00:10,600 --> 00:00:14,210
+You can grab this xml configuration file using a bare bones xml,
+
+4
+00:00:14,230 --> 00:00:16,910
+It does not have any Bean's defined in it.
+
+5
+00:00:17,020 --> 00:00:23,950
+It has the beans element which is the root element and the all the name spaces that we need from which
+
+6
+00:00:23,950 --> 00:00:27,630
+we'll be using the elements inside this bean's element.
+
+7
+00:00:27,630 --> 00:00:31,160
+So we can grab this from the resources section of this lecture.
+
+8
+00:00:31,630 --> 00:00:37,030
+Once you have it downloaded you can simply copy the spring config dot xml into your Eclipse project
+
+9
+00:00:37,420 --> 00:00:42,400
+or copy the contents of it go to eclipse right click on the source.
+
+10
+00:00:42,400 --> 00:00:53,090
+Main Java say new go to other type in xml, xml file select that next filename should be
+
+11
+00:00:53,090 --> 00:00:54,980
+config dot xml, it can be anything
+
+12
+00:00:55,010 --> 00:00:57,510
+I'm naming it as config dot xml
+
+13
+00:00:58,100 --> 00:01:08,830
+Finish do control a and paste the contents what you would have copied from the downloaded file maximize it and
+
+14
+00:01:08,830 --> 00:01:11,570
+will start configuring our pojo
+
+15
+00:01:11,800 --> 00:01:17,760
+The element that we use here is the bean element.
+
+16
+00:01:17,880 --> 00:01:23,430
+We define a bean element for each object we want to instantiate the bean element has an attribute called
+
+17
+00:01:23,430 --> 00:01:27,020
+name which is a unique name for it.
+
+18
+00:01:27,030 --> 00:01:36,240
+Let's call it EMP in our program we'll be using this name to refer to this bean when you write a test
+
+19
+00:01:36,240 --> 00:01:41,810
+class next in the next lecture you'll be using this name to get the bean class.
+
+20
+00:01:42,030 --> 00:01:45,180
+We need to get the complete qualified class name.
+
+21
+00:01:45,180 --> 00:01:46,110
+Go to the employee.
+
+22
+00:01:46,110 --> 00:01:52,940
+Copy the package come back to config dot xml or paste the package dot employee.
+
+23
+00:01:52,950 --> 00:02:00,060
+That's the class and within the bean element to do dependency injection we have two Properties which we need
+
+24
+00:02:00,060 --> 00:02:05,180
+to inject ID which is an int and name which is a string.
+
+25
+00:02:05,520 --> 00:02:13,830
+To do that will use the property element which is the sub element of bean property.
+
+26
+00:02:13,830 --> 00:02:16,220
+Name is equal to within double quotes.
+
+27
+00:02:16,230 --> 00:02:27,110
+We need to give the exact name of the property which is ID close it right there and value is a sub element
+
+28
+00:02:29,520 --> 00:02:31,350
+within that you can specify the value.
+
+29
+00:02:31,350 --> 00:02:36,380
+Let's say that ID is 20 copy it paste it.
+
+30
+00:02:36,510 --> 00:02:39,900
+The second field is name and it's of type string.
+
+31
+00:02:39,900 --> 00:02:41,220
+I'm using my name.
+
+32
+00:02:41,220 --> 00:02:44,760
+You are welcome to use your name in the in here.
+
+33
+00:02:44,760 --> 00:02:48,670
+Inside the value do a control shift F to format.
+
+34
+00:02:48,960 --> 00:02:55,770
+So we have successfully created a bean or asking spring to create this employee bean and inject these
+
+35
+00:02:55,770 --> 00:03:05,010
+2 values into the properties ID and name the next lecture will write a test class which will pull this bean
+
+36
+00:03:05,100 --> 00:03:09,170
+out of this configuration file and we can check out dependency injection.
+

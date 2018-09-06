@@ -1,0 +1,68 @@
+1
+00:00:00,300 --> 00:00:06,480
+The second step is to create or application classes and interfaces which are product service and product
+
+2
+00:00:06,480 --> 00:00:15,690
+service impled with one single method called Multiply go to eclipse or to the source main Java and the
+
+3
+00:00:15,690 --> 00:00:20,580
+package composite spring spring it will be doing this class Abdur Java.
+
+4
+00:00:20,610 --> 00:00:21,770
+We don't need it.
+
+5
+00:00:23,430 --> 00:00:34,400
+Right click on the package saying new interface product service is the interface name finish maximize
+
+6
+00:00:34,940 --> 00:00:43,650
+how one single method that returns an integer int multiply in number one and number two
+
+7
+00:00:47,140 --> 00:00:49,660
+create a class that will implement this interface right.
+
+8
+00:00:49,670 --> 00:00:56,020
+Like new class product service in.
+
+9
+00:00:56,170 --> 00:00:58,150
+Click on the Add button.
+
+10
+00:00:58,530 --> 00:01:01,580
+Are the services the interface we want to implement.
+
+11
+00:01:01,760 --> 00:01:06,360
+Ok finish that block.
+
+12
+00:01:06,560 --> 00:01:09,810
+And this should return the product of these two numbers here.
+
+13
+00:01:10,100 --> 00:01:13,450
+Number one stop number two.
+
+14
+00:01:13,760 --> 00:01:14,840
+That's it.
+
+15
+00:01:14,840 --> 00:01:15,890
+So you have created the.
+
+16
+00:01:15,890 --> 00:01:19,880
+Those are the application interfaces and classes in the next lecture.
+
+17
+00:01:19,910 --> 00:01:22,130
+We will start implementing that aspect's.
+

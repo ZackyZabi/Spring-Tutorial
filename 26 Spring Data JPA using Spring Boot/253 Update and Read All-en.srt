@@ -1,0 +1,132 @@
+1
+00:00:00,360 --> 00:00:07,450
+In this lecture, I will show you how to use an update operation or how to perform a product update.
+
+2
+00:00:07,480 --> 00:00:14,610
+So right here we are creating a product, and then we are finding it. Let's do a update product by changing
+
+3
+00:00:14,610 --> 00:00:20,410
+the result. result.setPrice(),
+
+4
+00:00:20,490 --> 00:00:25,910
+I am going to change the price of the product to 1500 dollars.
+
+5
+00:00:25,910 --> 00:00:34,500
+Now, the Mac price has gone up. And to update it, we'll be using the same method, the same save method.
+
+6
+00:00:34,510 --> 00:00:37,980
+repository.save() and pass it
+
+7
+00:00:38,000 --> 00:00:45,900
+the result. You can change that name if you want to. And that will save the product or that will update the
+
+8
+00:00:45,900 --> 00:00:52,800
+product. So automatically, the JPA API, it internally, hibernate implementation will check if that product
+
+9
+00:00:52,830 --> 00:00:54,160
+already exists
+
+10
+00:00:54,210 --> 00:01:01,920
+with this Id. If it does, it will update that instead of creating it again. And let's do a find one more
+
+11
+00:01:01,920 --> 00:01:17,820
+time. So you can copy this piece here or we can do a findAll. repository.findAll(), dot,
+
+12
+00:01:17,850 --> 00:01:26,810
+I'm going to use some Java 8 features here which is .forEach(). This forEach allows you to write a
+
+13
+00:01:26,820 --> 00:01:32,420
+lambda expression. If you have taken my Core Java course, you know how to use lambdas. Inside this forEach,
+
+14
+00:01:32,490 --> 00:01:42,060
+you can say p or product or whatever, dash, arrow mark, flower bracket open,
+
+15
+00:01:42,060 --> 00:01:43,350
+close the flower bracket.
+
+16
+00:01:43,350 --> 00:01:45,160
+This is a lambda expression.
+
+17
+00:01:45,690 --> 00:01:47,670
+So we'll get a list of products back
+
+18
+00:01:47,680 --> 00:01:51,900
+here or a collection of iterable products back.
+
+19
+00:01:51,900 --> 00:01:57,900
+I'm doing a forEach on that and I'm passing in a lambda expression which will be executed for each
+
+20
+00:01:57,900 --> 00:01:58,380
+product.
+
+21
+00:01:58,380 --> 00:02:06,460
+In this case we have only one product. p.getPrice();
+
+22
+00:02:06,480 --> 00:02:09,120
+Let's check the price to see if it got updated.
+
+23
+00:02:09,210 --> 00:02:17,980
+You can do a sysout inside it, system.out.println(p.getPrice()).
+
+24
+00:02:17,980 --> 00:02:25,220
+Once we see it, see the result, I will explain it one more time for you. So put the whole thing in a
+
+25
+00:02:25,400 --> 00:02:28,680
+sysout with a semi-colon.
+
+26
+00:02:28,840 --> 00:02:30,030
+Save it.
+
+27
+00:02:30,070 --> 00:02:35,180
+So repository.findAll().forEach(p->{system.out.println(p.getPrice());}); display the price of the product.
+
+28
+00:02:35,290 --> 00:02:40,300
+Right click, do as Run As -> JUnit Test.
+
+29
+00:02:40,310 --> 00:02:45,630
+That should create a product in the database.
+
+30
+00:02:46,570 --> 00:02:50,900
+Fetch it and also then update the price. If you see the result here on the console,
+
+31
+00:02:50,910 --> 00:02:59,080
+it is 1500 now. So you have successfully updated a product as well as used the findAll method which
+
+32
+00:02:59,080 --> 00:03:02,830
+retrieves all the records in the database.
+
+33
+00:03:02,830 --> 00:03:08,200
+I will leave the delete and any other methods you will find on the repository, as an assignment.
+

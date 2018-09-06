@@ -1,0 +1,76 @@
+1
+00:00:00,390 --> 00:00:05,910
+Out of the four different ways to create a Spring Boot project, you have already learnt how to do it
+
+2
+00:00:05,970 --> 00:00:10,760
+using the Spring initializer website and then import that project into your IDE.
+
+3
+00:00:11,040 --> 00:00:17,650
+In this lecture, you will download an other powerful IDE that allows you to create a Spring Boot project
+
+4
+00:00:17,700 --> 00:00:19,170
+right from the IDE
+
+5
+00:00:19,290 --> 00:00:23,880
+instead of using or going to the Spring initializer website.
+
+6
+00:00:23,980 --> 00:00:29,670
+It is Spring Tool Suite. This IDE is built over Eclipse.
+
+7
+00:00:29,760 --> 00:00:31,290
+It internally uses Eclipse.
+
+8
+00:00:31,290 --> 00:00:35,540
+So it will be exactly same as Eclipse. For Eclipse users,
+
+9
+00:00:35,550 --> 00:00:36,560
+it's nothing new.
+
+10
+00:00:36,600 --> 00:00:41,060
+But in addition, it has a lot of support for Spring projects.
+
+11
+00:00:41,100 --> 00:00:44,890
+You can also use intelliJ. If you are already using intelliJ,
+
+12
+00:00:45,030 --> 00:00:52,410
+you can create Spring Boot projects right from your IDE. To install Spring Boot, launch your web browser,
+
+13
+00:00:52,890 --> 00:01:03,970
+open a new tab and search for spring tool suite. spring tool suite, select that and you will go to the
+
+14
+00:01:03,970 --> 00:01:12,500
+spring tool suite search results. Click on the very first link, and download the version for your particular
+
+15
+00:01:12,500 --> 00:01:18,920
+machine. That will be a zip file. Once you download it, unzip the contents and you will see something
+
+16
+00:01:18,920 --> 00:01:20,050
+like this.
+
+17
+00:01:20,130 --> 00:01:28,490
+For Mac, you will see STS.app. For Windows it will be an exe and you will be all set to create
+
+18
+00:01:28,490 --> 00:01:30,880
+projects from your IDE. In the next lecture,
+
+19
+00:01:30,890 --> 00:01:34,910
+I will show you how to create a project using Spring Tool Suite.
+

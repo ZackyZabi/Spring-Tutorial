@@ -1,0 +1,128 @@
+1
+00:00:00,140 --> 00:00:06,430
+When we use ORM tools like Hibernate the only piece of information we as developers need to provide is the
+
+2
+00:00:06,430 --> 00:00:13,980
+mapping information, mapping between the fields in our classes and the database table.
+
+3
+00:00:15,260 --> 00:00:22,620
+We can do it using XML or annotations. Annotations is the most popular way and that is what we're
+
+4
+00:00:22,640 --> 00:00:24,680
+going to use in this particular course.
+
+5
+00:00:24,740 --> 00:00:31,580
+There are four JPA annotations, Java Persistance API annotations that we as developers should know, @Entity,
+
+6
+00:00:31,970 --> 00:00:35,780
+@Table, @Id and @Column.
+
+7
+00:00:35,820 --> 00:00:37,470
+Let's take a look at an example.
+
+8
+00:00:37,470 --> 00:00:39,030
+First we create an entity.
+
+9
+00:00:39,250 --> 00:00:40,200
+It is a simple class.
+
+10
+00:00:40,200 --> 00:00:42,170
+It is a simple java bean like Employee
+
+11
+00:00:42,180 --> 00:00:48,630
+in this case. And we create all the fields in it, id firstName and lastName. And then we start marking
+
+12
+00:00:48,630 --> 00:00:53,680
+it with annotations, starting with the @Entity annotation.
+
+13
+00:00:54,150 --> 00:01:00,120
+And the primary field or the primary key field or the unique field in our application or in our entity,
+
+14
+00:01:00,120 --> 00:01:06,870
+for example in this case the id uniquely identifes an employee and it should be mapped to the id field
+
+15
+00:01:06,870 --> 00:01:13,420
+in the database which should be the primary key. We mark it with the @Id annotation.
+
+16
+00:01:13,610 --> 00:01:17,760
+This tells hibernate that this particular field is the primary key field.
+
+17
+00:01:17,790 --> 00:01:27,340
+These two annotations @Entity and @Id are mandatory for every entity that we create. The next two, the @Table
+
+18
+00:01:27,460 --> 00:01:31,450
+is optional as well as the @Column annotation is optional.
+
+19
+00:01:31,450 --> 00:01:38,620
+We use these only if the database table name is different from the class name, we can use the @Table
+
+20
+00:01:38,620 --> 00:01:41,090
+annotation and provide that name here.
+
+21
+00:01:41,110 --> 00:01:48,100
+For example, in this case the class name is Employee but the table name is not employee but it is emp.
+
+22
+00:01:48,280 --> 00:01:54,430
+That is why I am using @Table annotation and through the name attribute I'm providing the table name.
+
+23
+00:01:54,430 --> 00:01:56,410
+So all this information at runtime,
+
+24
+00:01:56,560 --> 00:02:02,530
+all these annotations will be processed by hibernate and it knows which entity should be mapped to which
+
+25
+00:02:02,530 --> 00:02:05,490
+table and which column or which field
+
+26
+00:02:05,920 --> 00:02:09,980
+in the Java object should be mapped to which column in the database.
+
+27
+00:02:10,020 --> 00:02:17,230
+You can also use the @Column, it's optional. And we use it if the fields here, the field names here are
+
+28
+00:02:17,230 --> 00:02:22,160
+different from the column names and also the @Column has few other attributes as well.
+
+29
+00:02:22,540 --> 00:02:30,240
+To summarize, you can use the four annotations to map our Java classes to the database tables.
+
+30
+00:02:30,250 --> 00:02:40,030
+They are @Entity,@Table, @Id and @Column. The @Entity and @Id are mandatory. @Id is used to mark the primary
+
+31
+00:02:40,030 --> 00:02:48,580
+key column and we use the @Table and @Column optionally if we want to map fields and classes if
+
+32
+00:02:48,580 --> 00:02:51,160
+the names are different from the database.
+

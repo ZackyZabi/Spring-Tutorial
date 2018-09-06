@@ -1,0 +1,92 @@
+1
+00:00:00,770 --> 00:00:08,500
+Eclipse is one of the most popular and most used ides that provides code assistance compiles our code
+
+2
+00:00:08,500 --> 00:00:16,570
+and even allows us to apply that code on a web-container and run it. By the end of this lecture it
+
+3
+00:00:16,570 --> 00:00:24,880
+will have the eclipse IDE installed on your machine to do that you can grab this URL from here or simply google
+
+4
+00:00:24,880 --> 00:00:28,490
+for Eclipse download launch your web browser,
+
+5
+00:00:28,570 --> 00:00:31,520
+paste it here enter this
+
+6
+00:00:31,650 --> 00:00:36,580
+will take us to the eclipse downloads page has different releases
+
+7
+00:00:36,580 --> 00:00:38,140
+Mars is the latest
+
+8
+00:00:38,160 --> 00:00:41,260
+and then it supports multiple operating systems.
+
+9
+00:00:41,260 --> 00:00:43,150
+Click on Mars packages,
+
+10
+00:00:46,070 --> 00:00:49,160
+We need to install Eclipse ID for Java
+
+11
+00:00:49,220 --> 00:00:50,450
+EE developers not
+
+12
+00:00:50,470 --> 00:00:55,680
+and not the java developers click on that
+
+13
+00:00:56,000 --> 00:01:01,640
+and now you can select the package for your appropriate operating system for windows it will be
+
+14
+00:01:01,640 --> 00:01:05,850
+a zip file for Mac also it will be a tar.gz
+
+15
+00:01:05,860 --> 00:01:11,010
+file you need to unzip the contents of it and you have the eclipse there for windows you can
+
+16
+00:01:11,010 --> 00:01:17,370
+simply download unzip the contents of the zip file and eclipse will be installed on your machine once
+
+17
+00:01:17,370 --> 00:01:17,950
+installed,
+
+18
+00:01:17,970 --> 00:01:24,080
+let's click on Windows 64 bit here as you can see there will be a download link,
+
+19
+00:01:24,090 --> 00:01:28,600
+you click on it and you will get the zip file once you downloaded and unzipped
+
+20
+00:01:28,590 --> 00:01:34,110
+please create a shortcut like this on your desktop on Mac it will automatically appear if not you can
+
+21
+00:01:34,260 --> 00:01:37,190
+drag this shortcut.
+
+22
+00:01:37,360 --> 00:01:44,580
+I'll show you how to launch eclipse and configure eclipse to use the java we have installed earlier in
+
+23
+00:01:44,580 --> 00:01:46,150
+the next lecture.
+

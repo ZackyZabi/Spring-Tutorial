@@ -1,0 +1,24 @@
+1
+00:00:00,240 --> 00:00:05,370
+Assume that you are consuming a web service. You're not really going to do it but you're going to create
+
+2
+00:00:05,370 --> 00:00:12,660
+a properties file for this assignment called wsclient.properties which will have three name-value
+
+3
+00:00:12,660 --> 00:00:13,520
+parts in it.
+
+4
+00:00:13,530 --> 00:00:21,060
+url which is xyz, it's not a real URL, userName and password. Let's assume that this is the information
+
+5
+00:00:21,060 --> 00:00:29,130
+we need to consume a webservice. But your goal is to configure this property file inside the spring configuration
+
+6
+00:00:29,790 --> 00:00:35,630
+and then create a test class, read these properties and display them on the console.
+

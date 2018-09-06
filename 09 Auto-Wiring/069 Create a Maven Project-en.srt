@@ -1,0 +1,104 @@
+1
+00:00:00,240 --> 00:00:06,570
+To start working on the Spring auto-wire use case, let's first create a new maven project, because we have
+
+2
+00:00:06,570 --> 00:00:10,320
+put quite a few classes under this Spring core and also packages.
+
+3
+00:00:10,500 --> 00:00:13,350
+It's getting overloaded or cluttered.
+
+4
+00:00:13,680 --> 00:00:16,580
+So create a new project by going to the File menu.
+
+5
+00:00:16,800 --> 00:00:25,700
+New -> Maven project, click Next. Leave the default option which is maven architect, click start, click Next.
+
+6
+00:00:26,260 --> 00:00:36,230
+The group Id is com.bharath.spring which is fine, and the artifact Id should be springcoreadvanced.
+
+7
+00:00:37,340 --> 00:00:40,500
+Finish, that will create the maven project for us.
+
+8
+00:00:41,690 --> 00:00:48,130
+Open the pom.xml and close everything else. If you have other files open close them all. Click on the last tab
+
+9
+00:00:48,140 --> 00:00:52,690
+which says pom.xml. By default it will have the junit dependency.
+
+10
+00:00:52,820 --> 00:01:01,310
+Let's add the spring dependencies by going to the pom.xml of the previous project. Open it, go to the
+
+11
+00:01:01,310 --> 00:01:03,200
+last tab, maximize.
+
+12
+00:01:03,380 --> 00:01:12,200
+Copy all the way from properties till the closing of build element. Come back to our new project's pom.
+
+13
+00:01:12,590 --> 00:01:21,290
+Start from properties, go all the way till dependencies, paste it, save it. We got the spring version as a property,
+
+14
+00:01:21,780 --> 00:01:27,650
+we have the two spring dependencies, the spring-core and spring-context, the jars that we need, and Maven
+
+15
+00:01:27,650 --> 00:01:34,060
+will pull all the other transitive dependencies. And in the plugin management, we have configured the maven
+
+16
+00:01:34,060 --> 00:01:37,220
+plugin compiler or maven-compiler-plugin.
+
+17
+00:01:37,720 --> 00:01:43,880
+And we are asking it to use Java version 1.8. By default, maven will use 1.5.
+
+18
+00:01:44,050 --> 00:01:48,480
+So we're asking it to use 1.8. Go to src/test/java.
+
+19
+00:01:48,500 --> 00:01:54,740
+We don't need junit, we are not using junit. So delete that package, OK.
+
+20
+00:01:56,290 --> 00:01:59,940
+Right click on the project. Since we have changed the maven pom.xml,
+
+21
+00:01:59,980 --> 00:02:05,340
+you have to right click, go to Maven, say Update Project, hit OK.
+
+22
+00:02:05,560 --> 00:02:09,880
+That will update the project and all the errors will go away.
+
+23
+00:02:09,880 --> 00:02:14,480
+Now let's copy over the propertyplaceholder which we have here.
+
+24
+00:02:14,590 --> 00:02:22,210
+Copy over that package, Control+c, paste it under the source folder here, because propertyplaceholder
+
+25
+00:02:22,210 --> 00:02:28,840
+is also an advanced topic and let's delete it from the previous project. We'll have it only in one place.
+
+26
+00:02:30,180 --> 00:02:34,130
+That's it. Starting next lecture, you'll be working on Spring autowiring.
+

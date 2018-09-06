@@ -1,0 +1,227 @@
+0
+00:00.310 --> 00:04.940
+In this lecture you will learn the last and final way to configure the spring life cycle methods.
+
+1
+00:05.100 --> 00:07.780
+That is using annotations to do that.
+
+2
+00:07.780 --> 00:09.130
+Let's create a new package.
+
+3
+00:09.130 --> 00:13.680
+Right click on interface's package say new package.
+
+4
+00:14.130 --> 00:18.660
+Change it from interfaces to annotations.
+
+5
+00:18.820 --> 00:25.810
+We're going to use the spring annotation support copy all the patient dot java test  dot java and Config
+
+6
+00:25.800 --> 00:26.120
+dot xml
+
+7
+00:26.120 --> 00:30.550
+paste it on annotations package close everything in Eclipse.
+
+8
+00:30.850 --> 00:37.780
+to avoid confusion and open everything from under the annotations package patient dot  Java test dot Java and
+
+9
+00:37.810 --> 00:47.000
+config dot xml go to patient Java patient will not implement the spring interfaces any more.
+
+10
+00:47.070 --> 00:55.140
+Do a control shift O to organize the imports delete after property set and destroy methods  do a control
+
+11
+00:55.140 --> 00:55.480
+shift F 
+
+12
+00:55.510 --> 01:02.020
+we are going to use the hi and bye methods but this time instead of configuring it in the config
+
+13
+01:02.020 --> 01:05.870
+dot xml using init and destroy attributes.
+
+14
+01:05.970 --> 01:15.760
+Here we use annotations right above the hi methods we use a forced construct from javaX dot annotation.
+
+15
+01:17.440 --> 01:20.600
+This will mark the hi method as the init method.
+
+16
+01:20.830 --> 01:25.740
+So this method should be public void hi without any parameters.
+
+17
+01:25.750 --> 01:27.650
+The name of the method could be anything.
+
+18
+01:27.670 --> 01:35.230
+Similarly the destroy method should be marked with predestroy before the object is destroyed this bye
+
+19
+01:35.230 --> 01:37.010
+method should be invoked.
+
+20
+01:37.030 --> 01:43.040
+This annotation is also from javax dot annotation. Go to test
+
+21
+01:43.040 --> 01:45.560
+and you know what changes you need to do.
+
+22
+01:45.890 --> 01:49.670
+Change the package from interfaces to annotations
+
+23
+01:54.030 --> 01:57.450
+save it go to config  dot xml even in here.
+
+24
+01:57.480 --> 02:00.690
+We need to change it from interfaces to annotations.
+
+25
+02:00.690 --> 02:03.000
+The package name for patient.
+
+26
+02:03.000 --> 02:07.130
+Otherwise we'll see a class cast exception, run the test
+
+27
+02:07.140 --> 02:11.790
+Right click run as a java application.
+
+28
+02:12.790 --> 02:18.520
+And in the output you don't see the init and destroy methods being called you only see that it goes
+
+29
+02:18.520 --> 02:22.540
+inside the setters and then we use the object and display it.
+
+30
+02:22.540 --> 02:28.050
+The reason is by default in spring all the annotation support is disabled.
+
+31
+02:28.120 --> 02:30.850
+We need to enable it using the configuration.
+
+32
+02:30.860 --> 02:32.920
+There are a couple of ways to do it.
+
+33
+02:33.190 --> 02:35.350
+we will learn one of the ways in this lecture.
+
+34
+02:35.770 --> 02:39.730
+The first way is to enable just these two annotations.
+
+35
+02:39.730 --> 02:43.980
+The predestroy and post construct support in spring.
+
+36
+02:44.080 --> 02:47.500
+The second way is to enable support for all the annotations.
+
+37
+02:47.500 --> 02:53.730
+So first you are going to learn how to enable the support for just the post construction predestroy annotations
+
+38
+02:53.800 --> 02:59.440
+for the life cycle methods, we do that by defining a bean element.
+
+39
+02:59.440 --> 03:06.700
+Class is equal to common annotation bean post processor.
+
+40
+03:06.730 --> 03:15.970
+So to get it go to your test class and start typing in common annotation control space.
+
+41
+03:16.010 --> 03:23.120
+It's common annotation bean post-procesor select that and Spring will import the whole class for you
+
+42
+03:23.120 --> 03:27.250
+copy that from the import including the package.
+
+43
+03:27.270 --> 03:34.290
+Go to the config dot xml and define a bean with that class bean class is equal to within double
+
+44
+03:34.290 --> 03:34.960
+quotes.
+
+45
+03:35.110 --> 03:36.500
+paste that entire thing.
+
+46
+03:36.520 --> 03:37.880
+No need to give it a name.
+
+47
+03:37.880 --> 03:39.680
+Close the bean tag and that's it.
+
+48
+03:39.720 --> 03:47.780
+Once you create an instance of it automatically spring will enable the support for life cycle annotations
+
+49
+03:47.790 --> 03:50.280
+the post construct and pre-destroy again
+
+50
+03:50.520 --> 03:57.420
+The name of that bean is common annotation bean post-processor come back to test get  rid of this,
+
+51
+03:57.470 --> 04:04.440
+You don't need it do  a control shift O to remove the  unwanted imports rerun the test again,
+
+52
+04:06.470 --> 04:12.920
+And this time you will see that it goes inside the hi method as well as inside the bye method.
+
+53
+04:13.130 --> 04:20.420
+In this lecture you have learned that you can use the post construct and predestroy annotations to
+
+54
+04:20.420 --> 04:26.540
+configure in it and destroy methods and to enable annotation support these for just these two annotations
+
+55
+04:27.350 --> 04:30.160
+you need to create
+
+56
+04:30.190 --> 04:36.560
+a spring bean called common annotation bean post processor for the spring framework.

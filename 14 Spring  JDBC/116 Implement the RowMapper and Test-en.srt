@@ -1,0 +1,84 @@
+1
+00:00:00,240 --> 00:00:05,150
+This lecture Cherryville implement the Map Room mattered the days you are going to read from the resultset
+
+2
+00:00:05,210 --> 00:00:11,220
+in Walk the letters on the resultset and I will set the values by creating an employee object.
+
+3
+00:00:11,310 --> 00:00:15,390
+So let's get started by creating it Employee object employee.
+
+4
+00:00:15,450 --> 00:00:18,150
+MP is it called the new employee
+
+5
+00:00:20,540 --> 00:00:23,840
+MP Daut set.
+
+6
+00:00:24,010 --> 00:00:26,870
+Let's start with the IB r s dot.
+
+7
+00:00:27,130 --> 00:00:28,810
+Get in.
+
+8
+00:00:28,990 --> 00:00:35,160
+The ID is of type integer Bhasin the column index it starts with one.
+
+9
+00:00:35,320 --> 00:00:40,930
+We know that the first column in the database is the ID that is the reason we are using one and setting
+
+10
+00:00:40,930 --> 00:00:45,990
+it into MP Daut set the next ENP darte set.
+
+11
+00:00:46,000 --> 00:00:53,140
+First name ORUs d'arte get to column 2.
+
+12
+00:00:53,520 --> 00:00:59,520
+It should be get screened get x x x Smethurst based on the paper we pass and string in double.
+
+13
+00:00:59,550 --> 00:01:02,160
+Except for bits of type string.
+
+14
+00:01:02,160 --> 00:01:11,160
+Finally employed Daut set last name to start get screened again for the last name and the index's 3
+
+15
+00:01:12,090 --> 00:01:14,150
+and return that employ.
+
+16
+00:01:14,580 --> 00:01:15,170
+That's it.
+
+17
+00:01:15,180 --> 00:01:19,040
+It's that simple to implement the map roll mattered.
+
+18
+00:01:19,440 --> 00:01:21,940
+Spring will give us the resultset at runtime.
+
+19
+00:01:21,990 --> 00:01:28,890
+We are getting the results out of the results that creating an object of our own type and returning
+
+20
+00:01:28,890 --> 00:01:30,200
+it in the next lecture.
+
+21
+00:01:30,210 --> 00:01:33,410
+You will create the test and see it in action.
+

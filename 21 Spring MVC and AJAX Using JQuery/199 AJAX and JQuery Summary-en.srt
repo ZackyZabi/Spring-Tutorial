@@ -1,0 +1,64 @@
+1
+00:00:00,400 --> 00:00:06,930
+These attacks and the equity section you have learned that Ajax stands for synchronous javascript and
+
+2
+00:00:07,280 --> 00:00:08,050
+XML.
+
+3
+00:00:08,280 --> 00:00:15,450
+It allows us to build responsive web sites by the end user to send in multiple requests instead of him
+
+4
+00:00:15,450 --> 00:00:19,720
+sending one single request and waiting for the response to come back.
+
+5
+00:00:20,370 --> 00:00:23,100
+It's engro less communication.
+
+6
+00:00:23,120 --> 00:00:29,450
+Second we have also learned that Jay queery is a javascript library that uses Javascript internally
+
+7
+00:00:29,600 --> 00:00:36,480
+but it provides abstraction and makes it easy for you I don't oppose to use javascript.
+
+8
+00:00:36,590 --> 00:00:38,680
+It provides easy to use syntax.
+
+9
+00:00:38,910 --> 00:00:46,360
+You have performed at Ajax call you it Ajax call into spring and we see the publication from the browser
+
+10
+00:00:46,610 --> 00:00:50,340
+using J.A.G. syntax $ Ajax.
+
+11
+00:00:50,360 --> 00:00:56,090
+It required three parameters are data namely you order of that.
+
+12
+00:00:56,090 --> 00:01:00,310
+So what are the application data that has to be sent to the.
+
+13
+00:01:00,350 --> 00:01:01,130
+So what.
+
+14
+00:01:01,130 --> 00:01:07,940
+And finally a callback function and the response comes back we need to provide a callback function that
+
+15
+00:01:07,940 --> 00:01:09,550
+will be invoked.
+
+16
+00:01:09,910 --> 00:01:16,280
+So how successfully performed FDX call using J.A.G. and spring NBC.
+

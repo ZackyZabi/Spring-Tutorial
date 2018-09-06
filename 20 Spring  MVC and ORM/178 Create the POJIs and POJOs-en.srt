@@ -1,0 +1,196 @@
+1
+00:00:00,260 --> 00:00:06,220
+In this lecture you will start implementing the interfaces and classes across the layers of our application.
+
+2
+00:00:06,240 --> 00:00:13,980
+Starting with the user interface in the data access layer will only create the interfaces classes and
+
+3
+00:00:13,980 --> 00:00:14,970
+Arto out of them.
+
+4
+00:00:15,330 --> 00:00:22,070
+And in the next few lectures we'll implement the methods across these layers or do Eclipse.
+
+5
+00:00:22,100 --> 00:00:25,380
+Right click on the source for the new interface.
+
+6
+00:00:25,470 --> 00:00:27,410
+Start with User B.
+
+7
+00:00:27,580 --> 00:00:33,080
+All the packets should be user Daut deal finish.
+
+8
+00:00:33,090 --> 00:00:39,150
+It was that Adal create the implementation for this new class.
+
+9
+00:00:40,930 --> 00:00:47,920
+Package could be used right now are user Doud got IGMP implementation user.
+
+10
+00:00:48,280 --> 00:00:49,780
+I am is the class.
+
+11
+00:00:49,780 --> 00:00:56,230
+Click on Add and they should implement that user be able to select that.
+
+12
+00:00:56,340 --> 00:00:57,130
+OK.
+
+13
+00:00:57,340 --> 00:00:58,400
+Finish.
+
+14
+00:00:58,870 --> 00:01:06,860
+We don't have any metrics to implement this class with that repository annotation from Spring.
+
+15
+00:01:07,300 --> 00:01:11,800
+Because this is going to do all the database work and it needs some transactional support.
+
+16
+00:01:13,510 --> 00:01:19,800
+And it depends on if you look at the diagram it depends on hibernate template to do its work.
+
+17
+00:01:19,810 --> 00:01:30,150
+So let's add that as a dependency hibernate template control space use the one from hibernate 5
+
+18
+00:01:34,250 --> 00:01:43,530
+but neat template see it make sure that it is from the hibernate file package it controlled one generate
+
+19
+00:01:43,750 --> 00:01:45,210
+of setters.
+
+20
+00:01:45,250 --> 00:01:46,300
+OK.
+
+21
+00:01:49,590 --> 00:01:57,800
+Similarly create the services Slayer class right click new start with the interface user service is
+
+22
+00:01:57,800 --> 00:02:08,540
+the class package com dot dot user dot service or services finish
+
+23
+00:02:11,060 --> 00:02:16,390
+and create the implementation for the service new class.
+
+24
+00:02:16,530 --> 00:02:25,160
+It was a service I am click on and it was a service
+
+25
+00:02:27,700 --> 00:02:29,340
+that interface hit finish
+
+26
+00:02:33,030 --> 00:02:37,660
+and we need to market with it so we annotation from spring.
+
+27
+00:02:37,710 --> 00:02:39,930
+So the Dow was Makara with repository.
+
+28
+00:02:39,990 --> 00:02:42,810
+This obviously is micro with ex-service and the service.
+
+29
+00:02:42,810 --> 00:02:52,640
+If you look at that Agonum it depends on the user or Tao to do its work so that user interface here
+
+30
+00:02:53,610 --> 00:02:58,260
+will be injecting the implementation are automatically splitting will inject the implementation later
+
+31
+00:02:58,260 --> 00:02:59,070
+on.
+
+32
+00:02:59,070 --> 00:03:11,250
+It was that or Dow Dow and market with it auto wired annotation similarly copy this on the dollar immobiliser
+
+33
+00:03:11,260 --> 00:03:14,010
+and we need to markhor hibernate template with it.
+
+34
+00:03:14,030 --> 00:03:22,380
+Ottaway location I'm back with the service make this private control one agenda getters and setters.
+
+35
+00:03:22,900 --> 00:03:24,160
+Okay.
+
+36
+00:03:24,920 --> 00:03:26,150
+Format it.
+
+37
+00:03:26,260 --> 00:03:28,290
+So we have successfully created two layers.
+
+38
+00:03:28,320 --> 00:03:30,020
+The Dow and the services.
+
+39
+00:03:30,160 --> 00:03:36,630
+Let's go to the controller layer which is our UI and the final layer in our application right click
+
+40
+00:03:37,140 --> 00:03:43,380
+new Plus you know we don't need any interface name is user control.
+
+41
+00:03:44,350 --> 00:03:44,890
+Package.
+
+42
+00:03:44,890 --> 00:03:56,970
+Com dot dot it's being autem NBC Autum dot dot CON-TROLL finish in the controller class should be macrobid
+
+43
+00:03:58,680 --> 00:04:03,300
+it controller annotation I'm spinning.
+
+44
+00:04:03,440 --> 00:04:11,020
+You said your type annotation again and this depends on the user service.
+
+45
+00:04:11,020 --> 00:04:14,310
+So they use that in the controller user.
+
+46
+00:04:14,590 --> 00:04:24,640
+So this is the interface garlics service and market with auto wired annotation and gendered that getters
+
+47
+00:04:24,640 --> 00:04:25,240
+and setters
+
+48
+00:04:27,930 --> 00:04:30,360
+formatted controls you have to do that.
+
+49
+00:04:30,420 --> 00:04:36,960
+So you have completed all the layers creating the interfaces and classes and also why adding the dependencies.
+

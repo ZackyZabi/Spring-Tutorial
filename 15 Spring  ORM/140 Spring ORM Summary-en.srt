@@ -1,0 +1,124 @@
+1
+00:00:00,420 --> 00:00:03,840
+In this lecture, I will summarize what you have learnt from the Spring
+
+2
+00:00:03,890 --> 00:00:12,810
+ORM section. ORM stands for Object Relational Mapping and tools like Hibernate, ORM tools or frameworks
+
+3
+00:00:12,810 --> 00:00:19,700
+like Hibernate will map our Java objects to database or relational database rows.
+
+4
+00:00:20,160 --> 00:00:26,010
+They will also generate the SQL that is required to insert,  delete, update and query these rows
+
+5
+00:00:26,010 --> 00:00:27,030
+from the database.
+
+6
+00:00:27,060 --> 00:00:33,630
+They will automatically convert our objects into the data in the table rows and vice versa. When the data
+
+7
+00:00:33,630 --> 00:00:34,420
+comes back,
+
+8
+00:00:34,510 --> 00:00:42,370
+Hibernate will automatically convert the row into an object. Spring simplifies using Hibernate by providing
+
+9
+00:00:42,370 --> 00:00:44,690
+an integration with Hibernate.
+
+10
+00:00:44,830 --> 00:00:47,470
+It gives us a HibernateTemplate class.
+
+11
+00:00:47,620 --> 00:00:55,630
+We configure this class which depends on SessionFactory. SessionFactory needs dataSource, hibernateProperties.
+
+12
+00:00:55,630 --> 00:01:02,300
+Datasource, you know that it takes care of creating the database connection. hibernateProperties,
+
+13
+00:01:02,530 --> 00:01:07,910
+there are a couple of important properties which you have configured. They are dialect.
+
+14
+00:01:08,050 --> 00:01:14,420
+It is a class, these are key value pairs. Using dialect property we specify a class for SQL,
+
+15
+00:01:14,440 --> 00:01:18,250
+MySQL it is different, for Oracle it is different. So for each database,
+
+16
+00:01:18,250 --> 00:01:24,010
+the dialect class is responsible for generating the SQL commands.
+
+17
+00:01:24,110 --> 00:01:28,820
+The second property is show_sql which is a boolean property.
+
+18
+00:01:28,820 --> 00:01:30,660
+By default it is false.
+
+19
+00:01:30,710 --> 00:01:37,310
+It tells hibernate that it should log all the queries that it generates on the console so that we can
+
+20
+00:01:37,310 --> 00:01:40,260
+see what's going on against the database.
+
+21
+00:01:40,370 --> 00:01:44,470
+The value you should be using is true to enable it.
+
+22
+00:01:44,680 --> 00:01:47,380
+Finally annotatedClasses.
+
+23
+00:01:47,590 --> 00:01:53,620
+These are the entities which is very first step. When we start using Hibernate we first create entities
+
+24
+00:01:53,740 --> 00:01:58,600
+which are Java classes, which map to a database table.
+
+25
+00:01:58,600 --> 00:02:05,290
+We do that using annotations from JPA, Java Persistence API. We mark our classes with annotations such
+
+26
+00:02:05,290 --> 00:02:08,110
+as @Entity, @Table,
+
+27
+00:02:08,210 --> 00:02:13,650
+@Column, @Id, etc; Once we have the hibernateTemplate bean,
+
+28
+00:02:13,960 --> 00:02:21,220
+we can perform the database crud operations using the methods on it such as save, update, delete, get to get
+
+29
+00:02:21,220 --> 00:02:29,000
+a single object, and loadAll to get a list of objects which are list of rows in the database. While we
+
+30
+00:02:29,000 --> 00:02:36,130
+use these methods, we'll not be passing any SQL, we'll be using objects instead. ORM tools like Hibernate
+
+31
+00:02:36,220 --> 00:02:40,160
+will do the conversion for us and generate the queries.
+

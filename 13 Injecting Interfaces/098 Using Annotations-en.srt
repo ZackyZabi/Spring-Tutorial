@@ -1,0 +1,168 @@
+1
+00:00:00,210 --> 00:00:06,510
+So far you have done dependency injection while using interfaces through some old configuration in this
+
+2
+00:00:06,600 --> 00:00:12,500
+and the next lecture you will learn how to do it using annotations and Auto-ID.
+
+3
+00:00:12,690 --> 00:00:14,790
+Let's get started.
+
+4
+00:00:14,790 --> 00:00:21,560
+The very first step as you know is to mark our classes with the component annotation.
+
+5
+00:00:21,690 --> 00:00:25,030
+That's true that at component from Spring Framework.
+
+6
+00:00:26,740 --> 00:00:33,770
+On RB William Bell and also are to be you impel that component.
+
+7
+00:00:34,340 --> 00:00:41,140
+And we are that spring knows that it can create or create these objects to detect we need to go to the
+
+8
+00:00:41,140 --> 00:00:44,570
+conflict for example get rid of all these beings here.
+
+9
+00:00:44,590 --> 00:00:50,700
+We don't need them or we can create another configuration file if we want to back this up.
+
+10
+00:00:50,740 --> 00:00:59,020
+It's up to you can text Kallen components can close this element right here and we need to provide the
+
+11
+00:00:59,020 --> 00:01:06,330
+base package for putting to search for classes to auto wire up to create instances and hardware grab
+
+12
+00:01:06,340 --> 00:01:15,540
+this package up to interfaces or to configure the example Bastet do a control shift to format Springville
+
+13
+00:01:15,570 --> 00:01:19,720
+search this package as well as a package if it has any.
+
+14
+00:01:20,070 --> 00:01:21,450
+And that's it.
+
+15
+00:01:21,450 --> 00:01:34,180
+But we haven't marked our will impact right here at auto wide say it that's on the test and see if it
+
+16
+00:01:34,180 --> 00:01:34,820
+works.
+
+17
+00:01:34,850 --> 00:01:41,260
+I click to run as a job application.
+
+18
+00:01:41,460 --> 00:01:43,390
+We have an exception.
+
+19
+00:01:43,950 --> 00:01:48,430
+It says no such bean no be named B will available.
+
+20
+00:01:49,880 --> 00:01:58,700
+That's because we haven't by default if you remember it was the camel case of the class here but in
+
+21
+00:01:58,700 --> 00:02:06,650
+our test we are using B all and you know how to change it on that component.
+
+22
+00:02:06,710 --> 00:02:12,860
+You can give it to name call it Bial save it on that best.
+
+23
+00:02:12,860 --> 00:02:23,000
+Again let's see if it looks this time and it does so it injects the will yet by creating an instance
+
+24
+00:02:23,000 --> 00:02:29,630
+of order D or impellor because I have marked only the order D-Will impled with the competent annotation.
+
+25
+00:02:29,660 --> 00:02:35,550
+It worked successfully because putting scans through this package and it knows only off this order be
+
+26
+00:02:35,780 --> 00:02:37,890
+impact the only implementation.
+
+27
+00:02:37,910 --> 00:02:45,970
+It thinks that the Ardeo implementation is the only class that implement this interface.
+
+28
+00:02:46,520 --> 00:02:54,720
+So spring is dynamically finding on the class but at least one class which injects or which implements
+
+29
+00:02:55,330 --> 00:03:01,960
+this particular interface it creates an object of the type that these market with the component annotation
+
+30
+00:03:02,170 --> 00:03:03,800
+and is injecting it.
+
+31
+00:03:03,800 --> 00:03:12,410
+Now Lexmark the second one are to deal with it component annotation as well.
+
+32
+00:03:15,070 --> 00:03:19,850
+CBOT on that test again let's see if it works this time.
+
+33
+00:03:21,700 --> 00:03:28,170
+And we get that exception that see what that exception is and we'll fix it in the next lecture.
+
+34
+00:03:28,950 --> 00:03:36,130
+It says unsatisfied dependency exception error creating been with named buil unsatisfied dependency
+
+35
+00:03:36,130 --> 00:03:40,590
+expecta no unique bean definition exception we have seen this earlier.
+
+36
+00:03:40,960 --> 00:03:47,500
+It says No uneek being because there are multiple bins which implement this particular interface.
+
+37
+00:03:47,500 --> 00:03:55,370
+If you go to the order d r r r b y and pulp this interface is implemented by both are simple as well
+
+38
+00:03:55,370 --> 00:03:56,380
+as order D-Will.
+
+39
+00:03:56,390 --> 00:04:02,890
+I am here too and spring does not know which implementation it should use in the configuration area.
+
+40
+00:04:02,900 --> 00:04:06,560
+We were using the exact name of the bin or that operands of the bin.
+
+41
+00:04:06,560 --> 00:04:11,900
+But here we have an early spring which being in Ottawa for the next lecture.
+
+42
+00:04:11,900 --> 00:04:13,260
+I will show you how to do that.
+

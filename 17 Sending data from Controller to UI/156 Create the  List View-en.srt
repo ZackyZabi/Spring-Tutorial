@@ -1,0 +1,156 @@
+1
+00:00:00,330 --> 00:00:06,710
+Before we create the displayList.jsp in this lecture, let's set these values on the right objects.
+
+2
+00:00:06,930 --> 00:00:09,230
+That is, we have created employee2 and 3.
+
+3
+00:00:09,250 --> 00:00:12,520
+But I haven't changed the setters here.
+
+4
+00:00:12,610 --> 00:00:14,580
+It should be employee2.setId
+
+5
+00:00:15,210 --> 00:00:17,260
+and the name and salary similarly.
+
+6
+00:00:17,520 --> 00:00:23,280
+Employee3 dot setId, name and salary.
+
+7
+00:00:23,730 --> 00:00:36,350
+Once we have it, go to the views, right click. By now you know what to do. View -> New -> JSP. Call it
+
+8
+00:00:36,500 --> 00:00:41,660
+displayList because that is the name we have used in the controller. displayList.jsp, finish.
+
+9
+00:00:43,650 --> 00:00:45,090
+We need two imports here.
+
+10
+00:00:45,090 --> 00:00:53,460
+So right on this page directive, go to the end before the percentage, greater than symbol, use an import attribute
+
+11
+00:00:53,580 --> 00:00:55,890
+is equal to, within double quotes,
+
+12
+00:00:56,130 --> 00:00:57,970
+we need the Employee object.
+
+13
+00:00:58,080 --> 00:01:04,370
+So go to the Employee.java, grab the package name all the way till dto, come back.
+
+14
+00:01:04,590 --> 00:01:13,310
+Paste it, dot employee. We are going to use employee and also a java.util.list.
+
+15
+00:01:13,680 --> 00:01:20,920
+So all the imports should be comma separated within the import, within the double quotes. Go to the body use the
+
+16
+00:01:20,920 --> 00:01:31,690
+scriptlets, less than symbol, percentage, percentage greater than symbol. Within that request.getAttribute.
+
+17
+00:01:32,640 --> 00:01:35,630
+And the key is employees.
+
+18
+00:01:35,640 --> 00:01:41,100
+That is what we have set on the ModelAndView in the ListController, employees.
+
+19
+00:01:41,100 --> 00:01:49,780
+That is how we can retrieve it. Come back and this will return a list of employees.
+
+20
+00:01:49,930 --> 00:01:50,680
+We know that.
+
+21
+00:01:50,740 --> 00:01:59,500
+So we can typecast it into that employees, is equal to, within brackets, list of, within angular brackets,
+
+22
+00:01:59,500 --> 00:02:01,790
+Employee. By default,
+
+23
+00:02:01,790 --> 00:02:03,960
+this returns an object type.
+
+24
+00:02:03,960 --> 00:02:10,960
+We need to typecast it to whatever type. In this case it is list of employees. Use a for-each loop. For
+
+25
+00:02:12,900 --> 00:02:25,140
+each employee, employee e colon, employees, open the floor bracket, end it, out.println. Use the
+
+26
+00:02:25,140 --> 00:02:30,330
+out implicit object, e.getId.
+
+27
+00:02:30,330 --> 00:02:40,680
+Similarly you can copy this, paste it. e.getName, that's enough, two fields, id and name. Do a control+
+
+28
+00:02:40,730 --> 00:02:42,130
+shift+f to format.
+
+29
+00:02:42,390 --> 00:02:47,500
+So we have successfully retrieved the employees from the request by invoking the getAttribute,
+
+30
+00:02:47,580 --> 00:02:50,820
+looping through it and displaying the id and name.
+
+31
+00:02:53,980 --> 00:03:00,700
+You can right click on the application, say run as -> run on server. That will restart the server. Hit finish.
+
+32
+00:03:01,450 --> 00:03:02,780
+It asks for restart.
+
+33
+00:03:02,830 --> 00:03:03,540
+Hit OK.
+
+34
+00:03:05,280 --> 00:03:09,720
+And the URL that we should be using, if you go to the ListController, it should be
+
+35
+00:03:12,600 --> 00:03:13,820
+readList.
+
+36
+00:03:13,830 --> 00:03:19,360
+So go back to the browser, at the end type in read, l capital, list.
+
+37
+00:03:19,510 --> 00:03:20,980
+Enter.
+
+38
+00:03:21,220 --> 00:03:23,360
+And that will display the employee id
+
+39
+00:03:23,420 --> 00:03:26,420
+and the name for all three employees.
+

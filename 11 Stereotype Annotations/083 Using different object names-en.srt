@@ -1,0 +1,64 @@
+1
+00:00:00,180 --> 00:00:07,620
+The Spring container when we use the @Component annotation by default uses the class name to name the object
+
+2
+00:00:07,620 --> 00:00:10,660
+reference as well, but it uses camel case.
+
+3
+00:00:10,680 --> 00:00:15,940
+That is the reason in our test class, when we read the bean from the container, we have used instructor.
+
+4
+00:00:16,100 --> 00:00:17,180
+I small,
+
+5
+00:00:17,190 --> 00:00:23,040
+i is small, instructor. But we can change it, and we can use whatever name we want.
+
+6
+00:00:23,250 --> 00:00:26,770
+Go back to the instructor class. On the component annotation,
+
+7
+00:00:26,880 --> 00:00:33,230
+we can provide value within double quotes and this will be the bean name. Instead of instructor,
+
+8
+00:00:33,240 --> 00:00:35,250
+am giving inst.
+
+9
+00:00:35,430 --> 00:00:42,570
+Now if you go to test class, right click, run it, we should get an exception. It should say bean not found.
+
+10
+00:00:42,840 --> 00:00:44,090
+Maximize the console.
+
+11
+00:00:44,100 --> 00:00:51,840
+It says NoSuchBeanDefinitionException: No bean named instructor is available, because once we start
+
+12
+00:00:51,840 --> 00:00:59,250
+using a value on the component annotation, the Spring container will create a bean with that name. In
+
+13
+00:00:59,250 --> 00:01:00,000
+our test class,
+
+14
+00:01:00,000 --> 00:01:10,880
+now we should use inst instead of instructor. Save it, rerun the test. And now it creates an object.
+
+15
+00:01:10,880 --> 00:01:17,190
+So to name a particular bean while using the @Component annotation, you should use it on the component
+
+16
+00:01:17,200 --> 00:01:20,350
+annotation, within double quotes, you need to provide a value.
+

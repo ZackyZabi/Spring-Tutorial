@@ -1,0 +1,152 @@
+1
+00:00:00,270 --> 00:00:06,000
+So far you have learnt how to send primitive data from the controller to the UI. In this and the
+
+2
+00:00:06,000 --> 00:00:12,180
+next lecture, you're going to send object data to the UI using the same addObject method.
+
+3
+00:00:12,180 --> 00:00:16,370
+So let's get started by creating a new object to hold this data,
+
+4
+00:00:16,380 --> 00:00:20,880
+the employee information, the id, the name and the salary.
+
+5
+00:00:21,020 --> 00:00:29,190
+Right click on the java package, new -> class. Call it employee. Instead of controller put it into a package
+
+6
+00:00:29,190 --> 00:00:44,250
+called dto. Finish, dto for data transfer object. Maximize, private int id, private string name,
+
+7
+00:00:44,460 --> 00:00:46,390
+private double salary.
+
+8
+00:00:46,540 --> 00:00:50,770
+Let's make salary double.
+
+9
+00:00:50,910 --> 00:00:53,240
+Select them all, generate the getters and setters.
+
+10
+00:00:55,930 --> 00:01:01,480
+I want them, select all, after salary.
+
+11
+00:01:01,520 --> 00:01:02,360
+Hit OK.
+
+12
+00:01:02,620 --> 00:01:08,250
+Control+shift+f to format. Go to source, add the toString method as well.
+
+13
+00:01:08,300 --> 00:01:10,430
+Hit OK.
+
+14
+00:01:10,430 --> 00:01:15,950
+And we have the Employee class which we are going to use inside a new Controller class that we are going
+
+15
+00:01:15,950 --> 00:01:27,840
+to create. Right click on the controller package, new -> class, call it ObjectController because it's going
+
+16
+00:01:27,840 --> 00:01:39,160
+to return an object. ObjectController with one single method called public, returns a ModelAndView
+
+17
+00:01:39,170 --> 00:01:50,820
+just like our earlier method. sendObject, format it.
+
+18
+00:01:51,100 --> 00:02:01,490
+And it should return a new ModelAndView. Add a return statement so that the errors will go away.
+
+19
+00:02:03,870 --> 00:02:10,600
+Select this, control+1, Assign statement to a new local variable. Call it ModelAndView, that's fine.
+
+20
+00:02:12,570 --> 00:02:21,830
+ModelAndView, the very first thing we're going to do is to set a view name. We don't have a view yet. Let's
+
+21
+00:02:21,830 --> 00:02:32,850
+call that view as object. When we create the JSP page, it'll be object.jsp or let's call it displayObject.jsp.
+
+22
+00:02:32,860 --> 00:02:39,870
+O is capital, we are following camel case convention. The next important piece is to set the model
+
+23
+00:02:39,870 --> 00:02:50,930
+data. To do that, ModelAndView.addObject, key value pairs. Call the key employee.
+
+24
+00:02:51,030 --> 00:02:52,160
+You can call it whatever you want.
+
+25
+00:02:52,170 --> 00:02:54,170
+You can call it emp if you want to.
+
+26
+00:02:54,360 --> 00:02:57,710
+And the value is a new Employee.
+
+27
+00:02:57,750 --> 00:03:03,700
+You are going to send an object back. Select that, new Employee.
+
+28
+00:03:03,740 --> 00:03:12,490
+Hit control+1, extract to a local variable. Call it employee. Now assign values to it or set the properties
+
+29
+00:03:12,490 --> 00:03:23,540
+on it. Employee dot setId is 1234, employee dot setName, not the id
+
+30
+00:03:23,550 --> 00:03:28,270
+again, the name. setName, within double quotes John.
+
+31
+00:03:31,280 --> 00:03:39,010
+employee dot setSalary, let's say 8000 that's bucks per month.
+
+32
+00:03:39,490 --> 00:03:50,260
+Do a control+shift+f to format. Add a RequestMapping, RequestMapping, map it to a URL or a URI.
+
+33
+00:03:53,620 --> 00:03:58,030
+Within double quotes, if you go look at the other controller, the HelloController,
+
+34
+00:03:58,190 --> 00:04:09,370
+we use a forward slash and then the URI. Let's say readObject. You can give whatever URL you want here
+
+35
+00:04:09,980 --> 00:04:10,430
+and that's it.
+
+36
+00:04:10,430 --> 00:04:15,530
+So in this lecture, you have successfully created a DTO, an object called employee with three fields
+
+37
+00:04:16,100 --> 00:04:20,980
+and you are returning that from the controller to a view called
+
+38
+00:04:22,740 --> 00:04:26,350
+displayObject. You will create this view in the next lecture.
+

@@ -1,0 +1,176 @@
+1
+00:00:00,870 --> 00:00:04,470
+This and the next lecture I will introduce you to Ajax.
+
+2
+00:00:04,500 --> 00:00:12,460
+And Jake very very briefly that jack stands for Asynchronous JavaScript and XML.
+
+3
+00:00:12,530 --> 00:00:14,170
+Do I understand Ajax.
+
+4
+00:00:14,290 --> 00:00:21,300
+We need to know the race in which plane communicates to the application running on a server.
+
+5
+00:00:22,050 --> 00:00:26,520
+So when I claimed access as a web application from his browser the communication could be synchronous
+
+6
+00:00:26,580 --> 00:00:33,480
+or asynchronous in synchronous the plane sensing their request and wait for the response to come back
+
+7
+00:00:33,510 --> 00:00:36,850
+until the response comes back from the application running on the server.
+
+8
+00:00:36,960 --> 00:00:41,830
+He will not be able to pick and either action on the browser.
+
+9
+00:00:41,940 --> 00:00:48,250
+He just needs to wait and the response comes back he can send the next request by clicking on a button
+
+10
+00:00:48,280 --> 00:00:50,970
+or by accessing it you are learn about the speech.
+
+11
+00:00:51,070 --> 00:00:52,570
+And then the response comes back.
+
+12
+00:00:52,570 --> 00:00:58,080
+So here is a request response cycle is where everything is in sync.
+
+13
+00:00:58,090 --> 00:01:00,780
+That is why it is called synchronous communication.
+
+14
+00:01:00,970 --> 00:01:08,170
+As a result the end user needs to wait quite a bit and he can do anything else when he sends in a request.
+
+15
+00:01:08,230 --> 00:01:16,280
+That is where I think honest communication with is possible using AJAX comes in and using AJAX that
+
+16
+00:01:16,830 --> 00:01:21,420
+plane from there you like and Sandomir request question he need not wait for the response to come back
+
+17
+00:01:21,430 --> 00:01:25,000
+he can send in multiple requests and the responses will come back.
+
+18
+00:01:25,000 --> 00:01:31,140
+It's Incra honestly at some point later as a result he can perform something on the way instead of just
+
+19
+00:01:31,140 --> 00:01:31,730
+waiting.
+
+20
+00:01:31,790 --> 00:01:37,100
+It is very powerful especially when our web pages how multiple things on the way.
+
+21
+00:01:37,890 --> 00:01:40,880
+Each of these components can be updated asynchronously.
+
+22
+00:01:40,890 --> 00:01:47,580
+So the end user will see something happening on the page and the responsiveness of our application to
+
+23
+00:01:47,580 --> 00:01:49,280
+the end user increases.
+
+24
+00:01:49,290 --> 00:01:52,100
+Then we use AJAX.
+
+25
+00:01:52,120 --> 00:01:54,820
+Let's take a look at a very simple realtime example.
+
+26
+00:01:54,820 --> 00:02:02,870
+Go to your web browser go to Google dot com and search for Google sign up you would already use to the
+
+27
+00:02:02,870 --> 00:02:03,320
+screen.
+
+28
+00:02:03,320 --> 00:02:07,770
+Click on the very first link which says Create your Google account.
+
+29
+00:02:07,800 --> 00:02:11,980
+This is the sign up page where you need to enter your details.
+
+30
+00:02:12,030 --> 00:02:19,460
+Let's say X Y Z ABC Budig an entry or name but tells you what a username I'm going to type.
+
+31
+00:02:19,590 --> 00:02:24,780
+But this is where asynchronous communication with the server is going to happen.
+
+32
+00:02:24,780 --> 00:02:32,070
+I type parrot and I tabel or as soon as I tab to create a password as soon as onchange happens.
+
+33
+00:02:32,070 --> 00:02:36,160
+Here you see error message.
+
+34
+00:02:36,180 --> 00:02:42,850
+So from this page and ajax call has been made to the Google's application and it checks if this is I
+
+35
+00:02:42,880 --> 00:02:48,390
+mean it's already there in the Google database if it exists it is sending back an error message card
+
+36
+00:02:48,930 --> 00:02:50,940
+that username is the account.
+
+37
+00:02:51,390 --> 00:02:58,410
+So using AJAX we can perform AJAX calls and update partial ways in our application instead of submitting
+
+38
+00:02:58,410 --> 00:03:05,160
+the end form at the end after filling in everything and then the user seeing a message here we can see
+
+39
+00:03:05,160 --> 00:03:08,070
+it right away as soon as he piped in goes to the next will.
+
+40
+00:03:08,340 --> 00:03:14,180
+The validation has happened by making AJAX call all the way to the server to the database and he's able
+
+41
+00:03:14,180 --> 00:03:16,540
+to do the response right away.
+
+42
+00:03:16,950 --> 00:03:23,280
+So that is where Ajax is very powerful it improves the responsiveness of our web application in the
+
+43
+00:03:23,280 --> 00:03:24,100
+next few lectures.
+
+44
+00:03:24,120 --> 00:03:28,100
+You will be making a similar AJAX call using Jacqui.
+

@@ -1,0 +1,123 @@
+0
+00:00.230 --> 00:04.230
+In this lecture you will learn about the spring beans scopes.
+
+1
+00:04.410 --> 00:09.180
+The scope is availability of the object in the container in simple words,
+
+2
+00:09.180 --> 00:14.910
+it is the number of objects created in the container of a particular bean type.
+
+3
+00:14.910 --> 00:24.050
+There are five possible values Singleton prototype request session and finally global session. Singleton
+
+4
+00:24.110 --> 00:28.730
+is the default value when we configure a bean in the spring configuration,
+
+5
+00:28.730 --> 00:30.400
+and we do not provide any scope,
+
+6
+00:30.410 --> 00:37.880
+by default it is singleton.The spring container if the market a singleton or if we don't specify anything
+
+7
+00:37.880 --> 00:46.590
+on the bean will create only one object no matter how many times that bean is read and used in our application.
+
+8
+00:47.590 --> 00:49.790
+The second scope is the prototype scope.
+
+9
+00:49.810 --> 00:57.640
+If we mark bean as prototype then the container will create different objects of that type.
+
+10
+00:57.670 --> 01:06.460
+Every time that object is read and used in our application and next is request as the name itself says the
+
+11
+01:06.460 --> 01:14.590
+request scope is only relevant for spring MVC webapplications, when the request comes in from the end user
+
+12
+01:14.660 --> 01:20.890
+or from the browser to our web application which is developed using spring spring container will create
+
+13
+01:21.130 --> 01:27.430
+an object per request per user request next session again.
+
+14
+01:27.500 --> 01:32.050
+Session is also relevant only for spring MVCweb applications.
+
+15
+01:32.180 --> 01:39.560
+A session is everything that happens between a user logon and Logout or everything that happens from the
+
+16
+01:39.560 --> 01:48.030
+time the user first access our website till the time he leaves our website if we mark a bean as
+
+17
+01:48.160 --> 01:56.170
+session scope scope then the spring container will create only one object for the entire session.
+
+18
+01:56.320 --> 02:03.400
+If a new user session is created then another object will be instantiated by spring.
+
+19
+02:03.430 --> 02:07.680
+Last but not the least the global session,
+
+20
+02:07.740 --> 02:14.670
+this will create if we mark bean as Global's session scoped spring container will create an object
+
+21
+02:14.710 --> 02:16.950
+per global context.
+
+22
+02:16.950 --> 02:19.100
+This is used only in spring.
+
+23
+02:19.100 --> 02:21.630
+MVC Portlet applications.
+
+24
+02:24.410 --> 02:28.950
+In Portlet applications there can be multiple Portlets across these portlets
+
+25
+02:28.950 --> 02:30.420
+there will be a global session.
+
+26
+02:30.440 --> 02:36.410
+global context and Spring container will create only one object for the entire global session
+
+27
+02:36.500 --> 02:40.690
+across these portlets we will see the first two.
+
+28
+02:40.700 --> 02:48.070
+That is the singleton and prototype in-action in the next lecture and request and session will be covered.
+
+29
+02:48.080 --> 02:54.110
+When you create a spring MVC webapplications in sections later on a global session will not be
+
+30
+02:54.110 --> 03:00.470
+covered as a part of this course because will not creating Portlet applications in this course.

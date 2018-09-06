@@ -1,0 +1,88 @@
+1
+00:00:00,460 --> 00:00:09,330
+An object A depends on object B to do its job, then B is the dependency and A is the dependent object.
+
+2
+00:00:09,330 --> 00:00:15,360
+So far, you have learnt how to do dependency injection using the setter and constructor injection and
+
+3
+00:00:15,360 --> 00:00:22,530
+link up these two objects using the ref tag. As a programmer, you have configured the dependency injection
+
+4
+00:00:22,530 --> 00:00:26,240
+in the config.xml using the ref tag.
+
+5
+00:00:26,310 --> 00:00:30,830
+This process of linking the dependent and the dependency is called Wiring,
+
+6
+00:00:30,930 --> 00:00:38,610
+wiring of beans together. In realtime applications, you will be wiring a lot of objects or a lot of dependencies
+
+7
+00:00:38,820 --> 00:00:39,400
+together.
+
+8
+00:00:40,380 --> 00:00:45,100
+If this process is done by the programmer, then it is called bean wiring.
+
+9
+00:00:45,330 --> 00:00:52,910
+And if this process is done by the container itself, the Spring container itself, then it is called auto wiring.
+
+10
+00:00:53,010 --> 00:00:59,220
+So we'll not be writing any ref tag, we will not be using the property tag or the constructor arg tag,
+
+11
+00:00:59,460 --> 00:01:01,570
+the container will do it for us.
+
+12
+00:01:01,620 --> 00:01:10,200
+Simply we configure it when we configure our beans to do autowiring. Autowiring can be done in two different
+
+13
+00:01:10,200 --> 00:01:13,970
+ways using XML. By default,
+
+14
+00:01:14,050 --> 00:01:16,620
+it is no, it is not autowired.
+
+15
+00:01:17,050 --> 00:01:25,150
+We can autowire by type, by the datatype, by name of the bean and also Auto detect is an other option which
+
+16
+00:01:25,180 --> 00:01:30,520
+only works in Spring 2.0x and lower. So auto detect is not there,
+
+17
+00:01:30,550 --> 00:01:33,400
+starting Spring 3.0 we'll not be using that.
+
+18
+00:01:33,400 --> 00:01:42,450
+And finally, by constructor. Here by type and by name use the setter injection. By constructor, as the name
+
+19
+00:01:42,450 --> 00:01:45,930
+itself says it uses the constructor injection.
+
+20
+00:01:46,530 --> 00:01:49,600
+And also we can do autowiring through annotations.
+
+21
+00:01:49,780 --> 00:01:56,520
+We use the @Autowired annotation and @Qualifier annotation to do Autowiring. In the next few
+
+22
+00:01:56,520 --> 00:01:59,400
+lectures, you'll be using both these ways to autowire.
+

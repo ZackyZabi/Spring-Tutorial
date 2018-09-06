@@ -1,0 +1,76 @@
+1
+00:00:00,330 --> 00:00:08,310
+The very first step to see Spring Data in action, is to create a project in STS. So go to your STS
+
+2
+00:00:08,440 --> 00:00:19,630
+IDE, File menu -> New -> Spring Starter Project. Give it a name, call it springdatajpa,
+
+3
+00:00:19,690 --> 00:00:28,150
+if you want to add, you can add jpa at the end. The service URL is start.spring.io which is okay.
+
+4
+00:00:28,550 --> 00:00:36,880
+Change the group name to com.bharath.spring.data.
+
+5
+00:00:39,330 --> 00:00:42,880
+Artifact name is springdatajpa. The package,
+
+6
+00:00:42,940 --> 00:00:47,670
+somehow it doesn't reflect the group name. So I'm going to copy the group name and paste it here.
+
+7
+00:00:48,470 --> 00:00:54,830
+Next, we need to choose two things here. So you can search from here.
+
+8
+00:00:54,830 --> 00:00:57,670
+You can select whatever dependencies you want.
+
+9
+00:00:57,710 --> 00:01:07,740
+Number one, search for jpa and select this JPA which is under SQL. That dependency is added.
+
+10
+00:01:07,740 --> 00:01:13,020
+Next, search for mysql, because we are going to connect to the MySQL database,
+
+11
+00:01:13,020 --> 00:01:24,480
+we need that Jar dependency. Finish. So the project is created. If you open the pom.xml, go
+
+12
+00:01:24,540 --> 00:01:30,380
+to the last tab. It would list all the starter dependencies for us.
+
+13
+00:01:30,440 --> 00:01:39,530
+Scroll down. It has spring-boot-starter-data-jpa, mysql-connector-java which is the JDBC driver and
+
+14
+00:01:39,530 --> 00:01:43,360
+some test jars or one single test jar.
+
+15
+00:01:43,370 --> 00:01:50,420
+Go to Maven dependencies and you will see a ton of other jars which Maven pulls through these
+
+16
+00:01:50,420 --> 00:01:54,450
+jars. So these dependencies here, transitively depend on these. So
+
+17
+00:01:54,470 --> 00:02:01,780
+Maven transitively pulls all the jars that it needs to get the work done. Starting the next lecture,
+
+18
+00:02:01,820 --> 00:02:09,860
+you will create an entity, you'll create a repository and we'll then see how easy it is to do the CRUD
+
+19
+00:02:09,860 --> 00:02:13,550
+operations against a database by coming up with a test.
+

@@ -1,0 +1,200 @@
+1
+00:00:00,230 --> 00:00:07,410
+The previous lectures you have used the J.D. template and inserted the card into that database in simple
+
+2
+00:00:07,410 --> 00:00:13,800
+steps in this and the next few lectures we are going to make our application look more real time more
+
+3
+00:00:13,800 --> 00:00:15,420
+like a real time application.
+
+4
+00:00:15,690 --> 00:00:20,890
+By following simple steps first will create the Employee class which will have three fields.
+
+5
+00:00:20,950 --> 00:00:27,810
+These are simple being which represents our database table employee database table with the first name
+
+6
+00:00:27,870 --> 00:00:29,240
+and last name.
+
+7
+00:00:30,130 --> 00:00:31,680
+We call it D.
+
+8
+00:00:31,870 --> 00:00:33,200
+It carries the data.
+
+9
+00:00:33,200 --> 00:00:34,980
+We can also call it an entity.
+
+10
+00:00:35,200 --> 00:00:43,390
+Once we have that entity we'll create a diesel interface which is implemented by the class in real time
+
+11
+00:00:43,390 --> 00:00:49,330
+obligations be able as a pattern be able stands for data access object.
+
+12
+00:00:49,330 --> 00:00:54,650
+We put all the database code inside the class.
+
+13
+00:00:54,730 --> 00:00:59,980
+This class will use the Daily Beast template to perform the database operations and we are going to
+
+14
+00:00:59,980 --> 00:01:05,410
+wire this very basic template with employee door impellor that is we are going to inject it into the
+
+15
+00:01:05,410 --> 00:01:12,280
+employee Dow impulse and you already know that the template uses that data source.
+
+16
+00:01:12,280 --> 00:01:14,400
+We have already wired these stupe.
+
+17
+00:01:14,500 --> 00:01:19,990
+Now we are going to wire the database a template into the employee document and will test the employee
+
+18
+00:01:19,990 --> 00:01:24,810
+Dow impellor then start off that actually using the Ribisi template in our test.
+
+19
+00:01:25,000 --> 00:01:26,470
+That could be more real time.
+
+20
+00:01:26,830 --> 00:01:33,860
+So lets get started by creating this deal and this does and will do the injection in the next lecture.
+
+21
+00:01:35,700 --> 00:01:43,910
+Go to eclipse right click on the source package we are going to create it in a new Bakkies new class.
+
+22
+00:01:44,020 --> 00:01:53,530
+DD always the first one employee and we'll put it inside a package called Spring duty got employed dot
+
+23
+00:01:53,700 --> 00:01:54,820
+D D.
+
+24
+00:01:54,890 --> 00:01:58,310
+You can either call a deal or you can call again NDP.
+
+25
+00:01:58,380 --> 00:02:03,440
+Typically we use entities that term into the other package entity and we are working with autem tools
+
+26
+00:02:03,650 --> 00:02:11,570
+like Hibernate finish and the data that carries its weight in ID.
+
+27
+00:02:11,870 --> 00:02:17,900
+But I weighed in first name by weight in our sorry strength
+
+28
+00:02:21,230 --> 00:02:22,730
+last name.
+
+29
+00:02:22,870 --> 00:02:33,750
+Also this is also staring back at the end gender getters and setters right click go to source gendered
+
+30
+00:02:33,760 --> 00:02:45,040
+getters and setters to select all hate ok and don't shift effort to format these fills up until X..
+
+31
+00:02:45,050 --> 00:02:47,010
+Move them up there.
+
+32
+00:02:47,020 --> 00:02:49,080
+That is where they belong.
+
+33
+00:02:49,200 --> 00:02:55,750
+Gendered that boosting matter by going to source generate to string it ok.
+
+34
+00:02:56,290 --> 00:03:00,730
+Shift to format we have the Deeble this will carry that data for us.
+
+35
+00:03:01,630 --> 00:03:11,310
+Next create Berdahl interface be able interface new interface employee be a fool and they should go
+
+36
+00:03:11,310 --> 00:03:16,350
+in to employee dot Deeble package finish.
+
+37
+00:03:16,450 --> 00:03:21,910
+Let's start with one single mother to insert a card into the database and create
+
+38
+00:03:24,950 --> 00:03:28,010
+and this will the employee object.
+
+39
+00:03:28,070 --> 00:03:36,520
+So whatever data we provide to it through the employee control one import employee will retrieve that
+
+40
+00:03:36,520 --> 00:03:45,810
+data inside the Create implementation and will send it in the insert or update operation create an implementation
+
+41
+00:03:45,810 --> 00:03:49,560
+class for this.
+
+42
+00:03:49,740 --> 00:03:55,070
+I click Create new class Employee B.
+
+43
+00:03:55,130 --> 00:03:57,290
+I am all for implementation.
+
+44
+00:03:57,290 --> 00:04:06,110
+The package will be com dot dot dot employee Dot be able dot 8 MP for implementation we put the implementation
+
+45
+00:04:06,110 --> 00:04:12,640
+classes in a different package finish and they should implement
+
+46
+00:04:15,490 --> 00:04:22,970
+employee d all developments the employee idea or head control one and an implementation methods and
+
+47
+00:04:23,110 --> 00:04:27,370
+how one single mother will implement this method in the next lecture.
+
+48
+00:04:27,580 --> 00:04:33,700
+So in this lecture you have started making our application look like a more realtime application by
+
+49
+00:04:33,700 --> 00:04:41,560
+creating employee DDR which holds the data then the employee interface and finally the employee will
+
+50
+00:04:41,760 --> 00:04:43,680
+class the or impellor Plus.
+

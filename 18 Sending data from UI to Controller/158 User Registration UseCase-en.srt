@@ -1,0 +1,56 @@
+1
+00:00:00,200 --> 00:00:05,460
+In this lecture, I will walk you through this simple user registration usecase that you will be implementing
+
+2
+00:00:05,490 --> 00:00:10,700
+in the next few lectures and send that data from the UI to the Controller.
+
+3
+00:00:10,800 --> 00:00:17,310
+The very first step is to implement a userRegistration.jsp which the enduser will access through
+
+4
+00:00:17,310 --> 00:00:18,690
+the Controller.
+
+5
+00:00:18,690 --> 00:00:20,840
+The Controller will send this view back.
+
+6
+00:00:21,090 --> 00:00:26,970
+The user will then enter the information and submit the form which will once again go to the Controller
+
+7
+00:00:27,480 --> 00:00:33,240
+at which point the Controller will create an instance of the User class that we create.
+
+8
+00:00:33,240 --> 00:00:39,720
+We create this User class. The Controller will automatically create an object of this User class when
+
+9
+00:00:39,750 --> 00:00:47,010
+this form is submitted and it will handover that object, this particular object to the Controller method,
+
+10
+00:00:47,910 --> 00:00:51,550
+marked with @ModelAttribute annotation.
+
+11
+00:00:51,840 --> 00:00:59,310
+So we are going to create a Controller with two methods. The first method will simply return this userReg.jsp.
+
+12
+00:00:59,370 --> 00:01:06,070
+The second method is what we'll mark with @ModelAttribute, the parameter will be marked with @ModelAttribute.
+
+13
+00:01:06,210 --> 00:01:12,750
+It will retrieve the user information and simply display it on the console and send a response back
+
+14
+00:01:12,750 --> 00:01:13,540
+to the user.
+

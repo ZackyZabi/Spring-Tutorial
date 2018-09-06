@@ -1,0 +1,68 @@
+1
+00:00:00,240 --> 00:00:05,730
+In this lecture, you will create a Java configuration file that will replace the web.xml.
+
+2
+00:00:05,820 --> 00:00:10,080
+We'll split it into two lectures as always. We'll do few things at a time.
+
+3
+00:00:10,260 --> 00:00:18,600
+So right click on the package, create a new class. Call it WebConfiguration or WebServletConfiguration.
+
+4
+00:00:19,700 --> 00:00:26,570
+WebServletConfiguration and this should implement an interface from Spring.
+
+5
+00:00:26,570 --> 00:00:35,520
+Click on add and search for WebApplicationInitialiser. Select that interface, WebApplicationInitialiser.
+
+6
+00:00:35,520 --> 00:00:44,200
+Click Ok, Finish. And there is only one method that we need to override, it is the onStartup method, which gets
+
+7
+00:00:44,200 --> 00:00:50,890
+a servletContext. Delete the todo. Hit control+d and create a
+
+8
+00:00:54,020 --> 00:01:07,540
+AnnotationWeb or AnnotationConfigWebApplicationContext. Not the AnnotationConfigApplicationContext
+
+9
+00:01:07,560 --> 00:01:12,010
+application context which you have used when you worked with the standalone Java applications for configuring
+
+10
+00:01:12,370 --> 00:01:14,710
+standalone job applications.
+
+11
+00:01:14,710 --> 00:01:22,810
+This is AnnotationConfigWebApplicationContext, call it webContext is equal to, create a new instance
+
+12
+00:01:22,810 --> 00:01:23,200
+of it.
+
+13
+00:01:26,630 --> 00:01:33,400
+And register our configuration, webContext.register().
+
+14
+00:01:33,420 --> 00:01:36,910
+The class is SpringConfig.class.
+
+15
+00:01:36,920 --> 00:01:45,230
+That is our configuration file. Control+space, SpringConfig.class, and we have successfully told
+
+16
+00:01:45,470 --> 00:01:50,080
+the web configuration about the Spring configuration class. In the next lecture,
+
+17
+00:01:50,110 --> 00:01:56,840
+you will configure the dispatcher-servlet dynamically within this WebServletConfiguration.
+

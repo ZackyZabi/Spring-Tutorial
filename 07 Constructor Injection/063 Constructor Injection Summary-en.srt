@@ -1,0 +1,68 @@
+1
+00:00:00,340 --> 00:00:08,040
+To quickly recap what you have learnt from the constructor injection section, the Spring container uses a parameterized
+
+2
+00:00:08,040 --> 00:00:13,210
+constructor instead of using the setter methods, when we ask it to use the constructor injection.
+
+3
+00:00:13,710 --> 00:00:18,830
+And we do that using the constructor-arg element inside the bean element.
+
+4
+00:00:19,020 --> 00:00:27,180
+We use multiple constructor arguments depending on the number of parameters we have on our class' constructor.
+
+5
+00:00:27,250 --> 00:00:33,360
+We can inject primitive types, collections as well as objects using the constructor-arg and the Spring
+
+6
+00:00:33,430 --> 00:00:39,400
+container will invoke the appropriate constructor based on the number of arguments we provide here, in the
+
+7
+00:00:39,400 --> 00:00:40,740
+bean tag.
+
+8
+00:00:40,760 --> 00:00:46,750
+You have also learnt about the ambiguity problem that can happen because of the types of constructor arguments
+
+9
+00:00:46,750 --> 00:00:48,200
+we pass in.
+
+10
+00:00:48,670 --> 00:00:50,810
+And to avoid that ambiguity problem,
+
+11
+00:00:50,890 --> 00:00:57,450
+we can use the type attribute, index attribute as well as the name attribute on this constructor-arg
+
+12
+00:00:57,670 --> 00:01:04,900
+element. Using the type, we can specify the exact datatype of the parameter on the construct parameter
+
+13
+00:01:04,900 --> 00:01:11,140
+we define in that class. Using index, we can specify the order in which the constructor argument should be
+
+14
+00:01:11,170 --> 00:01:14,110
+mapped to the constructor method in a class.
+
+15
+00:01:14,110 --> 00:01:21,220
+And finally, using the name we can specify which parameter name a particular constructor argument, that
+
+16
+00:01:21,220 --> 00:01:25,310
+we define in the xml should be mapped when a object is created.
+
+17
+00:01:25,330 --> 00:01:32,230
+This name, is the name of the parameter of the constructor method that we define inside a class.
+

@@ -1,0 +1,51 @@
+0
+00:00.590 --> 00:07.160
+You've already learned that by default all the spring beans are singleton that is spring only creates
+
+1
+00:07.160 --> 00:13.820
+one instance of any particular bean by default and you can change it using scope already tried all
+
+2
+00:13.820 --> 00:16.220
+that when you do Java configuration.
+
+3
+00:16.280 --> 00:18.950
+You can do that if you go to Spring config.
+
+4
+00:19.130 --> 00:27.260
+There is an annotation which is called which you can define right here at the bean level and annotation
+
+5
+00:27.380 --> 00:33.530
+is at scope and you can provide it a value within double quotes which could be a singleton prototype
+
+6
+00:33.530 --> 00:40.750
+exectra I want you to explore it and in the Test class create two instances or invoke the Get bean method
+
+7
+00:41.360 --> 00:45.380
+twice and check out the hash codes on those instances.
+
+8
+00:45.380 --> 00:52.800
+If you say dao dot hash code see the values a new singleton which is the default both the values
+
+9
+00:52.800 --> 00:55.720
+should be same when you create create two Dao's
+
+10
+00:55.820 --> 01:04.050
+both their hash codes should match when you use Prototype S-Corp then the values should be different.
+
+11
+01:04.070 --> 01:11.390
+You have already played around with scopes but this time it's going to be on this method using the at scope
+
+12
+01:11.510 --> 01:12.160
+annotation.

@@ -1,0 +1,196 @@
+1
+00:00:00,320 --> 00:00:06,360
+In this lecture you will learn what spring is by the end of it if there are two things that I want
+
+2
+00:00:06,360 --> 00:00:09,270
+you to understand and remember they are spring
+
+3
+00:00:09,270 --> 00:00:13,540
+is a dependency injection framework, number two
+
+4
+00:00:13,590 --> 00:00:22,520
+it compilements the existing Java EE standards by making them easier for us the developers to use.
+
+5
+00:00:22,600 --> 00:00:29,980
+That brings us to dependency injection. When we develop software applications we organize our code across
+
+6
+00:00:30,100 --> 00:00:33,610
+components in case of Java these components are classes.
+
+7
+00:00:33,770 --> 00:00:40,590
+Here I have Class A which depends on Class B to get its work done.
+
+8
+00:00:40,600 --> 00:00:49,170
+So these components typically use each other.Instead of we creating an object of class B in class A we
+
+9
+00:00:49,170 --> 00:00:57,240
+delegate this responsibility to frameworks like spring. Spring at runtime dynamically create an object
+
+10
+00:00:57,240 --> 00:01:05,860
+of class B and it will inject it into Class A We as a developers can simply focus on our business logic instead
+
+11
+00:01:05,860 --> 00:01:14,010
+of worrying about the object creation.This process of moving the control of object creation from the
+
+12
+00:01:14,010 --> 00:01:17,160
+application code to a external framework
+
+13
+00:01:17,400 --> 00:01:21,450
+is called inversion of control it is a design pattern.
+
+14
+00:01:21,450 --> 00:01:27,630
+We are giving away the object creation control from our application code to a external framework
+
+15
+00:01:27,660 --> 00:01:29,970
+or container like spring.
+
+16
+00:01:31,100 --> 00:01:34,670
+So where does Dependency Injection apply in case of Java.
+
+17
+00:01:34,740 --> 00:01:42,540
+EE applications. Any java EE application if you take a look at it, it will be typically organized into
+
+18
+00:01:42,630 --> 00:01:47,860
+layers UI layers, services layer, data access layer and more.
+
+19
+00:01:48,000 --> 00:01:52,590
+Each of these layers use the services provided by the layer below.
+
+20
+00:01:54,310 --> 00:02:00,840
+For example, the UI layer we have order controller which an order service, the order service in turn will
+
+21
+00:02:00,850 --> 00:02:04,510
+use the services provided by the order DAO.
+
+22
+00:02:04,960 --> 00:02:11,430
+This is where spring dependency injection will come in spring will automatically create the order DAO
+
+23
+00:02:11,890 --> 00:02:18,490
+it will inject it into the order service.It will automatically create the order service and inject it into the order controller.
+
+24
+00:02:19,350 --> 00:02:22,470
+That is where dependency injection comes-in in JavaEE
+
+25
+00:02:22,490 --> 00:02:26,100
+along with dependancy injection,
+
+26
+00:02:26,340 --> 00:02:32,700
+the second thing I want you to understand is that spring makes it very easy for us the developers to
+
+27
+00:02:32,700 --> 00:02:35,860
+use the existing API's and frameworks.
+
+28
+00:02:36,030 --> 00:02:43,620
+For example, spring provides spring JDBC which you can think off as a wrapper around the JDBC standard
+
+29
+00:02:43,620 --> 00:02:50,780
+from oracle and as a developer we can execute sequel statement in one single line.
+
+30
+00:02:50,970 --> 00:02:55,370
+It will take away all the repeated code that is there in JDBC.
+
+31
+00:02:55,670 --> 00:03:02,520
+Similarly it will make our life very easy by providing spring ORM using spring ORM object relational
+
+32
+00:03:02,520 --> 00:03:03,280
+mapping
+
+33
+00:03:03,360 --> 00:03:11,940
+will be able to use ORM tools like hibernate in a very simple manner and in the UI layer it provides
+
+34
+00:03:11,940 --> 00:03:16,740
+integration with Struts java server faces to develop beautiful faces
+
+35
+00:03:16,770 --> 00:03:18,840
+again in simple steps.
+
+36
+00:03:19,800 --> 00:03:26,880
+And also if the community or the people developers at Spring feel that a particular javaEE standard
+
+37
+00:03:26,970 --> 00:03:34,920
+or a framework is difficult to use for example struts or even JSF then they come up with a parallel
+
+38
+00:03:35,010 --> 00:03:36,060
+implementation.
+
+39
+00:03:36,060 --> 00:03:39,890
+One such implementation is the spring MVC.
+
+40
+00:03:39,960 --> 00:03:46,050
+Using this you can develop the web layer for your web applications you will be learning spring MVC in detail
+
+41
+00:03:46,350 --> 00:03:47,660
+in lectures later on.
+
+42
+00:03:48,560 --> 00:03:54,770
+And also spring provide services like security transaction management which we can simply configure and are
+
+43
+00:03:54,890 --> 00:03:56,670
+ready to use.
+
+44
+00:03:56,720 --> 00:04:05,960
+To summarize spring is a dependency injection framework when we have classes that depend on each other
+
+45
+00:04:06,200 --> 00:04:08,360
+will delegate that responsibility to spring.
+
+46
+00:04:08,390 --> 00:04:13,150
+And it will automatically create those objects then inject them. In a Java application,
+
+47
+00:04:13,160 --> 00:04:21,230
+these classes are spread across the layers of our application and also spring makes it easy to use existing
+
+48
+00:04:21,230 --> 00:04:30,170
+standards like JDBC, ORM and UI technologies such as struts JSF etc. and it also provides services
+
+49
+00:04:30,260 --> 00:04:34,850
+like security transaction management which we can configure in simple steps.
+

@@ -1,0 +1,32 @@
+1
+00:00:00,120 --> 00:00:06,240
+The first step is to add the maven dependency for spring-boot-starter-web. To do that,
+
+2
+00:00:06,240 --> 00:00:13,100
+go to STS, go to the springdatajpa project. Open up the pom.xml file, double click
+
+3
+00:00:13,110 --> 00:00:22,140
+to maximize. Go to the dependencies section and right below the spring-boot-starter-data-jpa, you can
+
+4
+00:00:22,140 --> 00:00:30,270
+copy this dependency and paste it right next to it. Do a Control+shift+f to format, remove the spaces.
+
+5
+00:00:32,930 --> 00:00:37,710
+And the dependency we want is spring-boot-starter-web.
+
+6
+00:00:38,010 --> 00:00:41,250
+We don't need the data-jpa. We already have it in here.
+
+7
+00:00:41,520 --> 00:00:45,730
+So spring-boot-starter-web, that's all that is required.
+
+8
+00:00:45,750 --> 00:00:50,120
+In the next lecture, you will start working on our Rest Controller.
+

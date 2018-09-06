@@ -1,0 +1,227 @@
+0
+00:00.420 --> 00:05.670
+In this lecture you will create the spring configuration which is the second step and also the Test class
+
+1
+00:05.910 --> 00:07.360
+and run it.
+
+2
+00:07.420 --> 00:13.300
+So let's get started by copying the configuration file config dot xml grab any of the earlier ones paste it
+
+3
+00:13.390 --> 00:16.750
+in the map package grab the test from set or list.
+
+4
+00:16.960 --> 00:24.750
+paste it open up the test we don't have the car dealer in this case we are going to deal with the customer
+
+5
+00:24.750 --> 00:25.170
+objects
+
+6
+00:25.170 --> 00:29.700
+so let's update the test first and we'll come back to xml configuration customer on the left
+
+7
+00:29.700 --> 00:31.620
+hand side also its customer
+
+8
+00:31.800 --> 00:38.880
+and we are going to name the bean inside spring configuration as a customer when we create it save that
+
+9
+00:39.680 --> 00:45.620
+and instead of doing or invoking the getter methods we can simply display the customer
+
+10
+00:46.020 --> 00:50.930
+So here instead of this it's going to be customer get rid of the second sys out
+
+11
+00:51.030 --> 00:56.430
+Now that we have the two string method on the customer class the two string method will be invoked and the
+
+12
+00:56.430 --> 00:58.310
+details should be displayed
+
+13
+00:58.770 --> 01:00.640
+change this package name here
+
+14
+01:01.170 --> 01:11.240
+to spring core slash map slash config dot xml
+
+15
+01:11.260 --> 01:13.780
+The next step is to come up with the configuration.
+
+16
+01:13.810 --> 01:23.950
+Open the config dot xml maximize the name of the bean is customer class name spring 
+
+17
+01:24.020 --> 01:25.020
+Spring core.
+
+18
+01:25.150 --> 01:27.150
+Dot map dot
+
+19
+01:30.020 --> 01:32.620
+customer.
+
+20
+01:33.110 --> 01:36.080
+We can use the piece schema for assigning the ID.
+
+21
+01:36.130 --> 01:42.320
+We have an ID field on the customer as well so we can leave it as it is.
+
+22
+01:43.310 --> 01:44.460
+But it doesn't end there.
+
+23
+01:44.460 --> 01:49.660
+We have more slash bean ends there within the bean.
+
+24
+01:49.910 --> 01:59.440
+We have the property name is products go to customer and the products is the name of the property.
+
+25
+01:59.730 --> 02:13.410
+Come back paste it within the property we'll use map and map is where we define entries entry key
+
+26
+02:13.710 --> 02:22.120
+is equal to hundred and value is equal to iPhone.
+
+27
+02:22.140 --> 02:25.870
+Let's start with that.
+
+28
+02:25.990 --> 02:35.030
+So here we are we have defined a map entry which has both the key as well as value as attributes.
+
+29
+02:35.830 --> 02:39.340
+So this is a way where we are defining the key and value as attributes.
+
+30
+02:39.340 --> 02:41.500
+There are different ways of defining it.
+
+31
+02:41.500 --> 02:51.940
+lets try the second type entry value is equal to or let's start with key, key is equal to within double
+
+32
+02:51.940 --> 02:54.810
+quotes 200.
+
+33
+02:55.110 --> 03:01.820
+And instead of defining the value as an attribute I'm going to define the value as the element value
+
+34
+03:03.120 --> 03:07.790
+is IPad That's the second variation.
+
+35
+03:07.800 --> 03:14.160
+The third variation is entry value is equal to
+
+36
+03:18.400 --> 03:20.590
+Mac Book Pro
+
+37
+03:24.990 --> 03:26.840
+and key
+
+38
+03:27.540 --> 03:33.020
+I'm going to define the key element and the value as an attribute this is the third combination.
+
+39
+03:33.180 --> 03:35.840
+So these are all different ways of defining the entries.
+
+40
+03:35.840 --> 03:42.540
+You are welcome to do all the entries in this format or this format or any format you like but you have
+
+41
+03:42.540 --> 03:54.580
+the choice key value is equal to 300 in the last combination of course entry is where we define
+
+42
+03:54.580 --> 04:04.230
+both as elements both the key and value as elements key is 400.
+
+43
+04:04.350 --> 04:11.330
+Of course I need to define a value I can just define the key as it is key has a sub element called value
+
+44
+04:16.680 --> 04:20.080
+control X do a control shift F  to format
+
+45
+04:22.670 --> 04:30.700
+save it and the value is MacBook Air
+
+46
+04:34.870 --> 04:35.850
+save it.
+
+47
+04:35.930 --> 04:41.120
+So we have successfully defined four entries in the map we have used four combinations both key and
+
+48
+04:41.120 --> 04:48.940
+value as attributes key as attribute value as element value as attribute key as element.
+
+49
+04:49.190 --> 04:53.770
+And then key and value as elements.
+
+50
+04:53.910 --> 04:57.560
+Lets run our test and see what happens.
+
+51
+04:57.570 --> 05:06.600
+Right click run as Java application load said displays the ID which is 20.
+
+52
+05:06.610 --> 05:08.400
+Let me maximize it.
+
+53
+05:08.980 --> 05:14.990
+And the values in the map 100 for iPhone 200 for iPad 300 is the key and the value is MacBook Pro
+
+54
+05:15.490 --> 05:17.820
+and the last one is MacBook Air.
+
+55
+05:18.100 --> 05:23.050
+So you have successfully created a map using spring configuration.
+
+56
+05:23.290 --> 05:27.370
+If you go to the config dot xml and also injected it into a Java class.

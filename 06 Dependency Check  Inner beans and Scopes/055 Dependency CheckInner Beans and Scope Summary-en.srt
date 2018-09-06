@@ -1,0 +1,103 @@
+0
+00:00.350 --> 00:06.180
+In this lecture I will summarize what you have learned from that dependency check inner beans and
+
+1
+00:06.270 --> 00:14.040
+scope's section. Using the spring dependency check feature we can ensure that a particular object for
+
+2
+00:14.040 --> 00:16.470
+sure gets what it requires,
+
+3
+00:16.560 --> 00:19.910
+that is the dependencies that it requires in order to function.
+
+4
+00:19.950 --> 00:26.850
+We do that using the @ required annotation on a particular dependency.
+
+5
+00:26.960 --> 00:33.490
+If that particular dependency is not provided at runtime Spring will throw a bean initialization exception
+
+6
+00:33.950 --> 00:36.820
+by default spring will assign the default values.
+
+7
+00:36.830 --> 00:42.680
+But if you use the at required annotation then that dependency has to be provided otherwise you will see
+
+8
+00:42.680 --> 00:45.080
+this exception in your application.
+
+9
+00:45.860 --> 00:49.100
+Second we have learned how to configure beans inside beans.
+
+10
+00:49.100 --> 00:50.590
+That is dependencies.
+
+11
+00:51.120 --> 00:57.520
+We use Bean then the property tag and then inside it we can define another bean.
+
+12
+00:57.630 --> 01:04.350
+So the first bean depends on the second bean inner beans allow us to define dependencies within another
+
+13
+01:04.350 --> 01:05.080
+bean.
+
+14
+01:05.370 --> 01:08.450
+We have learnt how to do that and seen it in action as well.
+
+15
+01:08.820 --> 01:15.740
+Last and very important you have learnt the five different scopes namely Singleton prototype request
+
+16
+01:15.750 --> 01:19.750
+session and global session that apply to spring beans.
+
+17
+01:20.820 --> 01:27.650
+Spring container by default uses the singleton scope that is no matter how many times we retrieve and
+
+18
+01:27.660 --> 01:34.020
+use an object from the spring container in our application it will create only one instance of it to
+
+19
+01:34.020 --> 01:34.710
+change it.
+
+20
+01:34.710 --> 01:38.620
+We specify a scope in xml configuration.
+
+21
+01:38.670 --> 01:44.940
+The second scope that we can provide is prototype which tells the spring container that it should create
+
+22
+01:45.000 --> 01:52.020
+a different bean everytime we request for an object in our application. The request transition scopes are
+
+23
+01:52.020 --> 01:55.710
+for the web application context when you work with spring MVC.
+
+24
+01:55.740 --> 02:02.040
+You can see these two in action and the global session is for portlet context when you develop portlet applications
+
+25
+02:02.040 --> 02:05.220
+which is  very rare which you use for global session.

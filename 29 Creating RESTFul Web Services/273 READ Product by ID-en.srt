@@ -1,0 +1,120 @@
+1
+00:00:00,240 --> 00:00:05,730
+In this lecture, we'll implement a finder method to get a single product.
+
+2
+00:00:06,060 --> 00:00:08,990
+So you have already implemented a method that returns as all the products.
+
+3
+00:00:09,000 --> 00:00:14,860
+If you go to the very first tab and click on the Send button, now it returns both the products in the
+
+4
+00:00:14,860 --> 00:00:15,600
+database.
+
+5
+00:00:15,690 --> 00:00:22,030
+But if you want a product by it's ID, to find the product by its ID, we'll implement that particular finder
+
+6
+00:00:22,050 --> 00:00:23,480
+method. Go to STS,
+
+7
+00:00:27,270 --> 00:00:29,590
+and go all the way to the end of your controller.
+
+8
+00:00:29,610 --> 00:00:35,340
+Let me add some spaces so that you can see it clearly. public Product,
+
+9
+00:00:35,340 --> 00:00:41,730
+I wanted it to return a product and it is getProduct.
+
+10
+00:00:41,740 --> 00:00:54,700
+It takes a long id and it returns repository.findOne. The findOne method takes a id and it
+
+11
+00:00:54,700 --> 00:00:58,050
+returns just a single product.
+
+12
+00:00:58,150 --> 00:01:02,510
+Mark this with @GetMapping.
+
+13
+00:01:03,790 --> 00:01:08,240
+But the difference here, along with the GetMapping, in the GetMapping,
+
+14
+00:01:08,440 --> 00:01:15,640
+we need to pass in the id in the URL. So forward slash, to pass in a path parameter,
+
+15
+00:01:15,640 --> 00:01:16,950
+open up the flower bracket,
+
+16
+00:01:16,990 --> 00:01:24,090
+this is like a placeholder. Whatever URL parameter comes in, that will go into this. Or we
+
+17
+00:01:24,090 --> 00:01:30,470
+are telling Spring that it should be binded to this. And then, to inject the value from the URL into our
+
+18
+00:01:30,660 --> 00:01:31,790
+method parameter,
+
+19
+00:01:31,930 --> 00:01:41,830
+mark this method parameter with @PathVariable. @PathVariable annotation from Spring, and within brackets
+
+20
+00:01:41,830 --> 00:01:49,930
+you can tell it that it should be mapped to this particular id. So automatically the value in the URL will be taken
+
+21
+00:01:49,930 --> 00:01:55,630
+by Spring and it will be injected into this id and then it will be used in the findOne method.
+
+22
+00:01:56,440 --> 00:01:59,230
+Let's stop and start the server and test it out.
+
+23
+00:02:05,320 --> 00:02:12,100
+Go to Postman, open a new tab grab the URL from the previous one.
+
+24
+00:02:12,240 --> 00:02:13,200
+Paste it.
+
+25
+00:02:13,250 --> 00:02:13,950
+The method is
+
+26
+00:02:13,950 --> 00:02:16,120
+Get, slash
+
+27
+00:02:16,170 --> 00:02:26,200
+1. Simply pass in the id. Send and we get the product 1, with the id 1 back. Change the id to 2
+
+28
+00:02:27,100 --> 00:02:30,560
+and you will get a product for which the id is 2.
+
+29
+00:02:30,580 --> 00:02:36,380
+So you have implemented a finder method which takes an id in the URL as a path variable
+
+30
+00:02:36,460 --> 00:02:41,020
+or as a path parameter and it returns that particular product back.
+

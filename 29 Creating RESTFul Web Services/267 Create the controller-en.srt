@@ -1,0 +1,52 @@
+1
+00:00:00,150 --> 00:00:06,840
+The second step is to create a RESTful controller class that will act as a endpoint to our RESTful application.
+
+2
+00:00:07,980 --> 00:00:08,520
+To do that,
+
+3
+00:00:08,520 --> 00:00:10,410
+go to STS.
+
+4
+00:00:13,160 --> 00:00:25,240
+Right click on the src/main/java, New -> Class. Call it ProductController and put it in a package called
+
+5
+00:00:25,240 --> 00:00:36,470
+com.bharath.spring.controllers. Finish. Right now this is just a class. To make it Spring RESTful
+
+6
+00:00:36,490 --> 00:00:44,890
+controller, you have to mark it with @RestController annotation from springframework.web.
+
+7
+00:00:44,920 --> 00:00:51,160
+So you have added the maven dependency in the last project which was spring-boot-starter-web.
+
+8
+00:00:51,250 --> 00:00:54,450
+That is where this annotation resides.
+
+9
+00:00:54,460 --> 00:01:00,240
+That is the number one step. And then we have to define a root path for our controller.
+
+10
+00:01:00,250 --> 00:01:08,890
+That is where our clients will be accessing our RESTful services. To do that you'll use @RequestMapping.
+
+11
+00:01:12,760 --> 00:01:20,950
+Within double quotes, /products. That will be the URI that our clients will use to access this
+
+12
+00:01:20,950 --> 00:01:24,240
+particular controller and starting the next lecture,
+
+13
+00:01:24,240 --> 00:01:28,980
+you will define all the CRUD operations starting with getProduct.
+

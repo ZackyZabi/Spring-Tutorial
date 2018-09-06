@@ -1,0 +1,128 @@
+1
+00:00:00,210 --> 00:00:05,230
+In the previous lecture, you have successfully read and displayed the query parameters. In this lecture you
+
+2
+00:00:05,230 --> 00:00:10,180
+are going to learn two more attributes that we can use inside the @RequestParam.
+
+3
+00:00:10,530 --> 00:00:16,700
+Go back to the browser, and this time don't provide the salary details.
+
+4
+00:00:16,700 --> 00:00:22,610
+Get rid of the last parameter, hit enter, submit the form again and let's see what happens.
+
+5
+00:00:22,640 --> 00:00:30,110
+It says required double parameter salary. You get a HTTP 400 back because by default Spring
+
+6
+00:00:30,110 --> 00:00:37,510
+container wants everything that we mark with the @RequestParam annotation. To make them optional,
+
+7
+00:00:38,770 --> 00:00:41,250
+you can add a new attribute. Before you do that,
+
+8
+00:00:41,290 --> 00:00:44,110
+you need to assign this sal to a value.
+
+9
+00:00:44,630 --> 00:00:49,500
+If its two attributes are more than we have to use value is equal to sal
+
+10
+00:00:49,500 --> 00:00:55,270
+comma, required is equal to, within double quotes,
+
+11
+00:00:55,720 --> 00:00:56,740
+it's a boolean value.
+
+12
+00:00:56,770 --> 00:00:58,740
+So required is equal to false. By default
+
+13
+00:00:58,750 --> 00:00:59,830
+it is true.
+
+14
+00:00:59,900 --> 00:01:02,270
+Now you're going to see an other exception.
+
+15
+00:01:02,380 --> 00:01:10,700
+So go back to the browser, hit enter without providing salary. Once Tomcat restarts
+
+16
+00:01:10,750 --> 00:01:16,090
+let's try that again in the browser and we see a different exception this time.
+
+17
+00:01:16,090 --> 00:01:20,530
+Scroll down and it says optional double parameter, it is optional,
+
+18
+00:01:20,800 --> 00:01:27,430
+but salary is not present but cannot be translated into null. Because it's a primitive type,
+
+19
+00:01:27,490 --> 00:01:32,300
+it cannot be translated to null. Spring tries to assign a null value, it doesn't work.
+
+20
+00:01:32,530 --> 00:01:39,100
+So go back to the RequestParam's controller and provide a defaultValue.
+
+21
+00:01:39,100 --> 00:01:42,960
+The last attribute is defaultValue,
+
+22
+00:01:42,960 --> 00:01:50,680
+v capital is equal to, say 60. 60 is the default salary.
+
+23
+00:01:50,680 --> 00:01:53,740
+Save it and that should go inside double quotes.
+
+24
+00:01:56,640 --> 00:01:58,000
+Restart the server
+
+25
+00:01:59,220 --> 00:02:09,780
+just to make sure our changes are picked. Go back to the browser, hit Enter and this time you don't see any errors.
+
+26
+00:02:09,870 --> 00:02:14,710
+And if you see the console, id is 123, name is John
+
+27
+00:02:14,790 --> 00:02:21,020
+and the salary is the default salary. You can provide zero as well if you want to, any default value.
+
+28
+00:02:21,210 --> 00:02:26,350
+So in this lecture, you have learnt that you should always mark the fields as optional
+
+29
+00:02:26,400 --> 00:02:32,520
+if you don't want them and you should provide default values for primitive types because a null value
+
+30
+00:02:32,520 --> 00:02:38,370
+cannot be assigned by the Spring container to the primitive types. You can also try out by passing invalid
+
+31
+00:02:38,370 --> 00:02:38,820
+values.
+
+32
+00:02:38,820 --> 00:02:44,210
+For example if you pass in xyz for id you will also see an exception.
+

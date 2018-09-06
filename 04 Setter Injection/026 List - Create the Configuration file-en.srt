@@ -1,0 +1,156 @@
+1
+00:00:00,200 --> 00:00:06,150
+In this lecture you will learn how to use the list xml element in the configuration file to inject the list
+
+2
+00:00:06,180 --> 00:00:08,510
+into a java object.To do that,
+
+3
+00:00:08,520 --> 00:00:11,970
+go to eclipse will create a new configuration file.
+
+4
+00:00:11,970 --> 00:00:18,990
+We can also add a bean in the config dot xml but just to show you how to put a config inside a package
+
+5
+00:00:18,990 --> 00:00:19,720
+and use it.
+
+6
+00:00:19,800 --> 00:00:21,480
+Let's create another configuration file.
+
+7
+00:00:21,480 --> 00:00:26,750
+Copy this paste it on this package just to avoid confusion
+
+8
+00:00:26,760 --> 00:00:36,600
+Right click on it rename by going to rename or hit F2 change it to list config dot xml
+
+9
+00:00:36,660 --> 00:00:39,200
+hit OK get rid of this bean
+
+10
+00:00:42,470 --> 00:00:48,130
+dont touch the config dot xml close it open the list config dot xml maximize.
+
+11
+00:00:48,410 --> 00:00:48,940
+Delete this
+
+12
+00:00:48,970 --> 00:00:51,900
+bean here and let's start from scratch.
+
+13
+00:00:51,900 --> 00:00:58,050
+Declare a new bean the name of it will be hospital.
+
+14
+00:00:58,290 --> 00:01:06,200
+Class is equal to the entire package name so go to the class grab the package name.
+
+15
+00:01:06,560 --> 00:01:09,070
+Come back to the conflict paste it
+
+16
+00:01:12,050 --> 00:01:16,860
+copy it again come back paste it dot hospital.
+
+17
+00:01:17,070 --> 00:01:22,650
+That is the instance we want spring to create close it and within the bean element we are going to
+
+18
+00:01:22,650 --> 00:01:23,810
+do a setter injection.
+
+19
+00:01:23,850 --> 00:01:30,300
+The property injection of these two values for the name
+
+20
+00:01:30,300 --> 00:01:33,060
+Go here
+
+21
+00:01:33,060 --> 00:01:37,470
+Property name is equal to name.
+
+22
+00:01:37,470 --> 00:01:45,410
+Inside it you can give a value you are welcome to use either the value as attribute or value as element.
+
+23
+00:01:45,410 --> 00:01:52,330
+I'm going to use value as element but the name the hospital name is going to be global hospitals.
+
+24
+00:01:52,520 --> 00:01:54,440
+You can list your favorite hospital here
+
+25
+00:01:57,240 --> 00:01:57,760
+save it.
+
+26
+00:01:57,770 --> 00:02:06,140
+The second property going to define it as a List property name is departments copy it comeback
+
+27
+00:02:06,450 --> 00:02:07,710
+paste it
+
+28
+00:02:08,110 --> 00:02:09,990
+The department is not of a value
+
+29
+00:02:10,100 --> 00:02:11,470
+It's going to be a list.
+
+30
+00:02:11,480 --> 00:02:13,960
+This is where we lose the list element
+
+31
+00:02:14,300 --> 00:02:20,280
+from spring namespace and within the list we can have multiple values.
+
+32
+00:02:20,690 --> 00:02:27,500
+Again you can use value as a list of value as a tag or value as an element value as an element or value
+
+33
+00:02:27,500 --> 00:02:29,070
+as an attribute.
+
+34
+00:02:29,120 --> 00:02:34,740
+Let's put three values into this ,list the various departments.
+
+35
+00:02:34,740 --> 00:02:43,110
+I'm going to keep it simple front office inpatient outpatient
+
+36
+00:02:43,420 --> 00:02:46,180
+You can list more if you want to and that's it.
+
+37
+00:02:46,180 --> 00:02:52,840
+So we have successfully configured the hospital bean and we are injecting two fields into it or two
+
+38
+00:02:52,840 --> 00:02:58,870
+dependencies into it using the setter injection or the property injection and for the list inside the
+
+39
+00:02:58,870 --> 00:03:02,940
+property we have used the element called list.
+

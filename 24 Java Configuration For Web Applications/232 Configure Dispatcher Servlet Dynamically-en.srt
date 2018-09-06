@@ -1,0 +1,68 @@
+1
+00:00:00,390 --> 00:00:06,540
+In this lecture, we'll dynamically configure the dispatcher-servlet,this piece here. With the web.xml we are
+
+2
+00:00:06,540 --> 00:00:11,650
+going to dynamically do it in our Java configuration. Starting 3.0,
+
+3
+00:00:11,700 --> 00:00:13,830
+we are allowed to do this.
+
+4
+00:00:14,070 --> 00:00:19,010
+Start by using ServletRegistration, it's an interface.
+
+5
+00:00:19,060 --> 00:00:29,700
+ServletRegistration.Dynamic servlet, is equal to context or the servletContext which was passed to
+
+6
+00:00:29,700 --> 00:00:35,960
+this method, dot addServlet(arg0, arg1). We are dynamically adding
+
+7
+00:00:35,970 --> 00:00:42,960
+a servlet with a URL mapping. Go back to web.xml or the name of the servlet which is dispatcher.
+
+8
+00:00:43,240 --> 00:00:44,070
+Comeback,
+
+9
+00:00:44,190 --> 00:00:54,630
+paste the name and create a new instance of the servlet which is DispatcherServlet from Spring. So you've dynamically
+
+10
+00:00:54,630 --> 00:00:59,610
+created a dispatcher-servlet instance and you've registered it with the container.
+
+11
+00:00:59,610 --> 00:01:10,580
+Next step, we can tell the container that we want to load this servlet. servlet.setLoadOnStartup(1);
+
+12
+00:01:10,920 --> 00:01:15,500
+That means this servlet should be loaded as soon as the servlet container starts up.
+
+13
+00:01:15,540 --> 00:01:23,790
+And also we can dynamically register it for a particular URI, addMapping("/").
+
+14
+00:01:23,790 --> 00:01:28,770
+That is what we mapped. Everything that comes to our application should go to the dispatcher-servlet.
+
+15
+00:01:28,770 --> 00:01:32,500
+That is how we have it in the web.xml as well.
+
+16
+00:01:32,730 --> 00:01:36,020
+So you've successfully registered by creating a
+
+17
+00:01:36,030 --> 00:01:45,740
+Dispatcher-servlet. Now you can get rid of the web.xml as well. Right click, delete and it's gone.
+

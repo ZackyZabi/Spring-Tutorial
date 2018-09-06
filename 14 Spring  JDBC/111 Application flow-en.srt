@@ -1,0 +1,80 @@
+1
+00:00:00,210 --> 00:00:05,430
+In this lecture I will explain the flow end to end and summarize what you have achieved in the last
+
+2
+00:00:05,430 --> 00:00:08,470
+few lectures and we ran best.
+
+3
+00:00:08,500 --> 00:00:15,460
+The spring has always it's the configuration file and in the configuration file you can find three bins.
+
+4
+00:00:15,520 --> 00:00:19,030
+The first being is the employee be able implementation.
+
+5
+00:00:19,210 --> 00:00:24,430
+This Been needs the daily the template being to work so the container will then tried to create the
+
+6
+00:00:24,580 --> 00:00:29,360
+DBC template bin and The Daily Beast template depends on datasource.
+
+7
+00:00:29,470 --> 00:00:32,540
+So this being container will look for the data source bin.
+
+8
+00:00:32,650 --> 00:00:33,890
+It will find it here.
+
+9
+00:00:34,000 --> 00:00:38,640
+It will create an instance of it by using the information we have already provided here.
+
+10
+00:00:38,950 --> 00:00:44,740
+Then it indexed that datasource into the database template and it uses the database a template object
+
+11
+00:00:45,100 --> 00:00:52,240
+to inject it into the employee or Imbolc while creating an object off the employee impellor and then
+
+12
+00:00:53,350 --> 00:00:59,580
+we are creating employee BP or setting the data in to it and we are invoking the create method on the
+
+13
+00:00:59,580 --> 00:01:04,660
+Dow being which we are reading from spring and in the create matter.
+
+14
+00:01:04,980 --> 00:01:09,910
+We are using this very basic template which we have injected in the configuration.
+
+15
+00:01:09,950 --> 00:01:17,340
+Exclude the update method which makes the sequel and the 3 values for which we have placeholders here.
+
+16
+00:01:17,370 --> 00:01:18,380
+The question marks.
+
+17
+00:01:18,390 --> 00:01:20,190
+So spring will replace them.
+
+18
+00:01:20,190 --> 00:01:24,090
+Here is the update and we saw the result already.
+
+19
+00:01:24,300 --> 00:01:29,280
+So this is a pattern which we typically follow in real time applications instead of a test.
+
+20
+00:01:29,280 --> 00:01:37,020
+Plus we would inject this Deewar in our business object plus the next layer class in Java the application.
+

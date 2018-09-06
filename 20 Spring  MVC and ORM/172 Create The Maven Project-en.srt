@@ -1,0 +1,148 @@
+1
+00:00:00,080 --> 00:00:05,460
+In this lecture he will walk on the very first step which is to create them him project and update the
+
+2
+00:00:05,550 --> 00:00:15,550
+bomb dot example or to eclipse Filemon you knew Mavin project you had to create it may have an application
+
+3
+00:00:15,940 --> 00:00:24,700
+next door and select the default option scroll down and go to May an archetype that Python webapp next
+
+4
+00:00:25,780 --> 00:00:34,710
+with a name call it putting MVC or R M and B C for a model view controller or item for object relational
+
+5
+00:00:34,800 --> 00:00:38,360
+mapping inish.
+
+6
+00:00:38,610 --> 00:00:40,480
+And that will create a new project for us.
+
+7
+00:00:40,520 --> 00:00:43,680
+The very first step is to get rid of this error.
+
+8
+00:00:43,850 --> 00:00:45,040
+You know why that happens.
+
+9
+00:00:45,050 --> 00:00:49,670
+It's because of this dependency is already already done it.
+
+10
+00:00:49,670 --> 00:00:58,560
+When you work on the spring MBC project right click go to properties search for run times click on target
+
+11
+00:00:58,560 --> 00:01:01,270
+at run times and Apache Tomcat.
+
+12
+00:01:01,530 --> 00:01:04,300
+OK that will resolve that error.
+
+13
+00:01:04,700 --> 00:01:12,780
+Next open the Bombarnac someone and let's update it by adding someone figuration from the previous projects.
+
+14
+00:01:12,950 --> 00:01:24,880
+Go to the spring MBC project open up the palm file click on the last tab about a click to maximize.
+
+15
+00:01:25,780 --> 00:01:32,950
+You can copy starting from properties all the way till end of burled copy that come back but the new
+
+16
+00:01:32,950 --> 00:01:35,830
+project start from dependencies.
+
+17
+00:01:36,280 --> 00:01:40,950
+Go to the end of it and paste what you have copied to the Control shift.
+
+18
+00:01:40,970 --> 00:01:47,410
+If you format we that may have an compiler plugin as well as we have the spring.
+
+19
+00:01:47,410 --> 00:01:49,650
+MBC dependency.
+
+20
+00:01:49,690 --> 00:01:53,420
+We also need the spring autumn dependencies.
+
+21
+00:01:53,620 --> 00:01:55,590
+So go to the autumn project spring
+
+22
+00:01:58,630 --> 00:02:01,620
+autumn expanded open the bombard X-amount
+
+23
+00:02:04,310 --> 00:02:07,330
+lofts tab again and maximize it.
+
+24
+00:02:07,340 --> 00:02:16,930
+All we need is the spring autumn hibernate core and my squirrel character copied those three dependencies.
+
+25
+00:02:17,060 --> 00:02:22,020
+The spring quarter and spring context we get it for free when we add the spring.
+
+26
+00:02:22,050 --> 00:02:26,820
+Bambi MBC.
+
+27
+00:02:27,160 --> 00:02:30,150
+We have successfully added all the dependencies.
+
+28
+00:02:30,650 --> 00:02:31,780
+The first one is putting in.
+
+29
+00:02:31,880 --> 00:02:35,300
+You know why we need it to work on the UI layer.
+
+30
+00:02:35,300 --> 00:02:38,880
+We need to bring MBC trans pulls all the other dependencies.
+
+31
+00:02:38,900 --> 00:02:40,270
+It requires spring.
+
+32
+00:02:40,290 --> 00:02:43,260
+Autumn of course to use Hibernate.
+
+33
+00:02:43,370 --> 00:02:49,860
+Hibernate template hibernate core has all the hibernate core and a squirrel character.
+
+34
+00:02:50,030 --> 00:02:56,570
+This is the driver profile file JTB see Driver Josephite right click on the project go to may even do
+
+35
+00:02:56,600 --> 00:02:56,950
+it.
+
+36
+00:02:57,250 --> 00:03:04,020
+Update Project hit OK and maven will resolve everything and we don't see errors anymore.
+
+37
+00:03:04,100 --> 00:03:07,280
+So he have successfully completed the very first step.
+

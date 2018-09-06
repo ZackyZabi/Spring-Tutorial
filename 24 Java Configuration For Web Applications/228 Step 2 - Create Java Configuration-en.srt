@@ -1,0 +1,116 @@
+1
+00:00:00,270 --> 00:00:06,330
+The second step is to replace the dispatcher-servlet.xml with a Java based configuration.
+
+2
+00:00:07,260 --> 00:00:11,200
+Go to Eclipse. Before you create the configuration,
+
+3
+00:00:11,350 --> 00:00:14,670
+right click on our project. Any time we change the pom.xml,
+
+4
+00:00:14,850 --> 00:00:23,860
+if you see any errors or even if you don't see any errors, right click on it, say Maven, do a Update Project.
+
+5
+00:00:23,930 --> 00:00:24,750
+Hit OK.
+
+6
+00:00:24,980 --> 00:00:26,980
+And if you have any errors they should go away.
+
+7
+00:00:26,980 --> 00:00:30,870
+Maven will update according to the new pom.xml.
+
+8
+00:00:31,370 --> 00:00:35,010
+Now let's create the Java configuration for our Spring MVC project by
+
+9
+00:00:35,030 --> 00:00:40,610
+right clicking on the new package. Say New -> Class.
+
+10
+00:00:40,920 --> 00:00:44,390
+Call it SpringConfig, Finish.
+
+11
+00:00:44,390 --> 00:00:52,060
+We are going to replace the dispatcher-servlet.xml which has two elements, context:component-scan
+
+12
+00:00:52,060 --> 00:00:57,700
+and a bean which is the InternalResourceViewResolver.
+
+13
+00:00:57,800 --> 00:01:07,340
+We'll replace these two with the Java configuration. To do that, our config class should extend a class
+
+14
+00:01:07,340 --> 00:01:18,610
+from Spring which is MVC or WebMvcConfigurerAdapter.
+
+15
+00:01:18,890 --> 00:01:20,990
+Its WebMvcConfigurerAdapter.
+
+16
+00:01:21,350 --> 00:01:25,440
+Very first step is to annotate this class with three annotations.
+
+17
+00:01:25,440 --> 00:01:32,680
+Number one you already know, @Configuration, which tells Spring that this is a configuration class.
+
+18
+00:01:33,140 --> 00:01:36,860
+Second annotation here is enable
+
+19
+00:01:38,650 --> 00:01:50,160
+MVC support, that is @EnableWebMvc. Last and the most important one, ComponentScan.
+
+20
+00:01:50,290 --> 00:01:58,780
+So this is exactly the same as the component-scan element here in the xml. And using this we can specify
+
+21
+00:01:58,900 --> 00:02:04,820
+which packages should be scanned within double quotes, you can provide a value.
+
+22
+00:02:05,030 --> 00:02:09,830
+You can simply grab the package name from here. You can have this configuration in a different package
+
+23
+00:02:09,920 --> 00:02:13,950
+and use a different package here for scanning.
+
+24
+00:02:13,970 --> 00:02:18,610
+It's up to you. But I have everything in the same package.
+
+25
+00:02:18,640 --> 00:02:24,290
+So in this lecture, you have successfully created the Spring Configuration file and added three annotations
+
+26
+00:02:24,290 --> 00:02:32,240
+to it. You have enabled the MVC support from Spring. You have marked this class as a configuration file and also you have used
+
+27
+00:02:32,360 --> 00:02:37,820
+the ComponentScan element and you have told Spring which all packages
+
+28
+00:02:37,820 --> 00:02:41,620
+it should scan for all the controller packages
+
+29
+00:02:41,660 --> 00:02:43,170
+or the spring beans.
+

@@ -1,0 +1,124 @@
+1
+00:00:00,150 --> 00:00:07,320
+ORM stands for Object Relational Mapping. In this and the next few lectures I will introduce you to
+
+2
+00:00:07,320 --> 00:00:14,210
+several ORM concepts in general as well as within the Spring framework. When we use JDBC or even
+
+3
+00:00:14,260 --> 00:00:17,300
+Spring JDBC to do database operations,
+
+4
+00:00:17,520 --> 00:00:22,800
+we create the SQL query using the primitive data available in an object.
+
+5
+00:00:22,920 --> 00:00:28,530
+We take the primitive types, create an SQL statement and then execute it against the database. All that
+
+6
+00:00:28,530 --> 00:00:31,880
+work is done by the developer, except for the execution
+
+7
+00:00:31,890 --> 00:00:40,270
+we create the SQL. And when the response comes back we'll convert that data that comes back into our
+
+8
+00:00:40,270 --> 00:00:42,330
+Java objects again.
+
+9
+00:00:42,370 --> 00:00:47,040
+So all that work is being done by the developer which is hectic and a lot of work.
+
+10
+00:00:47,110 --> 00:00:50,090
+That is where a ORM tool comes in.
+
+11
+00:00:51,340 --> 00:00:57,940
+And once we start using ORM we simply create a class called entity class, a simple Java POJO or
+
+12
+00:00:57,940 --> 00:01:05,400
+a bean and we provide a mapping. Every field in the class will be mapped to a database column.
+
+13
+00:01:05,410 --> 00:01:13,390
+Once we do that mapping this ORM tool will automatically convert our object into database rows and
+
+14
+00:01:13,510 --> 00:01:14,590
+vice versa.
+
+15
+00:01:14,980 --> 00:01:22,960
+That is the power of using ORM tool. It converts an object into a database row and vice versa. We'll not be
+
+16
+00:01:23,020 --> 00:01:24,900
+writing any SQL.
+
+17
+00:01:25,180 --> 00:01:29,590
+This ORM tool will generate the required SQL on the fly,
+
+18
+00:01:29,650 --> 00:01:31,660
+once we provide this mapping information.
+
+19
+00:01:35,050 --> 00:01:42,450
+The Java EE standard for doing ORM is JPA which stands for Java Persistence API.
+
+20
+00:01:43,370 --> 00:01:49,960
+Just like any other standard, servlets, JDBC, etc; Oracle provides this JPA standard. And as a part
+
+21
+00:01:49,960 --> 00:01:56,680
+of every standard we have an API and a specification. The API is for us, the developers.
+
+22
+00:01:56,710 --> 00:02:02,860
+There are several annotations and interfaces and classes which we use. And the specification is for somebody
+
+23
+00:02:02,860 --> 00:02:07,990
+like Hibernate which implements this standard, the JPA standard.
+
+24
+00:02:07,990 --> 00:02:11,860
+Hibernate is the popular implementation of the JPA standard.
+
+25
+00:02:11,860 --> 00:02:17,970
+There are several other implementations like EclipseLink, TopLink, etc; but we'll be using Hibernate
+
+26
+00:02:18,040 --> 00:02:19,960
+which is the most popular one.
+
+27
+00:02:20,140 --> 00:02:28,420
+The current version of hibernate is 5.0. To summarize, in this lecture you have learnt what an ORM is.
+
+28
+00:02:29,570 --> 00:02:36,950
+It makes our job as an object oriented developer very easy by generating the SQL on the fly and also it
+
+29
+00:02:36,950 --> 00:02:45,800
+converts objects into database rows and rows back into Java objects without us writing any SQL or
+
+30
+00:02:45,800 --> 00:02:47,980
+doing any mapping on our own.
+
+31
+00:02:47,980 --> 00:02:53,210
+We simply provide the mapping information and the ORM tool will take care of the rest.
+

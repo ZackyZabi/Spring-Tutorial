@@ -1,0 +1,140 @@
+1
+00:00:00,330 --> 00:00:03,490
+In this lecture, you will see how simpler the code will become
+
+2
+00:00:03,510 --> 00:00:10,800
+once we start using the ModelMap and string to return a ViewName instead of ModelAndView. To do that, go
+
+3
+00:00:10,800 --> 00:00:13,370
+to the UserController,
+
+4
+00:00:13,380 --> 00:00:19,610
+the usecase that we have worked on earlier, that is the user registration usecase. Open up the UserController,
+
+5
+00:00:20,040 --> 00:00:27,210
+the very first method, all it does is return a view back but it is creating a ModelAndView object to
+
+6
+00:00:27,210 --> 00:00:27,870
+do that.
+
+7
+00:00:28,120 --> 00:00:36,650
+Let's change that to string. Get rid of the first two lines and simply return, within double quotes, userReg,
+
+8
+00:00:36,860 --> 00:00:43,280
+r capital, that's that. We need not create a ModelAndView object at all.
+
+9
+00:00:43,280 --> 00:00:44,400
+So that's simple.
+
+10
+00:00:44,690 --> 00:00:46,980
+Now the code is much better and cleaner.
+
+11
+00:00:47,090 --> 00:00:54,110
+The second method takes a model attribute, that is whatever comes from the HTML form. Again it creates
+
+12
+00:00:54,110 --> 00:00:55,440
+a ModelAndView.
+
+13
+00:00:55,520 --> 00:01:01,290
+So get rid of ModelAndView. Instead return the view first. Within double quotes,
+
+14
+00:01:01,300 --> 00:01:07,300
+regResult is the view. Change the return type to string.
+
+15
+00:01:07,360 --> 00:01:10,480
+So we are done with the view portion.
+
+16
+00:01:10,570 --> 00:01:18,310
+Now for the model portion, we need to use the ModelMap. We need to define the ModelMap as a parameter.
+
+17
+00:01:18,460 --> 00:01:23,180
+ModelMap from spring, call it model.
+
+18
+00:01:25,860 --> 00:01:31,470
+model.addAttribute, use that method.
+
+19
+00:01:31,560 --> 00:01:39,320
+Whatever you are adding here to the ModelAndView, do that on the ModelMap.
+
+20
+00:01:39,330 --> 00:01:41,780
+User comma user.
+
+21
+00:01:44,960 --> 00:01:45,610
+Format it.
+
+22
+00:01:45,620 --> 00:01:48,670
+Get rid of the ModelAndView, we don't need it anymore.
+
+23
+00:01:48,770 --> 00:01:56,300
+Now the code is much simpler and cleaner because we don't use ModelMap. Do a control+shift+o to organize
+
+24
+00:01:56,300 --> 00:02:03,620
+the imports, control+shift+o. Let's rerun the application and see if everything works as expected.
+
+25
+00:02:03,870 --> 00:02:08,240
+Right click, run as -> run on server, finish.
+
+26
+00:02:08,410 --> 00:02:11,710
+My Tomcat is not running, so it will start it.
+
+27
+00:02:11,710 --> 00:02:14,580
+If you have it up on running it will restart it.
+
+28
+00:02:14,680 --> 00:02:17,260
+The very first page is the registration page.
+
+29
+00:02:17,260 --> 00:02:26,680
+So copy that URL, come to spring MVC, paste it, Enter. So it goes to the first page, the first method
+
+30
+00:02:26,680 --> 00:02:27,750
+has worked.
+
+31
+00:02:27,760 --> 00:02:34,150
+You have simply returned a string as a view and the Spring container has sent it to that particular
+
+32
+00:02:34,150 --> 00:02:34,650
+view.
+
+33
+00:02:34,770 --> 00:02:44,260
+Go back, give it an id 123, Bharath, bharath@gmail.com. Submit and the second method
+
+34
+00:02:44,380 --> 00:02:45,950
+works as well,
+
+35
+00:02:46,150 --> 00:02:53,470
+just like how it was working before but the code is now much simpler and cleaner.
+

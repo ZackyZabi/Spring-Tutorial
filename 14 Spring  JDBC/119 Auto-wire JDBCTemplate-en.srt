@@ -1,0 +1,124 @@
+1
+00:00:00,210 --> 00:00:06,030
+Know that you know how to use the GBC template to perform cad operations against a database in this
+
+2
+00:00:06,030 --> 00:00:10,110
+lecture you will learn how to auto wire this very basic template.
+
+3
+00:00:10,110 --> 00:00:16,590
+If we go to the employee we're impelled we haven't wired it but instead we have used the configuration
+
+4
+00:00:16,590 --> 00:00:20,040
+to inject the database the template into the employee.
+
+5
+00:00:20,580 --> 00:00:27,030
+So let's get rid of this we not defined the been here the lead the Dow impled been from the configuration
+
+6
+00:00:27,780 --> 00:00:34,770
+go to the employee down in pulp the very first step to start using annotations is to mark our Been with
+
+7
+00:00:34,820 --> 00:00:38,310
+that component annotation from Spring.
+
+8
+00:00:38,500 --> 00:00:39,900
+Do that.
+
+9
+00:00:39,900 --> 00:00:48,210
+This tells spring that this class an object of this class can be created the next annotation is at Arto
+
+10
+00:00:48,540 --> 00:00:56,290
+wired and spring will automatically inject it provided we enable annotations as well as contex type
+
+11
+00:00:56,290 --> 00:01:02,690
+1 component scan in the conflict Daut example where they're added right at the beginning you can add
+
+12
+00:01:02,700 --> 00:01:05,320
+it in context.
+
+13
+00:01:05,500 --> 00:01:13,350
+I found a colon component hyphen can provide the base package which is the Dow impels package.
+
+14
+00:01:13,750 --> 00:01:18,400
+We should provide the implementation package not the interfaces package.
+
+15
+00:01:18,400 --> 00:01:19,900
+They are different now.
+
+16
+00:01:20,090 --> 00:01:27,430
+It's a border configured based package you can PLO's this element right here we control shift to format
+
+17
+00:01:28,860 --> 00:01:33,520
+a rerun that best.
+
+18
+00:01:33,660 --> 00:01:34,520
+That is an exception.
+
+19
+00:01:34,520 --> 00:01:39,080
+Let's see what the problem is no such being employed now available.
+
+20
+00:01:40,080 --> 00:01:46,540
+That's because in the past we are trying to read the bean as employee doll.
+
+21
+00:01:46,580 --> 00:01:54,650
+But if you remember by default spring will create the class using the class name or create the object
+
+22
+00:01:54,680 --> 00:01:55,670
+using the class name.
+
+23
+00:01:55,660 --> 00:01:59,080
+So let's provide the name here within brackets.
+
+24
+00:02:00,850 --> 00:02:02,240
+Employee.
+
+25
+00:02:02,490 --> 00:02:06,310
+Now that is what we are using in our best employee be able.
+
+26
+00:02:06,310 --> 00:02:10,860
+So once you give it you will create the being with that name and it should be available.
+
+27
+00:02:12,430 --> 00:02:14,050
+And this time it works successfully.
+
+28
+00:02:14,050 --> 00:02:19,150
+So in this letter you have successfully Ottaway or the daily busy template or by mocking our POJO with
+
+29
+00:02:19,150 --> 00:02:23,830
+that component annotation use of that word annotation on the BBC template.
+
+30
+00:02:24,030 --> 00:02:30,550
+And in the config you have provided the base package for the container to scan by using the context
+
+31
+00:02:30,570 --> 00:02:32,440
+colon components can.
+

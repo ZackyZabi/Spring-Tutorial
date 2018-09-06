@@ -1,0 +1,100 @@
+1
+00:00:00,380 --> 00:00:08,020
+A second way to process the data inside the JSP page is to use the JSP expression language. It has
+
+2
+00:00:08,020 --> 00:00:15,180
+nothing to do with Spring or Spring MVC but its a convenient method. So let's use it. To use the JSP
+
+3
+00:00:15,190 --> 00:00:16,110
+expression language,
+
+4
+00:00:16,120 --> 00:00:24,940
+we use the dollar symbol and within flower brackets, open and close brace, simply use the attribute that
+
+5
+00:00:24,940 --> 00:00:29,120
+is in the request or session or whichever scope. In this case it is in the request scope.
+
+6
+00:00:30,150 --> 00:00:33,040
+And automatically the JSPEL will evaluate it.
+
+7
+00:00:33,060 --> 00:00:38,840
+That is, it will search in the request scope, get the value of it and it will display its value.
+
+8
+00:00:39,650 --> 00:00:46,410
+Let's put it inside a bold tag, HTML bold tag. Close the bold tag right there.
+
+9
+00:00:47,160 --> 00:00:57,920
+And this is id colon, copy that line, paste it a couple of times. Do a control+shift+f to format.
+
+10
+00:00:58,120 --> 00:01:10,800
+The second one is name and the third one is salary, colon add a line break right here. br slash.
+
+11
+00:01:10,810 --> 00:01:13,030
+So we got Id, name.
+
+12
+00:01:16,420 --> 00:01:18,590
+Get rid of the extra id here.
+
+13
+00:01:19,570 --> 00:01:26,920
+Salary, name and then the Id. Save it, go back to the web browser.
+
+14
+00:01:26,930 --> 00:01:31,910
+But for this to work, there is one thing you need to do. You need to get rid of this doc type HTML
+
+15
+00:01:31,920 --> 00:01:35,810
+which Eclipse generates. If you have it here,
+
+16
+00:01:35,990 --> 00:01:37,900
+the EL is not going to be evaluated.
+
+17
+00:01:37,900 --> 00:01:39,180
+I have seen this issue.
+
+18
+00:01:39,190 --> 00:01:41,170
+So get rid of this line.
+
+19
+00:01:41,560 --> 00:01:45,130
+Go back to the web browser to the Hello, refresh.
+
+20
+00:01:45,220 --> 00:01:51,250
+And we are displaying the details again, but this time it is using the JSP Expression Language which is
+
+21
+00:01:51,250 --> 00:01:56,870
+very simple, similar to the Spring Expression Language. Dollar symbol, within floor brackets,
+
+22
+00:01:56,980 --> 00:02:05,860
+the name of the variable which we have set in to the model, id, name and salary. Automatically the Expression
+
+23
+00:02:05,860 --> 00:02:09,860
+Language, the dollar symbol will evaluate this value.
+
+24
+00:02:09,880 --> 00:02:16,240
+If we look for this, an attribute with this name in the request scope, get its value and display it to
+
+25
+00:02:16,240 --> 00:02:17,370
+the end user.
+

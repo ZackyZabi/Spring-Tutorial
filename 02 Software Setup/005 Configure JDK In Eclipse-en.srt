@@ -1,0 +1,148 @@
+1
+00:00:00,290 --> 00:00:07,620
+In this lecture you will learn how to launch that Eclipse ID and configure a JDK in it, so click on Eclipse
+
+2
+00:00:07,710 --> 00:00:08,310
+icon
+
+3
+00:00:08,430 --> 00:00:10,680
+once you install it your version might be different.
+
+4
+00:00:10,680 --> 00:00:13,520
+That's OK as long as it's one of the latest.
+
+5
+00:00:13,830 --> 00:00:21,090
+You need to select a workspace, workspace is where all the projects you are going to create will be saved
+
+6
+00:00:21,090 --> 00:00:21,740
+into eclipse.
+
+7
+00:00:21,740 --> 00:00:28,130
+We'll put all the projects into this folder, browser and you can select whatever folder you want on my Mac,
+
+8
+00:00:28,140 --> 00:00:31,770
+I have it under documents workspace.
+
+9
+00:00:31,770 --> 00:00:36,940
+You can create any folder on your cdrive or d drive and make it your workspace.
+
+10
+00:00:37,170 --> 00:00:37,900
+hit OK.
+
+11
+00:00:39,110 --> 00:00:46,290
+And that will launch eclipse if you are launching it for the first time you will see a different view.
+
+12
+00:00:46,370 --> 00:00:50,640
+Once you are on Eclipse you can close all those windows and we'll get here.
+
+13
+00:00:51,050 --> 00:00:53,390
+Eclipse has different perspectives java
+
+14
+00:00:53,410 --> 00:00:59,030
+EE Java exectra when you're developing a certain kind of project automatically those perspectives
+
+15
+00:00:59,030 --> 00:00:59,630
+will be switched.
+
+16
+00:00:59,630 --> 00:01:06,770
+If not you can click click on them and switch as well to configure the JDK you need to tell eclipse
+
+17
+00:01:06,950 --> 00:01:13,270
+where the JDK is so that it can use it compile your classes and do the rest of it.
+
+18
+00:01:13,280 --> 00:01:22,430
+So Windows preferences on a Windows machine you will see preferences under Windows preferences on Mac
+
+19
+00:01:22,480 --> 00:01:28,100
+will have go to the eclipse menu preferences once you are here
+
+20
+00:01:28,380 --> 00:01:30,010
+either its windows or Mac,
+
+21
+00:01:30,020 --> 00:01:30,980
+its all the same.
+
+22
+00:01:30,980 --> 00:01:33,870
+So JRE type-in JRE
+
+23
+00:01:34,020 --> 00:01:37,510
+Click on installed JRE's by default.
+
+24
+00:01:37,510 --> 00:01:41,350
+Eclipse picks up the JRE installed on your machine.
+
+25
+00:01:41,420 --> 00:01:45,860
+If you have one so Windows usually comes with a JRE under program files.
+
+26
+00:01:45,860 --> 00:01:47,780
+It would pick that up.
+
+27
+00:01:47,780 --> 00:01:57,680
+If not if it has picked that up delete it by selecting it remove and add click on add select standard
+
+28
+00:01:57,680 --> 00:02:05,100
+V.M. next browse to wherever you have installed JDK on your machine and select that folder.
+
+29
+00:02:05,450 --> 00:02:14,270
+So in my case if I did this this is my JDK in your case if you are on Windows it will be C-Drive program
+
+30
+00:02:14,270 --> 00:02:18,040
+files Java or JDK 1.8 like this.
+
+31
+00:02:18,050 --> 00:02:19,460
+So just select that folder.
+
+32
+00:02:19,460 --> 00:02:26,540
+You don't need all this content slash home that is on Mac on Windows you can stop here right here are
+
+33
+00:02:26,540 --> 00:02:27,490
+JDK.
+
+34
+00:02:27,770 --> 00:02:31,690
+So you shouldn't select a JRE or JDK bin.
+
+35
+00:02:31,760 --> 00:02:36,310
+It should be the JDK folder.
+
+36
+00:02:36,460 --> 00:02:42,520
+So in this lecture you have lunched the eclipse ID selected workspace and also would have configured a JDK
+
+37
+00:02:42,600 --> 00:02:46,320
+that you how installed in the previous lectures for Eclipse to use.
+

@@ -1,0 +1,68 @@
+1
+00:00:00,430 --> 00:00:04,290
+You have used value as element and value as attribute.
+
+2
+00:00:04,310 --> 00:00:10,080
+An other way to initialize or inject values or inject dependencies is to use the P schema.
+
+3
+00:00:10,890 --> 00:00:13,870
+It's a very easy and popular way to do that.
+
+4
+00:00:13,890 --> 00:00:19,650
+You need the P namespace which is right here and the prefix for it is P.
+
+5
+00:00:19,680 --> 00:00:22,540
+and this is its namespace. Once we have it,
+
+6
+00:00:22,560 --> 00:00:29,280
+We can use the P colon and we need to specify the property which we want to initialize instead of
+
+7
+00:00:29,550 --> 00:00:36,600
+defining the property element we use P colon ID on this particular class class object.
+
+8
+00:00:36,600 --> 00:00:44,670
+I want to initialize the ID to within double coats 20 similarly P colon the second one is
+
+9
+00:00:44,790 --> 00:00:50,490
+name that is the property P colon name is equal to within double coats bharath
+
+10
+00:00:50,710 --> 00:00:52,970
+and then we don't need any of these.
+
+11
+00:00:53,160 --> 00:00:56,760
+and this bean element can also end right here.
+
+12
+00:00:56,770 --> 00:00:59,380
+Its a convenient and easy.
+
+13
+00:00:59,400 --> 00:01:05,130
+So this is called the P namespace or P schema way of doing it.
+
+14
+00:01:05,220 --> 00:01:09,070
+Let's run our test one more time and see if it still works.
+
+15
+00:01:10,370 --> 00:01:12,290
+And the output still remains the same.
+
+16
+00:01:12,290 --> 00:01:19,690
+So we have finally learnt all the three ways of injecting values using value as element value as attribute
+
+17
+00:01:19,790 --> 00:01:23,480
+and then the P schema way of doing things.
+

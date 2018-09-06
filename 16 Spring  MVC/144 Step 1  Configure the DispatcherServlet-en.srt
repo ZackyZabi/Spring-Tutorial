@@ -1,0 +1,128 @@
+1
+00:00:00,210 --> 00:00:06,240
+Starting this lecture, you will create your Spring MVC application in five simple steps.
+
+2
+00:00:06,240 --> 00:00:12,900
+Number one, configure the dispatcher servlet in the web.xml, create a spring configuration file
+
+3
+00:00:12,930 --> 00:00:18,690
+under the WEB-INF folder. Number three, configure the view resolver.
+
+4
+00:00:18,710 --> 00:00:25,490
+You know what a view resolver is. It appends a prefix and suffix to the view we return from the controller.
+
+5
+00:00:26,690 --> 00:00:29,120
+Create the controller class is the fourth step.
+
+6
+00:00:29,180 --> 00:00:30,830
+And also we'll configure it.
+
+7
+00:00:31,190 --> 00:00:37,290
+And finally we'll create the folder structure and the JSP page under WEB-INF.
+
+8
+00:00:37,350 --> 00:00:40,270
+So let's get started by configuring the dispatch servlet.
+
+9
+00:00:40,270 --> 00:00:52,340
+Go to Eclipse. Spring MVC is our project. Open the web.xml. This is where we'll configure over dispatcher
+
+10
+00:00:52,360 --> 00:00:53,170
+servlet.
+
+11
+00:00:53,240 --> 00:00:58,180
+Change the name to Hello spring
+
+12
+00:00:58,240 --> 00:01:01,930
+MVC. That's the display name of this application.
+
+13
+00:01:02,280 --> 00:01:04,420
+Configure the servlet, servlet
+
+14
+00:01:07,560 --> 00:01:15,400
+is the element that we want to use. Servlet name is the first one, let's call it
+
+15
+00:01:15,420 --> 00:01:19,890
+dispatcher.
+
+16
+00:01:20,070 --> 00:01:22,910
+The second element should be servlet-class.
+
+17
+00:01:22,950 --> 00:01:26,690
+We know that it is called dispatcher servlet, but we don't know the package name.
+
+18
+00:01:26,700 --> 00:01:27,480
+You know what to do.
+
+19
+00:01:27,480 --> 00:01:36,340
+Control+shift+t, search for DispatcherServlet and you'll find it under spring framework.
+
+20
+00:01:36,440 --> 00:01:44,740
+Select it, grab the class name all the way from the package name, copy, come back to the web.xml,
+
+21
+00:01:45,040 --> 00:01:45,630
+paste it.
+
+22
+00:01:48,280 --> 00:01:51,160
+Remove any unwanted lines.
+
+23
+00:01:51,420 --> 00:01:54,600
+We have configured this servlet name and its class.
+
+24
+00:01:54,610 --> 00:01:59,220
+Now we need to configure the mapping for it. servlet-mapping
+
+25
+00:01:59,230 --> 00:02:03,070
+is the element. It has elements two child elements,
+
+26
+00:02:03,160 --> 00:02:04,580
+servlet-name again.
+
+27
+00:02:04,820 --> 00:02:06,340
+Dispatcher, the same name
+
+28
+00:02:06,340 --> 00:02:14,980
+what we have used here. And a url-pattern. We can use whatever pattern we want.
+
+29
+00:02:14,980 --> 00:02:21,010
+I'm going to use a forward slash meaning, all the requests that come from the browser to our web application,
+
+30
+00:02:21,010 --> 00:02:29,730
+any request should go to the dispatcher-servlet. We can also use something like .html or .do etc;
+
+31
+00:02:29,770 --> 00:02:36,880
+But I'm going to use a forward slash. So in this lecture you have successfully configured the dispatcher
+
+32
+00:02:36,880 --> 00:02:40,250
+servlet from spring MVC in the web.xml.
+

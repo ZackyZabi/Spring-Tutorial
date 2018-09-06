@@ -1,0 +1,204 @@
+1
+00:00:00,270 --> 00:00:07,800
+The very first step is to update the pom.xml with a new dependency which is the servlet jar dependency
+
+2
+00:00:07,890 --> 00:00:16,320
+and also add the war plugin to the pom.xml. To do that, go to Eclipse, go to the Spring MVC project,
+
+3
+00:00:16,380 --> 00:00:20,600
+open the pom.xml which is the Maven configuration file.
+
+4
+00:00:20,640 --> 00:00:28,740
+Click on the last tab which says pom.xml. DoubleClick to maximize. Go to the dependencies section and
+
+5
+00:00:28,740 --> 00:00:36,640
+at the end of it we are going to add a new dependency for the servlet jars. We don't need this servlet
+
+6
+00:00:36,990 --> 00:00:40,600
+dependency at runtime because Tomcat already has it.
+
+7
+00:00:40,860 --> 00:00:47,760
+But to build our project using Maven, we will need it because we are going to add or use some classes
+
+8
+00:00:47,760 --> 00:00:56,350
+from the servlet API when we replace the web.xml and dynamically register the servlets. Launch
+
+9
+00:00:56,470 --> 00:01:01,690
+your web browser and search for, or Google for
+
+10
+00:01:04,140 --> 00:01:13,300
+Servlet maven dependency and the very first link that shows up. Click on 3.1.0, the sublink
+
+11
+00:01:13,300 --> 00:01:18,160
+here. That will take you to the maven dependency page.
+
+12
+00:01:18,160 --> 00:01:19,280
+Scroll down,
+
+13
+00:01:19,300 --> 00:01:29,020
+copy the contents. Go back to Eclipse, paste it. Do a control+shift+f to format. Delete any unwanted spaces.
+
+14
+00:01:29,020 --> 00:01:30,190
+Delete this line.
+
+15
+00:01:30,190 --> 00:01:38,680
+Hit control+d and you will see that by default the scope is provided. Meaning, that at runtime we don't need
+
+16
+00:01:38,680 --> 00:01:45,190
+it and it is provided by the application container which in our case is Tomcat. Stop the server for
+
+17
+00:01:45,210 --> 00:01:48,130
+now. So we have added the Maven dependency.
+
+18
+00:01:48,130 --> 00:01:55,280
+The last step in the Maven pom.xml is to add another plugin which is the war plugin.
+
+19
+00:01:55,690 --> 00:02:02,230
+So far, we have been using the default settings for the war plugin that comes with maven. We have to
+
+20
+00:02:02,250 --> 00:02:11,500
+override them because when we delete the web.xml later on, the Maven plugin will fail to build
+
+21
+00:02:11,500 --> 00:02:18,270
+our project, because it always expects the web.xml by default in a web application project for Maven
+
+22
+00:02:18,370 --> 00:02:19,370
+to build.
+
+23
+00:02:19,810 --> 00:02:26,920
+So we are going to tell Maven by adding a new war plugin configuration that our project will not
+
+24
+00:02:26,920 --> 00:02:35,160
+have a web.xml although it is a web project. So you can start by copying this compiler plugin.
+
+25
+00:02:35,620 --> 00:02:37,830
+Paste the contents right next to it.
+
+26
+00:02:37,840 --> 00:02:45,550
+We are going to update it. The groupId is same for both the compiler as well as the war plugin, so leave
+
+27
+00:02:45,550 --> 00:02:59,310
+it. The artifact name is maven-war-plugin. The version, you can go for whatever version.
+
+28
+00:02:59,320 --> 00:03:01,800
+If there is later than 2.4, you can use it.
+
+29
+00:03:01,900 --> 00:03:03,710
+But I have been using 2.4.
+
+30
+00:03:03,720 --> 00:03:07,490
+So I am going to continue with that. Within configuration,
+
+31
+00:03:07,570 --> 00:03:11,070
+get rid of the source and target directories.
+
+32
+00:03:11,080 --> 00:03:18,520
+The configuration will look different for a war file, warSourceDirectory.
+
+33
+00:03:18,610 --> 00:03:23,000
+If you hit control+space, Eclipse will help you out with the elements that are available.
+
+34
+00:03:23,010 --> 00:03:25,900
+warSourceDirectory is what we need.
+
+35
+00:03:26,990 --> 00:03:35,010
+src/main/webapp. That is the source directory for our war file. In our project
+
+36
+00:03:35,120 --> 00:03:37,760
+that is how it is structured.
+
+37
+00:03:37,760 --> 00:03:43,460
+Give it a name, warName. Do a control+shift+f to format.
+
+38
+00:03:49,220 --> 00:03:54,520
+The war name will be springmvc. That is our project name as well.
+
+39
+00:03:54,540 --> 00:04:05,010
+And the last and the important piece, failOn, hit control+space, failOnMissingWebXml.
+
+40
+00:04:05,050 --> 00:04:13,530
+Let me scroll it up by adding some spaces so that you can see it clearly. failOnMissingWebXml,
+
+41
+00:04:13,570 --> 00:04:15,860
+and this by default is true.
+
+42
+00:04:16,030 --> 00:04:20,470
+So turn it off by changing it to false.
+
+43
+00:04:20,470 --> 00:04:26,170
+So this tells Maven, there is a missing angular bracket,
+
+44
+00:04:26,170 --> 00:04:31,580
+let me add that. Do a control+shift+f to format. Save it and all the errors go away.
+
+45
+00:04:31,760 --> 00:04:39,340
+So this failOnMissingWebXml tells maven that it should not fail the build if there is no web.xml
+
+46
+00:04:39,420 --> 00:04:47,660
+in our war project. This is the purpose that we are adding the entire plugin for war. Otherwise we
+
+47
+00:04:47,660 --> 00:04:49,220
+would have not needed it.
+
+48
+00:04:49,220 --> 00:04:52,200
+We would have used the default settings that comes with maven.
+
+49
+00:04:52,230 --> 00:04:59,210
+So in this lecture, you have successfully configured the servlet dependency as well as the Maven war plugin
+
+50
+00:04:59,220 --> 00:05:03,780
+and turned off the failOnMissingWebXml
+
+51
+00:05:03,890 --> 00:05:09,100
+so that maven will build our application although there is no web.xml.
+

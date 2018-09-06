@@ -1,0 +1,128 @@
+1
+00:00:01,460 --> 00:00:07,840
+You have learnt how Spring data makes our life as a developer easy, to implement our data access layer, and to
+
+2
+00:00:07,840 --> 00:00:10,630
+use JPA without writing much code.
+
+3
+00:00:10,680 --> 00:00:13,280
+It avoids all the boilerplate coding.
+
+4
+00:00:13,300 --> 00:00:19,960
+All we needed to do, was to create an entity and create an interface that extends the CrudRepository
+
+5
+00:00:19,960 --> 00:00:22,220
+from Spring data.
+
+6
+00:00:22,430 --> 00:00:28,700
+And we were able to perform save, findOne, findAll, delete, update and there are several other operations
+
+7
+00:00:28,700 --> 00:00:32,550
+on the CrudRepository which we can explore. In this section,
+
+8
+00:00:32,550 --> 00:00:39,080
+you'll learn few more advanced features that Spring Data offers, starting with finder methods or
+
+9
+00:00:39,080 --> 00:00:40,720
+custom finder methods.
+
+10
+00:00:41,060 --> 00:00:49,620
+For example, if I want to find a product in the database based of its name, I need not write any SQL.
+
+11
+00:00:49,640 --> 00:00:58,610
+Spring data has a syntax that we need to follow, wherein we'll create a method called findBy, the camelcase
+
+12
+00:00:58,610 --> 00:01:03,980
+of the field on the product, in our repository interface. And at runtime,
+
+13
+00:01:03,980 --> 00:01:11,320
+when this method is invoked Spring Data will automatically generate the query and return the results back.
+
+14
+00:01:11,330 --> 00:01:14,840
+In this case, it returns the list of products back.
+
+15
+00:01:14,840 --> 00:01:22,990
+Similarly, if I want to find a product by it's price, then I can simply create a method call findByPrice.
+
+16
+00:01:23,050 --> 00:01:25,340
+I will not be writing or implementing a method.
+
+17
+00:01:25,520 --> 00:01:30,190
+This is a abstract method on the repository interface.
+
+18
+00:01:30,200 --> 00:01:36,170
+It's very powerful. And if you want to keep exploring other features of Spring Data, launch your web browser
+
+19
+00:01:36,560 --> 00:01:47,770
+and search for Spring Data documentation, Enter. Click on the very first link which says Spring Data JPA-Reference Documentation.
+
+20
+00:01:47,770 --> 00:01:51,640
+And you can go through the various features
+
+21
+00:01:51,640 --> 00:01:56,800
+Spring Data offers. Now that you have a basic understanding of how it works, you can explore all the features.
+
+22
+00:01:57,300 --> 00:02:08,320
+Do a Control+f and search for supported keywords. Supported keywords, and you will go to a table where it lists
+
+23
+00:02:08,320 --> 00:02:11,080
+out the various keywords that we can use
+
+24
+00:02:11,080 --> 00:02:13,090
+in our method name syntax.
+
+25
+00:02:13,090 --> 00:02:20,850
+For example, if I want to find something by two fields I can say findByLastnameAndFirstname.
+
+26
+00:02:20,850 --> 00:02:26,760
+If I simply define a method like this, I need not write any SQL or JPQL.
+
+27
+00:02:26,760 --> 00:02:32,320
+Automatically Spring Data will generate something like this on the fly and it will get the results
+
+28
+00:02:32,320 --> 00:02:32,960
+for me.
+
+29
+00:02:33,190 --> 00:02:38,140
+You will see all this in action in the next few lectures. But you can refer to this table because, I am
+
+30
+00:02:38,140 --> 00:02:40,410
+not going to show you everything in this table.
+
+31
+00:02:40,600 --> 00:02:47,290
+There are several operators, LessThanEqual, Before, IsNull, etc; explore them and if you have any
+
+32
+00:02:47,290 --> 00:02:54,260
+questions, do let me know. And get ready to do a findByName and findByPrice on the product.
+

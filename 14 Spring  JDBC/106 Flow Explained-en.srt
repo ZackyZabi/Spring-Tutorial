@@ -1,0 +1,68 @@
+1
+00:00:00,230 --> 00:00:06,580
+In this lecture explain the flaw of what exactly happened and we ran our best and successfully inserted
+
+2
+00:00:06,620 --> 00:00:13,920
+a card into the database when we ran our test the configuration file is lorded by the spinning container.
+
+3
+00:00:13,920 --> 00:00:19,260
+It reads our on for example in which we have two bins.
+
+4
+00:00:19,460 --> 00:00:21,800
+The first one is the datasource been.
+
+5
+00:00:21,910 --> 00:00:23,990
+So the second one is The Daily Beast template.
+
+6
+00:00:23,990 --> 00:00:30,560
+Been putting notes that the Daily Beast template needs the datasource being so it will create that dependency
+
+7
+00:00:30,770 --> 00:00:31,740
+and well creating it.
+
+8
+00:00:31,760 --> 00:00:38,720
+It provides the form properties the driver class name the user name and password the datasource Bean
+
+9
+00:00:38,810 --> 00:00:42,190
+is the one which creates the connection internally.
+
+10
+00:00:42,230 --> 00:00:48,800
+The Daily Beast template will use the data source to create a connection create a statement and it is
+
+11
+00:00:48,800 --> 00:00:53,620
+responsible for executing that insert statement as well.
+
+12
+00:00:54,420 --> 00:01:00,390
+So internally spring Daily Beast template will take care of collection creation creating the statement
+
+13
+00:01:00,420 --> 00:01:01,820
+and executing it.
+
+14
+00:01:01,890 --> 00:01:08,910
+And at the end it uses the integer result and we can do whatever we want to do with that result.
+
+15
+00:01:08,970 --> 00:01:11,420
+That is the beauty of using the basic template.
+
+16
+00:01:11,550 --> 00:01:18,870
+Without writing all the Breillat plate calling it which we do enjoy Ribisi we can simply execute sequel's
+
+17
+00:01:18,870 --> 00:01:19,950
+statement.
+

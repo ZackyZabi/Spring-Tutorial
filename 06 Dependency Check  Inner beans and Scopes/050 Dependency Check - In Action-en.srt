@@ -1,0 +1,191 @@
+0
+00:00.220 --> 00:05.580
+The previous lecture you started working on the prescription use case for dependency check.
+
+1
+00:05.670 --> 00:09.390
+But you have skipped the config file step and moved on to test.
+
+2
+00:09.420 --> 00:10.770
+And we wrapped it up.
+
+3
+00:10.770 --> 00:14.020
+Let's go to conflict and configure our bean.
+
+4
+00:14.400 --> 00:26.160
+And then this lecture will also configure dependency check for our bean class is equal to prescription.
+
+5
+00:26.370 --> 00:27.440
+Grab the package name
+
+6
+00:30.350 --> 00:43.690
+all the way to dependency check come back paste it dot give it a name name is equal to prescription
+
+7
+00:47.170 --> 00:49.540
+And let's not inject any values.
+
+8
+00:50.420 --> 00:59.040
+But go to prescription and make this I.D. mandatory by using at required annotation from spring.
+
+9
+00:59.120 --> 01:01.610
+hit control one import
+
+10
+01:06.380 --> 01:10.000
+you cannot mark the fields as required.
+
+11
+01:10.040 --> 01:11.410
+That is the reason I have put it here.
+
+12
+01:11.420 --> 01:16.360
+I wanted to show you that you should use the required annotation only on the setter methods,
+
+13
+01:16.490 --> 01:24.880
+So cut it take it to the set id methods right here and it's good to go.
+
+14
+01:24.950 --> 01:27.220
+So you should always apply them on the setter methods.
+
+15
+01:27.230 --> 01:29.010
+We are making the ID field mandatory.
+
+16
+01:29.030 --> 01:30.700
+Let's see if it works.
+
+17
+01:30.810 --> 01:32.210
+go to test right click
+
+18
+01:35.060 --> 01:38.690
+run as java application.
+
+19
+01:38.750 --> 01:44.960
+It still doesn't throw any exception although the ID is 0 which is the default values spring simply
+
+20
+01:44.960 --> 01:50.150
+accepted all the default values for patient name  its null and for medicines it's null so it didn't
+
+21
+01:50.270 --> 01:52.820
+apply the required attribute.
+
+22
+01:52.820 --> 01:55.170
+Can you guess what the reason could be.
+
+23
+01:55.640 --> 01:57.870
+Yes you are right by default.
+
+24
+01:57.960 --> 02:04.670
+in spring the annotation support is disabled one way to enable it as you have seen earlier is to enable
+
+25
+02:04.670 --> 02:13.180
+it only for that particular annotation in case of dot required go to the spring config dot xml.
+
+26
+02:13.190 --> 02:17.030
+And we need to use a bean class is equal to
+
+27
+02:20.870 --> 02:21.920
+required.
+
+28
+02:22.010 --> 02:25.980
+We need to grab a class so the best way to do it close the Bean tag right here.
+
+29
+02:26.030 --> 02:28.670
+Go back to test at the end.
+
+30
+02:28.680 --> 02:38.240
+Type in required control space grab this required annotation bean post-processor and you will get the entire
+
+31
+02:38.240 --> 02:45.790
+package and the class copy the whole thing from the import come back to config dot xml paste the 
+
+32
+02:45.840 --> 02:46.640
+class.
+
+33
+02:46.640 --> 02:52.990
+So once we configure this class as a bean spring will instantiate this bean and this bean
+
+34
+02:52.990 --> 03:00.790
+knows how to process the at required annotation come back to test get rid off that line do a control shift o
+
+35
+03:00.910 --> 03:06.320
+to remove unwanted imports now lets run the test and see what happens
+
+36
+03:06.630 --> 03:13.660
+run as java application this time we will see the exception so that dependency check kicks in.
+
+37
+03:13.810 --> 03:19.630
+And if you scroll it to the right it says error creating bean with name prescription defined in the
+
+38
+03:19.630 --> 03:21.130
+classpath resources.
+
+39
+03:21.430 --> 03:27.420
+Keep going to the right bean initialization exception from spring property.
+
+40
+03:27.550 --> 03:32.250
+ID is required for bean prescription.
+
+41
+03:32.350 --> 03:39.640
+So it clearly says that ID is required but only the default value was found and its value was not set
+
+42
+03:39.810 --> 03:44.830
+So go to config dot XML use P schema .
+
+43
+03:44.890 --> 03:55.830
+P colon ID is equal to one to three save it rerun the test and this time there are no issues because
+
+44
+03:55.830 --> 03:58.230
+we have set the value for the id field.
+
+45
+03:58.230 --> 04:04.860
+Similarly you can mandate the patient name and medicines by using the @ required annotation on the
+
+46
+04:04.950 --> 04:07.930
+setter method for appropriate field.
+
+47
+04:07.980 --> 04:09.910
+Please go ahead and give it a try.

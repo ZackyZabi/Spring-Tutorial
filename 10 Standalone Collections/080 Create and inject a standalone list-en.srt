@@ -1,0 +1,316 @@
+1
+00:00:00,260 --> 00:00:06,220
+In this lecture, you will learn how to create a standalone collection and inject it into a POJO or a
+
+2
+00:00:06,240 --> 00:00:07,720
+Spring bean.
+
+3
+00:00:07,940 --> 00:00:14,030
+You will create a class called ProductsList and then you will inject a list into it using the standalone
+
+4
+00:00:14,060 --> 00:00:18,210
+syntax or the util schema. Go to Eclipse,
+
+5
+00:00:18,590 --> 00:00:27,820
+right click on the source package of springcoreadvanced, new -> class, call it ProductsList.
+
+6
+00:00:27,830 --> 00:00:29,820
+It will carry a list of product names.
+
+7
+00:00:29,930 --> 00:00:40,250
+The package is com.bharath.springcoreadvanced.standalone.collections.
+
+8
+00:00:41,240 --> 00:00:52,420
+Finish. This POJO or Spring bean will have one list of strings, which are the productNames. Control+1,
+
+9
+00:00:52,540 --> 00:00:56,790
+import the list from Javautil, control+1 on productNames,
+
+10
+00:00:56,920 --> 00:01:00,540
+create the getters and setters so that we can do setter injection.
+
+11
+00:01:01,010 --> 00:01:07,670
+Save it. Next step is to create the configuration file which is the most important step.
+
+12
+00:01:07,670 --> 00:01:10,480
+Grab the config.xml from an other package.
+
+13
+00:01:10,520 --> 00:01:11,390
+Paste it.
+
+14
+00:01:11,480 --> 00:01:13,150
+Open it.
+
+15
+00:01:13,640 --> 00:01:17,360
+Delete everything inside the beans element. The very first step
+
+16
+00:01:17,420 --> 00:01:24,980
+if you remember, is to add the namespaces that are required to use the util schema. You have already used the C schema
+
+17
+00:01:24,980 --> 00:01:26,000
+and P schema.
+
+18
+00:01:26,150 --> 00:01:27,930
+So it's very straight-forward.
+
+19
+00:01:28,340 --> 00:01:38,970
+Copy one of these lines that say the P schema one, enter, right after the C schema, paste it. Change p to util.
+
+20
+00:01:39,500 --> 00:01:44,260
+Similarly on the left hand side, the prefix that we are going to use will be util.
+
+21
+00:01:44,330 --> 00:01:51,050
+So this util prefix points to this namespace and we can use all the elements from that namespace by using
+
+22
+00:01:51,230 --> 00:01:51,580
+util.
+
+23
+00:01:51,580 --> 00:01:55,300
+It is like a placeholder for this namespace.
+
+24
+00:01:55,310 --> 00:01:58,780
+Next, we need to add the schema location as well.
+
+25
+00:01:59,030 --> 00:02:02,810
+So grab the last two lines, the context and its schema.
+
+26
+00:02:02,810 --> 00:02:09,670
+Copy them, go to the end before the semicolon, before the double quotes, enter, paste them.
+
+27
+00:02:09,890 --> 00:02:19,270
+Change everything that says context to util. Util and also spring-context
+
+28
+00:02:19,290 --> 00:02:21,700
+here should be changed to util.
+
+29
+00:02:21,810 --> 00:02:27,780
+So you have added the namespaces, the very first time we add it and save it, the schema will be downloaded
+
+30
+00:02:27,780 --> 00:02:31,430
+from the internet and we can use all the elements from it.
+
+31
+00:02:31,440 --> 00:02:35,010
+So let's get started, first create the list,
+
+32
+00:02:35,130 --> 00:02:42,300
+this particular list in a standalone manner. Instead of using the list element we'll use util colon, the
+
+33
+00:02:42,300 --> 00:02:47,290
+syntax, as you can see here, the util colon, the collection name.
+
+34
+00:02:47,300 --> 00:02:48,670
+Eclipse will help you out with it.
+
+35
+00:02:48,710 --> 00:02:55,300
+util colon, and it gives you all the collections you can use. List is what we want to use.
+
+36
+00:02:56,880 --> 00:03:04,770
+Next is list-class, the collection hyphen class, is equal to within double quotes,
+
+37
+00:03:04,770 --> 00:03:10,860
+you need to provide the complete qualified name of the collection, java.util.
+
+38
+00:03:10,860 --> 00:03:12,300
+I want to use Linked list.
+
+39
+00:03:12,300 --> 00:03:20,510
+I don't want to use arraylist which is by default. An Id, a unique Id so that we can refer to it later
+
+40
+00:03:20,510 --> 00:03:21,500
+on.
+
+41
+00:03:21,520 --> 00:03:29,580
+ProductsNames, this can be anything but in ProductsList we have used it as productNames.
+
+42
+00:03:29,580 --> 00:03:34,950
+That is the reason I am using it. You can also say PN instead of ProductNames and within the list, you
+
+43
+00:03:34,950 --> 00:03:36,970
+can add multiple values.
+
+44
+00:03:37,180 --> 00:03:45,070
+Value, let's say Macbook. I am an Apple fan.
+
+45
+00:03:45,110 --> 00:03:49,150
+You are welcome to add other products as well instead of Apple products.
+
+46
+00:03:49,150 --> 00:03:58,160
+Iphone, save it. Now we have successfully defined a standalone collection. It is standalone because it
+
+47
+00:03:58,160 --> 00:03:59,770
+is not inside a bean.
+
+48
+00:03:59,870 --> 00:04:02,660
+It is on its own. It stands on its own.
+
+49
+00:04:02,660 --> 00:04:11,290
+This can be used inside another bean. bean, class is equal to ProductsList, grab the package
+
+50
+00:04:11,300 --> 00:04:20,370
+name. Go to the bean, copy the package name, come back to config.xml, paste it, dot, give it a
+
+51
+00:04:21,010 --> 00:04:31,660
+name, is equal to productsList, close it. Within the bean tag, lets do property injection using the property
+
+52
+00:04:31,660 --> 00:04:35,110
+name is equal to productNames.
+
+53
+00:04:35,110 --> 00:04:39,280
+That is the name of the property right here, productNames.
+
+54
+00:04:42,850 --> 00:04:45,780
+Within the property tag, you can use ref.
+
+55
+00:04:45,820 --> 00:04:47,550
+We can also use ref as an attribute.
+
+56
+00:04:47,710 --> 00:04:54,070
+Let's use ref as element, bean is equal to whatever Id we have given here. We are going to refer
+
+57
+00:04:54,070 --> 00:05:05,110
+to that collection bean. Delete the extra double quores and close the ref right there. Remove unwanted lines. Save it.
+
+58
+00:05:05,260 --> 00:05:07,330
+Do a control+shift+f to format.
+
+59
+00:05:07,480 --> 00:05:13,510
+So you have successfully created a standalone bean and you have also injected it into another bean which
+
+60
+00:05:13,510 --> 00:05:15,350
+uses it. Next,
+
+61
+00:05:15,400 --> 00:05:22,870
+grab the test, paste it. Open the test, make the changes. You know by now what changes you need to make. We
+
+62
+00:05:22,880 --> 00:05:31,340
+need to change this package to standalone.collections. So get rid of autowiring/annotations, paste
+
+63
+00:05:31,340 --> 00:05:41,110
+standalone.collections, change the dot to forward slash. And this employee should be gone except for the productsList
+
+64
+00:05:42,160 --> 00:05:46,000
+Same on the left hand side as well.
+
+65
+00:05:46,080 --> 00:05:53,640
+Grab that, paste it, change the name to pl for productsList and pl. Here, instead of employee, it should
+
+66
+00:05:53,630 --> 00:05:57,280
+be the name of our bean, which is productsList.
+
+67
+00:05:57,300 --> 00:06:09,040
+Copy that, paste it in the test. Control+shift+f to format. Right click, run it, run as Java application. It is an exception.
+
+68
+00:06:09,040 --> 00:06:17,170
+Lets see what it is. It says Invalid property 'productName'. So in our config.xml, instead of productNames
+
+69
+00:06:17,180 --> 00:06:25,270
+I think I have used productName somewhere. Right here, the property names should be productNames and not
+
+70
+00:06:26,780 --> 00:06:32,670
+productName. Let's rerun the test.
+
+71
+00:06:32,830 --> 00:06:34,630
+And this time, it does the injection.
+
+72
+00:06:34,630 --> 00:06:39,910
+There is no toString method, that is the reason we are seeing the object. Go to productList, generate
+
+73
+00:06:40,440 --> 00:06:44,050
+the toString by going to source -> generate toString().
+
+74
+00:06:44,050 --> 00:06:45,010
+Hit OK.
+
+75
+00:06:46,100 --> 00:06:50,630
+Rerun the test and we see the list of products.
+
+76
+00:06:50,660 --> 00:06:54,800
+So we have successfully configured a standalone list collection.
+
+77
+00:06:54,900 --> 00:06:59,810
+You specified that you want a linked list and not an array list and you have injected into another bean.
+
+78
+00:06:59,820 --> 00:07:02,270
+This can be injected into any number of beans.
+
+79
+00:07:02,280 --> 00:07:05,480
+It is not local to this particular bean anymore.
+

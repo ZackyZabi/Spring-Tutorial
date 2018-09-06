@@ -1,0 +1,180 @@
+1
+00:00:00,370 --> 00:00:06,270
+In the previous few lectures, you have learnt how to create objects in Spring using annotations instead
+
+2
+00:00:06,270 --> 00:00:08,060
+of XML configuration.
+
+3
+00:00:08,150 --> 00:00:12,200
+You have successfully used the @Component and @Scope annotations.
+
+4
+00:00:12,390 --> 00:00:18,230
+But when we ran our tests, go to the test, get rid of this hashCode.
+
+5
+00:00:18,240 --> 00:00:24,390
+I want to display the object and see the values inside it. Remove both the hashCodes for instructor and instructor2.
+
+6
+00:00:24,390 --> 00:00:26,740
+Run the test again.
+
+7
+00:00:28,040 --> 00:00:33,440
+And it injects the default values, because we are not providing any values in the XML configuration
+
+8
+00:00:33,500 --> 00:00:35,420
+or through annotations.
+
+9
+00:00:35,420 --> 00:00:40,640
+You already know how to provide values to a bean through XML configuration using the value
+
+10
+00:00:40,640 --> 00:00:41,120
+tag.
+
+11
+00:00:41,300 --> 00:00:44,030
+But here, we are using component annotation.
+
+12
+00:00:44,030 --> 00:00:47,400
+Everything here is being done through annotations.
+
+13
+00:00:47,450 --> 00:00:54,630
+So in this lecture, you will learn about the @Value annotation which can be used to inject values. For
+
+14
+00:00:54,700 --> 00:01:01,670
+primitive types, we use @Value and provide the value within double quotes. This is an integer. For a string,
+
+15
+00:01:01,670 --> 00:01:06,380
+this is how we provide the value, within double quotes again. For collection types,
+
+16
+00:01:06,410 --> 00:01:08,030
+we do it in two steps.
+
+17
+00:01:08,150 --> 00:01:14,980
+We first create a collection in the XML configuration using the util schema.
+
+18
+00:01:15,020 --> 00:01:16,230
+You know how to do that.
+
+19
+00:01:16,280 --> 00:01:20,420
+We assign it a id, it could be a list, set, map etc.;
+
+20
+00:01:20,720 --> 00:01:29,320
+Once we have an Id, we use the value annotation in our class, in our Spring pojo class and we use
+
+21
+00:01:29,320 --> 00:01:34,100
+something called spring expression language. You we learn more about this in lectures later on.
+
+22
+00:01:34,100 --> 00:01:36,030
+For now you need to use a
+
+23
+00:01:36,050 --> 00:01:39,310
+Pound or a hash symbol. Within flower bracket,
+
+24
+00:01:39,400 --> 00:01:44,360
+you need to give the id which you have used when you created that collection.
+
+25
+00:01:44,620 --> 00:01:51,110
+So we use, or we refer to the collection we create in the XML configuration in the value tag, using this
+
+26
+00:01:51,110 --> 00:02:00,380
+syntax of hash, then flower brackets and then the Id or the reference. Finally, for injecting object types.
+
+27
+00:02:00,400 --> 00:02:06,670
+So if one class depends on another class, then we can do it simply using autowiring.
+
+28
+00:02:06,940 --> 00:02:11,890
+You are going to see all these in action in this and the next few lectures. Let's start with primitive
+
+29
+00:02:11,920 --> 00:02:12,670
+types.
+
+30
+00:02:14,310 --> 00:02:16,140
+Go to instructor.
+
+31
+00:02:16,140 --> 00:02:18,040
+We have two types here, Id
+
+32
+00:02:18,180 --> 00:02:21,220
+and then the name. Let's assign them a value.
+
+33
+00:02:23,080 --> 00:02:27,360
+@Value is the annotation, within brackets within double quotes,
+
+34
+00:02:27,360 --> 00:02:31,410
+we can provide the value. Say 10, save it.
+
+35
+00:02:31,530 --> 00:02:39,290
+Hit control+1, import it from org.springframework.beans.factory.annotation is the package.
+
+36
+00:02:39,460 --> 00:02:47,500
+Use @Value again. Assign a value, name of the instructor is Bharath Thippireddy, that's me.
+
+37
+00:02:48,170 --> 00:02:55,860
+Do a control+shift+f to format. Run the test again. And this time we should see the values,
+
+38
+00:02:58,110 --> 00:02:58,770
+right here.
+
+39
+00:02:58,890 --> 00:03:03,060
+And these annotations override any values we assign using assignment.
+
+40
+00:03:03,210 --> 00:03:13,720
+For example, here if I assign a value let's say 15 and the name is John instead of Bharath. Save it, run
+
+41
+00:03:13,720 --> 00:03:21,220
+the test again. The values you see are those being provided through annotations and not those being assigned.
+
+42
+00:03:21,250 --> 00:03:25,300
+So the annotations always override the values we assign.
+
+43
+00:03:25,360 --> 00:03:31,870
+So in this lecture, you have successfully learnt that you can use the @Value annotation when we inject
+
+44
+00:03:31,940 --> 00:03:37,810
+or when we use annotations to create spring objects to assign values. In the next few lectures,
+
+45
+00:03:37,810 --> 00:03:41,740
+you will also learn how to assign collection types and object types.
+

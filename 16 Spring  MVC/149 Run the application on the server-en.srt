@@ -1,0 +1,124 @@
+1
+00:00:00,220 --> 00:00:06,610
+We are all set to see it in action. Before we do that, in the dispatcher-servlet.xml,
+
+2
+00:00:06,720 --> 00:00:13,470
+I forgot to add a forward slash at the end of views. So add a forward slash so that when the view
+
+3
+00:00:13,630 --> 00:00:17,600
+resolver tries to resolve the view, it will use the following path,
+
+4
+00:00:17,790 --> 00:00:29,390
+slash hello.jsp. if you don't add this forward slash we'll get an error. So add it. right click on the application,
+
+5
+00:00:29,390 --> 00:00:32,000
+go to Run as -> Run on server.
+
+6
+00:00:32,000 --> 00:00:37,750
+This will deploy the application on the Tomcat server which we have configured in the software setup.
+
+7
+00:00:37,880 --> 00:00:39,710
+It is stopped right now.
+
+8
+00:00:39,710 --> 00:00:43,550
+It will automatically start it and deploy
+
+9
+00:00:43,590 --> 00:00:46,540
+the Spring MVC application on the server. By default,
+
+10
+00:00:46,570 --> 00:00:51,690
+you will see Hello world, because it opens up the index.jsp.
+
+11
+00:00:51,990 --> 00:00:54,010
+But that is not we are interested in.
+
+12
+00:00:54,300 --> 00:01:01,470
+So go to the eclipse browser. You can grab this link and you can open this in Chrome web browser as
+
+13
+00:01:01,470 --> 00:01:06,510
+well and you can also configure Eclipse to directly open it in Chrome.
+
+14
+00:01:06,670 --> 00:01:12,190
+At the end, the url should be Spring MVC which is the application name. Localhost is the server name,
+
+15
+00:01:13,020 --> 00:01:15,930
+8080 is the port number of Tomcat, slash,
+
+16
+00:01:16,110 --> 00:01:16,920
+hello.
+
+17
+00:01:17,050 --> 00:01:20,470
+That is the url which we have configured in the controller.
+
+18
+00:01:20,470 --> 00:01:21,520
+If you go here,
+
+19
+00:01:21,910 --> 00:01:30,180
+hello. Let's use that, Enter. And Spring runs and you see Hello from Spring
+
+20
+00:01:30,210 --> 00:01:36,360
+MVC. This is coming from our hello.jsp page.
+
+21
+00:01:36,530 --> 00:01:42,680
+So from the browser the request goes to our web application. In the web.xml
+
+22
+00:01:42,750 --> 00:01:47,770
+we have configurde the dispatcher-servlet to handle everything that comes to our web application.
+
+23
+00:01:47,770 --> 00:01:54,550
+We have used a forward slash. Thr dispatcher-servlet will take the request and it will dispatch it to the
+
+24
+00:01:54,600 --> 00:01:58,320
+hello controller.
+
+25
+00:01:58,430 --> 00:02:07,280
+Here, this guy and this method because we have matched the url pattern to this particular method. And this
+
+26
+00:02:07,280 --> 00:02:12,030
+returns a model and view in which we have configured the view to be hello.
+
+27
+00:02:12,200 --> 00:02:20,720
+The controller will then invoke the InternalViewResolver and it will give it hello. The view resolver
+
+28
+00:02:20,990 --> 00:02:21,970
+will append.
+
+29
+00:02:22,070 --> 00:02:29,030
+If you look at the dispatcher-servlet, it will append a prefix, this path and this extension and return
+
+30
+00:02:29,030 --> 00:02:30,210
+it to the controller.
+
+31
+00:02:30,270 --> 00:02:36,810
+The controller will take the JSP and execute it and send the response back to the web browser.
+

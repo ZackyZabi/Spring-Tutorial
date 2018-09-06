@@ -1,0 +1,96 @@
+1
+00:00:00,160 --> 00:00:06,420
+In this lecture will vie The Daily Beast template into them play the away and use it in the create method
+
+2
+00:00:06,450 --> 00:00:14,960
+to insert the card into the database that gets started by creating a new field called wait Judy we see
+
+3
+00:00:14,960 --> 00:00:20,970
+it control space template Spring Framework oller GBC template
+
+4
+00:00:23,690 --> 00:00:31,280
+create a room set amateurs it control one create getter and setter it OK to a control shift to format
+
+5
+00:00:31,400 --> 00:00:33,880
+and we can use it inside the create matter.
+
+6
+00:00:33,890 --> 00:00:39,430
+Now you already know that Korti how written it in the Test class.
+
+7
+00:00:39,670 --> 00:00:44,890
+But in this case we are not going to use their application context in their Dalrymple's we simply use
+
+8
+00:00:44,890 --> 00:00:46,490
+the Daily Beast template radically.
+
+9
+00:00:46,600 --> 00:00:49,520
+And then in the next lecture we will configure it.
+
+10
+00:00:49,720 --> 00:00:54,770
+We are doing it the other way around said go to imply dhal impulse.
+
+11
+00:00:55,400 --> 00:01:03,890
+Use the JTB see template dark update the access string and object parameters.
+
+12
+00:01:03,880 --> 00:01:13,380
+You know that sequel grab the sequel from best class copy this statement come back to the Dalrymple
+
+13
+00:01:13,380 --> 00:01:14,990
+inside the third string.
+
+14
+00:01:15,010 --> 00:01:19,010
+Scale is equal to insert into employee and the values with three placeholders.
+
+15
+00:01:19,020 --> 00:01:20,300
+We'll use that as well.
+
+16
+00:01:20,520 --> 00:01:28,680
+And the argument this time instead of hard coding them we lose it from the employee don't get AB is
+
+17
+00:01:28,680 --> 00:01:37,890
+the first one employee darte get first name is the second parameter employee don't get the last name
+
+18
+00:01:37,890 --> 00:01:40,980
+is the last and third parameter.
+
+19
+00:01:41,910 --> 00:01:48,930
+And this returns an integer result get control 1 signed statement to a new local variable call it result
+
+20
+00:01:49,500 --> 00:01:58,010
+and return that result instead of the zero delete any blank lines of to format in this lecture you have
+
+21
+00:01:58,010 --> 00:02:03,340
+successfully implemented the create method by using the BBC template.
+
+22
+00:02:03,500 --> 00:02:05,300
+Well why are they still the basic template.
+
+23
+00:02:05,330 --> 00:02:08,100
+In the next lecture in the conflict got eczema.
+
+24
+00:02:08,210 --> 00:02:10,280
+And also will create the best class.
+

@@ -1,0 +1,56 @@
+1
+00:00:00,580 --> 00:00:06,070
+To work on the hibernate use case or the ORM use case we are going to reuse the table from the Spring
+
+2
+00:00:06,070 --> 00:00:07,150
+JDBC.
+
+3
+00:00:07,330 --> 00:00:13,060
+It's kind of a migration project where we are migrating from Spring JDBC to ORM or using
+
+4
+00:00:13,060 --> 00:00:14,250
+Hibernate.
+
+5
+00:00:14,260 --> 00:00:20,950
+So we'll reuse the passenger table that's already there in the database. Copy over the Passenger class from
+
+6
+00:00:20,950 --> 00:00:27,640
+the earlier project so that you can make it an entity. You'll do that using the @Entity annotation
+
+7
+00:00:27,640 --> 00:00:31,780
+and the @Id annotations which are mandatory. And optionally,
+
+8
+00:00:31,780 --> 00:00:36,300
+you can use the @Table and Column annotations.
+
+9
+00:00:36,400 --> 00:00:43,000
+Once you make the Passenger a model object or an entity, you will then configure the SessionFactory and the
+
+10
+00:00:43,000 --> 00:00:43,590
+hibernateTemplate
+
+11
+00:00:43,600 --> 00:00:49,650
+in the spring configuration. The dataSource, you can ofcourse you need to configure the dataSource
+
+12
+00:00:49,660 --> 00:00:54,370
+which will be used by the SessionFactory and hibernateTemplate. And once you have it, create a test
+
+13
+00:00:54,370 --> 00:01:01,810
+class and perform the crud operations using save, update, delete, get which will get one single record
+
+14
+00:01:02,140 --> 00:01:06,060
+and loadAll which loads all the passengers in the database table.
+

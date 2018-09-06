@@ -1,0 +1,72 @@
+1
+00:00:00,280 --> 00:00:06,240
+In this lecture he will come up with the point Curt expression that will apply this advise to a particular
+
+2
+00:00:06,240 --> 00:00:14,810
+business method which in our case is the multi play method inside the product so we empower waterlogging
+
+3
+00:00:14,820 --> 00:00:15,680
+aspect.
+
+4
+00:00:15,930 --> 00:00:18,510
+Let's start with the ET before advice.
+
+5
+00:00:19,220 --> 00:00:25,670
+Within the double court's exit fusion is what we should use within brackets to this execution we come
+
+6
+00:00:25,670 --> 00:00:33,840
+up with our point cut expression always start with the method which is multiplied is our business method.
+
+7
+00:00:33,920 --> 00:00:40,660
+Open and close the brackets within the brackets to darte stood up as and any parameters any types of
+
+8
+00:00:40,660 --> 00:00:43,040
+parameters and any number of parameters.
+
+9
+00:00:44,580 --> 00:00:53,010
+And before that multiplied dot the class name which is product service am.
+
+10
+00:00:53,640 --> 00:00:56,910
+Then the Bakkies name separated by our dot product.
+
+11
+00:00:56,910 --> 00:01:06,370
+So we simple dropped the package name corporate comeback pasted before the dot ideaspace.
+
+12
+00:01:06,510 --> 00:01:09,000
+Next is the return type of this multiply.
+
+13
+00:01:09,000 --> 00:01:14,840
+I'm going to use this type of wild card that represents any return back.
+
+14
+00:01:14,980 --> 00:01:15,890
+That's it.
+
+15
+00:01:15,900 --> 00:01:23,700
+So how come up at that point the expression for multiply so that this particular advise will be applied
+
+16
+00:01:24,360 --> 00:01:26,230
+to that particular method here.
+
+17
+00:01:26,400 --> 00:01:30,250
+So copy that and use it in.
+
+18
+00:01:30,270 --> 00:01:34,980
+After that we're going to use the same exact point Curt expression.
+

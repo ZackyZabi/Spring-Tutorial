@@ -1,0 +1,48 @@
+1
+00:00:00,330 --> 00:00:05,600
+In this lecture, I'll show you how easy it is to download and setup tomcat on your machine.
+
+2
+00:00:05,850 --> 00:00:16,530
+Launch the Web browser and Google for Tomcat 8 download enter click on the very first link that says
+
+3
+00:00:16,620 --> 00:00:19,100
+Apache Tomcat 8 software download
+
+4
+00:00:22,630 --> 00:00:29,020
+Once you are on the page scroll down and you will see the binary distributions for different operating
+
+5
+00:00:29,020 --> 00:00:30,520
+systems.
+
+6
+00:00:30,640 --> 00:00:37,390
+Download the version for Windows if you are on Windows 32 bit 64 bit exectra its a zip file and if
+
+7
+00:00:37,390 --> 00:00:45,010
+you are on Mac or Linux download the tar.gz once downloaded unzip the contents of these folders
+
+8
+00:00:45,100 --> 00:00:52,350
+or the zip files I have unzipped them directly under my desktop just to showcase we can install it anywhere.
+
+9
+00:00:52,420 --> 00:00:56,460
+Open that folder and you will see the following subfolder.
+
+10
+00:00:56,770 --> 00:01:03,190
+You need not care or worry about these folders because we are going to configure tomcat in Eclipse and
+
+11
+00:01:03,190 --> 00:01:05,480
+we are going to use it from within
+
+12
+00:01:05,500 --> 00:01:06,580
+the eclipse IDE.
+

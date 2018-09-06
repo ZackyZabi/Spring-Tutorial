@@ -1,0 +1,164 @@
+1
+00:00:00,330 --> 00:00:05,910
+In the previous lecture, you have seen the ambiguity problem. That is, we have defined three constructors and
+
+2
+00:00:05,910 --> 00:00:10,300
+spring was invoking these constructors in a random fashion.
+
+3
+00:00:10,410 --> 00:00:16,840
+Although we have defined integers as constructor arguments, it was invoking the string constructor.
+
+4
+00:00:17,030 --> 00:00:20,670
+And if there was no string constructor, it was invoking the double constructor.
+
+5
+00:00:20,880 --> 00:00:22,320
+It's not random behavior.
+
+6
+00:00:22,320 --> 00:00:24,150
+It is expected behavior.
+
+7
+00:00:24,150 --> 00:00:31,890
+Let me explain what is happening. In the config.xml, by default spring considers these values
+
+8
+00:00:31,890 --> 00:00:37,100
+we provide as strings. And then, based on the method arguments
+
+9
+00:00:37,100 --> 00:00:43,820
+here or the constructor arguments it will convert them into the appropriate type using the parseInt,
+
+10
+00:00:43,850 --> 00:00:49,140
+parseDouble methods. But the container behavior is like this.
+
+11
+00:00:49,140 --> 00:00:55,830
+The reason the ambiguity problem is happening is because the container will try to match the given parameters
+
+12
+00:00:57,300 --> 00:01:01,490
+and see if there is a constructor which takes the string arguments to start with.
+
+13
+00:01:01,500 --> 00:01:06,200
+If there is one, it will use it and it will not invoke any other constructors.
+
+14
+00:01:06,210 --> 00:01:13,290
+That is the reason why we saw that Spring container was invoking the constructor that takes string arguments
+
+15
+00:01:13,350 --> 00:01:14,730
+when there is one.
+
+16
+00:01:14,730 --> 00:01:23,280
+If there is no constructor with string arguments, then it will match any other methods in the order in
+
+17
+00:01:23,280 --> 00:01:25,030
+which we define those methods.
+
+18
+00:01:25,270 --> 00:01:30,970
+Here in our case we have two methods. One that takes double arguments and the other one that takes integer
+
+19
+00:01:30,990 --> 00:01:38,640
+arguments. So the values we provided, 10 and 20 are also accepted as double values.
+
+20
+00:01:38,640 --> 00:01:40,810
+That is the reason Spring goes and searches.
+
+21
+00:01:40,830 --> 00:01:45,920
+If I get rid of this string method, the Spring container, if you run the test again,
+
+22
+00:01:47,120 --> 00:01:53,090
+it will search in the class for methods that can accept those values and the first method it finds is the one
+
+23
+00:01:53,390 --> 00:01:54,710
+with double arguments.
+
+24
+00:01:54,710 --> 00:01:59,810
+That is the reason it invokes this method, which is exactly what happened. That is the reason it never
+
+25
+00:01:59,820 --> 00:02:03,420
+invokes the method that takes integer values.
+
+26
+00:02:03,500 --> 00:02:06,120
+This problem, this ambiguity problem can be fixed
+
+27
+00:02:06,830 --> 00:02:13,700
+by using three different attributes that are available on the constructor-arg, starting with type, index
+
+28
+00:02:13,790 --> 00:02:15,220
+and name.
+
+29
+00:02:15,440 --> 00:02:17,660
+Let's look at type in this lecture.
+
+30
+00:02:17,810 --> 00:02:21,350
+Go to eclipse, go to config.xml.
+
+31
+00:02:21,350 --> 00:02:23,410
+These are attributes on the constructor-arg.
+
+32
+00:02:23,420 --> 00:02:29,530
+Type can be used to specify what type of arguments we want to match.
+
+33
+00:02:29,540 --> 00:02:35,160
+type="int", type="int".
+
+34
+00:02:35,250 --> 00:02:44,610
+The second parameter is also int. Run the test this time. And this time it invokes the Inside the constructor int.
+
+35
+00:02:44,680 --> 00:02:48,260
+Let's put the string method back as well. Save it.
+
+36
+00:02:48,340 --> 00:02:53,270
+Now we have three methods, although the order, first double comes then
+
+37
+00:02:53,380 --> 00:02:58,110
+the string. Let's run the test again and see the output.
+
+38
+00:02:58,360 --> 00:02:59,260
+It doesn't invoke
+
+39
+00:02:59,290 --> 00:03:05,050
+the string method or the string constructor anymore because we have used the type attribute and we are
+
+40
+00:03:05,050 --> 00:03:11,500
+telling the spring container that it should match a method which takes two arguments of type int and
+
+41
+00:03:11,810 --> 00:03:17,240
+int. So we can avoid ambiguity problem to a level using the type attribute.
+

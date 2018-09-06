@@ -1,0 +1,120 @@
+1
+00:00:00,140 --> 00:00:06,480
+Spring Boot provides various starter projects that help us easily start building different types
+
+2
+00:00:06,480 --> 00:00:08,140
+of Spring projects.
+
+3
+00:00:08,160 --> 00:00:14,620
+For example, we can use the spring-boot-starter dependency, we can add this project as a Maven
+
+4
+00:00:14,700 --> 00:00:21,380
+dependency, and automatically it will bring all the jar files that are required to build a standalone
+
+5
+00:00:21,390 --> 00:00:22,950
+Spring application.
+
+6
+00:00:22,950 --> 00:00:30,860
+Similarly, if we want to develop a web MVC application we'll add a dependency in our pom.xml called
+
+7
+00:00:30,880 --> 00:00:33,710
+spring-boot-starter-web.
+
+8
+00:00:34,260 --> 00:00:41,550
+So they all start with spring-boot-starter-web and at the end we add the type of project we want to create.
+
+9
+00:00:42,290 --> 00:00:49,000
+Similarly if we want to use JPA for Java persistence using Hibernate or whatever ORM, you would include
+
+10
+00:00:49,010 --> 00:00:57,520
+spring-boot-starter-data-jpa and all the other jars which are required to do JPA will be automatically
+
+11
+00:00:57,910 --> 00:00:59,950
+pulled for you.
+
+12
+00:00:59,980 --> 00:01:06,410
+Last but not least, if you want to use Spring Data REST, you will use that particular starter project.
+
+13
+00:01:06,520 --> 00:01:12,440
+So internally, it uses a concept called Bill of Materials from Maven.
+
+14
+00:01:12,670 --> 00:01:19,600
+Inside each of these starter projects, there will be a file which tells Maven what all dependent jars should
+
+15
+00:01:19,600 --> 00:01:23,070
+be filled should be pulled from the Maven repository.
+
+16
+00:01:23,310 --> 00:01:24,190
+It's no magic.
+
+17
+00:01:24,190 --> 00:01:31,960
+So inside each of these, they have information about what all jars are required to perform or to create
+
+18
+00:01:32,140 --> 00:01:33,500
+a certain type of project,
+
+19
+00:01:33,550 --> 00:01:40,500
+and those are pulled. When you create a project later on, I will show you how we add just the spring-boot-starter
+
+20
+00:01:40,510 --> 00:01:46,200
+and it will pull all the dependencies that are required to create a standalone Spring application.
+
+21
+00:01:46,510 --> 00:01:56,860
+You can also google for Spring Boot starter projects, Spring Boot starter projects and you can explore
+
+22
+00:01:56,980 --> 00:02:02,170
+the various starter projects that are available. You can click on one of the links. Let me click on the very first
+
+23
+00:02:02,170 --> 00:02:17,580
+one, spring-boot-starters. And you'll see a list of starter projects. Let me search for web or -web.
+
+24
+00:02:17,810 --> 00:02:19,220
+There is one for Web services.
+
+25
+00:02:19,220 --> 00:02:22,470
+There is a starter project for web, websockets, etc.
+
+26
+00:02:22,490 --> 00:02:27,640
+So depending on the type of project you are creating, you will include that particular dependency in your
+
+27
+00:02:27,650 --> 00:02:34,040
+Maven pom.xml. But Spring Boot provides you different ways to create Spring Boot projects
+
+28
+00:02:34,040 --> 00:02:37,100
+and you might not even add these entries manually.
+
+29
+00:02:37,130 --> 00:02:42,560
+The IDEs or the Spring Boot initialiser which I will talk about in the next lecture, will automatically
+
+30
+00:02:42,650 --> 00:02:45,890
+add these to your Maven pom.xml.
+

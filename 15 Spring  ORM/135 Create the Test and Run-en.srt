@@ -1,0 +1,188 @@
+1
+00:00:01,960 --> 00:00:05,000
+In this lecture, we are going to create a test class that uses our ProductDaoImpl
+
+2
+00:00:05,010 --> 00:00:11,300
+and saves a product record to the database. Let's see that in action.
+
+3
+00:00:13,340 --> 00:00:16,430
+If you are lazy you can copy over the test from the previous project.
+
+4
+00:00:16,430 --> 00:00:22,570
+I'm going to create it. Right click, new class called test with a main method.
+
+5
+00:00:22,570 --> 00:00:27,720
+Finish. Do a control+d to delete that.
+
+6
+00:00:27,720 --> 00:00:32,510
+Start with ApplicationContext, control+space from Spring.
+
+7
+00:00:33,150 --> 00:00:34,110
+That's the interface.
+
+8
+00:00:34,110 --> 00:00:40,920
+Context is equal to new ClassPathXmlApplicationContext.
+
+9
+00:00:41,010 --> 00:00:41,670
+Pass it
+
+10
+00:00:41,680 --> 00:00:50,200
+the configuration file, config.xml, semi-colon, grab the package name, and you know what to do.
+
+11
+00:00:50,220 --> 00:01:01,740
+Convert all the dots to forward slashes.
+
+12
+00:01:01,800 --> 00:01:10,710
+One last one. We have the context, that is access to the Spring container, context.getBean, within
+
+13
+00:01:10,760 --> 00:01:13,340
+double quotes we need to pass in the bean name.
+
+14
+00:01:13,820 --> 00:01:21,530
+But if you remember, when we use annotations by default Spring will create a bean with the same name
+
+15
+00:01:21,560 --> 00:01:22,590
+as the class name.
+
+16
+00:01:22,610 --> 00:01:28,810
+And if you don't want that, within brackets, within double quotes give it a name, call it productDao.
+
+17
+00:01:28,980 --> 00:01:34,100
+If not spring will create a camel case name with productDaoImpl.
+
+18
+00:01:34,130 --> 00:01:37,330
+Either you use it or give it a name here.
+
+19
+00:01:37,430 --> 00:01:38,860
+I'm going to use the productDao.
+
+20
+00:01:38,890 --> 00:01:46,760
+Go back to test, within double quotes paste that name, hit control+1, assign statement to a
+
+21
+00:01:46,760 --> 00:01:48,300
+new local variable.
+
+22
+00:01:48,360 --> 00:02:00,210
+Change it to productDao, hit control+1, import it. Another control+1, add cast.
+
+23
+00:02:00,270 --> 00:02:02,740
+So you know that control+1 is my favorite key
+
+24
+00:02:02,760 --> 00:02:12,220
+while using Eclipse. Call this productDao. productDao dot,
+
+25
+00:02:12,790 --> 00:02:16,810
+create is the method, create a new product. Hit control+space,
+
+26
+00:02:16,810 --> 00:02:19,980
+import the product.
+
+27
+00:02:20,040 --> 00:02:26,870
+That is the bean we need to pass. Select that, control+1, extract to local variable called product.
+
+28
+00:02:26,880 --> 00:02:28,950
+Set the values on it.
+
+29
+00:02:28,970 --> 00:02:40,070
+Product dot setId, the very first one is id, let's say 1 is the value. Product dot setName, within
+
+30
+00:02:40,070 --> 00:02:41,330
+double quotes,
+
+31
+00:02:41,750 --> 00:02:49,450
+Iphone. Product dot set description, desc, within double quotes
+
+32
+00:02:49,990 --> 00:02:51,500
+its awesome.
+
+33
+00:02:55,960 --> 00:03:01,800
+And finally product dot setPrice, let's say 700 bucks.
+
+34
+00:03:02,880 --> 00:03:10,080
+Save it. Do a control+shift+f to format. Go to the database and check if you have any records.
+
+35
+00:03:10,150 --> 00:03:12,890
+Execute the select query on the product table.
+
+36
+00:03:13,120 --> 00:03:13,860
+Run it.
+
+37
+00:03:13,890 --> 00:03:15,820
+There are no records right now.
+
+38
+00:03:15,840 --> 00:03:17,520
+Come back to the test.
+
+39
+00:03:17,640 --> 00:03:23,530
+Right click, run as java application.
+
+40
+00:03:23,620 --> 00:03:24,760
+Hit Ok to save it.
+
+41
+00:03:27,210 --> 00:03:33,580
+And look at the console and you will see that Hibernate generates a insert query automatically, we didn't
+
+42
+00:03:33,580 --> 00:03:35,080
+write this insert query.
+
+43
+00:03:35,080 --> 00:03:40,270
+Now let's go to the database and check if it has inserted the right values.
+
+44
+00:03:40,270 --> 00:03:41,050
+There we go.
+
+45
+00:03:41,050 --> 00:03:42,910
+1 is the id, Iphone,
+
+46
+00:03:42,940 --> 00:03:45,970
+It's awesome and the price is 700 bucks.
+
+47
+00:03:46,120 --> 00:03:51,400
+So you have successfully executed your very first Hibernate and Spring program.
+

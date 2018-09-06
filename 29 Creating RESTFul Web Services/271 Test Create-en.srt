@@ -1,0 +1,80 @@
+1
+00:00:00,300 --> 00:00:04,490
+In this lecture, we'll test our POST method. To do that,
+
+2
+00:00:04,620 --> 00:00:06,660
+stop the server.
+
+3
+00:00:06,930 --> 00:00:11,520
+It's already running, bring the app down and re-run it,
+
+4
+00:00:14,550 --> 00:00:18,540
+because we have made the code changes to implement CREATE. Once that's up,
+
+5
+00:00:18,540 --> 00:00:24,890
+go back to Postman. Click this plus button to open up a new tab. Go back to the previous tab,
+
+6
+00:00:25,050 --> 00:00:26,790
+grab the URL,
+
+7
+00:00:26,850 --> 00:00:29,050
+come back to the new tab, paste it.
+
+8
+00:00:29,130 --> 00:00:35,090
+Change this HTTP method from GET to POST. From the dropdown you can see all the HTTP methods here.
+
+9
+00:00:36,520 --> 00:00:44,350
+Click on Body, because we need to pass in the JSON in the POST request body, and select this raw.
+
+10
+00:00:45,690 --> 00:00:49,000
+Change the content type from text to application/json.
+
+11
+00:00:49,000 --> 00:00:55,250
+Go back to the previous tab and copy the contents of just the product.
+
+12
+00:00:55,260 --> 00:01:00,780
+No need of copying the square brackets, just from the starting flower bracket to the end up the brace.
+
+13
+00:01:01,270 --> 00:01:03,230
+Copy it, comeback.
+
+14
+00:01:03,340 --> 00:01:04,750
+Paste the contents.
+
+15
+00:01:04,950 --> 00:01:12,880
+Change the id to 2, name to IPhone and it's awesome,
+
+16
+00:01:12,930 --> 00:01:16,580
+atleast for me. And the price is $800.
+
+17
+00:01:16,620 --> 00:01:23,750
+So we are creating a new product with a new ID and everything. Click on Send and that should create
+
+18
+00:01:23,750 --> 00:01:27,450
+a product and in response we get that product back and the status is 200 OK.
+
+19
+00:01:27,470 --> 00:01:32,490
+To verify it, you can always go to your database.
+
+20
+00:01:33,650 --> 00:01:37,550
+And select * from product, and you should see two products.
+

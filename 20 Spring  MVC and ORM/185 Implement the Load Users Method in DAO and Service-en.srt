@@ -1,0 +1,100 @@
+1
+00:00:00,130 --> 00:00:05,970
+In this lecture you will implement the methods in the Dow and the services which will load all the users
+
+2
+00:00:06,090 --> 00:00:08,930
+in the user table and display them on the UI.
+
+3
+00:00:09,180 --> 00:00:15,240
+We'll start with that here then the services layer and then we'll implement the controller and view
+
+4
+00:00:15,330 --> 00:00:16,520
+in the next lecture.
+
+5
+00:00:17,650 --> 00:00:27,370
+Go to the user now add a new method that returns a list of users call it find use this
+
+6
+00:00:31,070 --> 00:00:33,590
+import less hit Control run imported from Jacquard.
+
+7
+00:00:33,650 --> 00:00:35,210
+It'll go to the user.
+
+8
+00:00:35,300 --> 00:00:43,790
+Impulse control one at unimplemented amateur's delayed that to stop the Tom-Kat if it's running otherwise
+
+9
+00:00:43,790 --> 00:00:47,300
+it's going to keep reloading the context.
+
+10
+00:00:49,610 --> 00:01:00,950
+Was that a impulse to find the users we remember the operation on the hibernate template hibernate template.
+
+11
+00:01:01,430 --> 00:01:06,170
+Dark Lord all is the matter and we need to tell it.
+
+12
+00:01:06,170 --> 00:01:07,800
+What is the A.P. class.
+
+13
+00:01:07,820 --> 00:01:11,900
+In our case it is user dot plus.
+
+14
+00:01:11,900 --> 00:01:18,560
+And that will automatically return a list of users assigned to a new local variable.
+
+15
+00:01:18,560 --> 00:01:23,640
+We can either do that or simply add a written statement here.
+
+16
+00:01:23,700 --> 00:01:33,280
+Delete this written null and that matter will return a list of users back to the Soviet laya users so
+
+17
+00:01:33,290 --> 00:01:37,290
+we start Java do the same here.
+
+18
+00:01:37,290 --> 00:01:40,050
+List of users.
+
+19
+00:01:40,770 --> 00:01:42,820
+And you can follow this method get users.
+
+20
+00:01:42,840 --> 00:01:45,110
+It need not be the same name as the Dow.
+
+21
+00:01:45,210 --> 00:01:55,100
+It's up to us to design our business logic methods control one import the list go to use so we simple
+
+22
+00:01:55,750 --> 00:02:08,350
+control one are unimplemented amateur's and the return dao not find users that set a single line.
+
+23
+00:02:08,380 --> 00:02:13,700
+So in this lecture we have successfully implemented the load user's method so that we can get all the
+
+24
+00:02:13,700 --> 00:02:19,020
+users in the database into a list of users in the dark layer or the data layer.
+
+25
+00:02:19,280 --> 00:02:24,470
+And so we said earlier in the next few lectures we will implement the controller and the methods.
+

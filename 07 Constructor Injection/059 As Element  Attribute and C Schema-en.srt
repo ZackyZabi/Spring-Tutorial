@@ -1,0 +1,108 @@
+1
+00:00:00,210 --> 00:00:05,550
+As I have said in the constructor injection introduction, everything that we do in property injection
+
+2
+00:00:05,550 --> 00:00:08,160
+can also be done in constructor injection.
+
+3
+00:00:08,310 --> 00:00:14,790
+That is, we can use this value as an element which we have already done or we can use it as an attribute.
+
+4
+00:00:15,030 --> 00:00:21,590
+On the constructor-arg element, value is equal to, within double quotes, 123.
+
+5
+00:00:21,810 --> 00:00:29,890
+And then, we can get rid of all this xml and close the constructor-arg right there. Save it.
+
+6
+00:00:30,000 --> 00:00:38,330
+Similarly, the reference can also be used as an element or as an attribute on the constructor-arg element.
+
+7
+00:00:38,490 --> 00:00:41,100
+ref="address".
+
+8
+00:00:41,250 --> 00:00:49,110
+Get rid of the constructor-arg, closing and the ref tag. And close the constructor-arg right there.
+
+9
+00:00:50,350 --> 00:00:58,420
+So our xml becomes simpler. Save it, re-run the test.
+
+10
+00:00:58,580 --> 00:01:02,030
+And we should still see the same output coming back.
+
+11
+00:01:02,150 --> 00:01:07,170
+The third one is using C-reference or C schema.
+
+12
+00:01:07,210 --> 00:01:14,230
+You already used P reference on P schema or P namespace. With constructor injection,
+
+13
+00:01:14,540 --> 00:01:20,340
+we can use the C schema or C namespace which will make our xml even more compact.
+
+14
+00:01:20,450 --> 00:01:22,340
+So start using it.
+
+15
+00:01:22,340 --> 00:01:29,940
+Copy this P namespace here and the prefix. Enter, paste it and change p to c.
+
+16
+00:01:30,080 --> 00:01:38,120
+We need the c schema namespace from Spring because the attributes that we use will be from this namespace.
+
+17
+00:01:39,200 --> 00:01:42,150
+And here, where we are doing constructor injection,
+
+18
+00:01:42,560 --> 00:01:50,510
+we can say c:, use the field name which is id="123".
+
+19
+00:01:51,580 --> 00:01:56,030
+c:, for passing reference or for injecting reference,
+
+20
+00:01:56,030 --> 00:01:58,600
+very similar to how we used it in p:,
+
+21
+00:01:58,640 --> 00:02:04,720
+we need to specify the name of the field which is address.
+
+22
+00:02:04,750 --> 00:02:13,580
+address:ref="address". Then we can close that bean bag right there.
+
+23
+00:02:14,330 --> 00:02:20,980
+So the c schema makes our xml very compact just like the p schema and p namespace.
+
+24
+00:02:21,190 --> 00:02:28,020
+Save it, re-run the test, and it should still work as expected,
+
+25
+00:02:28,130 --> 00:02:30,360
+and as how it was working earlier.
+
+26
+00:02:30,500 --> 00:02:37,070
+So in this lecture, you have learnt three things using value as tag and attribute with constructor injection
+
+27
+00:02:37,100 --> 00:02:45,050
+using reference as tag and reference and also using C schema or C namespace to make it compact.
+

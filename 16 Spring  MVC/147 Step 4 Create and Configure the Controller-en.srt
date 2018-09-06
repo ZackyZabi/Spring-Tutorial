@@ -1,0 +1,176 @@
+1
+00:00:00,150 --> 00:00:06,030
+The fourth step is to create the controller class which is the key class in our application, which takes
+
+2
+00:00:06,030 --> 00:00:10,620
+the request and sends a response back. Go to Eclipse,
+
+3
+00:00:10,710 --> 00:00:20,430
+src/main/java, right click, create a new class. Call it HelloController and change the package name to
+
+4
+00:00:20,430 --> 00:00:28,120
+com.bharath.spring.springmvc, HelloController is the name of the class, finish it.
+
+5
+00:00:31,470 --> 00:00:38,760
+To make it a controller, we need to mark it with the @Controller annotation. Every controller should
+
+6
+00:00:38,760 --> 00:00:40,370
+be marked with this annotation.
+
+7
+00:00:41,340 --> 00:00:47,820
+It is from the stereotype package which tells the Spring Framework that it can create a bean of this
+
+8
+00:00:47,820 --> 00:00:57,010
+type and it is a controller bean. That is, it can process the incoming HTTP requests. Add a method public.
+
+9
+00:00:57,350 --> 00:01:06,290
+It should return a ModelAndView. As you have learnt, ModelAndView. Control+space, import it from the
+
+10
+00:01:06,470 --> 00:01:13,790
+Spring framework, web.servlet.ModelAndView. The method name can be anything.
+
+11
+00:01:13,800 --> 00:01:16,350
+Hello is the method and it should return
+
+12
+00:01:19,120 --> 00:01:28,640
+new ModelAndView. Select that, hit control+1, extract to a local variable.
+
+13
+00:01:28,860 --> 00:01:30,940
+ModelAndView is the name of it.
+
+14
+00:01:31,120 --> 00:01:36,220
+We are not going to touch the model portion in this lecture, we'll not be setting any data. We'll only
+
+15
+00:01:36,280 --> 00:01:45,330
+set a view onto this ModelAndView variable or object. ModelAndView.setViewName which takes
+
+16
+00:01:45,330 --> 00:01:47,430
+a string. Within double quotes,
+
+17
+00:01:47,430 --> 00:01:49,810
+we need to pass in the view name which is hello.
+
+18
+00:01:49,830 --> 00:01:52,080
+We haven't created this view yet.
+
+19
+00:01:52,200 --> 00:01:56,210
+The hello.jsp, but we are going to pass it. And in the next lecture
+
+20
+00:01:56,210 --> 00:01:58,290
+we'll create the JSP page.
+
+21
+00:01:58,290 --> 00:02:00,130
+The beauty is, there is no location,
+
+22
+00:02:00,180 --> 00:02:06,420
+there is no suffix, the extension here that we have already configured with the view resolver in the
+
+23
+00:02:06,620 --> 00:02:09,400
+dispatcher-servlet.xml.
+
+24
+00:02:09,630 --> 00:02:17,310
+We need to mark this method with @RequestMapping because we need to tell Spring when this method
+
+25
+00:02:17,310 --> 00:02:20,100
+should be invoked, for which url-pattern.
+
+26
+00:02:20,380 --> 00:02:26,160
+So RequestMapping, within brackets, within double quotes, forward slash
+
+27
+00:02:26,530 --> 00:02:32,630
+hello. That's the url pattern I want to use. From the browser we should use this url pattern.
+
+28
+00:02:32,700 --> 00:02:36,820
+That is when Spring will invoke this particular method.
+
+29
+00:02:38,520 --> 00:02:44,570
+Now we haven't enabled annotations. So go to the dispatcher-servlet.xml which is our configuration file.
+
+30
+00:02:45,000 --> 00:02:46,410
+You know how to enable them.
+
+31
+00:02:46,530 --> 00:02:51,750
+Context colon, control+space component-scan.
+
+32
+00:02:51,750 --> 00:02:58,980
+This will both enable the annotations as well as we need to provide the base package which is this particular
+
+33
+00:02:58,980 --> 00:03:00,080
+package here.
+
+34
+00:03:00,420 --> 00:03:01,200
+Right click.
+
+35
+00:03:01,200 --> 00:03:09,500
+I want to rename this package, I'm not happy with the package name. So refactor -> rename.
+
+36
+00:03:09,850 --> 00:03:16,360
+We should have .controller at the end, dot controller because all these are controller classes.
+
+37
+00:03:17,630 --> 00:03:20,650
+Right click, refractor -> rename.
+
+38
+00:03:20,720 --> 00:03:25,350
+Just grab that name, cancel or
+
+39
+00:03:25,530 --> 00:03:27,390
+you can go to the Controller class.
+
+40
+00:03:30,070 --> 00:03:34,010
+Expand this, go to the controller, grab the package name from here.
+
+41
+00:03:34,390 --> 00:03:41,310
+Go back to the dispatcher-servlet and paste that package name. Close the element right there.
+
+42
+00:03:41,770 --> 00:03:48,310
+So you have successfully created a controller and you've also told Spring that it should scan the following
+
+43
+00:03:48,310 --> 00:03:52,220
+package for the controllers, for the beans that it can create.
+
+44
+00:03:52,450 --> 00:03:54,690
+And in this case it is a controller bean.
+

@@ -1,0 +1,100 @@
+1
+00:00:00,220 --> 00:00:07,590
+In this lecture, we will use the Service bean inside our test class and see if it got wired properly. Before
+
+2
+00:00:07,590 --> 00:00:17,010
+we do that, let's move this service to a new subpackage. Create a new package under springboot, dot
+
+3
+00:00:17,460 --> 00:00:18,270
+service.
+
+4
+00:00:18,300 --> 00:00:20,800
+That's where our service belongs.
+
+5
+00:00:21,040 --> 00:00:22,190
+Move the service there.
+
+6
+00:00:22,650 --> 00:00:23,560
+OK.
+
+7
+00:00:27,330 --> 00:00:33,500
+In the test class, I can rename this contextLoads to testService,
+
+8
+00:00:36,960 --> 00:00:44,950
+and to get the beans we need to autowire our ApplicationContext context;
+
+9
+00:00:44,980 --> 00:00:54,280
+mark it with @Autowired. In most of the realtime applications we'll be developing web applications
+
+10
+00:00:54,370 --> 00:00:57,420
+and we rarely have to do this.
+
+11
+00:00:57,550 --> 00:01:03,520
+We use Spring MVC mock test etc; which I'll show you when we do the web development piece using Spring Boot.
+
+12
+00:01:03,940 --> 00:01:15,700
+Inside the test service, context.getBean(arg0), pass in the class name which is Service.class. Hit control+1,
+
+13
+00:01:15,700 --> 00:01:23,070
+and import the service class from our own package. Control+1, assign statement to a new local variable.
+
+14
+00:01:23,090 --> 00:01:32,620
+Call it service. service dot, the only method we have in there is save. Invoke that method and that's all
+
+15
+00:01:32,620 --> 00:01:33,170
+we need to do.
+
+16
+00:01:33,160 --> 00:01:39,120
+You can assert for multiple things, but in this case we just want to see the output.
+
+17
+00:01:39,340 --> 00:01:44,480
+So right click, Run As -> JUnit test.
+
+18
+00:01:48,080 --> 00:01:52,810
+And that finishes successfully. As you know if we go here,
+
+19
+00:01:52,820 --> 00:01:58,890
+it's all green. And if you go to the console you should be able to see this text called Created.
+
+20
+00:01:58,990 --> 00:02:02,320
+So copy that, go to the console.
+
+21
+00:02:02,380 --> 00:02:07,260
+Contro+f, paste that and search for, this is Service Bean Created.
+
+22
+00:02:07,340 --> 00:02:13,390
+But you search again and you see this text here which says Created which is coming from the Dao.
+
+23
+00:02:13,400 --> 00:02:19,820
+So all our beans are successfully wired and we see the proper output. In the next lecture,
+
+24
+00:02:19,840 --> 00:02:24,210
+I'll explain the flow once again end to end, what exactly is happening,
+
+25
+00:02:24,380 --> 00:02:29,520
+how are the beans getting wired and how the Springboot application is starting and executing.
+

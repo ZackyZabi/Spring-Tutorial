@@ -1,0 +1,232 @@
+1
+00:00:00,200 --> 00:00:07,950
+In this lecture, you will create a JDBC Maven project and update the pom.xml with the required dependencies.
+
+2
+00:00:08,310 --> 00:00:15,270
+The required dependencies are spring-core, spring-context to do dependency injection, spring-jdbc to
+
+3
+00:00:15,420 --> 00:00:17,370
+do database operations.
+
+4
+00:00:17,370 --> 00:00:24,990
+Finally the mysql-connector jar which is the driver, JDBC driver to connect and work with mysql
+
+5
+00:00:25,020 --> 00:00:26,010
+database.
+
+6
+00:00:26,310 --> 00:00:30,830
+Let's get started by going to Eclipse IDE. File menu,
+
+7
+00:00:31,260 --> 00:00:37,500
+New -> Maven project. If you don't see this option go to other and you will find it. Click on maven project,
+
+8
+00:00:38,580 --> 00:00:47,260
+next, leave the default as it is. You should choose maven-archetype-quickstart. Next.
+
+9
+00:00:47,410 --> 00:00:50,800
+The Group Id is fine. Enter an artifact id which is our project name.
+
+10
+00:00:50,800 --> 00:00:56,440
+springjdbc is the name, springjdbc, all lowecase.
+
+11
+00:00:56,560 --> 00:01:04,140
+Finish and we have our project. Open the pom.xml which is the maven configuration. Click on
+
+12
+00:01:04,170 --> 00:01:06,720
+pom tab, which is the last tab here.
+
+13
+00:01:07,820 --> 00:01:15,100
+Open up any of the earlier poms. Go to springadvanced, springcoreadvanced, open the pom.xml, maximize.
+
+14
+00:01:16,440 --> 00:01:23,370
+Copy all the way from properties to the end except for the project closing tag, copy up to build closing.
+
+15
+00:01:23,960 --> 00:01:30,750
+Control+c, come to the new product's pom.xml. Start from properties, go all the way till
+
+16
+00:01:30,810 --> 00:01:32,060
+end of dependencies.
+
+17
+00:01:32,100 --> 00:01:34,230
+Delete it and paste whatever you
+
+18
+00:01:34,350 --> 00:01:42,180
+have copied. Do a control+shift+f to format. We have defined property for the version of Spring.
+
+19
+00:01:42,480 --> 00:01:47,690
+We have the two core dependencies, spring-core and spring-context to do dependency injection and
+
+20
+00:01:47,690 --> 00:01:53,420
+we also have the maven-compiler-plugin and we are telling maven to use 1.8 version of Java.
+
+21
+00:01:54,680 --> 00:01:59,960
+All that is left is spring-jdbc dependency and the mysql-connector driver.
+
+22
+00:02:00,070 --> 00:02:03,290
+So let's get them from the internet.
+
+23
+00:02:03,410 --> 00:02:07,280
+Open up your web browser, search for spring
+
+24
+00:02:07,280 --> 00:02:16,580
+jdbc maven dependency. spring jdbc maven dependency, click on the very first link which says
+
+25
+00:02:16,600 --> 00:02:24,990
+maven repository. And if you go back and check we have been using 4.3.6.
+
+26
+00:02:25,000 --> 00:02:29,990
+Go to your pom.xml. 4.3.6.RELEASE is the version.
+
+27
+00:02:30,220 --> 00:02:32,950
+So let's grab that version by clicking on this here.
+
+28
+00:02:36,720 --> 00:02:38,730
+Scroll down. As soon as you click here
+
+29
+00:02:38,730 --> 00:02:46,290
+this will be copied to the clipboard. So go back to Eclipse, paste that new dependency inside the dependency
+
+30
+00:02:46,290 --> 00:02:46,810
+section.
+
+31
+00:02:46,810 --> 00:02:48,750
+Do a control+shift+f.
+
+32
+00:02:48,840 --> 00:02:51,880
+Delete this link by hitting control+d.
+
+33
+00:02:51,990 --> 00:02:59,820
+Copy this version from here, ${springframework.version}. We don't want to hardcode that. So paste the dollar,
+
+34
+00:02:59,820 --> 00:03:01,250
+the property, this property is
+
+35
+00:03:01,270 --> 00:03:03,300
+defined right here.
+
+36
+00:03:03,810 --> 00:03:07,320
+And the last dependency is the sql connector,
+
+37
+00:03:07,470 --> 00:03:19,110
+mysql-connector. So go to Google one more time, search for mysql connector maven dependency.
+
+38
+00:03:19,150 --> 00:03:23,620
+Mysql connector maven dependency, click on the very first link,
+
+39
+00:03:26,020 --> 00:03:28,810
+and 5.1.6 is the latest.
+
+40
+00:03:28,810 --> 00:03:31,880
+Click on the text area here, that gets copied.
+
+41
+00:03:31,990 --> 00:03:34,240
+Go back to Eclipse.
+
+42
+00:03:34,830 --> 00:03:38,520
+Add it at the end of the dependences. Control+shift+f to format.
+
+43
+00:03:38,560 --> 00:03:39,860
+Delete that link.
+
+44
+00:03:40,120 --> 00:03:44,110
+Delete any spaces. Control+shift+f to format.
+
+45
+00:03:44,200 --> 00:03:49,780
+This we'll leave it as it is because you will be using this version only here. 5.1.6 is only
+
+46
+00:03:49,780 --> 00:03:55,210
+for this connector. Since we have deleted the JUnit,
+
+47
+00:03:55,410 --> 00:03:59,660
+let's get rid of this package here.
+
+48
+00:03:59,670 --> 00:04:01,390
+We don't need any tests.
+
+49
+00:04:01,440 --> 00:04:03,440
+Delete, hit OK.
+
+50
+00:04:06,410 --> 00:04:12,180
+And also delete this app.java or you can do it as a part of the next lecture.
+
+51
+00:04:12,180 --> 00:04:13,210
+It's up to you.
+
+52
+00:04:15,020 --> 00:04:22,630
+Anytime we change the pom.xml, we need to right click on the project, go to run as, sorry, go to
+
+53
+00:04:22,630 --> 00:04:27,510
+Maven and do a update project.
+
+54
+00:04:27,560 --> 00:04:35,340
+Click OK. Maven will pull all the dependencies and build our project or atleast make sure that our project
+
+55
+00:04:35,340 --> 00:04:36,110
+has everything.
+
+56
+00:04:36,120 --> 00:04:39,450
+So we have successfully created the springJDBC project, added
+
+57
+00:04:39,470 --> 00:04:42,000
+the dependencies we need. In the next lecture,
+
+58
+00:04:42,000 --> 00:04:46,380
+you can start using the JDBCTemplate to execute database operations.
+

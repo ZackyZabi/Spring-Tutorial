@@ -1,0 +1,64 @@
+1
+00:00:00,230 --> 00:00:09,570
+In this lecture, you'll see how easy it is to create a Spring Boot Web MVC project using STS. Go to the file menu,
+
+2
+00:00:10,060 --> 00:00:18,480
+say New -> Spring Starter Project. Give your project a name, call it springbootweb.
+
+3
+00:00:18,500 --> 00:00:21,550
+Change the group to
+
+4
+00:00:21,680 --> 00:00:25,700
+com.bharath.spring.web instead.
+
+5
+00:00:25,820 --> 00:00:36,810
+Same with package, the package should be com.bharath.spring.web or let's follow the convention spring.boot.web.
+
+6
+00:00:40,090 --> 00:00:40,810
+Next.
+
+7
+00:00:41,970 --> 00:00:50,080
+Here, search for web and select the very first one under web which is web. We need the web dependency.
+
+8
+00:00:50,120 --> 00:00:56,440
+That is the only dependency required as of now. Finish and that will create a Spring Boot Web project.
+
+9
+00:00:56,510 --> 00:01:04,160
+Expand it and open the pom.xml which is the important Maven configuration file. Click on the last
+
+10
+00:01:04,160 --> 00:01:10,450
+tab, double click to maximize. We have the maven coordinates with the project information.
+
+11
+00:01:10,690 --> 00:01:16,300
+The parent project as always is this the spring-boot-starter-parent. We have some properties which
+
+12
+00:01:16,300 --> 00:01:24,330
+specify the Java version. And the important section is the dependency section, wherein you see the
+
+13
+00:01:24,330 --> 00:01:34,410
+spring-boot-starter-web is the starter project for the web MVC projects while using Spring Boot. And the test dependency
+
+14
+00:01:34,420 --> 00:01:42,280
+as always and also the plugin that will create a jar file of our project and we'll be able to run the
+
+15
+00:01:42,280 --> 00:01:49,090
+jar file because, it will have the embedded Tomcat inside it and automatically it will launch our application
+
+16
+00:01:49,090 --> 00:01:53,890
+on localhost:8080 as you will see in the next few lectures.
+

@@ -1,0 +1,60 @@
+1
+00:00:00,330 --> 00:00:06,060
+Do work on the spring duty B.S. assignment will how to create a table called passenger in the database
+
+2
+00:00:06,090 --> 00:00:14,680
+which will how three fields IAB first name and last name will use the database a template and perform
+
+3
+00:00:14,680 --> 00:00:16,210
+the following four operations.
+
+4
+00:00:16,210 --> 00:00:22,360
+Create the read update and delete all the crowd operations while performing greed.
+
+5
+00:00:22,410 --> 00:00:28,210
+You will be using the rule mapper and you will be converting the data that comes back into air passenger
+
+6
+00:00:28,330 --> 00:00:29,670
+Jaba object.
+
+7
+00:00:29,800 --> 00:00:34,930
+So you will need to create a class car passenger with these three fields and a road map or inside of
+
+8
+00:00:34,930 --> 00:00:35,790
+a road mapper.
+
+9
+00:00:35,960 --> 00:00:41,470
+It will be reading these three fields and displaying them and you write their test class.
+
+10
+00:00:41,520 --> 00:00:47,820
+So once you create the table the steps will be configuring the Julie B.C.E. template and datasource
+
+11
+00:00:48,120 --> 00:00:53,760
+in the spring configuration and then you will write a test class in which it will read the Daily Beast
+
+12
+00:00:53,760 --> 00:00:58,480
+template bean and perform the correct operations.
+
+13
+00:00:58,500 --> 00:01:05,430
+As I said you will how to create a passenger class so that the data can be read back in Java object
+
+14
+00:01:05,430 --> 00:01:07,060
+when you do the read operation.
+
+15
+00:01:07,060 --> 00:01:10,430
+You will provide a real mapper so that the data can be converted.
+

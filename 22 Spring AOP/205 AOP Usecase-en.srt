@@ -1,0 +1,56 @@
+1
+00:00:00,390 --> 00:00:07,070
+In the next few lectures will work on a use case where it will create and apply your own aspects and
+
+2
+00:00:07,170 --> 00:00:07,850
+advice.
+
+3
+00:00:08,100 --> 00:00:10,380
+This will start by creating a spring.
+
+4
+00:00:10,380 --> 00:00:14,590
+It will be project update them have dependencies.
+
+5
+00:00:14,700 --> 00:00:19,830
+It will then create pujo or a service class starting with the interface then you implement that interface
+
+6
+00:00:19,830 --> 00:00:22,930
+with one single method called Multiply.
+
+7
+00:00:23,310 --> 00:00:27,350
+This will return the product of two given numbers.
+
+8
+00:00:27,480 --> 00:00:36,150
+Once you code that the next step is to create logging aspect the job of this aspect is to log a message
+
+9
+00:00:36,210 --> 00:00:38,730
+onto the console when the multiply method is invoked.
+
+10
+00:00:38,730 --> 00:00:45,570
+We want to log the details onto the console and we'll be doing that without touching the logic inside
+
+11
+00:00:45,590 --> 00:00:46,970
+the multiply method.
+
+12
+00:00:47,010 --> 00:00:49,720
+That is true Aspect Oriented Programming.
+
+13
+00:00:51,300 --> 00:00:57,070
+Once you have that aspect you will configure our beans and the aspect in the sporting configuration.
+
+14
+00:00:58,360 --> 00:01:03,320
+And finally you will create a best class Ronak and C it will be in action.
+

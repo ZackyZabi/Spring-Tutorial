@@ -1,0 +1,68 @@
+1
+00:00:00,210 --> 00:00:05,230
+The last option in XML based autowiring is to use the constructor.
+
+2
+00:00:05,520 --> 00:00:11,090
+When we did it by using byType and byName, the Spring container uses the setter injection or
+
+3
+00:00:11,150 --> 00:00:12,950
+the property based injection.
+
+4
+00:00:13,140 --> 00:00:14,810
+Let's use the constructor injection
+
+5
+00:00:14,820 --> 00:00:17,080
+in this lecture. Go to Eclipse.
+
+6
+00:00:17,250 --> 00:00:23,460
+To use the constructor injection, we need to provide a parameterized constructor. Go to Employee class.
+
+7
+00:00:24,330 --> 00:00:30,350
+Employee should take an object which is the dependency.
+
+8
+00:00:30,900 --> 00:00:40,700
+this.address = address; Go to the configuration, delete the duplicate bean that
+
+9
+00:00:40,700 --> 00:00:47,120
+we have created in the last lecture, the address1, save it.
+
+10
+00:00:47,260 --> 00:00:51,040
+And here, where we say autowire, instead of byName,
+
+11
+00:00:51,100 --> 00:00:58,020
+use constructor and that tells the Spring container that it should do a constructor based injection.
+
+12
+00:00:58,260 --> 00:01:07,290
+Go to test, right click, Run as Java application and automatically the spring container
+
+13
+00:01:07,290 --> 00:01:09,720
+does the constructor based injection for us.
+
+14
+00:01:09,810 --> 00:01:12,740
+So the way it works, it goes to the configuration file,
+
+15
+00:01:12,960 --> 00:01:18,170
+reads this employee bean and it sees that it has to do a constructor based injection.
+
+16
+00:01:18,360 --> 00:01:26,010
+So it'll look at what this constructor takes, what type of argument and it will look for this type of bean
+
+17
+00:01:26,280 --> 00:01:33,560
+in the configuration, it will instantiate it and then it will invoke the constructor to create the Employee.
+

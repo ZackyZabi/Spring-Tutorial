@@ -1,0 +1,96 @@
+1
+00:00:00,210 --> 00:00:05,820
+We have configured all our beans successfully and we are ready to implement the create method and use
+
+2
+00:00:05,820 --> 00:00:08,430
+the hibernateTemplate. Before we do that,
+
+3
+00:00:08,490 --> 00:00:11,280
+a couple of small typos that we need to fix.
+
+4
+00:00:11,430 --> 00:00:12,480
+If we have got them right
+
+5
+00:00:12,480 --> 00:00:13,540
+that's great.
+
+6
+00:00:13,620 --> 00:00:17,940
+When I configure the sessionFactory and used the p-schema,
+
+7
+00:00:18,110 --> 00:00:27,240
+I haven't used hyphen ref. So p:dataSource-ref is the first one. And the property should
+
+8
+00:00:27,240 --> 00:00:30,590
+be annotatedClasses, not annotateClasses.
+
+9
+00:00:30,620 --> 00:00:38,100
+It is all the annotated entities, so add a d if you have missed it like me. That's it, go to the ProductDaoImpl,
+
+10
+00:00:38,100 --> 00:00:42,400
+and start implementing the create method.
+
+11
+00:00:42,420 --> 00:00:44,450
+It's going to be very easy.
+
+12
+00:00:44,670 --> 00:00:53,410
+You will use the hibernateTemplate.save is the method and pass it an entity. Pass it
+
+13
+00:00:53,430 --> 00:00:59,590
+the product that is being passed to this method and this method returns an object, hit control+1,
+
+14
+00:00:59,620 --> 00:01:01,980
+assign statement to a new local variable.
+
+15
+00:01:02,170 --> 00:01:04,290
+It's a serializable object.
+
+16
+00:01:04,890 --> 00:01:06,920
+Let's use integer. We know that
+
+17
+00:01:07,030 --> 00:01:16,740
+when the save method returns, it returns an integer. Hit control+1, add a cast to integer. Call it result
+
+18
+00:01:17,590 --> 00:01:24,640
+and return that result. Do a control+shift+f to format.
+
+19
+00:01:24,770 --> 00:01:31,160
+And also we need to use transactions because this method is going to write to the database, it's using an insert.
+
+20
+00:01:31,910 --> 00:01:39,710
+So to use transactions you simply use it @Transactional annotation on your methods, @Transactional from
+
+21
+00:01:39,960 --> 00:01:46,700
+Spring Framework that tells Spring that this method should be wrapped around a transaction and we have
+
+22
+00:01:46,700 --> 00:01:54,820
+already configured the transactionManager and annotations for transaction in the configuration file.
+
+23
+00:01:54,830 --> 00:01:58,860
+So in this lecture, you have successfully implemented the create method.
+
+24
+00:01:59,030 --> 00:02:03,700
+One last step to go, we'll create the test class and run it.
+

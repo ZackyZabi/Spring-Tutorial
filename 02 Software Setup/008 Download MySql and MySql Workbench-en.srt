@@ -1,0 +1,156 @@
+1
+00:00:00,240 --> 00:00:06,270
+The database that you are going to use throughout this course is mysql which is a popular open source
+
+2
+00:00:06,390 --> 00:00:13,350
+data source database and also you will be installing mysql workbench and install mysql.
+
+3
+00:00:13,530 --> 00:00:20,910
+Mysql workbench is a client which is GUI based tool which which we can launch connect to the mysql and execute our sql
+
+4
+00:00:20,910 --> 00:00:27,360
+statements. You are going to do it in three simple steps you will download the installer you will install
+
+5
+00:00:27,360 --> 00:00:35,040
+the mysql as well as mysql workbench and you will configure mysql although it sounds like a
+
+6
+00:00:35,040 --> 00:00:36,900
+lot of work it isn't.
+
+7
+00:00:36,930 --> 00:00:41,640
+Once you download the installer you just keep clicking on the next button and there are a couple of
+
+8
+00:00:41,640 --> 00:00:42,890
+things you need to do.
+
+9
+00:00:42,960 --> 00:00:46,790
+You need to choose that you also need the workbench when you are installing.
+
+10
+00:00:46,980 --> 00:00:52,830
+And when you are in the configuration step you need to make sure that you enter a password it will
+
+11
+00:00:52,830 --> 00:00:57,280
+prompt you for entering a root password so that you can log in later on.
+
+12
+00:00:57,420 --> 00:01:02,250
+Make sure that you give a simple password which you will remember.
+
+13
+00:01:02,510 --> 00:01:09,510
+I will also give you a link which has very good instructions on how to install mysql search for my
+
+14
+00:01:09,660 --> 00:01:11,710
+sql install.
+
+15
+00:01:14,210 --> 00:01:16,860
+And scroll down.
+
+16
+00:01:16,940 --> 00:01:20,170
+There are many links but I found one of these very useful
+
+17
+00:01:20,170 --> 00:01:28,440
+which says Corley solutions dot com how to install mysql server 5.6 on Windows 7 development machine.
+
+18
+00:01:28,460 --> 00:01:31,030
+This works for different versions of Windows and Mac.
+
+19
+00:01:31,190 --> 00:01:36,370
+Click on that link and list out all the important steps to download.
+
+20
+00:01:37,560 --> 00:01:40,290
+to install and to configure.
+
+21
+00:01:40,530 --> 00:01:45,050
+Again all these instructions are nothing but clicking on the next button.
+
+22
+00:01:45,120 --> 00:01:51,410
+Only if you have any issues you can come back here and refer to it in the very first step.
+
+23
+00:01:51,480 --> 00:01:57,570
+you can click on the link here control click it and you will go to the mysql downloads page.
+
+24
+00:01:57,600 --> 00:02:02,490
+Scroll down and select your operating system.
+
+25
+00:02:02,490 --> 00:02:05,270
+If you are on Windows select Microsoft Windows.
+
+26
+00:02:05,970 --> 00:02:12,840
+I don't want you to download the zip files which are here click on this go to download page that will take
+
+27
+00:02:12,840 --> 00:02:18,570
+you to the MSI installer's and download one of these depending on your operating system once downloaded
+
+28
+00:02:18,570 --> 00:02:23,010
+double click on them and just keep clicking the next button.
+
+29
+00:02:23,820 --> 00:02:29,130
+Once the installation completes it will ask you if you want to configure the mysql server click on that
+
+30
+00:02:29,550 --> 00:02:36,330
+and that is where it will prompt you for a root password and make sure while installing you check the
+
+31
+00:02:36,330 --> 00:02:42,690
+workbench option as well so that you will have the bench installed as well and at the end of it, it will
+
+32
+00:02:42,690 --> 00:02:48,350
+be running as a Windows service automatically for you every time your machine restarts.
+
+33
+00:02:48,420 --> 00:02:50,400
+Mysql server will be up and running,
+
+34
+00:02:50,490 --> 00:02:53,710
+you can manage that by going to your Windows services.
+
+35
+00:02:53,730 --> 00:02:55,950
+Same on Mac on Mac as well.
+
+36
+00:02:56,100 --> 00:03:00,970
+It will boot up as soon as you mac starts and it will be up and running on a
+
+37
+00:03:01,020 --> 00:03:03,890
+port 3 3 0 6 by default.
+
+38
+00:03:03,960 --> 00:03:09,990
+Please do not forget the password that you are entering during installation for me I use a password
+
+39
+00:03:09,990 --> 00:03:14,510
+called test So that will be easy to remember.
+
